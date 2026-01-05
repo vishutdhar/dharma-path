@@ -42,7 +42,7 @@ export default function GitaPage() {
   ];
 
   return (
-    <main className="min-h-screen pb-24 bg-cream-100">
+    <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
       <header className="bg-gradient-to-br from-saffron-600 to-orange-500 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-6 pb-8">
@@ -70,24 +70,24 @@ export default function GitaPage() {
             </p>
           </div>
         </div>
-        <div className="h-6 bg-cream-100 rounded-t-[2rem]" />
+        <div className="h-6 bg-cream-100 dark:bg-gray-900 rounded-t-[2rem] transition-colors" />
       </header>
 
       {/* Content */}
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 -mt-2">
         {/* Intro Card */}
-        <div className="bg-white rounded-2xl shadow-md p-6 mb-6 border border-cream-200">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6 border border-cream-200 dark:border-gray-700 transition-colors">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-saffron-100 rounded-full flex items-center justify-center shrink-0">
-              <BookOpen className="text-saffron-600" size={24} />
+            <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center shrink-0">
+              <BookOpen className="text-saffron-600 dark:text-saffron-400" size={24} />
             </div>
             <div>
-              <h2 className="font-heading font-semibold text-gray-900 mb-1">
+              <h2 className="font-heading font-semibold text-gray-900 dark:text-gray-100 mb-1">
                 Your Page One
               </h2>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                The Bhagavad Gita is a 700-verse dialogue between Prince Arjuna 
-                and Lord Krishna. Read it chapter by chapter, verse by verse, 
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                The Bhagavad Gita is a 700-verse dialogue between Prince Arjuna
+                and Lord Krishna. Read it chapter by chapter, verse by verse,
                 with translations and commentary.
               </p>
             </div>
@@ -106,27 +106,27 @@ export default function GitaPage() {
                 key={chapter.chapter_number}
                 href={`/gita/${chapter.chapter_number}`}
               >
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-cream-200 hover:shadow-md hover:border-saffron-200 transition-all card-hover">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 hover:shadow-md hover:border-saffron-200 dark:hover:border-saffron-700 transition-all card-hover">
                   <div className="flex items-center gap-4">
                     {/* Chapter number */}
-                    <div className="w-10 h-10 bg-saffron-100 rounded-full flex items-center justify-center font-bold text-saffron-700 shrink-0">
+                    <div className="w-10 h-10 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center font-bold text-saffron-700 dark:text-saffron-400 shrink-0">
                       {chapter.chapter_number}
                     </div>
 
                     {/* Chapter info */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-medium text-gray-900">
+                      <h3 className="font-medium text-gray-900 dark:text-gray-100">
                         {chapterInfo[index]?.name || chapter.translation || `Chapter ${chapter.chapter_number}`}
                       </h3>
-                      <p className="text-sm text-gray-500 truncate">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 truncate">
                         {chapterInfo[index]?.meaning || chapter.meaning?.en || ''}
                       </p>
-                      <p className="text-xs text-saffron-600 mt-1">
+                      <p className="text-xs text-saffron-600 dark:text-saffron-400 mt-1">
                         {chapter.verses_count} verses
                       </p>
                     </div>
 
-                    <ChevronRight className="text-gray-300 shrink-0" size={20} />
+                    <ChevronRight className="text-gray-300 dark:text-gray-600 shrink-0" size={20} />
                   </div>
                 </div>
               </Link>

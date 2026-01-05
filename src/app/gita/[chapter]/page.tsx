@@ -100,19 +100,19 @@ export default function ChapterPage() {
   ];
 
   return (
-    <main className="min-h-screen pb-24 bg-cream-100">
+    <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
-      <header className="bg-white border-b border-cream-200 sticky top-0 z-40">
+      <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href="/gita" className="p-2 -ml-2 rounded-lg hover:bg-cream-100">
-              <ArrowLeft size={24} className="text-gray-600" />
+            <Link href="/gita" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+              <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div className="flex-1">
-              <h1 className="font-heading text-lg font-bold text-gray-900">
+              <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 Chapter {chapterNum}
               </h1>
-              <p className="text-sm text-saffron-600">
+              <p className="text-sm text-saffron-600 dark:text-saffron-400">
                 {chapterNames[chapterNum - 1] || chapter?.translation}
               </p>
             </div>
@@ -146,9 +146,9 @@ export default function ChapterPage() {
                 disabled={!canGoPrev}
                 className={`
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
-                  ${canGoPrev 
-                    ? 'bg-white text-saffron-600 hover:bg-saffron-50 shadow-sm border border-cream-200' 
-                    : 'bg-cream-200 text-cream-400 cursor-not-allowed'
+                  ${canGoPrev
+                    ? 'bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
+                    : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
               >
@@ -161,9 +161,9 @@ export default function ChapterPage() {
                 disabled={!canGoNext}
                 className={`
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
-                  ${canGoNext 
-                    ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg' 
-                    : 'bg-cream-200 text-cream-400 cursor-not-allowed'
+                  ${canGoNext
+                    ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg'
+                    : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
               >
@@ -174,7 +174,7 @@ export default function ChapterPage() {
 
             {/* Verse Picker */}
             <div className="mt-8">
-              <p className="text-sm text-gray-500 mb-3 text-center">Jump to verse</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 text-center">Jump to verse</p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {Array.from({ length: chapter?.verses_count || 0 }, (_, i) => i + 1).map(num => (
                   <button
@@ -182,9 +182,9 @@ export default function ChapterPage() {
                     onClick={() => setCurrentVerse(num)}
                     className={`
                       w-10 h-10 rounded-lg text-sm font-medium transition-all
-                      ${num === currentVerse 
-                        ? 'bg-saffron-500 text-white shadow-md' 
-                        : 'bg-white text-gray-600 hover:bg-saffron-50 border border-cream-200'
+                      ${num === currentVerse
+                        ? 'bg-saffron-500 text-white shadow-md'
+                        : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                       }
                     `}
                   >
@@ -202,20 +202,20 @@ export default function ChapterPage() {
       </div>
 
       {/* Chapter Navigation */}
-      <div className="fixed bottom-20 left-0 right-0 bg-white border-t border-cream-200 px-6 py-3">
+      <div className="fixed bottom-20 left-0 right-0 bg-white dark:bg-gray-800 border-t border-cream-200 dark:border-gray-700 px-6 py-3 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto flex items-center justify-between">
           <Link
             href={chapterNum > 1 ? `/gita/${chapterNum - 1}` : '#'}
             className={`
               text-sm font-medium
-              ${chapterNum > 1 ? 'text-saffron-600' : 'text-gray-300 pointer-events-none'}
+              ${chapterNum > 1 ? 'text-saffron-600 dark:text-saffron-400' : 'text-gray-300 dark:text-gray-600 pointer-events-none'}
             `}
           >
             ← Chapter {chapterNum - 1}
           </Link>
           <Link
             href="/gita"
-            className="text-sm text-gray-500"
+            className="text-sm text-gray-500 dark:text-gray-400"
           >
             All Chapters
           </Link>
@@ -223,7 +223,7 @@ export default function ChapterPage() {
             href={chapterNum < 18 ? `/gita/${chapterNum + 1}` : '#'}
             className={`
               text-sm font-medium
-              ${chapterNum < 18 ? 'text-saffron-600' : 'text-gray-300 pointer-events-none'}
+              ${chapterNum < 18 ? 'text-saffron-600 dark:text-saffron-400' : 'text-gray-300 dark:text-gray-600 pointer-events-none'}
             `}
           >
             Chapter {chapterNum + 1} →

@@ -97,17 +97,17 @@ export default function VerseCard({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-colors">
       {/* Header */}
-      <div className="bg-gradient-to-r from-saffron-50 to-cream-100 px-6 py-4 border-b border-cream-200">
+      <div className="bg-gradient-to-r from-saffron-50 to-cream-100 dark:from-saffron-900/30 dark:to-gray-800 px-6 py-4 border-b border-cream-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
-          <span className="font-heading text-lg font-semibold text-saffron-800">
+          <span className="font-heading text-lg font-semibold text-saffron-800 dark:text-saffron-400">
             {verseRef}
           </span>
           <div className="flex items-center gap-2">
             <button
               onClick={handleShare}
-              className="p-2 rounded-full hover:bg-saffron-100 text-saffron-600 transition-colors"
+              className="p-2 rounded-full hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400 transition-colors"
               aria-label="Share verse"
             >
               <Share2 size={18} />
@@ -116,9 +116,9 @@ export default function VerseCard({
               <button
                 onClick={() => onBookmark(`${verse.chapter}:${verse.verse}`)}
                 className={`p-2 rounded-full transition-colors ${
-                  isBookmarked 
-                    ? 'bg-saffron-100 text-saffron-600' 
-                    : 'hover:bg-saffron-100 text-gray-400'
+                  isBookmarked
+                    ? 'bg-saffron-100 dark:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400'
+                    : 'hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-gray-400'
                 }`}
                 aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark verse'}
               >
@@ -147,7 +147,7 @@ export default function VerseCard({
         <div className="divider-gold my-6" />
 
         {/* Translation */}
-        <blockquote className="text-gray-700 text-lg leading-relaxed text-center italic">
+        <blockquote className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-center italic">
           "{translation}"
         </blockquote>
 
@@ -156,7 +156,7 @@ export default function VerseCard({
           <div className="mt-6">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="flex items-center justify-center gap-2 w-full py-2 text-saffron-600 hover:text-saffron-700 transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-2 text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
             >
               <span className="text-sm font-medium">
                 {expanded ? 'Hide Explanation' : 'What Does This Mean?'}
@@ -170,43 +170,43 @@ export default function VerseCard({
                 {hasCustomContent && verse.customContent && (
                   <>
                     {/* Simple Explanation */}
-                    <div className="p-4 bg-cream-50 rounded-lg">
-                      <p className="font-medium text-saffron-700 mb-2">What This Means:</p>
-                      <p className="text-gray-700 leading-7 text-[15px]">
+                    <div className="p-4 bg-cream-50 dark:bg-gray-700/50 rounded-lg">
+                      <p className="font-medium text-saffron-700 dark:text-saffron-400 mb-2">What This Means:</p>
+                      <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                         {verse.customContent.explanation.simple}
                       </p>
                     </div>
 
                     {/* Deeper Explanation (if available) */}
                     {verse.customContent.explanation.deeper && (
-                      <div className="p-4 bg-maroon-50 rounded-lg">
-                        <p className="font-medium text-maroon-700 mb-2">Going Deeper:</p>
-                        <p className="text-gray-700 leading-7 text-[15px]">
+                      <div className="p-4 bg-maroon-50 dark:bg-maroon-900/20 rounded-lg">
+                        <p className="font-medium text-maroon-700 dark:text-maroon-400 mb-2">Going Deeper:</p>
+                        <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                           {verse.customContent.explanation.deeper}
                         </p>
                       </div>
                     )}
 
                     {/* Practical Application */}
-                    <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-                      <p className="font-medium text-green-700 mb-2">How To Apply This:</p>
-                      <p className="text-gray-700 leading-7 text-[15px]">
+                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800">
+                      <p className="font-medium text-green-700 dark:text-green-400 mb-2">How To Apply This:</p>
+                      <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                         {verse.customContent.practicalApplication}
                       </p>
                     </div>
 
                     {/* Key Terms */}
                     {verse.customContent.keyTerms && verse.customContent.keyTerms.length > 0 && (
-                      <div className="p-4 bg-white rounded-lg border border-cream-200">
-                        <p className="font-medium text-gray-700 mb-3">Key Sanskrit Terms:</p>
+                      <div className="p-4 bg-white dark:bg-gray-700/50 rounded-lg border border-cream-200 dark:border-gray-600">
+                        <p className="font-medium text-gray-700 dark:text-gray-300 mb-3">Key Sanskrit Terms:</p>
                         <div className="flex flex-wrap gap-2">
                           {verse.customContent.keyTerms.map((term, idx) => (
                             <span
                               key={idx}
-                              className="inline-flex items-center gap-1 px-3 py-1 bg-saffron-50 rounded-full text-sm"
+                              className="inline-flex items-center gap-1 px-3 py-1 bg-saffron-50 dark:bg-saffron-900/30 rounded-full text-sm"
                             >
-                              <span className="font-medium text-saffron-700">{term.term}</span>
-                              <span className="text-gray-500">= {term.meaning}</span>
+                              <span className="font-medium text-saffron-700 dark:text-saffron-400">{term.term}</span>
+                              <span className="text-gray-500 dark:text-gray-400">= {term.meaning}</span>
                             </span>
                           ))}
                         </div>
@@ -217,18 +217,18 @@ export default function VerseCard({
 
                 {/* API Commentary (fallback when no custom content) */}
                 {!hasCustomContent && hasApiCommentary && (
-                  <div className="p-4 bg-cream-50 rounded-lg text-gray-600 text-sm leading-relaxed">
+                  <div className="p-4 bg-cream-50 dark:bg-gray-700/50 rounded-lg text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="font-medium text-saffron-700">Commentary:</p>
+                      <p className="font-medium text-saffron-700 dark:text-saffron-400">Commentary:</p>
                       {/* Language toggle - only show if both languages available */}
                       {englishCommentary && hindiCommentary && (
-                        <div className="flex items-center gap-1 bg-cream-200 rounded-full p-1">
+                        <div className="flex items-center gap-1 bg-cream-200 dark:bg-gray-600 rounded-full p-1">
                           <button
                             onClick={() => setCommentaryLang('en')}
                             className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${
                               commentaryLang === 'en'
-                                ? 'bg-white text-saffron-700 shadow-sm'
-                                : 'text-gray-500 hover:text-gray-700'
+                                ? 'bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 shadow-sm'
+                                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                             }`}
                           >
                             English
@@ -237,8 +237,8 @@ export default function VerseCard({
                             onClick={() => setCommentaryLang('hi')}
                             className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${
                               commentaryLang === 'hi'
-                                ? 'bg-white text-saffron-700 shadow-sm'
-                                : 'text-gray-500 hover:text-gray-700'
+                                ? 'bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 shadow-sm'
+                                : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                             }`}
                           >
                             Hindi
@@ -251,7 +251,7 @@ export default function VerseCard({
                     <div className="leading-relaxed">
                       {commentaryLang === 'en' && englishCommentary ? (
                         <div className="space-y-4">
-                          <p className="text-gray-700 leading-7 text-[15px]">
+                          <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                             {englishCommentary}
                           </p>
                           <p className="text-xs text-gray-400 text-right italic">
@@ -260,7 +260,7 @@ export default function VerseCard({
                         </div>
                       ) : hindiCommentary ? (
                         <div className="space-y-4">
-                          <p className="text-gray-700 leading-7 text-[15px]">
+                          <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                             {hindiCommentary}
                           </p>
                           <p className="text-xs text-gray-400 text-right italic">
@@ -269,7 +269,7 @@ export default function VerseCard({
                         </div>
                       ) : englishCommentary ? (
                         <div className="space-y-4">
-                          <p className="text-gray-700 leading-7 text-[15px]">
+                          <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                             {englishCommentary}
                           </p>
                           <p className="text-xs text-gray-400 text-right italic">

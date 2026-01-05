@@ -83,19 +83,19 @@ export default function VersePage() {
   ];
 
   return (
-    <main className="min-h-screen pb-24 bg-cream-100">
+    <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
-      <header className="bg-white border-b border-cream-200 sticky top-0 z-40">
+      <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href={`/gita/${chapterNum}`} className="p-2 -ml-2 rounded-lg hover:bg-cream-100">
-              <ArrowLeft size={24} className="text-gray-600" />
+            <Link href={`/gita/${chapterNum}`} className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+              <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div className="flex-1">
-              <h1 className="font-heading text-lg font-bold text-gray-900">
+              <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 Gita {chapterNum}.{verseNum}
               </h1>
-              <p className="text-sm text-saffron-600">
+              <p className="text-sm text-saffron-600 dark:text-saffron-400">
                 Chapter {chapterNum}: {chapterNames[chapterNum - 1]}
               </p>
             </div>
@@ -127,7 +127,7 @@ export default function VersePage() {
               {canGoPrev ? (
                 <Link
                   href={`/gita/${chapterNum}/${verseNum - 1}`}
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-white text-saffron-600 hover:bg-saffron-50 shadow-sm border border-cream-200 transition-all"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 transition-all"
                 >
                   <ChevronLeft size={20} />
                   Verse {verseNum - 1}
@@ -135,7 +135,7 @@ export default function VersePage() {
               ) : canGoPrevChapter ? (
                 <Link
                   href={`/gita/${chapterNum - 1}`}
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-white text-saffron-600 hover:bg-saffron-50 shadow-sm border border-cream-200 transition-all"
+                  className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 transition-all"
                 >
                   <ChevronLeft size={20} />
                   Ch. {chapterNum - 1}
@@ -169,13 +169,13 @@ export default function VersePage() {
             <div className="mt-8 text-center space-y-3">
               <Link
                 href={`/gita/${chapterNum}`}
-                className="text-sm text-saffron-600 font-medium hover:underline block"
+                className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline block"
               >
                 View all verses in Chapter {chapterNum}
               </Link>
               <Link
                 href="/gita"
-                className="text-sm text-gray-500 hover:underline block"
+                className="text-sm text-gray-500 dark:text-gray-400 hover:underline block"
               >
                 ← Back to All Chapters
               </Link>

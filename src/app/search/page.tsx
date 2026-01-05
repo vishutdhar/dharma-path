@@ -90,31 +90,31 @@ export default function SearchPage() {
     : glossary;
 
   return (
-    <main className="min-h-screen pb-24 bg-cream-100">
+    <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
-      <header className="bg-white border-b border-cream-200 sticky top-0 z-40">
+      <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="p-2 -ml-2 rounded-lg hover:bg-cream-100">
-              <ArrowLeft size={24} className="text-gray-600" />
+            <Link href="/" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+              <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
-            <h1 className="font-heading text-xl font-bold text-gray-900">
+            <h1 className="font-heading text-xl font-bold text-gray-900 dark:text-gray-100">
               Search & Explore
             </h1>
           </div>
 
           {/* Search Input */}
           <div className="relative">
-            <SearchIcon 
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" 
-              size={20} 
+            <SearchIcon
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+              size={20}
             />
             <input
               type="text"
               placeholder="Search terms, concepts..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-cream-50 border border-cream-200 rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
+              className="w-full pl-12 pr-4 py-3 bg-cream-50 dark:bg-gray-700 border border-cream-200 dark:border-gray-600 rounded-xl text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function SearchPage() {
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <Lightbulb className="text-saffron-500" size={20} />
-              <h2 className="font-heading text-lg font-semibold text-gray-900">
+              <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                 Popular Topics
               </h2>
             </div>
@@ -136,7 +136,7 @@ export default function SearchPage() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 bg-white border border-cream-200 rounded-full text-sm font-medium text-gray-700 hover:bg-saffron-50 hover:border-saffron-200 hover:text-saffron-700 transition-colors"
+                  className="px-4 py-2 bg-white dark:bg-gray-800 border border-cream-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-saffron-50 dark:hover:bg-saffron-900/30 hover:border-saffron-200 dark:hover:border-saffron-700 hover:text-saffron-700 dark:hover:text-saffron-400 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -149,7 +149,7 @@ export default function SearchPage() {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <BookOpen className="text-saffron-500" size={20} />
-            <h2 className="font-heading text-lg font-semibold text-gray-900">
+            <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
               {query ? 'Search Results' : 'Glossary of Terms'}
             </h2>
           </div>
@@ -157,19 +157,19 @@ export default function SearchPage() {
           {filteredGlossary.length > 0 ? (
             <div className="space-y-3">
               {filteredGlossary.map((item) => (
-                <div 
+                <div
                   key={item.term}
-                  className="bg-white rounded-xl p-4 shadow-sm border border-cream-200"
+                  className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 transition-colors"
                 >
                   <div className="flex items-baseline gap-3 mb-2">
-                    <h3 className="font-heading text-lg font-semibold text-gray-900">
+                    <h3 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                       {item.term}
                     </h3>
-                    <span className="font-sanskrit text-saffron-600 text-lg">
+                    <span className="font-sanskrit text-saffron-600 dark:text-saffron-400 text-lg">
                       {item.sanskrit}
                     </span>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                     {item.definition}
                   </p>
                 </div>
