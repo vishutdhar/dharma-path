@@ -19,12 +19,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#F97316" />
+        {/* Prevent flash of wrong theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const stored = localStorage.getItem('dharma_path_theme');
+                const theme = stored || 'system';
+                const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (isDark) document.documentElement.classList.add('dark');
+              })();
+            `,
+          }}
+        />
       </head>
-      <body className="min-h-screen bg-cream-100 bg-sacred-pattern">
+      <body className="min-h-screen bg-cream-100 dark:bg-gray-900 bg-sacred-pattern transition-colors duration-300">
         <Providers>
           {children}
         </Providers>

@@ -16,13 +16,17 @@ import {
   RefreshCw,
   User,
   Mail,
-  Lock
+  Lock,
+  Sun,
+  Moon,
+  Monitor
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import ProgressRing from '@/components/ProgressRing';
 import { curriculum, getLessonCount } from '@/data/curriculum';
 import { getProgress, getDaysSinceStart, resetProgress, UserProgress } from '@/lib/progress';
 import { useAuth } from '@/lib/auth';
+import { useTheme } from '@/lib/theme';
 
 export default function ProfilePage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
@@ -34,6 +38,7 @@ export default function ProfilePage() {
   const [authLoading, setAuthLoading] = useState(false);
 
   const { user, loading, signInWithEmail, signUpWithEmail, signOut, syncProgress, clearCloudProgress, isSyncing } = useAuth();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const userProgress = getProgress();
@@ -174,7 +179,7 @@ export default function ProfilePage() {
   ];
 
   return (
-    <main className="min-h-screen pb-24 bg-cream-100">
+    <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
       <header className="bg-gradient-to-br from-saffron-600 to-orange-500 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-6 pb-8">
@@ -195,13 +200,53 @@ export default function ProfilePage() {
             {completedLessons} of {totalLessons} lessons complete
           </p>
         </div>
-        <div className="h-6 bg-cream-100 rounded-t-[2rem]" />
+        <div className="h-6 bg-cream-100 dark:bg-gray-900 rounded-t-[2rem] transition-colors" />
       </header>
 
       {/* Content */}
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 -mt-2">
+        {/* Theme Toggle */}
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 mb-6 transition-colors">
+          <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-3">Appearance</h3>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setTheme('light')}
+              className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
+                theme === 'light'
+                  ? 'bg-saffron-500 text-white'
+                  : 'bg-cream-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              <Sun size={18} />
+              Light
+            </button>
+            <button
+              onClick={() => setTheme('dark')}
+              className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
+                theme === 'dark'
+                  ? 'bg-saffron-500 text-white'
+                  : 'bg-cream-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              <Moon size={18} />
+              Dark
+            </button>
+            <button
+              onClick={() => setTheme('system')}
+              className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
+                theme === 'system'
+                  ? 'bg-saffron-500 text-white'
+                  : 'bg-cream-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
+              }`}
+            >
+              <Monitor size={18} />
+              Auto
+            </button>
+          </div>
+        </div>
+
         {/* Account Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-cream-200 p-4 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 mb-6 transition-colors">
           {loading ? (
             <div className="flex items-center justify-center py-4">
               <RefreshCw className="animate-spin text-gray-400" size={20} />
@@ -210,12 +255,12 @@ export default function ProfilePage() {
             // Logged in state
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-saffron-100 rounded-full flex items-center justify-center">
-                  <User className="text-saffron-600" size={20} />
+                <div className="w-10 h-10 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center">
+                  <User className="text-saffron-600 dark:text-saffron-400" size={20} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-gray-900 truncate">{user.email}</p>
-                  <div className="flex items-center gap-1 text-sm text-green-600">
+                  <p className="font-medium text-gray-900 dark:text-gray-100 truncate">{user.email}</p>
+                  <div className="flex items-center gap-1 text-sm text-green-600 dark:text-green-400">
                     <Cloud size={14} />
                     <span>Progress synced to cloud</span>
                   </div>
@@ -225,14 +270,14 @@ export default function ProfilePage() {
                 <button
                   onClick={syncProgress}
                   disabled={isSyncing}
-                  className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-cream-100 hover:bg-cream-200 rounded-lg text-sm font-medium text-gray-700 transition-colors disabled:opacity-50"
+                  className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-cream-100 dark:bg-gray-700 hover:bg-cream-200 dark:hover:bg-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors disabled:opacity-50"
                 >
                   <RefreshCw size={16} className={isSyncing ? 'animate-spin' : ''} />
                   {isSyncing ? 'Syncing...' : 'Sync Now'}
                 </button>
                 <button
                   onClick={handleSignOut}
-                  className="flex items-center justify-center gap-2 py-2 px-4 bg-cream-100 hover:bg-cream-200 rounded-lg text-sm font-medium text-gray-700 transition-colors"
+                  className="flex items-center justify-center gap-2 py-2 px-4 bg-cream-100 dark:bg-gray-700 hover:bg-cream-200 dark:hover:bg-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors"
                 >
                   <LogOut size={16} />
                   Sign Out
@@ -245,12 +290,12 @@ export default function ProfilePage() {
               {!showAuthForm ? (
                 <div>
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-cream-100 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-cream-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
                       <CloudOff className="text-gray-400" size={20} />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">Sign in to sync</p>
-                      <p className="text-sm text-gray-500">Save progress across devices</p>
+                      <p className="font-medium text-gray-900 dark:text-gray-100">Sign in to sync</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Save progress across devices</p>
                     </div>
                   </div>
                   <button
@@ -266,7 +311,7 @@ export default function ProfilePage() {
               ) : (
                 <form onSubmit={handleAuth}>
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-medium text-gray-900">
+                    <h3 className="font-medium text-gray-900 dark:text-gray-100">
                       {isSignUp ? 'Create Account' : 'Sign In'}
                     </h3>
                     <button
@@ -275,7 +320,7 @@ export default function ProfilePage() {
                         setShowAuthForm(false);
                         setAuthError(null);
                       }}
-                      className="text-sm text-gray-500 hover:text-gray-700"
+                      className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     >
                       Cancel
                     </button>
@@ -290,7 +335,7 @@ export default function ProfilePage() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="w-full pl-10 pr-4 py-2.5 border border-cream-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-2.5 border border-cream-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
                       />
                     </div>
                     <div className="relative">
@@ -302,7 +347,7 @@ export default function ProfilePage() {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                         minLength={6}
-                        className="w-full pl-10 pr-4 py-2.5 border border-cream-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-2.5 border border-cream-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
                       />
                     </div>
                   </div>
@@ -327,7 +372,7 @@ export default function ProfilePage() {
                       setIsSignUp(!isSignUp);
                       setAuthError(null);
                     }}
-                    className="w-full mt-2 text-sm text-saffron-600 hover:text-saffron-700"
+                    className="w-full mt-2 text-sm text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300"
                   >
                     {isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Create one"}
                   </button>
@@ -342,15 +387,15 @@ export default function ProfilePage() {
           {stats.map((stat) => {
             const Icon = stat.icon;
             return (
-              <div 
+              <div
                 key={stat.label}
-                className="bg-white rounded-xl p-4 shadow-sm border border-cream-200"
+                className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 transition-colors"
               >
-                <div className={`w-10 h-10 ${stat.bg} rounded-full flex items-center justify-center mb-3`}>
+                <div className={`w-10 h-10 ${stat.bg} dark:opacity-80 rounded-full flex items-center justify-center mb-3`}>
                   <Icon className={stat.color} size={20} />
                 </div>
-                <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-sm text-gray-500">{stat.label}</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">{stat.value}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</p>
               </div>
             );
           })}
@@ -360,18 +405,18 @@ export default function ProfilePage() {
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-4">
             <Award className="text-gold-500" size={20} />
-            <h2 className="font-heading text-lg font-semibold text-gray-900">
+            <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
               Achievements
             </h2>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm border border-cream-200 overflow-hidden">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 overflow-hidden transition-colors">
             {achievements.map((achievement, index) => (
-              <div 
+              <div
                 key={achievement.id}
                 className={`
                   flex items-center gap-4 p-4
-                  ${index !== achievements.length - 1 ? 'border-b border-cream-100' : ''}
+                  ${index !== achievements.length - 1 ? 'border-b border-cream-100 dark:border-gray-700' : ''}
                   ${achievement.earned ? '' : 'opacity-50'}
                 `}
               >
@@ -379,15 +424,15 @@ export default function ProfilePage() {
                   {achievement.earned ? achievement.icon : '🔒'}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-gray-900">
+                  <h3 className="font-medium text-gray-900 dark:text-gray-100">
                     {achievement.title}
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
                     {achievement.description}
                   </p>
                 </div>
                 {achievement.earned && (
-                  <span className="text-green-500 text-sm font-medium">
+                  <span className="text-green-500 dark:text-green-400 text-sm font-medium">
                     Earned!
                   </span>
                 )}
@@ -399,10 +444,10 @@ export default function ProfilePage() {
         {/* Bookmarked Verses */}
         {progress?.bookmarks && progress.bookmarks.length > 0 && (
           <div className="mb-6">
-            <h2 className="font-heading text-lg font-semibold text-gray-900 mb-4">
+            <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Saved Verses
             </h2>
-            <div className="bg-white rounded-2xl shadow-sm border border-cream-200 p-4">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 transition-colors">
               <div className="flex flex-wrap gap-2">
                 {progress.bookmarks.map((ref) => {
                   const [chapter, verse] = ref.split(':');
@@ -410,7 +455,7 @@ export default function ProfilePage() {
                     <Link
                       key={ref}
                       href={`/gita/${chapter}`}
-                      className="px-3 py-1.5 bg-saffron-50 text-saffron-700 rounded-full text-sm font-medium hover:bg-saffron-100 transition-colors"
+                      className="px-3 py-1.5 bg-saffron-50 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400 rounded-full text-sm font-medium hover:bg-saffron-100 dark:hover:bg-saffron-900/50 transition-colors"
                     >
                       Gita {chapter}.{verse}
                     </Link>
@@ -426,7 +471,7 @@ export default function ProfilePage() {
           <button
             onClick={handleReset}
             disabled={isResetting}
-            className="flex items-center justify-center gap-2 w-full py-3 text-red-500 hover:text-red-600 disabled:text-red-300 text-sm font-medium"
+            className="flex items-center justify-center gap-2 w-full py-3 text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:text-red-300 dark:disabled:text-red-700 text-sm font-medium"
           >
             <RotateCcw size={16} className={isResetting ? 'animate-spin' : ''} />
             {isResetting ? 'Resetting...' : 'Reset All Progress'}

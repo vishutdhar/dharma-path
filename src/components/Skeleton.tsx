@@ -7,14 +7,14 @@ interface SkeletonProps {
 export function Skeleton({ className = '' }: SkeletonProps) {
   return (
     <div
-      className={`animate-pulse bg-cream-200 rounded ${className}`}
+      className={`animate-pulse bg-cream-200 dark:bg-gray-700 rounded ${className}`}
     />
   );
 }
 
 export function VerseCardSkeleton() {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-cream-200">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-cream-200 dark:border-gray-700 transition-colors">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <Skeleton className="h-5 w-20" />
@@ -33,7 +33,7 @@ export function VerseCardSkeleton() {
       <Skeleton className="h-4 w-5/6 mb-4" />
 
       {/* Translation */}
-      <div className="border-l-4 border-cream-300 pl-4 py-2">
+      <div className="border-l-4 border-cream-300 dark:border-gray-600 pl-4 py-2">
         <Skeleton className="h-4 w-full mb-2" />
         <Skeleton className="h-4 w-4/5 mb-2" />
         <Skeleton className="h-4 w-3/4" />
@@ -64,7 +64,7 @@ export function ChapterListSkeleton() {
   return (
     <div className="space-y-3">
       {[1, 2, 3, 4, 5].map((i) => (
-        <div key={i} className="bg-white rounded-xl p-4 border border-cream-200">
+        <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-cream-200 dark:border-gray-700 transition-colors">
           <div className="flex items-center gap-4">
             <Skeleton className="w-10 h-10 rounded-full" />
             <div className="flex-1">
@@ -103,7 +103,7 @@ export function ProfileStatsSkeleton() {
   return (
     <div className="grid grid-cols-2 gap-4">
       {[1, 2, 3, 4].map((i) => (
-        <div key={i} className="bg-white rounded-xl p-4 border border-cream-200">
+        <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-cream-200 dark:border-gray-700 transition-colors">
           <Skeleton className="w-8 h-8 rounded-full mx-auto mb-2" />
           <Skeleton className="h-6 w-12 mx-auto mb-1" />
           <Skeleton className="h-4 w-20 mx-auto" />

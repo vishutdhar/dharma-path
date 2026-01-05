@@ -87,7 +87,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen pb-24">
+    <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
       <header className="bg-gradient-to-br from-saffron-600 via-saffron-500 to-orange-400 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-12 pb-8">
@@ -121,7 +121,7 @@ export default function HomePage() {
         </div>
 
         {/* Curved bottom */}
-        <div className="h-6 bg-cream-100 rounded-t-[2rem]" />
+        <div className="h-6 bg-cream-100 dark:bg-gray-900 rounded-t-[2rem] transition-colors" />
       </header>
 
       {/* Content */}
@@ -129,23 +129,23 @@ export default function HomePage() {
         {/* Continue Learning Card */}
         {currentLevel && (
           <Link href="/learn">
-            <div className="bg-white rounded-2xl shadow-lg p-6 mb-6 card-hover border border-cream-200">
-              <div className="flex items-center gap-2 text-saffron-600 mb-2">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-6 card-hover border border-cream-200 dark:border-gray-700 transition-colors">
+              <div className="flex items-center gap-2 text-saffron-600 dark:text-saffron-400 mb-2">
                 <BookOpen size={18} />
                 <span className="text-sm font-medium">Continue Learning</span>
               </div>
-              
-              <h2 className="font-heading text-xl font-semibold text-gray-900 mb-1">
+
+              <h2 className="font-heading text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">
                 Level {currentLevel.id}: {currentLevel.title}
               </h2>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                 {currentLevel.subtitle}
               </p>
 
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <div className="h-2 bg-cream-200 rounded-full overflow-hidden">
-                    <div 
+                  <div className="h-2 bg-cream-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div
                       className="h-full progress-bar rounded-full"
                       style={{ width: `${overallProgress}%` }}
                     />
@@ -158,7 +158,7 @@ export default function HomePage() {
         )}
 
         {/* Verse of the Day */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-6 border border-cream-200">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden mb-6 border border-cream-200 dark:border-gray-700 transition-colors">
           <div className="bg-gradient-to-r from-gold-500 to-saffron-500 px-6 py-3">
             <div className="flex items-center gap-2 text-white">
               <Sparkles size={18} />
@@ -170,21 +170,21 @@ export default function HomePage() {
             <VerseOfDaySkeleton />
           ) : verseOfDay ? (
             <div className="p-6">
-              <p className="text-sm text-saffron-600 font-medium mb-3">
+              <p className="text-sm text-saffron-600 dark:text-saffron-400 font-medium mb-3">
                 {formatVerseRef(verseOfDay.chapter, verseOfDay.verse)}
               </p>
-              
+
               <p className="sanskrit-text text-lg mb-4 text-center">
                 {verseOfDay.slok?.split('\n')[0]}...
               </p>
 
-              <blockquote className="text-gray-700 italic text-center leading-relaxed">
+              <blockquote className="text-gray-700 dark:text-gray-300 italic text-center leading-relaxed">
                 "{verseOfDay.purohit?.et || verseOfDay.siva?.et || 'Translation loading...'}"
               </blockquote>
 
-              <Link 
+              <Link
                 href={`/gita/${verseOfDay.chapter}/${verseOfDay.verse}`}
-                className="mt-4 flex items-center justify-center gap-2 text-saffron-600 font-medium"
+                className="mt-4 flex items-center justify-center gap-2 text-saffron-600 dark:text-saffron-400 font-medium"
               >
                 Read Full Verse
                 <ChevronRight size={18} />
@@ -200,22 +200,22 @@ export default function HomePage() {
         {/* Quick Actions */}
         <div className="grid grid-cols-2 gap-4 mb-6">
           <Link href="/gita">
-            <div className="bg-white rounded-xl p-4 shadow-md card-hover border border-cream-200 text-center">
-              <div className="w-12 h-12 bg-saffron-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <BookOpen className="text-saffron-600" size={24} />
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md card-hover border border-cream-200 dark:border-gray-700 text-center transition-colors">
+              <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                <BookOpen className="text-saffron-600 dark:text-saffron-400" size={24} />
               </div>
-              <h3 className="font-medium text-gray-900">Read Gita</h3>
-              <p className="text-xs text-gray-500 mt-1">All 18 chapters</p>
+              <h3 className="font-medium text-gray-900 dark:text-gray-100">Read Gita</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">All 18 chapters</p>
             </div>
           </Link>
 
           <Link href="/learn">
-            <div className="bg-white rounded-xl p-4 shadow-md card-hover border border-cream-200 text-center">
-              <div className="w-12 h-12 bg-maroon-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Calendar className="text-maroon-600" size={24} />
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md card-hover border border-cream-200 dark:border-gray-700 text-center transition-colors">
+              <div className="w-12 h-12 bg-maroon-100 dark:bg-maroon-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Calendar className="text-maroon-600 dark:text-maroon-400" size={24} />
               </div>
-              <h3 className="font-medium text-gray-900">My Journey</h3>
-              <p className="text-xs text-gray-500 mt-1">Track progress</p>
+              <h3 className="font-medium text-gray-900 dark:text-gray-100">My Journey</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Track progress</p>
             </div>
           </Link>
         </div>
@@ -223,40 +223,40 @@ export default function HomePage() {
         {/* Learning Path Preview */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-heading text-lg font-semibold text-gray-900">
+            <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
               Your Learning Path
             </h2>
-            <Link href="/learn" className="text-sm text-saffron-600 font-medium">
+            <Link href="/learn" className="text-sm text-saffron-600 dark:text-saffron-400 font-medium">
               View All
             </Link>
           </div>
 
           <div className="space-y-3">
             {curriculum.slice(0, 3).map((level, index) => (
-              <div 
+              <div
                 key={level.id}
                 className={`
-                  flex items-center gap-4 p-4 rounded-xl
-                  ${index === 0 
-                    ? 'bg-saffron-50 border border-saffron-200' 
-                    : 'bg-white border border-cream-200'
+                  flex items-center gap-4 p-4 rounded-xl transition-colors
+                  ${index === 0
+                    ? 'bg-saffron-50 dark:bg-saffron-900/20 border border-saffron-200 dark:border-saffron-800'
+                    : 'bg-white dark:bg-gray-800 border border-cream-200 dark:border-gray-700'
                   }
                 `}
               >
                 <div className={`
                   w-10 h-10 rounded-full flex items-center justify-center font-bold
-                  ${index === 0 
-                    ? 'bg-saffron-500 text-white' 
-                    : 'bg-cream-200 text-cream-500'
+                  ${index === 0
+                    ? 'bg-saffron-500 text-white'
+                    : 'bg-cream-200 dark:bg-gray-700 text-cream-500 dark:text-gray-400'
                   }
                 `}>
                   {level.id}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-gray-900">{level.title}</h3>
-                  <p className="text-sm text-gray-500">{level.subtitle}</p>
+                  <h3 className="font-medium text-gray-900 dark:text-gray-100">{level.title}</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{level.subtitle}</p>
                 </div>
-                <ChevronRight className="text-gray-300" size={20} />
+                <ChevronRight className="text-gray-300 dark:text-gray-600" size={20} />
               </div>
             ))}
           </div>

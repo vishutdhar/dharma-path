@@ -11,6 +11,11 @@
   --color-gold: #D4A54A;
 }
 
+.dark {
+  --color-cream: #1a1a1a;
+  --color-gold: #E5B85A;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,6 +31,11 @@ body {
   line-height: 1.7;
 }
 
+.dark body {
+  background-color: #111827;
+  color: #E5E7EB;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -33,6 +43,10 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #FAF3E8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -52,11 +66,19 @@ body {
   color: #7C2D12;
 }
 
+.dark .sanskrit-text {
+  color: #FDBA74;
+}
+
 /* Transliteration styling */
 .transliteration {
   font-style: italic;
   color: #9A3412;
   letter-spacing: 0.02em;
+}
+
+.dark .transliteration {
+  color: #FB923C;
 }
 
 /* Golden divider */
@@ -75,6 +97,10 @@ body {
   box-shadow: 0 20px 40px rgba(154, 52, 18, 0.1);
 }
 
+.dark .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+}
+
 /* Progress bar animation */
 .progress-bar {
   background: linear-gradient(90deg, #F97316, #D4A54A);
@@ -87,6 +113,10 @@ body {
   border-left: 3px solid #D4A54A;
   padding: 1rem 1.5rem;
   margin: 1rem 0;
+}
+
+.dark .verse-highlight {
+  background: linear-gradient(120deg, rgba(249, 115, 22, 0.15) 0%, rgba(212, 165, 74, 0.15) 100%);
 }
 
 /* Button styles */
@@ -137,4 +167,9 @@ button:focus-visible {
 ::selection {
   background-color: rgba(249, 115, 22, 0.2);
   color: #7C2D12;
+}
+
+.dark ::selection {
+  background-color: rgba(249, 115, 22, 0.4);
+  color: #FFF8F0;
 }
