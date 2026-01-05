@@ -1,6 +1,7 @@
 // Progress tracking using localStorage
 
 const STORAGE_KEY = 'dharma_path_progress';
+const STREAK_UPDATED_KEY = 'dharma_path_streak_updated_today';
 
 export interface UserProgress {
   completedLessons: string[]; // Array of lesson IDs
@@ -16,41 +17,89 @@ const defaultProgress: UserProgress = {
   completedLessons: [],
   currentLevel: 1,
   currentLesson: null,
-  streak: 0,
+  streak: 1,
   lastVisit: new Date().toISOString(),
   startDate: new Date().toISOString(),
   bookmarks: [],
 };
 
-// Get progress from localStorage
+// Helper to get today's date string (YYYY-MM-DD) for comparison
+function getTodayDateString(): string {
+  return new Date().toISOString().split('T')[0];
+}
+
+// Check if streak was already updated today (prevents race condition)
+function wasStreakUpdatedToday(): boolean {
+  if (typeof window === 'undefined') return false;
+  const lastUpdate = sessionStorage.getItem(STREAK_UPDATED_KEY);
+  return lastUpdate === getTodayDateString();
+}
+
+// Mark streak as updated for today
+function markStreakUpdated(): void {
+  if (typeof window === 'undefined') return;
+  sessionStorage.setItem(STREAK_UPDATED_KEY, getTodayDateString());
+}
+
+// Get progress from localStorage (pure read - no side effects)
 export function getProgress(): UserProgress {
   if (typeof window === 'undefined') return defaultProgress;
-  
+
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (!stored) return defaultProgress;
-    
-    const progress = JSON.parse(stored) as UserProgress;
-    
-    // Update streak based on last visit
+    if (!stored) {
+      // First visit - initialize with defaults and save
+      saveProgress(defaultProgress);
+      return defaultProgress;
+    }
+
+    return JSON.parse(stored) as UserProgress;
+  } catch {
+    return defaultProgress;
+  }
+}
+
+// Update daily visit and streak - call this once on app load
+// This is separated from getProgress to prevent race conditions
+export function updateDailyVisit(): UserProgress {
+  if (typeof window === 'undefined') return defaultProgress;
+
+  // Prevent multiple updates in the same session
+  if (wasStreakUpdatedToday()) {
+    return getProgress();
+  }
+
+  try {
+    const progress = getProgress();
     const lastVisit = new Date(progress.lastVisit);
     const today = new Date();
+
+    // Compare dates without time
+    const lastVisitDate = lastVisit.toISOString().split('T')[0];
+    const todayDate = today.toISOString().split('T')[0];
+
+    if (lastVisitDate === todayDate) {
+      // Same day - no streak update needed
+      return progress;
+    }
+
+    // Calculate days difference
     const daysDiff = Math.floor(
       (today.getTime() - lastVisit.getTime()) / (1000 * 60 * 60 * 24)
     );
-    
+
     if (daysDiff === 1) {
       // Consecutive day - increment streak
       progress.streak += 1;
     } else if (daysDiff > 1) {
-      // Streak broken
+      // Streak broken - reset to 1
       progress.streak = 1;
     }
-    // If same day, keep streak as is
-    
+
     progress.lastVisit = today.toISOString();
     saveProgress(progress);
-    
+    markStreakUpdated();
+
     return progress;
   } catch {
     return defaultProgress;

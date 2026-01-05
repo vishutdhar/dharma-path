@@ -2,17 +2,33 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, notFound } from 'next/navigation';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import VerseCard from '@/components/VerseCard';
+import { VerseCardSkeleton } from '@/components/Skeleton';
 import { getChapter, getVerse, GitaChapter, GitaVerse } from '@/lib/api';
 import { toggleBookmark, isBookmarked } from '@/lib/progress';
+
+// Maximum verses per chapter (for validation)
+const MAX_VERSES_PER_CHAPTER: Record<number, number> = {
+  1: 47, 2: 72, 3: 43, 4: 42, 5: 29, 6: 47, 7: 30, 8: 28, 9: 34,
+  10: 42, 11: 55, 12: 20, 13: 35, 14: 27, 15: 20, 16: 24, 17: 28, 18: 78
+};
 
 export default function VersePage() {
   const params = useParams();
   const chapterNum = parseInt(params.chapter as string);
   const verseNum = parseInt(params.verse as string);
+
+  // Validate chapter and verse numbers
+  const maxVerses = MAX_VERSES_PER_CHAPTER[chapterNum];
+  if (
+    isNaN(chapterNum) || chapterNum < 1 || chapterNum > 18 ||
+    isNaN(verseNum) || verseNum < 1 || (maxVerses && verseNum > maxVerses)
+  ) {
+    notFound();
+  }
 
   const [chapter, setChapter] = useState<GitaChapter | null>(null);
   const [verse, setVerse] = useState<GitaVerse | null>(null);
@@ -95,12 +111,7 @@ export default function VersePage() {
       {/* Content */}
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-6">
         {loading ? (
-          <div className="flex items-center justify-center py-20">
-            <div className="text-center">
-              <div className="w-12 h-12 border-4 border-saffron-200 border-t-saffron-500 rounded-full animate-spin mx-auto mb-4" />
-              <p className="text-gray-500">Loading verse...</p>
-            </div>
-          </div>
+          <VerseCardSkeleton />
         ) : verse ? (
           <>
             {/* Verse Card */}

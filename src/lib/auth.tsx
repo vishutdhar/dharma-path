@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { User, Session } from '@supabase/supabase-js';
-import { supabase, DbUserProgress } from './supabase';
+import { supabase, DbUserProgress, isSupabaseConfigured } from './supabase';
 import { getProgress, saveProgress, UserProgress } from './progress';
 
 interface AuthContextType {
@@ -26,13 +26,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isSyncing, setIsSyncing] = useState(false);
 
   useEffect(() => {
-    // Check if Supabase is properly configured
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-    if (!supabaseUrl || !supabaseKey) {
-      // Supabase not configured - skip auth and just use local storage
-      console.log('Supabase not configured - using local storage only');
+    // Skip all Supabase operations if not properly configured
+    if (!isSupabaseConfigured) {
       setLoading(false);
       return;
     }
@@ -40,7 +35,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Get initial session with timeout
     const timeoutId = setTimeout(() => {
       // If getSession takes too long, just proceed without auth
-      console.log('Auth session check timed out - using local storage');
+      if (process.env.NODE_ENV === 'development') {
+        console.info('[Dharma Path] Auth check timed out - continuing with local storage');
+      }
       setLoading(false);
     }, 5000);
 
@@ -48,7 +45,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       clearTimeout(timeoutId);
 
       if (error) {
-        console.error('Error getting session:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('[Dharma Path] Error getting session:', error);
+        }
         setLoading(false);
         return;
       }
@@ -63,7 +62,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     }).catch((error) => {
       clearTimeout(timeoutId);
-      console.error('Failed to get auth session:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[Dharma Path] Failed to get auth session:', error);
+      }
       setLoading(false);
     });
 
@@ -97,6 +98,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Sync local progress with cloud
   // Strategy: Merge local and cloud, keeping the most complete data
   async function syncProgressWithCloud(userId: string) {
+    // Skip if Supabase not configured
+    if (!isSupabaseConfigured) {
+      return;
+    }
+
     setIsSyncing(true);
     try {
       const localProgress = getProgress();
@@ -110,13 +116,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const result = await withTimeout(
         Promise.resolve(fetchPromise),
         10000,
-        'Sync timed out - using local storage'
+        'Sync timed out'
       );
       const { data: cloudProgress, error } = result as { data: DbUserProgress | null; error: any };
 
       if (error && error.code !== 'PGRST116') {
         // PGRST116 = no rows found (new user)
-        console.error('Error fetching cloud progress:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('[Dharma Path] Error fetching cloud progress:', error);
+        }
         return;
       }
 
@@ -142,7 +150,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         );
       }
     } catch (error) {
-      console.error('Error syncing progress:', error);
+      // Silently fail in production - user still has local progress
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[Dharma Path] Error syncing progress:', error);
+      }
     } finally {
       setIsSyncing(false);
     }
@@ -188,6 +199,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Upload progress to cloud
   async function uploadProgressToCloud(userId: string, progress: UserProgress) {
+    if (!isSupabaseConfigured) return;
+
     const { error } = await supabase
       .from('user_progress')
       .upsert({
@@ -203,8 +216,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         onConflict: 'user_id'
       });
 
-    if (error) {
-      console.error('Error uploading progress:', error);
+    if (error && process.env.NODE_ENV === 'development') {
+      console.error('[Dharma Path] Error uploading progress:', error);
     }
   }
 
@@ -218,8 +231,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Clear cloud progress (for reset functionality)
   // Returns true if successful, false if failed
   async function clearCloudProgress(): Promise<boolean> {
-    if (!user) {
-      return true; // No user = nothing to clear
+    if (!user || !isSupabaseConfigured) {
+      return true; // No user or no cloud = nothing to clear
     }
 
     try {
@@ -235,14 +248,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { error } = result as { error: any };
 
       if (error) {
-        console.error('Error clearing cloud progress:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.error('[Dharma Path] Error clearing cloud progress:', error);
+        }
         return false;
       }
 
-      console.log('Cloud progress cleared successfully');
       return true;
     } catch (error) {
-      console.error('Error clearing cloud progress:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[Dharma Path] Error clearing cloud progress:', error);
+      }
       return false;
     }
   }

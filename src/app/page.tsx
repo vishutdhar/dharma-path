@@ -12,8 +12,9 @@ import {
 import Navigation from '@/components/Navigation';
 import ProgressRing from '@/components/ProgressRing';
 import Onboarding from '@/components/Onboarding';
+import { VerseOfDaySkeleton } from '@/components/Skeleton';
 import { curriculum, getLessonCount } from '@/data/curriculum';
-import { getProgress, getDaysSinceStart, UserProgress } from '@/lib/progress';
+import { getProgress, getDaysSinceStart, UserProgress, updateDailyVisit } from '@/lib/progress';
 import { getVerseOfTheDay, getVerse, GitaVerse, formatVerseRef } from '@/lib/api';
 
 const ONBOARDING_KEY = 'dharma_path_onboarding_complete';
@@ -25,24 +26,45 @@ export default function HomePage() {
   const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
+    // Track if component is still mounted to prevent memory leaks
+    let isMounted = true;
+
     // Check if user has completed onboarding
     const hasCompletedOnboarding = localStorage.getItem(ONBOARDING_KEY);
     if (!hasCompletedOnboarding) {
       setShowOnboarding(true);
     }
 
-    // Load progress
-    const userProgress = getProgress();
-    setProgress(userProgress);
+    // Load progress and update daily visit (streak calculation)
+    // Using updateDailyVisit() ensures streak is only calculated once per session
+    const userProgress = updateDailyVisit();
+    if (isMounted) {
+      setProgress(userProgress);
+    }
 
-    // Load verse of the day
+    // Load verse of the day with cleanup
     const loadVerse = async () => {
-      const { chapter, verse } = getVerseOfTheDay();
-      const verseData = await getVerse(chapter, verse);
-      setVerseOfDay(verseData);
-      setLoading(false);
+      try {
+        const { chapter, verse } = getVerseOfTheDay();
+        const verseData = await getVerse(chapter, verse);
+        // Only update state if component is still mounted
+        if (isMounted) {
+          setVerseOfDay(verseData);
+          setLoading(false);
+        }
+      } catch (error) {
+        // Handle error gracefully
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
     };
     loadVerse();
+
+    // Cleanup function to prevent state updates on unmounted component
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   // Calculate overall progress
@@ -145,9 +167,7 @@ export default function HomePage() {
           </div>
 
           {loading ? (
-            <div className="p-6 text-center text-gray-400">
-              Loading today's wisdom...
-            </div>
+            <VerseOfDaySkeleton />
           ) : verseOfDay ? (
             <div className="p-6">
               <p className="text-sm text-saffron-600 font-medium mb-3">

@@ -2,16 +2,22 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, notFound } from 'next/navigation';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import VerseCard from '@/components/VerseCard';
+import { VerseCardSkeleton } from '@/components/Skeleton';
 import { getChapter, getVerse, GitaChapter, GitaVerse } from '@/lib/api';
 import { toggleBookmark, isBookmarked } from '@/lib/progress';
 
 export default function ChapterPage() {
   const params = useParams();
   const chapterNum = parseInt(params.chapter as string);
+
+  // Validate chapter number (Bhagavad Gita has exactly 18 chapters)
+  if (isNaN(chapterNum) || chapterNum < 1 || chapterNum > 18) {
+    notFound();
+  }
 
   const [chapter, setChapter] = useState<GitaChapter | null>(null);
   const [verses, setVerses] = useState<GitaVerse[]>([]);
@@ -122,12 +128,7 @@ export default function ChapterPage() {
       {/* Content */}
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-6">
         {loading ? (
-          <div className="flex items-center justify-center py-20">
-            <div className="text-center">
-              <div className="w-12 h-12 border-4 border-saffron-200 border-t-saffron-500 rounded-full animate-spin mx-auto mb-4" />
-              <p className="text-gray-500">Loading chapter...</p>
-            </div>
-          </div>
+          <VerseCardSkeleton />
         ) : currentVerseData ? (
           <>
             {/* Verse Card */}

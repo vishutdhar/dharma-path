@@ -4,14 +4,27 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
+// Check if Supabase is properly configured (not empty and not placeholder)
+export const isSupabaseConfigured = Boolean(
+  supabaseUrl &&
+  supabaseAnonKey &&
+  !supabaseUrl.includes('placeholder') &&
+  supabaseUrl.includes('supabase')
+);
+
 // Create a client that handles missing credentials gracefully
 function createSupabaseClient(): SupabaseClient {
-  if (!supabaseUrl || !supabaseAnonKey) {
-    // Return a dummy client that won't make real requests
-    // This prevents crashes when Supabase isn't configured
-    console.warn('Supabase credentials not configured - cloud sync disabled');
+  if (!isSupabaseConfigured) {
+    // Log once at startup (only in development)
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      console.info('[Dharma Path] Running in offline mode - cloud sync disabled');
+    }
   }
-  return createClient(supabaseUrl || 'https://placeholder.supabase.co', supabaseAnonKey || 'placeholder');
+  // Still create client (needed for type safety), but it won't be used if not configured
+  return createClient(
+    supabaseUrl || 'https://placeholder.supabase.co',
+    supabaseAnonKey || 'placeholder'
+  );
 }
 
 export const supabase = createSupabaseClient();

@@ -92,17 +92,17 @@ export default function LessonPage() {
     completeLesson(lessonId);
     setIsCompleted(true);
     setJustCompleted(true);
+    // User will manually navigate using the "Continue" button shown in UI
+  };
 
-    // Auto-navigate to next lesson after a short delay
-    setTimeout(() => {
-      const nextLesson = context?.nextLesson || findNextLessonGlobal(lessonId);
-      if (nextLesson) {
-        router.push(`/learn/${nextLesson.id}`);
-      } else {
-        // All done - go back to learn page
-        router.push('/learn');
-      }
-    }, 1500);
+  const handleContinue = () => {
+    const nextLesson = context?.nextLesson || findNextLessonGlobal(lessonId);
+    if (nextLesson) {
+      router.push(`/learn/${nextLesson.id}`);
+    } else {
+      // All done - go back to learn page
+      router.push('/learn');
+    }
   };
 
   if (!context) {
@@ -195,6 +195,11 @@ export default function LessonPage() {
           <div className="p-6">
             {lessonContent[lessonId] ? (
               // Render lesson content
+              // SECURITY NOTE: lessonContent comes from controlled static file (src/data/lessonContent.ts)
+              // Not user-generated content. For production with external content, use DOMPurify:
+              // npm install dompurify @types/dompurify
+              // import DOMPurify from 'dompurify';
+              // dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(lessonContent[lessonId]) }}
               <div
                 className="prose prose-gray max-w-none prose-headings:font-heading prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-blockquote:border-saffron-500 prose-blockquote:bg-saffron-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-strong:text-gray-900"
                 dangerouslySetInnerHTML={{ __html: lessonContent[lessonId] }}
@@ -220,13 +225,26 @@ export default function LessonPage() {
           <div className="px-6 py-6 bg-cream-50 border-t border-cream-200">
             {justCompleted ? (
               <div className="text-center">
-                <div className="flex items-center justify-center gap-2 text-green-600 mb-2">
+                <div className="flex items-center justify-center gap-2 text-green-600 mb-4">
                   <CheckCircle2 size={24} />
                   <span className="font-semibold">Lesson Completed!</span>
                 </div>
-                <p className="text-sm text-gray-500">
-                  Moving to next lesson...
-                </p>
+                {globalNextLesson ? (
+                  <button
+                    onClick={handleContinue}
+                    className="w-full py-4 bg-saffron-500 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg flex items-center justify-center gap-2"
+                  >
+                    Continue to Next Lesson
+                    <ChevronRight size={20} />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => router.push('/learn')}
+                    className="w-full py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-colors shadow-lg"
+                  >
+                    All Done! Back to Learning Path
+                  </button>
+                )}
               </div>
             ) : isCompleted ? (
               <div className="flex items-center justify-center gap-2 text-green-600">

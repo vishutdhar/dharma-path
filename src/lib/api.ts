@@ -36,7 +36,10 @@ const API_BASE = 'https://vedicscriptures.github.io';
 
 // Cache settings
 const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
-const cache: Map<string, { data: any; timestamp: number }> = new Map();
+const CACHE_STORAGE_KEY = 'dharma_path_api_cache';
+
+// In-memory cache (fallback if sessionStorage unavailable)
+const memoryCache: Map<string, { data: any; timestamp: number }> = new Map();
 
 export interface GitaVerse {
   chapter: number;
@@ -93,18 +96,62 @@ export interface GitaChapter {
   };
 }
 
-// Helper to get cached data
+// Helper to get cached data (tries sessionStorage first, then memory)
 function getFromCache<T>(key: string): T | null {
-  const cached = cache.get(key);
-  if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
-    return cached.data as T;
+  // Check memory cache first (faster)
+  const memCached = memoryCache.get(key);
+  if (memCached && Date.now() - memCached.timestamp < CACHE_DURATION) {
+    return memCached.data as T;
   }
+
+  // Try sessionStorage (persists across page navigations)
+  if (typeof window !== 'undefined') {
+    try {
+      const stored = sessionStorage.getItem(CACHE_STORAGE_KEY);
+      if (stored) {
+        const cache = JSON.parse(stored);
+        const cached = cache[key];
+        if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
+          // Also populate memory cache for faster subsequent access
+          memoryCache.set(key, cached);
+          return cached.data as T;
+        }
+      }
+    } catch {
+      // sessionStorage not available or corrupted
+    }
+  }
+
   return null;
 }
 
-// Helper to set cache
+// Helper to set cache (writes to both memory and sessionStorage)
 function setCache(key: string, data: any): void {
-  cache.set(key, { data, timestamp: Date.now() });
+  const cacheEntry = { data, timestamp: Date.now() };
+
+  // Always set memory cache
+  memoryCache.set(key, cacheEntry);
+
+  // Try to persist to sessionStorage
+  if (typeof window !== 'undefined') {
+    try {
+      const stored = sessionStorage.getItem(CACHE_STORAGE_KEY);
+      const cache = stored ? JSON.parse(stored) : {};
+
+      // Clean up expired entries to prevent storage bloat
+      const now = Date.now();
+      for (const k of Object.keys(cache)) {
+        if (now - cache[k].timestamp > CACHE_DURATION) {
+          delete cache[k];
+        }
+      }
+
+      cache[key] = cacheEntry;
+      sessionStorage.setItem(CACHE_STORAGE_KEY, JSON.stringify(cache));
+    } catch {
+      // sessionStorage quota exceeded or not available - memory cache still works
+    }
+  }
 }
 
 // Convert fallback chapter to API format
