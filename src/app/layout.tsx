@@ -56,6 +56,24 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Register Service Worker for offline support */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                      console.log('[SW] Registered:', registration.scope);
+                    })
+                    .catch(function(error) {
+                      console.log('[SW] Registration failed:', error);
+                    });
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-cream-100 dark:bg-gray-900 bg-sacred-pattern transition-colors duration-300">
         <Providers>
