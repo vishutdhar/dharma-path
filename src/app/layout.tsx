@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: 'Dharma Path | Finally Understand Hinduism',
   description: 'A structured learning path for beginners to understand Hinduism, from core concepts to the Bhagavad Gita.',
   keywords: ['Hinduism', 'Bhagavad Gita', 'learn hinduism', 'dharma', 'karma', 'spiritual learning'],
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Dharma Path',
+  },
   openGraph: {
     title: 'Dharma Path | Finally Understand Hinduism',
     description: 'The starting point you never had. Learn Hinduism step by step.',
@@ -21,8 +27,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#F97316" />
+        {/* Favicon and PWA Icons */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+
+        {/* PWA Theme Colors */}
+        <meta name="theme-color" content="#F97316" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1F2937" media="(prefers-color-scheme: dark)" />
+
+        {/* iOS PWA Settings */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Dharma Path" />
+
+        {/* Microsoft PWA Settings */}
+        <meta name="msapplication-TileColor" content="#F97316" />
+        <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
         {/* Prevent flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{

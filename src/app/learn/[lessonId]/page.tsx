@@ -201,7 +201,7 @@ export default function LessonPage() {
               // import DOMPurify from 'dompurify';
               // dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(lessonContent[lessonId]) }}
               <div
-                className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-heading prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-blockquote:border-saffron-500 prose-blockquote:bg-saffron-50 dark:prose-blockquote:bg-saffron-900/30 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-strong:text-gray-900 dark:prose-strong:text-gray-100"
+                className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-heading prose-h2:text-xl prose-h2:font-semibold prose-h2:text-gray-900 dark:prose-h2:text-gray-100 prose-h2:mt-8 prose-h2:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-blockquote:border-saffron-500 prose-blockquote:bg-saffron-50 dark:prose-blockquote:bg-saffron-900/30 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-strong:text-gray-900 dark:prose-strong:text-gray-100"
                 dangerouslySetInnerHTML={{ __html: lessonContent[lessonId] }}
               />
             ) : (
