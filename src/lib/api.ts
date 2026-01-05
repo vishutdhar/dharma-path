@@ -13,11 +13,24 @@ import {
 } from '@/data/gitaData';
 
 // Import our custom chapter content
+import chapter1 from '@/data/chapters/chapter1';
 import chapter2 from '@/data/chapters/chapter2';
 import chapter3 from '@/data/chapters/chapter3';
 import chapter4 from '@/data/chapters/chapter4';
 import chapter5 from '@/data/chapters/chapter5';
 import chapter6 from '@/data/chapters/chapter6';
+import chapter7 from '@/data/chapters/chapter7';
+import chapter8 from '@/data/chapters/chapter8';
+import chapter9 from '@/data/chapters/chapter9';
+import chapter10 from '@/data/chapters/chapter10';
+import chapter11 from '@/data/chapters/chapter11';
+import chapter12 from '@/data/chapters/chapter12';
+import chapter13 from '@/data/chapters/chapter13';
+import chapter14 from '@/data/chapters/chapter14';
+import chapter15 from '@/data/chapters/chapter15';
+import chapter16 from '@/data/chapters/chapter16';
+import chapter17 from '@/data/chapters/chapter17';
+import chapter18 from '@/data/chapters/chapter18';
 
 const API_BASE = 'https://vedicscriptures.github.io';
 
@@ -176,11 +189,24 @@ export async function getChapter(chapterNumber: number): Promise<GitaChapter | n
 function getCustomContent(chapterNum: number, verseNum: number) {
   // Map of our custom chapters
   const customChapters: { [key: number]: typeof chapter2 } = {
+    1: chapter1,
     2: chapter2,
     3: chapter3,
     4: chapter4,
     5: chapter5,
     6: chapter6,
+    7: chapter7,
+    8: chapter8,
+    9: chapter9,
+    10: chapter10,
+    11: chapter11,
+    12: chapter12,
+    13: chapter13,
+    14: chapter14,
+    15: chapter15,
+    16: chapter16,
+    17: chapter17,
+    18: chapter18,
   };
 
   const chapter = customChapters[chapterNum];
