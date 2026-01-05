@@ -1,0 +1,270 @@
+// Bhagavad Gita API Integration
+// Using the vedicscriptures API: https://vedicscriptures.github.io/
+// With caching and fallback to local data
+
+import {
+  chapters as fallbackChapters,
+  keyVerses as fallbackVerses,
+  getChapterFallback,
+  getVerseFallback,
+  GitaChapterData,
+  GitaVerseData
+} from '@/data/gitaData';
+
+const API_BASE = 'https://vedicscriptures.github.io';
+
+// Cache settings
+const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
+const cache: Map<string, { data: any; timestamp: number }> = new Map();
+
+export interface GitaVerse {
+  chapter: number;
+  verse: number;
+  slok: string; // Sanskrit
+  transliteration: string;
+  // Primary English translations from the API
+  purohit?: {
+    et: string; // English translation by Shri Purohit Swami
+  };
+  siva?: {
+    et: string; // English translation by Swami Sivananda
+  };
+  tej?: {
+    ht?: string; // Hindi translation
+    et?: string; // English translation (not always available)
+  };
+  spiura?: {
+    et: string;
+    author: string;
+  };
+  chinmay?: {
+    hc: string;
+  };
+  // Additional commentaries available
+  [key: string]: any;
+}
+
+export interface GitaChapter {
+  chapter_number: number;
+  verses_count: number;
+  name: string;
+  translation?: string;
+  transliteration?: string;
+  meaning?: {
+    en: string;
+    hi: string;
+  };
+  summary?: {
+    en: string;
+    hi: string;
+  };
+}
+
+// Helper to get cached data
+function getFromCache<T>(key: string): T | null {
+  const cached = cache.get(key);
+  if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
+    return cached.data as T;
+  }
+  return null;
+}
+
+// Helper to set cache
+function setCache(key: string, data: any): void {
+  cache.set(key, { data, timestamp: Date.now() });
+}
+
+// Convert fallback chapter to API format
+function convertFallbackChapter(fallback: GitaChapterData): GitaChapter {
+  return {
+    chapter_number: fallback.chapter_number,
+    verses_count: fallback.verses_count,
+    name: fallback.name,
+    translation: fallback.name_meaning,
+    meaning: {
+      en: fallback.name_meaning,
+      hi: ''
+    },
+    summary: {
+      en: fallback.summary,
+      hi: ''
+    }
+  };
+}
+
+// Convert fallback verse to API format
+function convertFallbackVerse(fallback: GitaVerseData): GitaVerse {
+  return {
+    chapter: fallback.chapter,
+    verse: fallback.verse,
+    slok: fallback.slok,
+    transliteration: fallback.transliteration,
+    purohit: {
+      et: fallback.translation
+    }
+  };
+}
+
+// Fetch all chapters with caching and fallback
+export async function getAllChapters(): Promise<GitaChapter[]> {
+  const cacheKey = 'all-chapters';
+
+  // Check cache first
+  const cached = getFromCache<GitaChapter[]>(cacheKey);
+  if (cached) return cached;
+
+  try {
+    const response = await fetch(`${API_BASE}/chapters`, {
+      next: { revalidate: 3600 } // Next.js cache for 1 hour
+    });
+    if (!response.ok) throw new Error('Failed to fetch chapters');
+    const data = await response.json();
+    setCache(cacheKey, data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching chapters, using fallback:', error);
+    // Return fallback data
+    return fallbackChapters.map(convertFallbackChapter);
+  }
+}
+
+// Fetch a specific chapter with caching and fallback
+export async function getChapter(chapterNumber: number): Promise<GitaChapter | null> {
+  const cacheKey = `chapter-${chapterNumber}`;
+
+  // Check cache first
+  const cached = getFromCache<GitaChapter>(cacheKey);
+  if (cached) return cached;
+
+  try {
+    const response = await fetch(`${API_BASE}/chapter/${chapterNumber}`, {
+      next: { revalidate: 3600 }
+    });
+    if (!response.ok) throw new Error('Failed to fetch chapter');
+    const data = await response.json();
+    setCache(cacheKey, data);
+    return data;
+  } catch (error) {
+    console.error(`Error fetching chapter ${chapterNumber}, using fallback:`, error);
+    // Return fallback data
+    const fallback = getChapterFallback(chapterNumber);
+    return fallback ? convertFallbackChapter(fallback) : null;
+  }
+}
+
+// Fetch a specific verse with caching and fallback
+export async function getVerse(chapter: number, verse: number): Promise<GitaVerse | null> {
+  const cacheKey = `verse-${chapter}-${verse}`;
+
+  // Check cache first
+  const cached = getFromCache<GitaVerse>(cacheKey);
+  if (cached) return cached;
+
+  try {
+    const response = await fetch(`${API_BASE}/slok/${chapter}/${verse}`, {
+      next: { revalidate: 3600 }
+    });
+    if (!response.ok) throw new Error('Failed to fetch verse');
+    const data = await response.json();
+    setCache(cacheKey, data);
+    return data;
+  } catch (error) {
+    console.error(`Error fetching verse ${chapter}.${verse}, using fallback:`, error);
+    // Return fallback data if we have it
+    const fallback = getVerseFallback(chapter, verse);
+    if (fallback) {
+      return convertFallbackVerse(fallback);
+    }
+    // If no fallback, return a minimal verse object
+    return {
+      chapter,
+      verse,
+      slok: 'Verse not available offline',
+      transliteration: '',
+      purohit: {
+        et: 'This verse is not available offline. Please check your internet connection.'
+      }
+    };
+  }
+}
+
+// Fetch all verses in a chapter (with batching for performance)
+export async function getChapterVerses(chapterNumber: number): Promise<GitaVerse[]> {
+  const chapter = await getChapter(chapterNumber);
+  if (!chapter) return [];
+
+  const verses: GitaVerse[] = [];
+
+  // Fetch verses in parallel batches for better performance
+  const batchSize = 10;
+  for (let i = 1; i <= chapter.verses_count; i += batchSize) {
+    const batch = [];
+    for (let j = i; j < Math.min(i + batchSize, chapter.verses_count + 1); j++) {
+      batch.push(getVerse(chapterNumber, j));
+    }
+    const results = await Promise.all(batch);
+    verses.push(...results.filter((v): v is GitaVerse => v !== null));
+  }
+
+  return verses;
+}
+
+// Get the "Verse of the Day" - based on date for consistency
+export function getVerseOfTheDay(): { chapter: number; verse: number } {
+  // Create a predictable "random" verse based on the date
+  const today = new Date();
+  const dayOfYear = Math.floor(
+    (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000
+  );
+
+  // Famous verses to cycle through
+  const famousVerses = [
+    { chapter: 2, verse: 47 },  // Karma yoga - rights to action only
+    { chapter: 2, verse: 14 },  // Pleasure and pain are temporary
+    { chapter: 2, verse: 22 },  // Soul changing bodies like clothes
+    { chapter: 2, verse: 20 },  // The soul is eternal
+    { chapter: 3, verse: 19 },  // Do your duty without attachment
+    { chapter: 4, verse: 7 },   // Whenever dharma declines...
+    { chapter: 4, verse: 8 },   // ...I manifest myself
+    { chapter: 6, verse: 5 },   // Elevate yourself through your mind
+    { chapter: 9, verse: 22 },  // I carry what they lack
+    { chapter: 11, verse: 32 }, // I am time, destroyer of worlds
+    { chapter: 18, verse: 66 }, // Surrender unto me
+  ];
+
+  return famousVerses[dayOfYear % famousVerses.length];
+}
+
+// Format verse reference (e.g., "Gita 2.47")
+export function formatVerseRef(chapter: number, verse: number): string {
+  return `Gita ${chapter}.${verse}`;
+}
+
+// Get simple English translation (prioritizing certain commentators)
+export function getSimpleTranslation(verse: GitaVerse): string {
+  // Priority order for simple translations
+  // purohit and siva are the primary English translation fields from the API
+  if (verse.purohit?.et) return verse.purohit.et;
+  if (verse.siva?.et) return verse.siva.et;
+  if (verse.tej?.et) return verse.tej.et;
+  if (verse.spiura?.et) return verse.spiura.et;
+
+  // Fallback: try to find any English translation
+  for (const key of Object.keys(verse)) {
+    if (typeof verse[key] === 'object' && verse[key]?.et) {
+      return verse[key].et;
+    }
+  }
+
+  return 'Translation not available';
+}
+
+// Prefetch chapters for faster subsequent loads
+export async function prefetchChapters(): Promise<void> {
+  try {
+    await getAllChapters();
+    console.log('Chapters prefetched successfully');
+  } catch (error) {
+    console.error('Failed to prefetch chapters:', error);
+  }
+}
