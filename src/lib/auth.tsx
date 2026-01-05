@@ -86,6 +86,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
+  // Helper to add timeout to promises
+  function withTimeout<T>(promise: Promise<T>, ms: number, errorMsg: string): Promise<T> {
+    const timeout = new Promise<never>((_, reject) => {
+      setTimeout(() => reject(new Error(errorMsg)), ms);
+    });
+    return Promise.race([promise, timeout]);
+  }
+
   // Sync local progress with cloud
   // Strategy: Merge local and cloud, keeping the most complete data
   async function syncProgressWithCloud(userId: string) {
@@ -93,12 +101,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       const localProgress = getProgress();
 
-      // Fetch cloud progress
-      const { data: cloudProgress, error } = await supabase
+      // Fetch cloud progress with 10 second timeout
+      const fetchPromise = supabase
         .from('user_progress')
         .select('*')
         .eq('user_id', userId)
         .single();
+      const result = await withTimeout(
+        Promise.resolve(fetchPromise),
+        10000,
+        'Sync timed out - using local storage'
+      );
+      const { data: cloudProgress, error } = result as { data: DbUserProgress | null; error: any };
 
       if (error && error.code !== 'PGRST116') {
         // PGRST116 = no rows found (new user)
@@ -108,7 +122,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       if (!cloudProgress) {
         // New user - upload local progress to cloud
-        await uploadProgressToCloud(userId, localProgress);
+        await withTimeout(
+          uploadProgressToCloud(userId, localProgress),
+          10000,
+          'Upload timed out'
+        );
       } else {
         // Existing user - merge progress
         const mergedProgress = mergeProgress(localProgress, cloudProgress);
@@ -117,7 +135,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         saveProgress(mergedProgress);
 
         // Update cloud
-        await uploadProgressToCloud(userId, mergedProgress);
+        await withTimeout(
+          uploadProgressToCloud(userId, mergedProgress),
+          10000,
+          'Upload timed out'
+        );
       }
     } catch (error) {
       console.error('Error syncing progress:', error);
@@ -201,10 +223,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     try {
-      const { error } = await supabase
+      const deletePromise = supabase
         .from('user_progress')
         .delete()
         .eq('user_id', user.id);
+      const result = await withTimeout(
+        Promise.resolve(deletePromise),
+        10000,
+        'Delete timed out'
+      );
+      const { error } = result as { error: any };
 
       if (error) {
         console.error('Error clearing cloud progress:', error);
