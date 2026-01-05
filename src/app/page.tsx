@@ -2,25 +2,35 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { 
-  Flame, 
-  ChevronRight, 
-  BookOpen, 
+import {
+  Flame,
+  ChevronRight,
+  BookOpen,
   Calendar,
-  Sparkles 
+  Sparkles
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import ProgressRing from '@/components/ProgressRing';
+import Onboarding from '@/components/Onboarding';
 import { curriculum, getLessonCount } from '@/data/curriculum';
 import { getProgress, getDaysSinceStart, UserProgress } from '@/lib/progress';
 import { getVerseOfTheDay, getVerse, GitaVerse, formatVerseRef } from '@/lib/api';
+
+const ONBOARDING_KEY = 'dharma_path_onboarding_complete';
 
 export default function HomePage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [verseOfDay, setVerseOfDay] = useState<GitaVerse | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
+    // Check if user has completed onboarding
+    const hasCompletedOnboarding = localStorage.getItem(ONBOARDING_KEY);
+    if (!hasCompletedOnboarding) {
+      setShowOnboarding(true);
+    }
+
     // Load progress
     const userProgress = getProgress();
     setProgress(userProgress);
@@ -42,6 +52,17 @@ export default function HomePage() {
 
   // Get current level info
   const currentLevel = curriculum.find(l => l.id === (progress?.currentLevel || 1));
+
+  // Handle onboarding completion
+  const handleOnboardingComplete = () => {
+    localStorage.setItem(ONBOARDING_KEY, 'true');
+    setShowOnboarding(false);
+  };
+
+  // Show onboarding for first-time visitors
+  if (showOnboarding) {
+    return <Onboarding onComplete={handleOnboardingComplete} />;
+  }
 
   return (
     <main className="min-h-screen pb-24">
