@@ -96,16 +96,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Merge local and cloud progress, keeping the best of both
   function mergeProgress(local: UserProgress, cloud: DbUserProgress): UserProgress {
     // Merge completed lessons (union of both)
-    const completedLessons = [...new Set([
+    const completedLessons = Array.from(new Set([
       ...local.completedLessons,
       ...cloud.completed_lessons
-    ])];
+    ]));
 
     // Merge bookmarks (union of both)
-    const bookmarks = [...new Set([
+    const bookmarks = Array.from(new Set([
       ...local.bookmarks,
       ...cloud.bookmarks
-    ])];
+    ]));
 
     // Use the higher streak
     const streak = Math.max(local.streak, cloud.streak);
