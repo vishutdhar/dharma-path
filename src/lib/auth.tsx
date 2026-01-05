@@ -25,8 +25,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isSyncing, setIsSyncing] = useState(false);
 
   useEffect(() => {
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    // Check if Supabase is properly configured
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      // Supabase not configured - skip auth and just use local storage
+      console.log('Supabase not configured - using local storage only');
+      setLoading(false);
+      return;
+    }
+
+    // Get initial session with timeout
+    const timeoutId = setTimeout(() => {
+      // If getSession takes too long, just proceed without auth
+      console.log('Auth session check timed out - using local storage');
+      setLoading(false);
+    }, 5000);
+
+    supabase.auth.getSession().then(({ data: { session }, error }) => {
+      clearTimeout(timeoutId);
+
+      if (error) {
+        console.error('Error getting session:', error);
+        setLoading(false);
+        return;
+      }
+
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
@@ -35,6 +60,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (session?.user) {
         syncProgressWithCloud(session.user.id);
       }
+    }).catch((error) => {
+      clearTimeout(timeoutId);
+      console.error('Failed to get auth session:', error);
+      setLoading(false);
     });
 
     // Listen for auth changes
@@ -50,7 +79,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     );
 
-    return () => subscription.unsubscribe();
+    return () => {
+      clearTimeout(timeoutId);
+      subscription.unsubscribe();
+    };
   }, []);
 
   // Sync local progress with cloud
