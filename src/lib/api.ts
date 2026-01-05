@@ -28,6 +28,7 @@ export interface GitaVerse {
   };
   siva?: {
     et: string; // English translation by Swami Sivananda
+    ec?: string; // English commentary by Swami Sivananda
   };
   tej?: {
     ht?: string; // Hindi translation

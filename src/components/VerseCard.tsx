@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Bookmark, Share2, Volume2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Bookmark, Share2, Volume2, ChevronDown, ChevronUp, Languages } from 'lucide-react';
 import { GitaVerse, formatVerseRef, getSimpleTranslation } from '@/lib/api';
 
 interface VerseCardProps {
@@ -18,6 +18,12 @@ export default function VerseCard({
   isBookmarked = false,
 }: VerseCardProps) {
   const [expanded, setExpanded] = useState(showExpanded);
+  const [commentaryLang, setCommentaryLang] = useState<'en' | 'hi'>('en');
+
+  // Get available commentaries
+  const englishCommentary = verse.siva?.ec;
+  const hindiCommentary = verse.chinmay?.hc;
+  const hasCommentary = englishCommentary || hindiCommentary;
   const verseRef = formatVerseRef(verse.chapter, verse.verse);
   const translation = getSimpleTranslation(verse);
 
@@ -92,7 +98,7 @@ export default function VerseCard({
         </blockquote>
 
         {/* Expandable commentary section */}
-        {verse.chinmay?.hc && (
+        {hasCommentary && (
           <div className="mt-6">
             <button
               onClick={() => setExpanded(!expanded)}
@@ -106,8 +112,54 @@ export default function VerseCard({
 
             {expanded && (
               <div className="mt-4 p-4 bg-cream-50 rounded-lg text-gray-600 text-sm leading-relaxed animate-fade-in">
-                <p className="font-medium text-saffron-700 mb-2">Commentary:</p>
-                {verse.chinmay.hc}
+                <div className="flex items-center justify-between mb-3">
+                  <p className="font-medium text-saffron-700">Commentary:</p>
+                  {/* Language toggle - only show if both languages available */}
+                  {englishCommentary && hindiCommentary && (
+                    <div className="flex items-center gap-1 bg-cream-200 rounded-full p-1">
+                      <button
+                        onClick={() => setCommentaryLang('en')}
+                        className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${
+                          commentaryLang === 'en'
+                            ? 'bg-white text-saffron-700 shadow-sm'
+                            : 'text-gray-500 hover:text-gray-700'
+                        }`}
+                      >
+                        English
+                      </button>
+                      <button
+                        onClick={() => setCommentaryLang('hi')}
+                        className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${
+                          commentaryLang === 'hi'
+                            ? 'bg-white text-saffron-700 shadow-sm'
+                            : 'text-gray-500 hover:text-gray-700'
+                        }`}
+                      >
+                        Hindi
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Commentary text */}
+                <div className="leading-relaxed">
+                  {commentaryLang === 'en' && englishCommentary ? (
+                    <>
+                      <p className="text-xs text-gray-400 mb-2">— Swami Sivananda</p>
+                      {englishCommentary}
+                    </>
+                  ) : hindiCommentary ? (
+                    <>
+                      <p className="text-xs text-gray-400 mb-2">— Swami Chinmayananda</p>
+                      {hindiCommentary}
+                    </>
+                  ) : englishCommentary ? (
+                    <>
+                      <p className="text-xs text-gray-400 mb-2">— Swami Sivananda</p>
+                      {englishCommentary}
+                    </>
+                  ) : null}
+                </div>
               </div>
             )}
           </div>
