@@ -32,13 +32,42 @@ export default function VerseCard({
     // Split on "Commentary" to separate word meanings from actual commentary
     const commentaryIndex = raw.indexOf('Commentary');
     if (commentaryIndex === -1) {
-      return { wordMeanings: '', commentary: raw };
+      return { wordMeanings: '', commentary: cleanupCommentary(raw) };
     }
 
     const wordMeanings = raw.substring(0, commentaryIndex).trim();
     const commentary = raw.substring(commentaryIndex + 'Commentary'.length).trim();
 
-    return { wordMeanings, commentary };
+    return { wordMeanings, commentary: cleanupCommentary(commentary) };
+  };
+
+  // Clean up API text quality issues (random question marks, etc.)
+  // The API has formatting issues where ? is used incorrectly throughout
+  const cleanupCommentary = (text: string): string => {
+    return text
+      // FIRST: Fix isolated "?" with spaces around it (remove entirely)
+      .replace(/\s+\?\s+/g, ' ')
+      // Fix "word?Word" (no space) where next is capitalized - likely sentence break
+      .replace(/\?([A-Z])/g, '. $1')
+      // Fix "word? Word" where next word starts sentence (capitalized)
+      .replace(/\?\s+([A-Z])/g, '. $1')
+      // Fix "word? followed by lowercase" (clearly not a question)
+      .replace(/\?\s*([a-z])/g, ', $1')
+      // Fix "word? i.e." or similar abbreviations
+      .replace(/\?\s*(i\.e\.|e\.g\.|etc\.|viz\.)/gi, ', $1')
+      // Fix remaining question marks followed by common words
+      .replace(/\?\s*(and|but|or|so|yet|for|nor|they|it|he|she|we|this|that|the|a|an|in|on|to|is|are|was|were)\s/gi, ', $1 ')
+      // Fix ",is" or ", is" at start (artifact from "?is" conversion)
+      .replace(/,\s*is\s/gi, ' is ')
+      // Fix double periods
+      .replace(/\.{2,}/g, '.')
+      // Fix ", ," or ",," patterns
+      .replace(/,\s*,/g, ',')
+      // Fix " ," patterns (space before comma)
+      .replace(/\s+,/g, ',')
+      // Clean up any double spaces
+      .replace(/\s{2,}/g, ' ')
+      .trim();
   };
 
   const { wordMeanings, commentary: englishCommentary } = parseEnglishCommentary(rawEnglishCommentary);
