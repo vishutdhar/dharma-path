@@ -33,7 +33,7 @@ export default function ProfilePage() {
   const [authError, setAuthError] = useState<string | null>(null);
   const [authLoading, setAuthLoading] = useState(false);
 
-  const { user, loading, signInWithEmail, signUpWithEmail, signOut, syncProgress, isSyncing } = useAuth();
+  const { user, loading, signInWithEmail, signUpWithEmail, signOut, syncProgress, clearCloudProgress, isSyncing } = useAuth();
 
   useEffect(() => {
     const userProgress = getProgress();
@@ -75,9 +75,30 @@ export default function ProfilePage() {
   const completedLessons = progress?.completedLessons.length || 0;
   const overallProgress = Math.round((completedLessons / totalLessons) * 100);
 
-  const handleReset = () => {
-    if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+  const [isResetting, setIsResetting] = useState(false);
+
+  const handleReset = async () => {
+    const message = user
+      ? 'Are you sure you want to reset ALL progress? This will clear both local and cloud data. This cannot be undone.'
+      : 'Are you sure you want to reset all progress? This cannot be undone.';
+
+    if (confirm(message)) {
+      setIsResetting(true);
+
+      // Clear cloud data first if logged in
+      if (user) {
+        const cloudCleared = await clearCloudProgress();
+        if (!cloudCleared) {
+          alert('Failed to clear cloud data. Please try again.');
+          setIsResetting(false);
+          return;
+        }
+      }
+
+      // Clear local storage
       resetProgress();
+
+      // Reload page to reflect changes
       window.location.reload();
     }
   };
@@ -404,10 +425,11 @@ export default function ProfilePage() {
         <div className="mb-6">
           <button
             onClick={handleReset}
-            className="flex items-center justify-center gap-2 w-full py-3 text-red-500 hover:text-red-600 text-sm font-medium"
+            disabled={isResetting}
+            className="flex items-center justify-center gap-2 w-full py-3 text-red-500 hover:text-red-600 disabled:text-red-300 text-sm font-medium"
           >
-            <RotateCcw size={16} />
-            Reset All Progress
+            <RotateCcw size={16} className={isResetting ? 'animate-spin' : ''} />
+            {isResetting ? 'Resetting...' : 'Reset All Progress'}
           </button>
         </div>
 

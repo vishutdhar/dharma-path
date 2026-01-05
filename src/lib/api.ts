@@ -16,6 +16,7 @@ import {
 import chapter2 from '@/data/chapters/chapter2';
 import chapter3 from '@/data/chapters/chapter3';
 import chapter4 from '@/data/chapters/chapter4';
+import chapter5 from '@/data/chapters/chapter5';
 
 const API_BASE = 'https://vedicscriptures.github.io';
 
@@ -177,6 +178,7 @@ function getCustomContent(chapterNum: number, verseNum: number) {
     2: chapter2,
     3: chapter3,
     4: chapter4,
+    5: chapter5,
   };
 
   const chapter = customChapters[chapterNum];

@@ -13,6 +13,7 @@ interface AuthContextType {
   signUpWithEmail: (email: string, password: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
   syncProgress: () => Promise<void>;
+  clearCloudProgress: () => Promise<boolean>;
   isSyncing: boolean;
 }
 
@@ -192,6 +193,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  // Clear cloud progress (for reset functionality)
+  // Returns true if successful, false if failed
+  async function clearCloudProgress(): Promise<boolean> {
+    if (!user) {
+      return true; // No user = nothing to clear
+    }
+
+    try {
+      const { error } = await supabase
+        .from('user_progress')
+        .delete()
+        .eq('user_id', user.id);
+
+      if (error) {
+        console.error('Error clearing cloud progress:', error);
+        return false;
+      }
+
+      console.log('Cloud progress cleared successfully');
+      return true;
+    } catch (error) {
+      console.error('Error clearing cloud progress:', error);
+      return false;
+    }
+  }
+
   // Sign in with email
   async function signInWithEmail(email: string, password: string) {
     const { error } = await supabase.auth.signInWithPassword({
@@ -224,6 +251,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       signUpWithEmail,
       signOut,
       syncProgress,
+      clearCloudProgress,
       isSyncing,
     }}>
       {children}
