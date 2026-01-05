@@ -21,8 +21,27 @@ export default function VerseCard({
   const [commentaryLang, setCommentaryLang] = useState<'en' | 'hi'>('en');
 
   // Get available commentaries
-  const englishCommentary = verse.siva?.ec;
+  const rawEnglishCommentary = verse.siva?.ec;
   const hindiCommentary = verse.chinmay?.hc;
+
+  // Parse English commentary - API returns word breakdown + "Commentary" + actual text
+  // Format: "4.7 यदा यदा whenever?..." followed by "Commentary Dharma is..."
+  const parseEnglishCommentary = (raw: string | undefined) => {
+    if (!raw) return { wordMeanings: '', commentary: '' };
+
+    // Split on "Commentary" to separate word meanings from actual commentary
+    const commentaryIndex = raw.indexOf('Commentary');
+    if (commentaryIndex === -1) {
+      return { wordMeanings: '', commentary: raw };
+    }
+
+    const wordMeanings = raw.substring(0, commentaryIndex).trim();
+    const commentary = raw.substring(commentaryIndex + 'Commentary'.length).trim();
+
+    return { wordMeanings, commentary };
+  };
+
+  const { wordMeanings, commentary: englishCommentary } = parseEnglishCommentary(rawEnglishCommentary);
   const hasCommentary = englishCommentary || hindiCommentary;
   const verseRef = formatVerseRef(verse.chapter, verse.verse);
   const translation = getSimpleTranslation(verse);
@@ -144,20 +163,32 @@ export default function VerseCard({
                 {/* Commentary text */}
                 <div className="leading-relaxed">
                   {commentaryLang === 'en' && englishCommentary ? (
-                    <>
-                      <p className="text-xs text-gray-400 mb-2">— Swami Sivananda</p>
-                      {englishCommentary}
-                    </>
+                    <div className="space-y-4">
+                      <p className="text-gray-700 leading-7 text-[15px]">
+                        {englishCommentary}
+                      </p>
+                      <p className="text-xs text-gray-400 text-right italic">
+                        — Swami Sivananda
+                      </p>
+                    </div>
                   ) : hindiCommentary ? (
-                    <>
-                      <p className="text-xs text-gray-400 mb-2">— Swami Chinmayananda</p>
-                      {hindiCommentary}
-                    </>
+                    <div className="space-y-4">
+                      <p className="text-gray-700 leading-7 text-[15px]">
+                        {hindiCommentary}
+                      </p>
+                      <p className="text-xs text-gray-400 text-right italic">
+                        — Swami Chinmayananda
+                      </p>
+                    </div>
                   ) : englishCommentary ? (
-                    <>
-                      <p className="text-xs text-gray-400 mb-2">— Swami Sivananda</p>
-                      {englishCommentary}
-                    </>
+                    <div className="space-y-4">
+                      <p className="text-gray-700 leading-7 text-[15px]">
+                        {englishCommentary}
+                      </p>
+                      <p className="text-xs text-gray-400 text-right italic">
+                        — Swami Sivananda
+                      </p>
+                    </div>
                   ) : null}
                 </div>
               </div>
