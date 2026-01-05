@@ -1,6 +1,7 @@
 // Bhagavad Gita API Integration
 // Using the vedicscriptures API: https://vedicscriptures.github.io/
 // With caching and fallback to local data
+// Priority: Our custom content > API > Fallback data
 
 import {
   chapters as fallbackChapters,
@@ -10,6 +11,9 @@ import {
   GitaChapterData,
   GitaVerseData
 } from '@/data/gitaData';
+
+// Import our custom chapter content
+import chapter2 from '@/data/chapters/chapter2';
 
 const API_BASE = 'https://vedicscriptures.github.io';
 
@@ -40,6 +44,17 @@ export interface GitaVerse {
   };
   chinmay?: {
     hc: string;
+  };
+  // Our custom content (takes priority when available)
+  customContent?: {
+    translation: string;
+    explanation: {
+      simple: string;
+      deeper?: string;
+    };
+    practicalApplication: string;
+    keyTerms?: { term: string; meaning: string }[];
+    themes?: string[];
   };
   // Additional commentaries available
   [key: string]: any;
@@ -153,7 +168,24 @@ export async function getChapter(chapterNumber: number): Promise<GitaChapter | n
   }
 }
 
+// Get our custom content if available
+function getCustomContent(chapterNum: number, verseNum: number) {
+  // Map of our custom chapters
+  const customChapters: { [key: number]: typeof chapter2 } = {
+    2: chapter2,
+  };
+
+  const chapter = customChapters[chapterNum];
+  if (!chapter) return null;
+
+  const verse = chapter.verses.find(v => v.verse === verseNum);
+  if (!verse) return null;
+
+  return verse;
+}
+
 // Fetch a specific verse with caching and fallback
+// Priority: Custom content > API > Fallback
 export async function getVerse(chapter: number, verse: number): Promise<GitaVerse | null> {
   const cacheKey = `verse-${chapter}-${verse}`;
 
@@ -161,16 +193,57 @@ export async function getVerse(chapter: number, verse: number): Promise<GitaVers
   const cached = getFromCache<GitaVerse>(cacheKey);
   if (cached) return cached;
 
+  // Check for our custom content first
+  const customVerse = getCustomContent(chapter, verse);
+
   try {
     const response = await fetch(`${API_BASE}/slok/${chapter}/${verse}`, {
       next: { revalidate: 3600 }
     });
     if (!response.ok) throw new Error('Failed to fetch verse');
-    const data = await response.json();
-    setCache(cacheKey, data);
-    return data;
+    const apiData = await response.json();
+
+    // Merge custom content with API data (custom takes priority for display)
+    const mergedData: GitaVerse = {
+      ...apiData,
+      // Keep Sanskrit and transliteration from API (standard)
+      slok: customVerse?.sanskrit || apiData.slok,
+      transliteration: customVerse?.transliteration || apiData.transliteration,
+      // Add our custom content if available
+      ...(customVerse && {
+        customContent: {
+          translation: customVerse.translation,
+          explanation: customVerse.explanation,
+          practicalApplication: customVerse.practicalApplication,
+          keyTerms: customVerse.keyTerms,
+          themes: customVerse.themes,
+        }
+      })
+    };
+
+    setCache(cacheKey, mergedData);
+    return mergedData;
   } catch (error) {
     console.error(`Error fetching verse ${chapter}.${verse}, using fallback:`, error);
+
+    // If we have custom content, use it even without API
+    if (customVerse) {
+      const customOnly: GitaVerse = {
+        chapter,
+        verse,
+        slok: customVerse.sanskrit,
+        transliteration: customVerse.transliteration,
+        customContent: {
+          translation: customVerse.translation,
+          explanation: customVerse.explanation,
+          practicalApplication: customVerse.practicalApplication,
+          keyTerms: customVerse.keyTerms,
+          themes: customVerse.themes,
+        }
+      };
+      return customOnly;
+    }
+
     // Return fallback data if we have it
     const fallback = getVerseFallback(chapter, verse);
     if (fallback) {
