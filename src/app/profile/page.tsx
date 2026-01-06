@@ -27,6 +27,8 @@ import { curriculum, getLessonCount } from '@/data/curriculum';
 import { getProgress, getDaysSinceStart, resetProgress, UserProgress } from '@/lib/progress';
 import { useAuth } from '@/lib/auth';
 import { useTheme } from '@/lib/theme';
+import { supabase, EmailSubscription, isSupabaseConfigured } from '@/lib/supabase';
+import { TOTAL_DAYS } from '@/lib/emailContent';
 
 export default function ProfilePage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
@@ -40,10 +42,115 @@ export default function ProfilePage() {
   const { user, loading, signInWithEmail, signUpWithEmail, signOut, syncProgress, clearCloudProgress, isSyncing } = useAuth();
   const { theme, setTheme } = useTheme();
 
+  // Email subscription state
+  const [emailSubscription, setEmailSubscription] = useState<EmailSubscription | null>(null);
+  const [isLoadingSubscription, setIsLoadingSubscription] = useState(false);
+  const [isUpdatingSubscription, setIsUpdatingSubscription] = useState(false);
+
   useEffect(() => {
     const userProgress = getProgress();
     setProgress(userProgress);
   }, []);
+
+  // Fetch email subscription when user is logged in
+  useEffect(() => {
+    async function fetchEmailSubscription() {
+      if (!user || !isSupabaseConfigured) {
+        setEmailSubscription(null);
+        return;
+      }
+
+      setIsLoadingSubscription(true);
+      try {
+        const { data, error } = await supabase
+          .from('email_subscriptions')
+          .select('*')
+          .eq('user_id', user.id)
+          .single();
+
+        if (error && error.code !== 'PGRST116') {
+          console.error('Error fetching email subscription:', error);
+        }
+
+        setEmailSubscription(data);
+      } catch (error) {
+        console.error('Error fetching email subscription:', error);
+      } finally {
+        setIsLoadingSubscription(false);
+      }
+    }
+
+    fetchEmailSubscription();
+  }, [user]);
+
+  // Toggle email subscription
+  const toggleEmailSubscription = async () => {
+    if (!user || !emailSubscription) return;
+
+    setIsUpdatingSubscription(true);
+    try {
+      const newSubscribed = !emailSubscription.subscribed;
+      const { error } = await supabase
+        .from('email_subscriptions')
+        .update({
+          subscribed: newSubscribed,
+          unsubscribed_at: newSubscribed ? null : new Date().toISOString(),
+        })
+        .eq('user_id', user.id);
+
+      if (error) {
+        console.error('Error toggling subscription:', error);
+        alert('Failed to update subscription. Please try again.');
+        return;
+      }
+
+      setEmailSubscription({
+        ...emailSubscription,
+        subscribed: newSubscribed,
+        unsubscribed_at: newSubscribed ? null : new Date().toISOString(),
+      });
+    } finally {
+      setIsUpdatingSubscription(false);
+    }
+  };
+
+  // Restart email journey from day 1
+  const restartEmailJourney = async () => {
+    if (!user || !emailSubscription) return;
+
+    if (!confirm('This will restart your daily email journey from Day 1. Continue?')) {
+      return;
+    }
+
+    setIsUpdatingSubscription(true);
+    try {
+      const { error } = await supabase
+        .from('email_subscriptions')
+        .update({
+          current_day: 1,
+          subscribed: true,
+          last_sent_at: null,
+          unsubscribed_at: null,
+        })
+        .eq('user_id', user.id);
+
+      if (error) {
+        console.error('Error restarting journey:', error);
+        alert('Failed to restart journey. Please try again.');
+        return;
+      }
+
+      setEmailSubscription({
+        ...emailSubscription,
+        current_day: 1,
+        subscribed: true,
+        last_sent_at: null,
+        unsubscribed_at: null,
+      });
+    } finally {
+      setIsUpdatingSubscription(false);
+    }
+  };
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -381,6 +488,99 @@ export default function ProfilePage() {
             </div>
           )}
         </div>
+
+        {/* Email Subscription Section - Only shown when logged in */}
+        {user && (
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 mb-6 transition-colors">
+            <div className="flex items-center gap-2 mb-3">
+              <Mail className="text-saffron-500" size={20} />
+              <h3 className="font-medium text-gray-900 dark:text-gray-100">Daily Email Lessons</h3>
+            </div>
+
+            {isLoadingSubscription ? (
+              <div className="flex items-center justify-center py-4">
+                <RefreshCw className="animate-spin text-gray-400" size={20} />
+              </div>
+            ) : emailSubscription ? (
+              <div>
+                {/* Progress indicator */}
+                <div className="mb-4">
+                  <div className="flex items-center justify-between text-sm mb-2">
+                    <span className="text-gray-600 dark:text-gray-400">
+                      Day {emailSubscription.current_day} of {TOTAL_DAYS}
+                    </span>
+                    <span className="text-gray-600 dark:text-gray-400">
+                      {Math.round((emailSubscription.current_day / TOTAL_DAYS) * 100)}%
+                    </span>
+                  </div>
+                  <div className="h-2 bg-cream-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-saffron-500 to-orange-500 rounded-full transition-all duration-300"
+                      style={{ width: `${(emailSubscription.current_day / TOTAL_DAYS) * 100}%` }}
+                    />
+                  </div>
+                </div>
+
+                {/* Status and toggle */}
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      {emailSubscription.subscribed ? (
+                        <span className="text-green-600 dark:text-green-400">Subscribed</span>
+                      ) : (
+                        <span className="text-gray-500">Unsubscribed</span>
+                      )}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      {emailSubscription.subscribed
+                        ? 'You\'ll receive one lesson daily at 6 AM UTC'
+                        : 'You won\'t receive daily lessons'}
+                    </p>
+                  </div>
+                  <button
+                    onClick={toggleEmailSubscription}
+                    disabled={isUpdatingSubscription}
+                    className={`relative w-12 h-6 rounded-full transition-colors ${
+                      emailSubscription.subscribed
+                        ? 'bg-saffron-500'
+                        : 'bg-gray-300 dark:bg-gray-600'
+                    } ${isUpdatingSubscription ? 'opacity-50' : ''}`}
+                  >
+                    <span
+                      className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${
+                        emailSubscription.subscribed ? 'translate-x-6' : ''
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                {/* Restart option */}
+                {emailSubscription.current_day > 1 && (
+                  <button
+                    onClick={restartEmailJourney}
+                    disabled={isUpdatingSubscription}
+                    className="w-full py-2 text-sm text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 disabled:opacity-50"
+                  >
+                    <RotateCcw size={14} className="inline mr-1" />
+                    Restart from Day 1
+                  </button>
+                )}
+
+                {emailSubscription.current_day >= TOTAL_DAYS && (
+                  <div className="mt-2 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                    <p className="text-sm text-green-700 dark:text-green-400 text-center">
+                      You've completed the 77-day journey!
+                    </p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Email subscription not found. Try signing out and back in.
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-4 mb-6">
