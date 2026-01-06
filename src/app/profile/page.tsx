@@ -114,6 +114,35 @@ export default function ProfilePage() {
     }
   };
 
+  // Create email subscription for existing users
+  const createEmailSubscription = async () => {
+    if (!user) return;
+
+    setIsUpdatingSubscription(true);
+    try {
+      const { data, error } = await supabase
+        .from('email_subscriptions')
+        .insert({
+          user_id: user.id,
+          email: user.email,
+          subscribed: true,
+          current_day: 1,
+        })
+        .select()
+        .single();
+
+      if (error) {
+        console.error('Error creating subscription:', error);
+        alert('Failed to subscribe. Please try again.');
+        return;
+      }
+
+      setEmailSubscription(data);
+    } finally {
+      setIsUpdatingSubscription(false);
+    }
+  };
+
   // Restart email journey from day 1
   const restartEmailJourney = async () => {
     if (!user || !emailSubscription) return;
@@ -575,9 +604,18 @@ export default function ProfilePage() {
                 )}
               </div>
             ) : (
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Email subscription not found. Try signing out and back in.
-              </p>
+              <div className="text-center">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Get one lesson delivered to your inbox every day for 77 days — from the foundations of Hinduism to the wisdom of the Bhagavad Gita.
+                </p>
+                <button
+                  onClick={createEmailSubscription}
+                  disabled={isUpdatingSubscription}
+                  className="w-full py-3 bg-saffron-500 hover:bg-saffron-600 disabled:bg-saffron-300 text-white rounded-lg font-medium transition-colors"
+                >
+                  {isUpdatingSubscription ? 'Subscribing...' : 'Subscribe to Daily Lessons'}
+                </button>
+              </div>
             )}
           </div>
         )}
