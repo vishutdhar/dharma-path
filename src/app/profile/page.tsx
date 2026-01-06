@@ -19,7 +19,8 @@ import {
   Lock,
   Sun,
   Moon,
-  Monitor
+  Monitor,
+  Heart
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import ProgressRing from '@/components/ProgressRing';
@@ -718,6 +719,28 @@ export default function ProfilePage() {
             <RotateCcw size={16} className={isResetting ? 'animate-spin' : ''} />
             {isResetting ? 'Resetting...' : 'Reset All Progress'}
           </button>
+        </div>
+
+        {/* Support Section */}
+        <div className="bg-gradient-to-br from-saffron-50 to-orange-50 dark:from-saffron-900/20 dark:to-orange-900/20 rounded-2xl shadow-sm border border-saffron-200 dark:border-saffron-800 p-6 mb-6 text-center transition-colors">
+          <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
+            <Heart className="text-saffron-600 dark:text-saffron-400" size={24} />
+          </div>
+          <h3 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+            Support Dharma Path
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            Help keep Dharma Path free for everyone. Your donation supports the development of daily lessons teaching Hindu philosophy and spiritual wisdom.
+          </p>
+          <a
+            href="https://donate.stripe.com/fZuaEW12G7NY3iEaod8g000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md"
+          >
+            <Heart size={18} />
+            Donate
+          </a>
         </div>
 
         {/* App Info */}
