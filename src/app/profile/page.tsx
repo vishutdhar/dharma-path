@@ -194,11 +194,15 @@ export default function ProfilePage() {
       if (error) {
         setAuthError(error.message);
       } else {
-        setShowAuthForm(false);
-        setEmail('');
-        setPassword('');
         if (isSignUp) {
+          // Keep form visible to show the confirmation message
           setAuthError('Check your email to confirm your account!');
+          setPassword('');
+        } else {
+          // Sign in successful - hide form
+          setShowAuthForm(false);
+          setEmail('');
+          setPassword('');
         }
       }
     } catch {
