@@ -9,6 +9,7 @@ import { curriculum, Lesson, Module, Level } from '@/data/curriculum';
 // Re-export Fuse types for use in components
 export type { FuseResultMatch };
 import { lessonContent } from '@/data/lessonContent';
+import { festivals, Festival } from '@/data/festivals';
 
 // Import all Gita chapters
 import chapter1 from '@/data/chapters/chapter1';
@@ -66,7 +67,18 @@ export interface SearchableGlossaryTerm {
   definition: string;
 }
 
-export type SearchableItem = SearchableLesson | SearchableVerse | SearchableGlossaryTerm;
+export interface SearchableFestival {
+  type: 'festival';
+  id: string;
+  name: string;
+  sanskrit?: string;
+  alternateNames: string;
+  summary: string;
+  month: string;
+  themes: string[];
+}
+
+export type SearchableItem = SearchableLesson | SearchableVerse | SearchableGlossaryTerm | SearchableFestival;
 
 export interface SearchResult {
   item: SearchableItem;
@@ -249,6 +261,22 @@ function buildVerseIndex(): SearchableVerse[] {
   return verses;
 }
 
+/**
+ * Build searchable festivals from festival data
+ */
+function buildFestivalIndex(): SearchableFestival[] {
+  return festivals.map(festival => ({
+    type: 'festival',
+    id: festival.id,
+    name: festival.name,
+    sanskrit: festival.sanskrit,
+    alternateNames: festival.alternateNames?.join(', ') || '',
+    summary: festival.summary,
+    month: festival.month,
+    themes: festival.themes,
+  }));
+}
+
 // =============================================================================
 // SEARCH ENGINE
 // =============================================================================
@@ -264,14 +292,18 @@ const fuseOptions: IFuseOptions<SearchableItem> = {
     // High priority - titles and terms
     { name: 'title', weight: 2.0 },
     { name: 'term', weight: 2.0 },
+    { name: 'name', weight: 2.0 }, // Festival name
     { name: 'reference', weight: 1.8 },
+    { name: 'alternateNames', weight: 1.5 }, // Festival alternate names
     // Medium priority - main content
     { name: 'translation', weight: 1.5 },
     { name: 'description', weight: 1.2 },
     { name: 'definition', weight: 1.2 },
+    { name: 'summary', weight: 1.2 }, // Festival summary
     // Lower priority - supporting content
     { name: 'explanation', weight: 0.8 },
     { name: 'practicalApplication', weight: 0.7 },
+    { name: 'month', weight: 0.6 }, // Festival month
     { name: 'content', weight: 0.5 },
     { name: 'transliteration', weight: 0.5 },
     { name: 'themes', weight: 0.4 },
@@ -290,11 +322,12 @@ function getSearchIndex(): Fuse<SearchableItem> {
   if (!searchIndex) {
     const lessons = buildLessonIndex();
     const verses = buildVerseIndex();
+    const festivalItems = buildFestivalIndex();
 
-    allItems = [...lessons, ...verses, ...glossary];
+    allItems = [...lessons, ...verses, ...glossary, ...festivalItems];
     searchIndex = new Fuse(allItems, fuseOptions);
 
-    console.log(`Search index built: ${lessons.length} lessons, ${verses.length} verses, ${glossary.length} terms`);
+    console.log(`Search index built: ${lessons.length} lessons, ${verses.length} verses, ${glossary.length} terms, ${festivalItems.length} festivals`);
   }
   return searchIndex;
 }
@@ -344,6 +377,16 @@ export function searchGlossary(query: string, limit: number = 20): SearchResult[
   const results = search(query, limit * 3);
   return results
     .filter(r => r.item.type === 'glossary')
+    .slice(0, limit);
+}
+
+/**
+ * Search only festivals
+ */
+export function searchFestivals(query: string, limit: number = 20): SearchResult[] {
+  const results = search(query, limit * 3);
+  return results
+    .filter(r => r.item.type === 'festival')
     .slice(0, limit);
 }
 

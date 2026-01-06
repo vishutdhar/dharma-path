@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
-import { Search as SearchIcon, ArrowLeft, BookOpen, Lightbulb, Book, ScrollText, X } from 'lucide-react';
+import { Search as SearchIcon, ArrowLeft, BookOpen, Lightbulb, Book, ScrollText, X, Calendar } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import {
   search,
@@ -10,6 +10,7 @@ import {
   SearchableLesson,
   SearchableVerse,
   SearchableGlossaryTerm,
+  SearchableFestival,
   getAllGlossaryTerms,
   getMatchExcerpt,
   FuseResultMatch,
@@ -37,7 +38,7 @@ function useDebounce<T>(value: T, delay: number): T {
   return debouncedValue;
 }
 
-type TabType = 'all' | 'lessons' | 'verses' | 'glossary';
+type TabType = 'all' | 'lessons' | 'verses' | 'glossary' | 'festivals';
 
 export default function SearchPage() {
   const [query, setQuery] = useState('');
@@ -71,6 +72,7 @@ export default function SearchPage() {
       if (activeTab === 'lessons') return r.item.type === 'lesson';
       if (activeTab === 'verses') return r.item.type === 'verse';
       if (activeTab === 'glossary') return r.item.type === 'glossary';
+      if (activeTab === 'festivals') return r.item.type === 'festival';
       return true;
     });
   }, [results, activeTab]);
@@ -81,6 +83,7 @@ export default function SearchPage() {
     lessons: results.filter(r => r.item.type === 'lesson').length,
     verses: results.filter(r => r.item.type === 'verse').length,
     glossary: results.filter(r => r.item.type === 'glossary').length,
+    festivals: results.filter(r => r.item.type === 'festival').length,
   }), [results]);
 
   // Get glossary for empty state
@@ -134,7 +137,7 @@ export default function SearchPage() {
           {/* Tabs - only show when searching */}
           {isSearchActive && results.length > 0 && (
             <div className="flex gap-2 mt-4 overflow-x-auto pb-1">
-              {(['all', 'lessons', 'verses', 'glossary'] as TabType[]).map((tab) => (
+              {(['all', 'lessons', 'verses', 'festivals', 'glossary'] as TabType[]).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -147,6 +150,7 @@ export default function SearchPage() {
                   {tab === 'all' && `All (${counts.all})`}
                   {tab === 'lessons' && `Lessons (${counts.lessons})`}
                   {tab === 'verses' && `Verses (${counts.verses})`}
+                  {tab === 'festivals' && `Festivals (${counts.festivals})`}
                   {tab === 'glossary' && `Terms (${counts.glossary})`}
                 </button>
               ))}
@@ -263,6 +267,10 @@ function SearchResultCard({ result }: { result: SearchResult }) {
 
   if (item.type === 'glossary') {
     return <GlossaryResultCard item={item} />;
+  }
+
+  if (item.type === 'festival') {
+    return <FestivalResultCard item={item} />;
   }
 
   return null;
@@ -397,5 +405,54 @@ function GlossaryResultCard({ item }: { item: SearchableGlossaryTerm }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function FestivalResultCard({ item }: { item: SearchableFestival }) {
+  return (
+    <Link href={`/festivals/${item.id}`}>
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 hover:shadow-md hover:border-orange-200 dark:hover:border-orange-700 transition-all">
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center shrink-0">
+            <Calendar className="text-orange-600 dark:text-orange-400" size={20} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs font-medium rounded">
+                Festival
+              </span>
+              <span className="text-xs text-gray-400">
+                {item.month}
+              </span>
+            </div>
+            <div className="flex items-baseline gap-2 mb-1">
+              <h3 className="font-medium text-gray-900 dark:text-gray-100">
+                {item.name}
+              </h3>
+              {item.sanskrit && (
+                <span className="font-sanskrit text-orange-600 dark:text-orange-400 text-sm">
+                  {item.sanskrit}
+                </span>
+              )}
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
+              {item.summary}
+            </p>
+            {item.themes.length > 0 && (
+              <div className="flex flex-wrap gap-1 mt-2">
+                {item.themes.slice(0, 3).map(theme => (
+                  <span
+                    key={theme}
+                    className="px-2 py-0.5 bg-cream-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-xs rounded"
+                  >
+                    {theme}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </Link>
   );
 }

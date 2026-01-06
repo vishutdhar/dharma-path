@@ -1,15 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowLeft, Lock, CheckCircle, Circle, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Lock, CheckCircle, Circle, ChevronRight, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import { curriculum, Level, getLevelDuration, getLessonCount } from '@/data/curriculum';
 import { getProgress, UserProgress, getLevelProgress, isLevelUnlocked } from '@/lib/progress';
+import { festivals } from '@/data/festivals';
 
 export default function LearnPage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [expandedLevel, setExpandedLevel] = useState<number | null>(1);
+  const [festivalsExpanded, setFestivalsExpanded] = useState(false);
 
   useEffect(() => {
     const userProgress = getProgress();
@@ -202,6 +204,81 @@ export default function LearnPage() {
               </div>
             );
           })}
+
+          {/* Festivals Section */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md border border-cream-200 dark:border-gray-700 transition-colors">
+            {/* Festivals Header */}
+            <button
+              onClick={() => setFestivalsExpanded(!festivalsExpanded)}
+              className="w-full p-6 text-left transition-colors hover:bg-cream-50 dark:hover:bg-gray-700"
+            >
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">
+                  <Calendar size={24} />
+                </div>
+
+                {/* Info */}
+                <div className="flex-1 min-w-0">
+                  <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
+                    Festival Guide
+                  </h2>
+                  <p className="text-orange-600 dark:text-orange-400 text-sm font-medium">
+                    Celebrate with Understanding
+                  </p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 line-clamp-2">
+                    Discover the meaning behind Hindu festivals and learn how to celebrate them
+                  </p>
+
+                  {/* Meta */}
+                  <div className="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                    <span>{festivals.length} festivals</span>
+                    <span>•</span>
+                    <span>Explore anytime</span>
+                  </div>
+                </div>
+
+                {/* Expand indicator */}
+                <ChevronRight
+                  className={`
+                    text-gray-400 transition-transform shrink-0
+                    ${festivalsExpanded ? 'rotate-90' : ''}
+                  `}
+                  size={20}
+                />
+              </div>
+            </button>
+
+            {/* Expanded Festival Grid */}
+            {festivalsExpanded && (
+              <div className="px-6 pb-6 pt-2 border-t border-cream-100 dark:border-gray-700">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  Learn what each festival means, why we celebrate it, and how to observe it authentically.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {festivals.map((festival) => (
+                    <Link
+                      key={festival.id}
+                      href={`/festivals/${festival.id}`}
+                      className="bg-cream-50 dark:bg-gray-700 rounded-xl p-4 border border-cream-200 dark:border-gray-600 hover:border-orange-300 dark:hover:border-orange-700 hover:shadow-md transition-all group"
+                    >
+                      <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 text-sm">
+                        {festival.name}
+                      </h3>
+                      {festival.sanskrit && (
+                        <p className="text-xs text-gray-400 mt-0.5">
+                          {festival.sanskrit}
+                        </p>
+                      )}
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        {festival.month}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

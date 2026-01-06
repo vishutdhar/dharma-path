@@ -171,12 +171,14 @@ export const lessonContent: Record<string, string> = {
 
     <h2>What This Means for You</h2>
     <p>
-      As a beginner, you don't need to read everything. In this course, we'll focus on the
-      <em>Bhagavad Gita</em> as your "Page One" — it's accessible, practical, and contains
-      the essence of Hindu philosophy in a manageable form.
+      As a beginner, you don't need to read everything. In this course, we'll build your
+      understanding step by step — starting with core concepts, then exploring the great
+      epics like the <em>Ramayana</em> and <em>Mahabharata</em>, before diving into the
+      <em>Bhagavad Gita</em>. This gradual approach gives you the context to truly
+      appreciate each text.
     </p>
     <p>
-      From there, you can explore whichever texts call to you.
+      From there, you can explore whichever texts call to you most deeply.
     </p>
   `,
 
