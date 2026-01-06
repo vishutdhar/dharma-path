@@ -279,11 +279,7 @@ export default function LessonPage() {
           {globalNextLesson && !justCompleted && (
             <Link
               href={`/learn/${globalNextLesson.id}`}
-              className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all ${
-                isCompleted
-                  ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg'
-                  : 'bg-white dark:bg-gray-800 text-gray-400 border border-cream-200 dark:border-gray-700'
-              }`}
+              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 border border-cream-200 dark:border-gray-700 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm"
             >
               Next
               <ChevronRight size={20} />
