@@ -13,11 +13,24 @@ import Navigation from '@/components/Navigation';
 import ProgressRing from '@/components/ProgressRing';
 import Onboarding from '@/components/Onboarding';
 import { VerseOfDaySkeleton } from '@/components/Skeleton';
-import { curriculum, getLessonCount } from '@/data/curriculum';
-import { getProgress, getDaysSinceStart, UserProgress, updateDailyVisit } from '@/lib/progress';
+import { curriculum, getLessonCount, Lesson, Level, Module } from '@/data/curriculum';
+import { getProgress, getDaysSinceStart, UserProgress, updateDailyVisit, findNextIncompleteLesson } from '@/lib/progress';
 import { getVerseOfTheDay, getVerse, GitaVerse, formatVerseRef } from '@/lib/api';
 
 const ONBOARDING_KEY = 'dharma_path_onboarding_complete';
+
+// Helper to find lesson details by ID
+function findLessonById(lessonId: string): { lesson: Lesson; module: Module; level: Level } | null {
+  for (const level of curriculum) {
+    for (const module of level.modules) {
+      const lesson = module.lessons.find(l => l.id === lessonId);
+      if (lesson) {
+        return { lesson, module, level };
+      }
+    }
+  }
+  return null;
+}
 
 export default function HomePage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
@@ -72,8 +85,15 @@ export default function HomePage() {
   const completedLessons = progress?.completedLessons.length || 0;
   const overallProgress = Math.round((completedLessons / totalLessons) * 100);
 
-  // Get current level info
-  const currentLevel = curriculum.find(l => l.id === (progress?.currentLevel || 1));
+  // Find the next lesson to continue
+  // First try currentLesson from progress, then calculate from completedLessons
+  const nextLessonId = progress?.currentLesson ||
+    findNextIncompleteLesson(progress?.completedLessons || [])?.lessonId ||
+    '1-1-1'; // Default to first lesson
+  const nextLessonInfo = findLessonById(nextLessonId);
+
+  // Get current level info (for backward compatibility)
+  const currentLevel = nextLessonInfo?.level || curriculum.find(l => l.id === (progress?.currentLevel || 1));
 
   // Handle onboarding completion
   const handleOnboardingComplete = () => {
@@ -127,19 +147,22 @@ export default function HomePage() {
       {/* Content */}
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 -mt-2">
         {/* Continue Learning Card */}
-        {currentLevel && (
-          <Link href="/learn">
+        {nextLessonInfo && (
+          <Link href={`/learn/${nextLessonId}`}>
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-6 card-hover border border-cream-200 dark:border-gray-700 transition-colors">
               <div className="flex items-center gap-2 text-saffron-600 dark:text-saffron-400 mb-2">
                 <BookOpen size={18} />
                 <span className="text-sm font-medium">Continue Learning</span>
               </div>
 
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                Level {nextLessonInfo.level.id} · {nextLessonInfo.module.title}
+              </p>
               <h2 className="font-heading text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                Level {currentLevel.id}: {currentLevel.title}
+                {nextLessonInfo.lesson.title}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                {currentLevel.subtitle}
+                {nextLessonInfo.lesson.description}
               </p>
 
               <div className="flex items-center justify-between">

@@ -2,8 +2,16 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { User, Session } from '@supabase/supabase-js';
-import { supabase, DbUserProgress, isSupabaseConfigured } from './supabase';
+import { supabase, EmailSubscription, isSupabaseConfigured } from './supabase';
 import { getProgress, saveProgress, UserProgress } from './progress';
+import {
+  mergeProgress,
+  cloudToLocal,
+  isLocalProgressOwnedBy,
+  isLocalProgressFromDifferentUser,
+  createFreshProgress,
+  DbUserProgress,
+} from './sync';
 
 interface AuthContextType {
   user: User | null;
@@ -77,6 +85,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (event === 'SIGNED_IN' && session?.user) {
           // Sync local progress to cloud on sign in
           await syncProgressWithCloud(session.user.id);
+
+          // Ensure email subscription exists (auto-subscribe new users)
+          if (session.user.email) {
+            ensureEmailSubscription(session.user.id, session.user.email);
+          }
         }
       }
     );
@@ -96,7 +109,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   // Sync local progress with cloud
-  // Strategy: Merge local and cloud, keeping the most complete data
+  // Strategy: Only merge if local progress belongs to current user, otherwise use cloud
   async function syncProgressWithCloud(userId: string) {
     // Skip if Supabase not configured
     if (!isSupabaseConfigured) {
@@ -106,6 +119,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsSyncing(true);
     try {
       const localProgress = getProgress();
+
+      // Check if local progress belongs to a different user (using extracted functions)
+      const localBelongsToCurrentUser = isLocalProgressOwnedBy(localProgress, userId);
+      const localBelongsToDifferentUser = isLocalProgressFromDifferentUser(localProgress, userId);
+
+      if (localBelongsToDifferentUser) {
+        // Local storage has another user's data - DO NOT merge it
+        console.info('[Dharma Path] Local progress belongs to different user, clearing local storage');
+      }
 
       // Fetch cloud progress with 10 second timeout
       const fetchPromise = supabase
@@ -129,25 +151,38 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
 
       if (!cloudProgress) {
-        // New user - upload local progress to cloud
-        await withTimeout(
-          uploadProgressToCloud(userId, localProgress),
-          10000,
-          'Upload timed out'
-        );
+        // New user with no cloud data
+        if (localBelongsToCurrentUser && localProgress.completedLessons.length > 0) {
+          // Upload their local progress to cloud (with userId tag)
+          const taggedProgress = { ...localProgress, userId };
+          saveProgress(taggedProgress);
+          await withTimeout(
+            uploadProgressToCloud(userId, taggedProgress),
+            10000,
+            'Upload timed out'
+          );
+        } else {
+          // Clear any foreign local data and start fresh (using extracted function)
+          const freshProgress = createFreshProgress(userId);
+          saveProgress(freshProgress);
+        }
       } else {
-        // Existing user - merge progress
-        const mergedProgress = mergeProgress(localProgress, cloudProgress);
-
-        // Update local storage
-        saveProgress(mergedProgress);
-
-        // Update cloud
-        await withTimeout(
-          uploadProgressToCloud(userId, mergedProgress),
-          10000,
-          'Upload timed out'
-        );
+        // User has cloud data
+        if (localBelongsToCurrentUser && !localBelongsToDifferentUser) {
+          // Merge local + cloud (this is the same user, using extracted function)
+          const mergedProgress = mergeProgress(localProgress, cloudProgress);
+          mergedProgress.userId = userId; // Tag with userId
+          saveProgress(mergedProgress);
+          await withTimeout(
+            uploadProgressToCloud(userId, mergedProgress),
+            10000,
+            'Upload timed out'
+          );
+        } else {
+          // Local belongs to someone else - use cloud data only (using extracted function)
+          const cloudAsLocal = cloudToLocal(cloudProgress, userId);
+          saveProgress(cloudAsLocal);
+        }
       }
     } catch (error) {
       // Silently fail in production - user still has local progress
@@ -157,44 +192,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsSyncing(false);
     }
-  }
-
-  // Merge local and cloud progress, keeping the best of both
-  function mergeProgress(local: UserProgress, cloud: DbUserProgress): UserProgress {
-    // Merge completed lessons (union of both)
-    const completedLessons = Array.from(new Set([
-      ...local.completedLessons,
-      ...cloud.completed_lessons
-    ]));
-
-    // Merge bookmarks (union of both)
-    const bookmarks = Array.from(new Set([
-      ...local.bookmarks,
-      ...cloud.bookmarks
-    ]));
-
-    // Use the higher streak
-    const streak = Math.max(local.streak, cloud.streak);
-
-    // Use the earlier start date
-    const localStart = new Date(local.startDate);
-    const cloudStart = new Date(cloud.start_date);
-    const startDate = localStart < cloudStart ? local.startDate : cloud.start_date;
-
-    // Use most recent last visit
-    const localVisit = new Date(local.lastVisit);
-    const cloudVisit = new Date(cloud.last_visit);
-    const lastVisit = localVisit > cloudVisit ? local.lastVisit : cloud.last_visit;
-
-    return {
-      completedLessons,
-      currentLevel: Math.max(local.currentLevel, cloud.current_level),
-      currentLesson: local.currentLesson || cloud.current_lesson,
-      streak,
-      lastVisit,
-      startDate,
-      bookmarks,
-    };
   }
 
   // Upload progress to cloud
@@ -225,6 +222,44 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   async function syncProgress() {
     if (user) {
       await syncProgressWithCloud(user.id);
+    }
+  }
+
+  // Ensure user has an email subscription (auto-subscribe on sign-up)
+  async function ensureEmailSubscription(userId: string, email: string) {
+    if (!isSupabaseConfigured) return;
+
+    try {
+      // Check if subscription already exists
+      const { data: existing } = await supabase
+        .from('email_subscriptions')
+        .select('id')
+        .eq('user_id', userId)
+        .single();
+
+      if (existing) {
+        // Subscription already exists
+        return;
+      }
+
+      // Create new subscription (auto-subscribed, starting at day 1)
+      const { error } = await supabase
+        .from('email_subscriptions')
+        .insert({
+          user_id: userId,
+          email: email,
+          subscribed: true,
+          current_day: 1,
+        });
+
+      if (error && process.env.NODE_ENV === 'development') {
+        console.error('[Dharma Path] Error creating email subscription:', error);
+      }
+    } catch (error) {
+      // Silently fail - not critical for user experience
+      if (process.env.NODE_ENV === 'development') {
+        console.error('[Dharma Path] Error ensuring email subscription:', error);
+      }
     }
   }
 

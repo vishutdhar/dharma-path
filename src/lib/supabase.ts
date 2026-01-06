@@ -43,3 +43,16 @@ export interface DbUserProgress {
   created_at: string;
   updated_at: string;
 }
+
+export interface EmailSubscription {
+  id: string;
+  user_id: string;
+  email: string;
+  subscribed: boolean;
+  current_day: number; // 1-77
+  last_sent_at: string | null;
+  subscribed_at: string;
+  unsubscribed_at: string | null;
+  created_at: string;
+  updated_at: string;
+}

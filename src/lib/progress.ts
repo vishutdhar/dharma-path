@@ -11,6 +11,7 @@ export interface UserProgress {
   lastVisit: string; // ISO date string
   startDate: string;
   bookmarks: string[]; // Verse references like "2:47"
+  userId?: string; // User ID who owns this progress (for multi-user sync)
 }
 
 const defaultProgress: UserProgress = {
@@ -112,11 +113,60 @@ export function saveProgress(progress: UserProgress): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 }
 
-// Mark a lesson as completed
+// Find the next incomplete lesson in the curriculum
+// Returns { lessonId, levelId } or null if all completed
+export function findNextIncompleteLesson(completedLessons: string[]): { lessonId: string; levelId: number } | null {
+  // Import curriculum dynamically to avoid circular dependencies
+  // Lesson IDs follow pattern: "level-module-lesson" (e.g., "1-1-1")
+  // We iterate through all possible lessons in order
+  const lessonOrder = [
+    // Level 1: The Foundation (14 lessons)
+    '1-1-1', '1-1-2', '1-1-3', // Module 1-1: What is Hinduism?
+    '1-2-1', '1-2-2', '1-2-3', '1-2-4', '1-2-5', // Module 1-2: Core Concepts
+    '1-3-1', '1-3-2', '1-3-3', '1-3-4', '1-3-5', '1-3-6', // Module 1-3: The Divine
+    // Level 2: The Stories (12 lessons)
+    '2-1-1', '2-1-2', '2-1-3', '2-1-4', '2-1-5', // Module 2-1: Ramayana
+    '2-2-1', '2-2-2', '2-2-3', '2-2-4', '2-2-5', '2-2-6', '2-2-7', // Module 2-2: Mahabharata
+    // Level 3: The Gita (17 lessons)
+    '3-1-1', '3-1-2', // Module 3-1: Setting the Scene
+    '3-2-1', '3-2-2', '3-2-3', '3-2-4', '3-2-5', '3-2-6', '3-2-7', '3-2-8', '3-2-9', '3-2-10', '3-2-11', '3-2-12', // Module 3-2: Journey
+    '3-3-1', '3-3-2', '3-3-3', // Module 3-3: Three Paths
+    // Level 4: Going Deeper (16 lessons)
+    '4-1-1', '4-1-2', '4-1-3', '4-1-4', '4-1-5', // Module 4-1: Upanishads
+    '4-2-1', '4-2-2', '4-2-3', '4-2-4', '4-2-5', // Module 4-2: Four Traditions
+    '4-3-1', '4-3-2', '4-3-3', // Module 4-3: Vedas
+    '4-4-1', '4-4-2', '4-4-3', // Module 4-4: Hindu Practice
+  ];
+
+  for (const lessonId of lessonOrder) {
+    if (!completedLessons.includes(lessonId)) {
+      // Extract level from lesson ID (first character)
+      const levelId = parseInt(lessonId.split('-')[0]);
+      return { lessonId, levelId };
+    }
+  }
+
+  // All lessons completed
+  return null;
+}
+
+// Mark a lesson as completed and update currentLesson to the next one
 export function completeLesson(lessonId: string): UserProgress {
   const progress = getProgress();
   if (!progress.completedLessons.includes(lessonId)) {
     progress.completedLessons.push(lessonId);
+
+    // Find and set the next lesson to continue
+    const nextLesson = findNextIncompleteLesson(progress.completedLessons);
+    if (nextLesson) {
+      progress.currentLesson = nextLesson.lessonId;
+      progress.currentLevel = nextLesson.levelId;
+    } else {
+      // All lessons completed
+      progress.currentLesson = null;
+      progress.currentLevel = 4; // Stay on last level
+    }
+
     saveProgress(progress);
   }
   return progress;
