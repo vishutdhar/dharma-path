@@ -8,6 +8,8 @@ import { nasadiyaSukta } from './nasadiya-sukta';
 import { gayatri } from './gayatri';
 import { purushaSukta } from './purusha-sukta';
 import { agniSukta } from './agni-sukta';
+import { sriSukta } from './sri-sukta';
+import { shantiSuktas } from './shanti-suktas';
 
 // =============================================================================
 // ALL HYMNS
@@ -18,9 +20,8 @@ export const hymns: Record<VedicHymnId, VedicHymn> = {
   'gayatri': gayatri,
   'purusha-sukta': purushaSukta,
   'agni-sukta': agniSukta,
-  // More hymns will be added:
-  // 'sri-sukta': sriSukta,
-  // 'shanti-suktas': shantiSuktas,
+  'sri-sukta': sriSukta,
+  'shanti-suktas': shantiSuktas,
 } as Record<VedicHymnId, VedicHymn>;
 
 // =============================================================================
@@ -177,3 +178,5 @@ export { nasadiyaSukta } from './nasadiya-sukta';
 export { gayatri } from './gayatri';
 export { purushaSukta } from './purusha-sukta';
 export { agniSukta } from './agni-sukta';
+export { sriSukta } from './sri-sukta';
+export { shantiSuktas } from './shanti-suktas';
