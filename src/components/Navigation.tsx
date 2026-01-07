@@ -17,7 +17,7 @@ export default function Navigation() {
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-cream-200 dark:border-gray-700 shadow-lg z-50 transition-colors">
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-4">
-        <div className="flex items-center justify-around py-1">
+        <div className="flex items-center justify-around py-0.5 sm:py-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             const Icon = item.icon;
@@ -27,7 +27,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`
-                  flex flex-col items-center py-1.5 px-4 rounded-lg transition-all duration-200
+                  flex flex-col items-center py-1 sm:py-1.5 px-3 sm:px-4 rounded-lg transition-all duration-200
                   ${isActive
                     ? 'text-saffron-600 dark:text-saffron-400'
                     : 'text-gray-400 dark:text-gray-500 hover:text-saffron-500 dark:hover:text-saffron-400'
@@ -35,11 +35,12 @@ export default function Navigation() {
                 `}
               >
                 <Icon
-                  size={20}
+                  size={18}
+                  className="sm:w-5 sm:h-5"
                   strokeWidth={isActive ? 2.5 : 2}
                 />
                 <span className={`
-                  text-xs mt-0.5 font-medium
+                  text-[10px] sm:text-xs mt-0.5 font-medium
                   ${isActive ? 'text-saffron-600 dark:text-saffron-400' : 'text-gray-500 dark:text-gray-400'}
                 `}>
                   {item.label}
