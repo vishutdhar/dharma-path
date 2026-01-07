@@ -791,7 +791,7 @@ export default function ProfilePage() {
               {/* QR Code */}
               <div className="bg-white p-4 rounded-xl inline-block mb-4">
                 <img
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('upi://pay?pa=6005817706@ptyes&pn=Dharma Path&cu=INR')}`}
+                  src="/upi-qr.png"
                   alt="UPI QR Code"
                   width={200}
                   height={200}
