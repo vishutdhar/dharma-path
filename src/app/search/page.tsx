@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
-import { Search as SearchIcon, ArrowLeft, BookOpen, Lightbulb, Book, ScrollText, X, Calendar } from 'lucide-react';
+import { Search as SearchIcon, ArrowLeft, BookOpen, Lightbulb, Book, ScrollText, X, Calendar, Sparkles } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import {
   search,
@@ -11,6 +11,7 @@ import {
   SearchableVerse,
   SearchableGlossaryTerm,
   SearchableFestival,
+  SearchableUpanishadVerse,
   getAllGlossaryTerms,
   getMatchExcerpt,
   FuseResultMatch,
@@ -21,6 +22,7 @@ const quickLinks = [
   { label: 'What is Dharma?', href: '/learn/1-2-1' },
   { label: 'Understanding Karma', href: '/learn/1-2-2' },
   { label: 'The Bhagavad Gita', href: '/gita' },
+  { label: 'The Upanishads', href: '/upanishads' },
   { label: 'Who is Krishna?', href: '/learn/3-1-2' },
   { label: 'The Ramayana', href: '/learn/2-1-1' },
   { label: 'Core Concepts', href: '/learn' },
@@ -38,7 +40,7 @@ function useDebounce<T>(value: T, delay: number): T {
   return debouncedValue;
 }
 
-type TabType = 'all' | 'lessons' | 'verses' | 'glossary' | 'festivals';
+type TabType = 'all' | 'lessons' | 'verses' | 'upanishads' | 'glossary' | 'festivals';
 
 export default function SearchPage() {
   const [query, setQuery] = useState('');
@@ -71,6 +73,7 @@ export default function SearchPage() {
     return results.filter(r => {
       if (activeTab === 'lessons') return r.item.type === 'lesson';
       if (activeTab === 'verses') return r.item.type === 'verse';
+      if (activeTab === 'upanishads') return r.item.type === 'upanishad-verse';
       if (activeTab === 'glossary') return r.item.type === 'glossary';
       if (activeTab === 'festivals') return r.item.type === 'festival';
       return true;
@@ -82,6 +85,7 @@ export default function SearchPage() {
     all: results.length,
     lessons: results.filter(r => r.item.type === 'lesson').length,
     verses: results.filter(r => r.item.type === 'verse').length,
+    upanishads: results.filter(r => r.item.type === 'upanishad-verse').length,
     glossary: results.filter(r => r.item.type === 'glossary').length,
     festivals: results.filter(r => r.item.type === 'festival').length,
   }), [results]);
@@ -137,7 +141,7 @@ export default function SearchPage() {
           {/* Tabs - only show when searching */}
           {isSearchActive && results.length > 0 && (
             <div className="flex gap-2 mt-4 overflow-x-auto pb-1">
-              {(['all', 'lessons', 'verses', 'festivals', 'glossary'] as TabType[]).map((tab) => (
+              {(['all', 'lessons', 'verses', 'upanishads', 'festivals', 'glossary'] as TabType[]).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -149,7 +153,8 @@ export default function SearchPage() {
                 >
                   {tab === 'all' && `All (${counts.all})`}
                   {tab === 'lessons' && `Lessons (${counts.lessons})`}
-                  {tab === 'verses' && `Verses (${counts.verses})`}
+                  {tab === 'verses' && `Gita (${counts.verses})`}
+                  {tab === 'upanishads' && `Upanishads (${counts.upanishads})`}
                   {tab === 'festivals' && `Festivals (${counts.festivals})`}
                   {tab === 'glossary' && `Terms (${counts.glossary})`}
                 </button>
@@ -263,6 +268,10 @@ function SearchResultCard({ result }: { result: SearchResult }) {
 
   if (item.type === 'verse') {
     return <VerseResultCard item={item} matches={matches} />;
+  }
+
+  if (item.type === 'upanishad-verse') {
+    return <UpanishadVerseResultCard item={item} matches={matches} />;
   }
 
   if (item.type === 'glossary') {
@@ -437,6 +446,71 @@ function FestivalResultCard({ item }: { item: SearchableFestival }) {
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
               {item.summary}
+            </p>
+            {item.themes.length > 0 && (
+              <div className="flex flex-wrap gap-1 mt-2">
+                {item.themes.slice(0, 3).map(theme => (
+                  <span
+                    key={theme}
+                    className="px-2 py-0.5 bg-cream-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-xs rounded"
+                  >
+                    {theme}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function UpanishadVerseResultCard({
+  item,
+  matches,
+}: {
+  item: SearchableUpanishadVerse;
+  matches?: readonly FuseResultMatch[];
+}) {
+  // Find the best match to show
+  const translationMatch = matches?.find(m => m.key === 'translation');
+  const explanationMatch = matches?.find(m => m.key === 'explanation');
+
+  const excerpt = translationMatch
+    ? getMatchExcerpt(item.translation, translationMatch.indices)
+    : explanationMatch
+    ? getMatchExcerpt(item.explanation, explanationMatch.indices)
+    : item.translation;
+
+  return (
+    <Link href={`/upanishads/${item.upanishad}/${item.section}-${item.verse}`}>
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 hover:shadow-md hover:border-purple-200 dark:hover:border-purple-700 transition-all">
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center shrink-0">
+            <Sparkles className="text-purple-600 dark:text-purple-400" size={20} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-xs font-medium rounded">
+                Upanishad
+              </span>
+              {item.famousVerse && (
+                <span className="px-2 py-0.5 bg-gold-100 dark:bg-gold-900/30 text-gold-700 dark:text-gold-400 text-xs font-medium rounded">
+                  Famous
+                </span>
+              )}
+              {item.mahavakya && (
+                <span className="px-2 py-0.5 bg-saffron-100 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400 text-xs font-medium rounded">
+                  Mahavakya
+                </span>
+              )}
+            </div>
+            <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-1">
+              {item.reference}
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 italic">
+              "{excerpt}"
             </p>
             {item.themes.length > 0 && (
               <div className="flex flex-wrap gap-1 mt-2">

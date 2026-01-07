@@ -234,8 +234,8 @@ export default function HomePage() {
 
           <Link href="/learn">
             <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md card-hover border border-cream-200 dark:border-gray-700 text-center transition-colors">
-              <div className="w-12 h-12 bg-maroon-100 dark:bg-maroon-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Calendar className="text-maroon-600 dark:text-maroon-400" size={24} />
+              <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Calendar className="text-saffron-600 dark:text-saffron-400" size={24} />
               </div>
               <h3 className="font-medium text-gray-900 dark:text-gray-100">My Journey</h3>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Track progress</p>

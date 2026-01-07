@@ -10,6 +10,7 @@ import { curriculum, Lesson, Module, Level } from '@/data/curriculum';
 export type { FuseResultMatch };
 import { lessonContent } from '@/data/lessonContent';
 import { festivals, Festival } from '@/data/festivals';
+import { upanishads, Upanishad, UpanishadVerse } from '@/data/upanishads';
 
 // Import all Gita chapters
 import chapter1 from '@/data/chapters/chapter1';
@@ -78,7 +79,24 @@ export interface SearchableFestival {
   themes: string[];
 }
 
-export type SearchableItem = SearchableLesson | SearchableVerse | SearchableGlossaryTerm | SearchableFestival;
+export interface SearchableUpanishadVerse {
+  type: 'upanishad-verse';
+  id: string; // "chandogya-6-8"
+  upanishad: string;
+  upanishadName: string;
+  section: number;
+  verse: number;
+  reference: string; // "Chandogya 6.8"
+  translation: string;
+  explanation: string;
+  practicalApplication: string;
+  transliteration: string;
+  themes: string[];
+  famousVerse?: boolean;
+  mahavakya?: boolean;
+}
+
+export type SearchableItem = SearchableLesson | SearchableVerse | SearchableGlossaryTerm | SearchableFestival | SearchableUpanishadVerse;
 
 export interface SearchResult {
   item: SearchableItem;
@@ -277,6 +295,40 @@ function buildFestivalIndex(): SearchableFestival[] {
   }));
 }
 
+/**
+ * Build searchable Upanishad verses from all available Upanishads
+ */
+function buildUpanishadIndex(): SearchableUpanishadVerse[] {
+  const verses: SearchableUpanishadVerse[] = [];
+
+  for (const [upanishadId, upanishad] of Object.entries(upanishads)) {
+    if (!upanishad) continue;
+
+    for (const section of upanishad.sections) {
+      for (const verse of section.verses) {
+        verses.push({
+          type: 'upanishad-verse',
+          id: `${verse.upanishad}-${verse.section}-${verse.verse}`,
+          upanishad: verse.upanishad,
+          upanishadName: upanishad.name.english,
+          section: verse.section,
+          verse: verse.verse,
+          reference: `${upanishad.name.english} ${verse.section}.${verse.verse}`,
+          translation: verse.translation,
+          explanation: verse.explanation.simple + (verse.explanation.deeper ? ' ' + verse.explanation.deeper : ''),
+          practicalApplication: verse.practicalApplication,
+          transliteration: verse.transliteration,
+          themes: verse.themes,
+          famousVerse: verse.famousVerse,
+          mahavakya: !!verse.mahavakya,
+        });
+      }
+    }
+  }
+
+  return verses;
+}
+
 // =============================================================================
 // SEARCH ENGINE
 // =============================================================================
@@ -323,11 +375,12 @@ function getSearchIndex(): Fuse<SearchableItem> {
     const lessons = buildLessonIndex();
     const verses = buildVerseIndex();
     const festivalItems = buildFestivalIndex();
+    const upanishadVerses = buildUpanishadIndex();
 
-    allItems = [...lessons, ...verses, ...glossary, ...festivalItems];
+    allItems = [...lessons, ...verses, ...glossary, ...festivalItems, ...upanishadVerses];
     searchIndex = new Fuse(allItems, fuseOptions);
 
-    console.log(`Search index built: ${lessons.length} lessons, ${verses.length} verses, ${glossary.length} terms, ${festivalItems.length} festivals`);
+    console.log(`Search index built: ${lessons.length} lessons, ${verses.length} Gita verses, ${upanishadVerses.length} Upanishad verses, ${glossary.length} terms, ${festivalItems.length} festivals`);
   }
   return searchIndex;
 }
@@ -387,6 +440,16 @@ export function searchFestivals(query: string, limit: number = 20): SearchResult
   const results = search(query, limit * 3);
   return results
     .filter(r => r.item.type === 'festival')
+    .slice(0, limit);
+}
+
+/**
+ * Search only Upanishad verses
+ */
+export function searchUpanishads(query: string, limit: number = 20): SearchResult[] {
+  const results = search(query, limit * 3);
+  return results
+    .filter(r => r.item.type === 'upanishad-verse')
     .slice(0, limit);
 }
 

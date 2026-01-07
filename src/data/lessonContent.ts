@@ -6166,6 +6166,19 @@ export const lessonContent: Record<string, string> = {
       In the following lessons, we'll explore four of the most important Upanishads:
       the Isha, Katha, and Mandukya — each offering unique windows into the infinite.
     </p>
+
+    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
+      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+        📖 Explore the Upanishads
+      </h3>
+      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+        Ready to dive deeper? Explore all 13 principal Upanishads verse-by-verse, with Sanskrit,
+        transliteration, translation, and commentary.
+      </p>
+      <a href="/upanishads" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+        Explore the Upanishads →
+      </a>
+    </div>
   `,
 
   "4-1-2": `
@@ -6284,6 +6297,19 @@ export const lessonContent: Record<string, string> = {
       see God everywhere, enjoy without attachment, and recognize your true Self
       as the deathless consciousness that pervades all things.
     </p>
+
+    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
+      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+        📖 Read the Isha Upanishad
+      </h3>
+      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+        Experience all 18 verses of the Isha Upanishad with original Sanskrit, transliteration,
+        translation, and detailed commentary on each verse.
+      </p>
+      <a href="/upanishads/isha" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+        Read the Isha Upanishad →
+      </a>
+    </div>
   `,
 
   "4-1-3": `
@@ -6454,6 +6480,19 @@ export const lessonContent: Record<string, string> = {
       Nachiketa, having received this wisdom, attained Brahman and became free from
       death. "So will anyone else," the text concludes, "who knows the Self in this way."
     </p>
+
+    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
+      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+        📖 Read the Katha Upanishad
+      </h3>
+      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+        Explore all 119 verses of the Katha Upanishad — Nachiketa's complete dialogue with Death,
+        including the famous chariot metaphor and teachings on the immortal Self.
+      </p>
+      <a href="/upanishads/katha" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+        Read the Katha Upanishad →
+      </a>
+    </div>
   `,
 
   "4-1-4": `
@@ -6621,6 +6660,19 @@ export const lessonContent: Record<string, string> = {
       a direct path to recognizing your true nature as the eternal witness
       in which all experience arises.
     </p>
+
+    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
+      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+        📖 Read the Mandukya Upanishad
+      </h3>
+      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+        Study all 12 verses of the Mandukya Upanishad with detailed explanations of OM,
+        the four states of consciousness, and the path to Turiya.
+      </p>
+      <a href="/upanishads/mandukya" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+        Read the Mandukya Upanishad →
+      </a>
+    </div>
   `,
 
   "4-1-5": `
@@ -6791,6 +6843,19 @@ export const lessonContent: Record<string, string> = {
       is Brahman, I am Brahman — contain the entire teaching of Advaita Vedanta.
       Realize any one of them fully, and liberation is yours.
     </p>
+
+    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
+      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+        📖 Explore the Source Texts
+      </h3>
+      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+        Discover the Mahavakyas in their original context. Read the Chandogya (Tat Tvam Asi),
+        Brihadaranyaka (Aham Brahmasmi), Aitareya (Prajnanam Brahma), and Mandukya (Ayam Atma Brahma) Upanishads.
+      </p>
+      <a href="/upanishads" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+        Explore the Upanishads →
+      </a>
+    </div>
   `,
 
   // ============================================

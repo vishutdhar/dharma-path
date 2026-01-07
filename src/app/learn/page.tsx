@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowLeft, Lock, CheckCircle, Circle, ChevronRight, Calendar } from 'lucide-react';
+import { ArrowLeft, Lock, CheckCircle, Circle, ChevronRight, Calendar, BookOpen, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import { curriculum, Level, getLevelDuration, getLessonCount } from '@/data/curriculum';
@@ -12,6 +12,7 @@ export default function LearnPage() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [expandedLevel, setExpandedLevel] = useState<number | null>(1);
   const [festivalsExpanded, setFestivalsExpanded] = useState(false);
+  const [scripturesExpanded, setScripturesExpanded] = useState(false);
 
   useEffect(() => {
     const userProgress = getProgress();
@@ -204,6 +205,99 @@ export default function LearnPage() {
               </div>
             );
           })}
+
+          {/* Scripture Exploration Section */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md border border-cream-200 dark:border-gray-700 transition-colors">
+            {/* Scripture Header */}
+            <button
+              onClick={() => setScripturesExpanded(!scripturesExpanded)}
+              className="w-full p-6 text-left transition-colors hover:bg-cream-50 dark:hover:bg-gray-700"
+            >
+              <div className="flex items-start gap-4">
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-saffron-100 dark:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400">
+                  <BookOpen size={24} />
+                </div>
+
+                {/* Info */}
+                <div className="flex-1 min-w-0">
+                  <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
+                    Scripture Exploration
+                  </h2>
+                  <p className="text-saffron-600 dark:text-saffron-400 text-sm font-medium">
+                    Dive into the Primary Texts
+                  </p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 line-clamp-2">
+                    Read the original scriptures verse-by-verse with explanations and practical applications
+                  </p>
+
+                  {/* Meta */}
+                  <div className="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                    <span>2 scriptures</span>
+                    <span>•</span>
+                    <span>Explore anytime</span>
+                  </div>
+                </div>
+
+                {/* Expand indicator */}
+                <ChevronRight
+                  className={`
+                    text-gray-400 transition-transform shrink-0
+                    ${scripturesExpanded ? 'rotate-90' : ''}
+                  `}
+                  size={20}
+                />
+              </div>
+            </button>
+
+            {/* Expanded Scripture Grid */}
+            {scripturesExpanded && (
+              <div className="px-6 pb-6 pt-2 border-t border-cream-100 dark:border-gray-700">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  Explore the foundational texts of Hindu philosophy with verse-by-verse translations and explanations.
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  <Link
+                    href="/gita"
+                    className="bg-cream-50 dark:bg-gray-700 rounded-xl p-4 border border-cream-200 dark:border-gray-600 hover:border-saffron-300 dark:hover:border-saffron-700 hover:shadow-md transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-saffron-100 dark:bg-saffron-900/30 flex items-center justify-center">
+                        <BookOpen className="text-saffron-600 dark:text-saffron-400" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-600 dark:group-hover:text-saffron-400">
+                          Bhagavad Gita
+                        </h3>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          18 chapters • 700 verses
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/upanishads"
+                    className="bg-cream-50 dark:bg-gray-700 rounded-xl p-4 border border-cream-200 dark:border-gray-600 hover:border-saffron-300 dark:hover:border-saffron-700 hover:shadow-md transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-saffron-100 dark:bg-saffron-900/30 flex items-center justify-center">
+                        <Sparkles className="text-saffron-600 dark:text-saffron-400" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-600 dark:group-hover:text-saffron-400">
+                          Upanishads
+                        </h3>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                          13 principal texts
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
 
           {/* Festivals Section */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md border border-cream-200 dark:border-gray-700 transition-colors">
