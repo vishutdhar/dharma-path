@@ -6,13 +6,14 @@
 
 ## Current State (as of January 2025)
 
-### Learn Section (59 lessons, 4 levels)
-| Level | Title | Lessons | Content |
-|-------|-------|---------|---------|
-| 1 | The Foundation | 14 | Core concepts, deities, basics |
-| 2 | The Stories | 12 | Ramayana (5) + Mahabharata (7) |
-| 3 | The Gita | 17 | Chapter-by-chapter journey |
-| 4 | Going Deeper | 16 | Upanishads, traditions, Vedas, practice |
+### Learn Section (59 lessons, 4 levels → expanding to 5 levels)
+| Level | Title | Lessons | Content | Status |
+|-------|-------|---------|---------|--------|
+| 1 | The Foundation | 14 | Core concepts, deities, basics | ✅ Complete |
+| 2 | The Stories | 12 | Ramayana (5) + Mahabharata (7) | ✅ Complete |
+| 3 | The Gita | 17 | Chapter-by-chapter journey | ✅ Complete |
+| 4 | Going Deeper | 16 | Upanishads, traditions, Vedas, practice | ✅ Complete |
+| **5** | **The Puranas** | **~20** | **Bhagavata, Shiva, Devi stories** | ❌ Planned |
 
 ### Scripture Sections (verse-by-verse reading)
 | Scripture | Status | Verses | Notes |
@@ -166,7 +167,7 @@ interface VedicVerse {
 | "The Uddhava Gita" | Krishna's final teachings (Skandha 11) |
 | "Lessons & Legacy" | Key takeaways, influence on bhakti movement |
 
-**Location**: Add as Module 4-5 in Level 4, OR create Level 5
+**Location**: Level 5, Module 5-1
 
 ---
 
@@ -186,7 +187,48 @@ interface VedicVerse {
 - The nine nights (Navaratri connection)
 - Forms of the Divine Mother
 
-**Location**: Add as Modules in Level 4 or Level 5
+**Location**: Level 5, Modules 5-2 and 5-3
+
+---
+
+## Level 5 Structure (DECISION MADE)
+
+**Decision**: Create a new Level 5 for Puranas rather than expanding Level 4.
+
+**Rationale**:
+- Keeps existing levels unchanged
+- Puranas are conceptually more advanced (assume foundation knowledge)
+- Doesn't overwhelm Level 4 with too many modules
+- Clear progression: Foundation → Stories → Gita → Deep Philosophy → Puranas
+
+**Level 5: The Puranas (~20 lessons)**
+```
+Level 5: The Puranas
+├── Module 5-1: Bhagavata Purana (8-10 lessons)
+│   ├── 5-1-1: What is the Bhagavata Purana?
+│   ├── 5-1-2: Creation and Cosmic Cycles
+│   ├── 5-1-3: The Devotee Kings (Dhruva, Prahlada)
+│   ├── 5-1-4: Krishna's Birth & Childhood
+│   ├── 5-1-5: Krishna in Vrindavan
+│   ├── 5-1-6: Krishna's Later Life
+│   ├── 5-1-7: The Uddhava Gita
+│   └── 5-1-8: Lessons & Legacy
+│
+├── Module 5-2: Shiva Purana (5-7 lessons)
+│   ├── 5-2-1: Shiva: The Cosmic Dancer
+│   ├── 5-2-2: The Marriage of Shiva and Parvati
+│   ├── 5-2-3: Ganesha and Kartikeya
+│   ├── 5-2-4: The Twelve Jyotirlingas
+│   └── 5-2-5: Shaiva Philosophy
+│
+└── Module 5-3: Devi Mahatmya (3-5 lessons)
+    ├── 5-3-1: The Goddess Awakens
+    ├── 5-3-2: The Battle with Mahishasura
+    ├── 5-3-3: The Nine Nights (Navaratri)
+    └── 5-3-4: Forms of the Divine Mother
+```
+
+**Unlock Requirement**: Complete Level 4
 
 ---
 
