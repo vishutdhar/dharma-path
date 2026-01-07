@@ -9194,4 +9194,934 @@ export const lessonContent: Record<string, string> = {
       over a thousand years.
     </p>
   `,
+
+  "5-1-4": `
+    <h2>The Most Beloved Child in History</h2>
+    <p>
+      If there's one figure who captures the hearts of Hindus more than any
+      other, it's <strong>Krishna</strong> — not as the wise counselor of
+      the Gita, but as the divine child whose mischief, charm, and miracles
+      have enchanted the world for over a thousand years.
+    </p>
+    <p>
+      The Bhagavata Purana's tenth book (Skandha 10) devotes more chapters
+      to Krishna's life than to any other subject. It's the heart of the
+      entire text — and the source of India's most beloved devotional imagery.
+    </p>
+
+    <h2>The Prophecy and the Prison</h2>
+    <p>
+      The story begins with a prophecy that terrified a tyrant.
+    </p>
+    <p>
+      <strong>Kamsa</strong>, the cruel king of Mathura, learned from a
+      divine voice that the eighth child of his sister Devaki would be
+      his destroyer. Immediately, he imprisoned Devaki and her husband
+      Vasudeva, killing each child as it was born.
+    </p>
+    <p>
+      Six children died. The seventh (Balarama) was mystically transferred
+      to another womb. Then came the eighth — Krishna.
+    </p>
+    <blockquote>
+      <em>"The Lord who holds the universe was born in a prison cell,
+      demonstrating that no circumstance can limit the Divine."</em>
+      <br/>— Traditional teaching
+    </blockquote>
+
+    <h3>The Midnight Escape</h3>
+    <p>
+      On the night Krishna was born, miracles unfolded:
+    </p>
+    <ul>
+      <li>The prison guards fell into deep sleep</li>
+      <li>The locked doors swung open on their own</li>
+      <li>The chains binding Vasudeva fell away</li>
+    </ul>
+    <p>
+      A divine voice instructed Vasudeva: "Carry this child across the
+      Yamuna River to Gokul. Exchange him with the daughter just born
+      to Nanda and Yashoda. Return before anyone wakes."
+    </p>
+    <p>
+      Vasudeva placed the newborn in a basket on his head and walked
+      into the stormy night. The Yamuna was flooded — but as he entered,
+      the waters parted. The great serpent Shesha rose from the river,
+      spreading his hood to shelter the divine infant from the rain.
+    </p>
+    <p>
+      Vasudeva exchanged the babies and returned. When Kamsa came to
+      kill the eighth child, he found a baby girl who slipped from his
+      hands, transformed into the goddess Yogamaya, and declared:
+      "The one who will destroy you has already escaped!"
+    </p>
+
+    <h2>Childhood in Gokul</h2>
+    <p>
+      Krishna grew up in the cowherd village of Gokul, raised by the
+      loving foster parents <strong>Nanda</strong> and <strong>Yashoda</strong>.
+      From the beginning, he was no ordinary child.
+    </p>
+
+    <h3>The Butter Thief</h3>
+    <p>
+      Krishna became famous for stealing butter — not from hunger, but
+      from pure divine play (<em>lila</em>). He would organize raids with
+      his friends on the houses of the village women (gopis), climbing
+      on each other's shoulders to reach pots hung from the ceiling.
+    </p>
+    <p>
+      The gopis would complain to Yashoda: "Your son breaks our pots,
+      steals our butter, and runs away laughing!" But secretly, they
+      adored these visits.
+    </p>
+    <blockquote>
+      <em>"The butter thief stole not just butter, but the hearts of
+      all who knew him."</em>
+      <br/>— Bhakti poetry
+    </blockquote>
+    <p>
+      <strong>The deeper meaning:</strong> The butter represents the
+      essence of devotion (the cream of the heart), and Krishna "steals"
+      the hearts of His devotees through His irresistible charm.
+    </p>
+
+    <h3>The Universe in His Mouth</h3>
+    <p>
+      One day, children complained to Yashoda that Krishna had eaten mud.
+      When she demanded he open his mouth, she saw within it:
+    </p>
+    <ul>
+      <li>The entire universe — stars, planets, oceans</li>
+      <li>All directions, all time, all beings</li>
+      <li>Even herself, standing there looking into his mouth</li>
+    </ul>
+    <p>
+      For a moment, Yashoda realized her child was the Supreme Lord.
+      But Krishna immediately cast his divine illusion (yoga-maya) over
+      her — she forgot what she saw and resumed seeing him simply as
+      her beloved son.
+    </p>
+    <p>
+      <strong>The teaching:</strong> God is present even in the most
+      ordinary-seeming circumstances. And sometimes, it's divine grace
+      itself that lets us experience God as intimately near rather than
+      cosmically overwhelming.
+    </p>
+
+    <h2>The Demon Slayers</h2>
+    <p>
+      Throughout his childhood, Kamsa sent demons to kill Krishna.
+      Each attempt became an opportunity for divine play:
+    </p>
+
+    <h3>Putana — The Poisoned Breast</h3>
+    <p>
+      A demoness disguised as a beautiful woman came offering to nurse
+      the infant Krishna. Her breasts were smeared with deadly poison.
+      But baby Krishna, while nursing, sucked out her life force instead.
+      The demoness died — and because she had offered her breast to God
+      (even with evil intent), she attained liberation.
+    </p>
+    <p>
+      <strong>Teaching:</strong> Even accidental contact with the Divine
+      can lead to liberation.
+    </p>
+
+    <h3>Trinavarta — The Whirlwind</h3>
+    <p>
+      A demon came as a tornado, lifting baby Krishna into the sky.
+      But Krishna made himself impossibly heavy, crushing the demon
+      and floating gently back down.
+    </p>
+
+    <h3>Shakatasura — The Cart Demon</h3>
+    <p>
+      A demon possessed a cart near where baby Krishna lay. With one
+      kick of his tiny foot, Krishna shattered the cart and the demon
+      within it. The villagers, finding the baby unharmed among the
+      wreckage, were astonished.
+    </p>
+
+    <h2>Why These Stories Matter</h2>
+    <p>
+      The childhood stories of Krishna serve multiple purposes:
+    </p>
+    <ul>
+      <li><strong>Intimacy with God:</strong> They show that the Supreme
+      can be approached as a child — innocent, playful, lovable</li>
+      <li><strong>Divine protection:</strong> No matter what evil arises,
+      God effortlessly overcomes it</li>
+      <li><strong>The sweetness of devotion:</strong> These stories
+      inspired the entire bhakti movement's emphasis on loving God
+      as a parent loves a child</li>
+      <li><strong>Liberation through any relationship:</strong> Even
+      Kamsa, obsessed with Krishna (through hatred), achieved liberation
+      by constantly thinking of the Lord</li>
+    </ul>
+    <p>
+      In the next lesson, we follow Krishna to Vrindavan, where his
+      youth unfolds in the most celebrated stories of divine love
+      in all of Hindu literature.
+    </p>
+  `,
+
+  "5-1-5": `
+    <h2>The Enchanted Forest</h2>
+    <p>
+      When Krishna was about seven years old, the cowherds moved from
+      Gokul to <strong>Vrindavan</strong> — a pastoral paradise along
+      the Yamuna River. Here, Krishna's divine play (<em>lila</em>)
+      reached its most beautiful expression.
+    </p>
+    <p>
+      Vrindavan means "the forest of Vrinda (Tulsi)" — a place of
+      sacred groves, flower-covered meadows, and clear waters. For
+      devotees, it represents the spiritual realm where the soul
+      can experience pure, unobstructed love for God.
+    </p>
+
+    <h2>The Divine Cowherd</h2>
+    <p>
+      In Vrindavan, Krishna lived as a <strong>gopala</strong> — a
+      tender of cows. Each morning, he and his friends would take the
+      village's cattle to graze, spending the day in the forest in
+      play and adventure.
+    </p>
+
+    <h3>The Flute</h3>
+    <p>
+      Krishna's flute (<em>venu</em> or <em>murali</em>) is the most
+      famous symbol of his Vrindavan years. When he played:
+    </p>
+    <ul>
+      <li>The cows stopped grazing, transfixed</li>
+      <li>Rivers stopped flowing to listen</li>
+      <li>Birds fell silent</li>
+      <li>The gopis, hearing from afar, were drawn irresistibly</li>
+    </ul>
+    <blockquote>
+      <em>"The sound of his flute steals the minds of all beings.
+      Even the wise lose themselves in its melody."</em>
+      <br/>— Bhagavata Purana 10.21
+    </blockquote>
+    <p>
+      <strong>The symbolism:</strong> The flute is hollow — empty of
+      ego. It becomes a channel for divine music. Similarly, the
+      devotee who empties themselves of self becomes an instrument
+      for God's song.
+    </p>
+
+    <h2>The Gopis</h2>
+    <p>
+      The <strong>gopis</strong> — the young women of Vrindavan — are
+      central to the Bhagavata's teaching on devotion. Their love for
+      Krishna represents the soul's longing for union with the Divine.
+    </p>
+    <p>
+      Their love is described as <em>parakiya bhava</em> — a love so
+      powerful it transcends all social conventions. They leave their
+      homes, their duties, even their families when they hear Krishna's
+      flute. This "transgressive" devotion represents the soul's
+      willingness to abandon everything — even dharmic obligations —
+      for God alone.
+    </p>
+    <blockquote>
+      <em>"For the gopis, Krishna was not just a beloved — he was
+      breath itself. Without him, they simply could not exist."</em>
+      <br/>— Bhakti commentary
+    </blockquote>
+
+    <h3>Radha</h3>
+    <p>
+      Among the gopis, <strong>Radha</strong> holds a special place —
+      though the Bhagavata Purana mentions her only indirectly (as
+      "the special one"). Later tradition elevates her as Krishna's
+      eternal consort, the embodiment of devotion itself.
+    </p>
+    <p>
+      Radha-Krishna together represent the complete divine: the soul
+      (Radha) eternally united with God (Krishna). Their love story
+      is considered the highest expression of <em>madhurya bhava</em>
+      — the sweetness of divine romance.
+    </p>
+
+    <h2>The Rasa Lila</h2>
+    <p>
+      The most celebrated episode of Krishna's Vrindavan years is the
+      <strong>Rasa Lila</strong> — the divine dance that took place
+      on a full moon night in autumn.
+    </p>
+    <p>
+      When Krishna played his flute, all the gopis of Vrindavan came
+      running. Some left cooking half-done; some left nursing their
+      babies; some left their husbands' beds. Nothing could stop them.
+    </p>
+    <p>
+      And then — Krishna multiplied himself. Each gopi found herself
+      dancing with Krishna, believing she alone had his attention.
+      The dance formed a great circle, with Krishna appearing between
+      every two gopis.
+    </p>
+    <blockquote>
+      <em>"Like a jewel set between golden beads, Krishna appeared
+      between each pair of gopis, and each gopi felt she had him
+      entirely to herself."</em>
+      <br/>— Bhagavata Purana 10.33
+    </blockquote>
+
+    <h3>The Meaning</h3>
+    <p>
+      The Rasa Lila is not merely a romantic story — it's a profound
+      spiritual teaching:
+    </p>
+    <ul>
+      <li><strong>Individual attention:</strong> God gives complete
+      attention to each devotee, as if they alone existed</li>
+      <li><strong>Expansion:</strong> The infinite can multiply
+      infinitely without diminishing</li>
+      <li><strong>Union in difference:</strong> The soul dances with
+      God — distinct yet inseparable</li>
+      <li><strong>Pure love:</strong> The gopis wanted nothing from
+      Krishna except Krishna himself — this is the model of desireless
+      devotion</li>
+    </ul>
+    <p>
+      For centuries, this episode has inspired poetry, music, dance,
+      and painting. It remains the pinnacle of bhakti literature.
+    </p>
+
+    <h2>The Lifting of Govardhan</h2>
+    <p>
+      One of Krishna's most famous deeds in Vrindavan was lifting
+      <strong>Govardhan Hill</strong> on his little finger.
+    </p>
+    <p>
+      The story begins when Krishna convinced the villagers to stop
+      their annual worship of Indra (the rain god) and instead worship
+      the hill that nourished their cattle. Indra, enraged, sent
+      torrential rains and thunderstorms to destroy Vrindavan.
+    </p>
+    <p>
+      The seven-year-old Krishna simply lifted the entire mountain
+      like an umbrella and held it aloft for seven days while the
+      villagers and cattle sheltered beneath.
+    </p>
+    <blockquote>
+      <em>"Don't fear. Come under the mountain. As long as I hold it,
+      no harm can reach you."</em>
+      <br/>— Krishna to the villagers
+    </blockquote>
+    <p>
+      Indra finally surrendered, acknowledging Krishna's supremacy.
+    </p>
+
+    <h3>The Teaching</h3>
+    <ul>
+      <li>God protects His devotees against all forces — even divine
+      ones</li>
+      <li>Pride (Indra's) leads to humiliation; devotion leads to
+      protection</li>
+      <li>The mountain represents nature (prakriti), and Krishna's
+      lifting it shows His lordship over creation</li>
+    </ul>
+
+    <h2>The End of Childhood</h2>
+    <p>
+      Krishna's Vrindavan years couldn't last forever. The very
+      purpose of his incarnation — to destroy Kamsa and restore
+      dharma — awaited him in Mathura.
+    </p>
+    <p>
+      When the summons came, Krishna left Vrindavan. The gopis'
+      separation (<em>viraha</em>) became as spiritually significant
+      as their union. Their longing for the absent beloved represents
+      the soul's ache for God in a world where direct experience is
+      veiled.
+    </p>
+    <p>
+      In the next lesson, we follow Krishna from the pastoral idyll
+      of Vrindavan into the battles, kingship, and teaching that
+      would define his adult life.
+    </p>
+  `,
+
+  "5-1-6": `
+    <h2>From Village to Kingdom</h2>
+    <p>
+      Krishna's departure from Vrindavan marks a profound shift in
+      the Bhagavata's narrative. The playful child and romantic youth
+      becomes a warrior, king, and teacher. Yet the text insists that
+      Krishna never truly changes — only our perception of him does.
+    </p>
+
+    <h2>The Killing of Kamsa</h2>
+    <p>
+      Kamsa, still obsessed with destroying Krishna, invited him and
+      Balarama to Mathura for a wrestling tournament — a trap. But
+      Krishna had other plans.
+    </p>
+    <p>
+      As he entered the city, different people saw him differently:
+    </p>
+    <ul>
+      <li>The wrestlers saw a thunderbolt</li>
+      <li>Common people saw a beautiful youth</li>
+      <li>The gopis saw their beloved</li>
+      <li>The cowherd saw a kinsman</li>
+      <li>Kamsa saw death itself</li>
+    </ul>
+    <blockquote>
+      <em>"The same sun appears differently to different eyes —
+      so Krishna appeared to each according to their nature."</em>
+      <br/>— Bhagavata commentary
+    </blockquote>
+    <p>
+      Krishna killed the wrestlers sent against him, then leapt into
+      the royal pavilion and dragged Kamsa from his throne. With the
+      tyrant's death, he liberated his birth parents Devaki and
+      Vasudeva from prison — meeting them properly for the first time.
+    </p>
+
+    <h2>Education in Ujjain</h2>
+    <p>
+      After defeating Kamsa, Krishna and Balarama were sent to the
+      ashram of the sage <strong>Sandipani</strong> for formal education.
+      In just 64 days, they mastered all 64 arts and sciences — a
+      demonstration that the Divine, while playing the human role
+      completely, is never actually limited by human constraints.
+    </p>
+    <p>
+      As guru dakshina (teacher's fee), Sandipani asked Krishna to
+      retrieve his son who had died by drowning. Krishna traveled to
+      the realm of death itself, defeated the demon who held the boy,
+      and returned the child to his teacher.
+    </p>
+
+    <h2>The Founding of Dwarka</h2>
+    <p>
+      Mathura faced constant attacks from Kamsa's allies, particularly
+      the demon king <strong>Jarasandha</strong>. Rather than endlessly
+      defend, Krishna led his people west to the coast of Gujarat,
+      where he built a new city: <strong>Dwarka</strong> — the city
+      of gates.
+    </p>
+    <p>
+      Dwarka was a marvel: built on reclaimed land (or according to
+      some accounts, on an island), with golden spires, crystal
+      palaces, and all the prosperity of a divine kingdom. It became
+      Krishna's capital for the rest of his earthly life.
+    </p>
+    <p>
+      Because Krishna withdrew from Mathura rather than fighting
+      endlessly, he is sometimes called <strong>Ranchhod</strong> —
+      "one who left the battlefield." Far from a criticism, this
+      title celebrates strategic wisdom over pride.
+    </p>
+
+    <h2>The 16,108 Queens</h2>
+    <p>
+      The Bhagavata describes Krishna as having <strong>16,108 wives</strong>.
+      The number sounds shocking until we understand the story:
+    </p>
+    <p>
+      The demon Narakasura had kidnapped 16,100 princesses and held
+      them captive. Krishna defeated the demon and freed the women.
+      But in that era, women "touched" by another man were considered
+      unmarriageable. Krishna married all 16,100 to restore their
+      honor and give them status.
+    </p>
+    <p>
+      Added to his eight principal queens (the <em>ashtabharya</em>),
+      this made 16,108. And here's the miracle: Krishna expanded
+      himself into 16,108 forms, living fully with each wife
+      simultaneously, each believing she had his complete attention.
+    </p>
+    <blockquote>
+      <em>"The sage Narada visited each of Krishna's palaces and
+      found him fully present in each — doing different activities,
+      fully engaged with each queen."</em>
+      <br/>— Bhagavata Purana 10.69
+    </blockquote>
+    <p>
+      <strong>The teaching:</strong> Just as with the Rasa Lila,
+      Krishna demonstrates that God's love is not diminished by
+      being shared — it multiplies infinitely.
+    </p>
+
+    <h2>The Mahabharata Years</h2>
+    <p>
+      Krishna's most famous worldly role is his involvement in the
+      <strong>Mahabharata</strong> — the great war between the Pandavas
+      and Kauravas. Though the Bhagavata focuses more on his earlier
+      life, it acknowledges his role as:
+    </p>
+    <ul>
+      <li><strong>Friend and advisor</strong> to the Pandavas</li>
+      <li><strong>Charioteer</strong> to Arjuna</li>
+      <li><strong>Teacher</strong> of the Bhagavad Gita</li>
+      <li><strong>Diplomat</strong> who tried to prevent the war</li>
+      <li><strong>Strategist</strong> who guided victory</li>
+    </ul>
+    <p>
+      The Gita, delivered on the battlefield just before war began,
+      contains Krishna's most systematic philosophical teaching.
+      It's covered in detail in Level 3 of this course.
+    </p>
+
+    <h2>Krishna's Character</h2>
+    <p>
+      Throughout these later stories, Krishna displays qualities that
+      distinguish him from ordinary heroes:
+    </p>
+    <ul>
+      <li><strong>Complete equanimity:</strong> Neither victory nor
+      defeat affects his inner state</li>
+      <li><strong>Strategic flexibility:</strong> He uses whatever
+      means necessary for dharma — including cunning</li>
+      <li><strong>Accessibility:</strong> He remains available to
+      the humblest devotee even while negotiating with kings</li>
+      <li><strong>Playfulness:</strong> Even in court, he retains the
+      joy of his Vrindavan nature</li>
+    </ul>
+
+    <h2>The Yadava Destruction</h2>
+    <p>
+      The Bhagavata does not shy from describing how Krishna's own
+      clan destroyed itself. Years after the Mahabharata, the Yadavas
+      became drunk with prosperity and pride. A curse led them to
+      fight among themselves, wiping out the entire dynasty.
+    </p>
+    <p>
+      Krishna watched this happen without preventing it. His purpose
+      was never to establish a permanent worldly kingdom but to
+      demonstrate divine play and teach eternal truths.
+    </p>
+
+    <h2>The Teaching of Later Life</h2>
+    <p>
+      Krishna's adult life teaches:
+    </p>
+    <ul>
+      <li>Divinity can operate within worldly roles — king, husband,
+      friend — without being limited by them</li>
+      <li>Action in the world and spiritual realization are not
+      opposed</li>
+      <li>Even God respects karma — He guided but didn't override
+      human choice</li>
+      <li>All manifestations eventually withdraw — only the eternal
+      remains</li>
+    </ul>
+    <p>
+      In the next lesson, we explore Krishna's final teaching — the
+      Uddhava Gita — delivered just before his departure from the
+      world.
+    </p>
+  `,
+
+  "5-1-7": `
+    <h2>Krishna's Final Teaching</h2>
+    <p>
+      As the Yadava dynasty destroyed itself and Krishna's earthly
+      mission neared its end, one disciple came seeking final guidance:
+      <strong>Uddhava</strong>, Krishna's cousin and lifelong companion.
+    </p>
+    <p>
+      The teaching that Krishna gave him — occupying chapters 7 through
+      29 of the Bhagavata's eleventh book (Skandha 11) — is known as
+      the <strong>Uddhava Gita</strong>. While less famous than the
+      Bhagavad Gita, many scholars consider it even more comprehensive.
+    </p>
+    <blockquote>
+      <em>"The Bhagavad Gita is Krishna's teaching before battle.
+      The Uddhava Gita is Krishna's teaching before departure —
+      more intimate, more complete."</em>
+      <br/>— Traditional distinction
+    </blockquote>
+
+    <h2>The Context</h2>
+    <p>
+      Uddhava had witnessed the destruction of the Yadavas. He saw
+      Krishna's own family tear itself apart. Now, knowing Krishna
+      would soon leave the world, he was devastated.
+    </p>
+    <p>
+      "How can I live without you?" Uddhava asked. "Take me with you
+      wherever you go."
+    </p>
+    <p>
+      Krishna's response was not to grant this request but to give
+      Uddhava the means to be with him eternally — through knowledge.
+    </p>
+
+    <h2>The Twenty-Four Gurus</h2>
+    <p>
+      One of the Uddhava Gita's most beloved passages describes a
+      wandering sage called the <strong>Avadhuta</strong> who learned
+      wisdom from twenty-four teachers — none of them human:
+    </p>
+    <ul>
+      <li><strong>Earth</strong> taught patience — it endures everything</li>
+      <li><strong>Air</strong> taught detachment — it passes through all
+      without clinging</li>
+      <li><strong>Sky</strong> taught boundlessness — the Self, like
+      space, has no limits</li>
+      <li><strong>Water</strong> taught purification — it cleanses all
+      it touches</li>
+      <li><strong>Fire</strong> taught transformation — it accepts all
+      offerings and reduces them to essence</li>
+      <li><strong>Moon</strong> taught that the Self, like the moon,
+      remains unchanged though its reflection waxes and wanes</li>
+      <li><strong>Sun</strong> taught that like water evaporated then
+      returned as rain, the soul appears in different bodies</li>
+      <li><strong>Pigeon</strong> taught (by negative example) that
+      excessive attachment brings suffering</li>
+      <li><strong>Python</strong> taught contentment with whatever comes</li>
+      <li><strong>Ocean</strong> taught equanimity — neither swollen by
+      rivers nor diminished by drought</li>
+      <li><strong>Moth</strong> taught the danger of attraction to
+      sensory glamour</li>
+      <li><strong>Bee</strong> taught to gather wisdom from many sources</li>
+      <li><strong>Elephant</strong> taught (by negative example) how
+      desire can be used to trap even the strongest</li>
+      <li><strong>Honey-gatherer</strong> taught not to hoard</li>
+      <li><strong>Deer</strong> taught the danger of enchanting sounds</li>
+      <li><strong>Fish</strong> taught the danger of taste attachment</li>
+      <li><strong>Pingala</strong> (a courtesan) taught dispassion —
+      when she stopped waiting for customers and found peace within</li>
+      <li><strong>Osprey</strong> taught to travel light</li>
+      <li><strong>Child</strong> taught freedom from social anxiety</li>
+      <li><strong>Maiden</strong> taught to work alone (her bangles
+      clinked when she pounded rice with company)</li>
+      <li><strong>Arrow-maker</strong> taught absorption —
+      he was so focused he didn't notice the king pass by</li>
+      <li><strong>Snake</strong> taught to live in whatever shelter comes</li>
+      <li><strong>Spider</strong> taught that creation emerges from
+      and returns to the creator</li>
+      <li><strong>Wasp</strong> taught that continuous contemplation
+      transforms the contemplator</li>
+    </ul>
+    <blockquote>
+      <em>"For one with eyes to see, the whole universe is a teacher."</em>
+      <br/>— Bhagavata Purana 11.9
+    </blockquote>
+
+    <h2>Key Teachings</h2>
+    <p>
+      The Uddhava Gita covers an extraordinary range of topics:
+    </p>
+
+    <h3>The Three Paths Unified</h3>
+    <p>
+      While the Bhagavad Gita presents karma, jnana, and bhakti as
+      somewhat distinct paths, the Uddhava Gita shows their integration.
+      True devotion includes knowledge and right action; true knowledge
+      flowers as devotion; right action without ego becomes worship.
+    </p>
+
+    <h3>Seeing the Divine Everywhere</h3>
+    <p>
+      Krishna teaches that the advanced devotee sees Him in all beings
+      and all beings in Him. This vision of unity eliminates all
+      distinction between "sacred" and "profane."
+    </p>
+    <blockquote>
+      <em>"The wise see the same Self in a learned brahmin, a cow,
+      an elephant, a dog, and an outcast."</em>
+      <br/>— Echoing Gita 5.18
+    </blockquote>
+
+    <h3>Beyond Ritual</h3>
+    <p>
+      While respecting Vedic rituals, Krishna emphasizes that true
+      worship transcends external forms. The heart's devotion matters
+      more than elaborate ceremonies.
+    </p>
+
+    <h3>Renunciation Clarified</h3>
+    <p>
+      True renunciation is not mere abandonment of things but
+      abandonment of attachment to things. One can live in the world
+      without being bound by it.
+    </p>
+
+    <h3>The Nature of Maya</h3>
+    <p>
+      Krishna explains illusion (maya) more systematically than in
+      the Bhagavad Gita, describing how the gunas (qualities) create
+      apparent diversity in what is actually unified.
+    </p>
+
+    <h2>The Yoga of Devotion</h2>
+    <p>
+      Perhaps the Uddhava Gita's most significant contribution is its
+      detailed description of <em>bhakti yoga</em> as a complete path:
+    </p>
+    <ul>
+      <li>Hearing about the Lord (<em>shravana</em>)</li>
+      <li>Chanting His names (<em>kirtana</em>)</li>
+      <li>Remembering Him (<em>smarana</em>)</li>
+      <li>Serving His feet (<em>pada-sevana</em>)</li>
+      <li>Worshipping Him (<em>archana</em>)</li>
+      <li>Bowing to Him (<em>vandana</em>)</li>
+      <li>Serving as His servant (<em>dasya</em>)</li>
+      <li>Befriending Him (<em>sakhya</em>)</li>
+      <li>Complete self-surrender (<em>atma-nivedana</em>)</li>
+    </ul>
+    <p>
+      These "nine forms of devotion" became foundational for all
+      subsequent bhakti traditions.
+    </p>
+
+    <h2>The Departure</h2>
+    <p>
+      After delivering this teaching, Krishna sent Uddhava to Badrinath
+      to pursue spiritual practice. He didn't want Uddhava to witness
+      what came next.
+    </p>
+    <p>
+      Krishna then sat in meditation under a peepal tree. A hunter
+      named Jara (meaning "old age"), mistaking Krishna's foot for a
+      deer, shot an arrow that struck His heel — the only vulnerable
+      spot. Rather than expressing anger, Krishna blessed the hunter
+      and peacefully left His body.
+    </p>
+    <blockquote>
+      <em>"Even death, for the Lord, was an act of grace."</em>
+      <br/>— Traditional commentary
+    </blockquote>
+
+    <h2>Why the Uddhava Gita Matters</h2>
+    <p>
+      This teaching is special because:
+    </p>
+    <ul>
+      <li>It represents Krishna's most intimate instruction</li>
+      <li>It integrates all spiritual paths into unified practice</li>
+      <li>It speaks to spiritual seekers at every level</li>
+      <li>It provides the philosophical foundation for bhakti movements</li>
+      <li>It shows how to maintain connection with the Divine even
+      when external forms pass away</li>
+    </ul>
+    <p>
+      In our final lesson, we explore the Bhagavata Purana's lasting
+      legacy — its influence on Hindu culture, the bhakti movements,
+      and its relevance for seekers today.
+    </p>
+  `,
+
+  "5-1-8": `
+    <h2>A Text That Changed India</h2>
+    <p>
+      The Bhagavata Purana is not just a scripture — it's a cultural
+      force that shaped Indian civilization. Its stories, teachings,
+      and devotional approach transformed religion from priestly
+      ritual to popular movement.
+    </p>
+    <p>
+      Understanding the Bhagavata's legacy helps us appreciate why
+      it remains so vital today.
+    </p>
+
+    <h2>The Birth of Bhakti Movements</h2>
+    <p>
+      Before the Bhagavata became widespread, Hindu worship was largely
+      dominated by:
+    </p>
+    <ul>
+      <li>Complex Vedic rituals requiring trained priests</li>
+      <li>Philosophical inquiry accessible mainly to scholars</li>
+      <li>Temple worship centered on image and mantra</li>
+    </ul>
+    <p>
+      The Bhagavata offered something revolutionary: <strong>direct,
+      personal, emotional connection with God</strong> — available to
+      anyone, regardless of caste, gender, or education.
+    </p>
+    <blockquote>
+      <em>"The Bhagavata declared that God could be reached not through
+      ritual or philosophy alone, but through love."</em>
+      <br/>— Historian of religion
+    </blockquote>
+
+    <h3>Medieval Bhakti Saints</h3>
+    <p>
+      From the 12th to 17th centuries, saint-poets across India created
+      devotional movements directly inspired by the Bhagavata:
+    </p>
+    <ul>
+      <li><strong>Jayadeva</strong> (12th century) — His <em>Gita
+      Govinda</em> celebrates Radha-Krishna's divine love</li>
+      <li><strong>Namdev and Tukaram</strong> — Maharashtra's poet-saints
+      who sang of simple devotion</li>
+      <li><strong>Chaitanya Mahaprabhu</strong> (15th-16th century) —
+      Whose ecstatic devotion sparked a movement still vibrant today</li>
+      <li><strong>Mirabai</strong> — The princess who abandoned royalty
+      to sing of Krishna</li>
+      <li><strong>Surdas</strong> — The blind poet whose songs of
+      Krishna's childhood are still sung daily</li>
+      <li><strong>Tulsidas</strong> — Though focused on Rama, his
+      work shows the Bhagavata's influence on all Hindu devotion</li>
+    </ul>
+    <p>
+      Each of these movements claimed the Bhagavata as inspiration.
+      The text gave them both content (Krishna's stories) and method
+      (the nine forms of devotion).
+    </p>
+
+    <h2>Influence on Art and Culture</h2>
+    <p>
+      The Bhagavata's stories became the primary subject of Indian
+      artistic expression:
+    </p>
+
+    <h3>Visual Arts</h3>
+    <ul>
+      <li><strong>Miniature paintings</strong> — The Rajput and Pahari
+      schools created thousands of paintings illustrating Krishna's
+      life, especially his Vrindavan years</li>
+      <li><strong>Temple sculpture</strong> — Scenes of butter-stealing,
+      Govardhan lifting, and Rasa Lila adorn temples across India</li>
+      <li><strong>Folk art</strong> — From Madhubani to Pattachitra,
+      regional traditions depict Bhagavata episodes</li>
+    </ul>
+
+    <h3>Performing Arts</h3>
+    <ul>
+      <li><strong>Bharatanatyam and Odissi</strong> — Classical dance
+      forms with extensive Bhagavata-based repertoire</li>
+      <li><strong>Kathak</strong> — Originally developed to narrate
+      Krishna's stories</li>
+      <li><strong>Rasa Lila performances</strong> — Enacted in
+      Vrindavan and beyond for centuries</li>
+      <li><strong>Harikatha</strong> — Traditional story-telling that
+      brings the Bhagavata to village audiences</li>
+    </ul>
+
+    <h3>Music</h3>
+    <ul>
+      <li><strong>Kirtana</strong> — The call-and-response devotional
+      singing that the Bhagavata recommends</li>
+      <li><strong>Bhajan tradition</strong> — Thousands of devotional
+      songs based on Bhagavata stories</li>
+      <li><strong>Classical compositions</strong> — Carnatic and
+      Hindustani musicians continue to set Bhagavata texts to music</li>
+    </ul>
+
+    <h2>Theological Contributions</h2>
+    <p>
+      Beyond devotion, the Bhagavata made lasting philosophical
+      contributions:
+    </p>
+
+    <h3>Personalism</h3>
+    <p>
+      While the Upanishads emphasized impersonal Brahman, the Bhagavata
+      asserts that the Supreme Reality is personal — that God is not
+      less than human (mere force or principle) but more than human
+      (possessing infinite personality).
+    </p>
+
+    <h3>Avatar Theology</h3>
+    <p>
+      The Bhagavata provides the fullest account of divine descent
+      (<em>avatara</em>), explaining why and how God takes form in
+      the world.
+    </p>
+
+    <h3>Grace</h3>
+    <p>
+      The text emphasizes that liberation comes ultimately not through
+      human effort alone but through divine grace (<em>kripa</em>).
+      The Lord actively reaches toward the devotee.
+    </p>
+
+    <h3>Integration</h3>
+    <p>
+      Rather than opposing knowledge, action, and devotion, the
+      Bhagavata shows how they mutually support and ultimately merge
+      into unified spiritual life.
+    </p>
+
+    <h2>Modern Relevance</h2>
+    <p>
+      Why does the Bhagavata matter today?
+    </p>
+
+    <h3>Accessible Spirituality</h3>
+    <p>
+      In an age of complexity, the Bhagavata offers a simple message:
+      love God, serve others, and see the Divine everywhere. This
+      requires no special equipment, training, or circumstances.
+    </p>
+
+    <h3>Emotional Authenticity</h3>
+    <p>
+      Modern psychology recognizes what the Bhagavata always knew:
+      emotions are not obstacles to spirituality but vehicles for it.
+      The text validates the full range of human feeling as potential
+      paths to the Divine.
+    </p>
+
+    <h3>Environmental Wisdom</h3>
+    <p>
+      Krishna's years as a cowherd, the reverence for Govardhan Hill,
+      and the Avadhuta's learning from nature all suggest a sacred
+      relationship with the natural world — teachings increasingly
+      relevant in an age of environmental crisis.
+    </p>
+
+    <h3>Social Inclusion</h3>
+    <p>
+      The Bhagavata explicitly states that God's love extends to all
+      regardless of birth or status. This message fueled reform
+      movements and continues to challenge caste discrimination.
+    </p>
+
+    <h2>How to Engage the Bhagavata</h2>
+    <p>
+      For those inspired to go deeper:
+    </p>
+    <ul>
+      <li><strong>Reading:</strong> Begin with Skandha 10 (Krishna's
+      life) or 11 (Uddhava Gita). Let stories become contemplation.</li>
+      <li><strong>Listening:</strong> Traditional study happens through
+      <em>katha</em> — oral exposition. Seek out Bhagavata recitations
+      and discourses.</li>
+      <li><strong>Art:</strong> Let paintings, music, and dance of the
+      Bhagavata tradition deepen your connection.</li>
+      <li><strong>Practice:</strong> Try the nine forms of devotion,
+      starting with just one.</li>
+      <li><strong>Contemplation:</strong> Take one verse or episode
+      daily and sit with it. Let meaning unfold gradually.</li>
+    </ul>
+
+    <h2>Conclusion: The Ever-Fresh Text</h2>
+    <p>
+      The Bhagavata Purana has been called "the beautiful" — a text
+      that nourishes through its very form as much as its content.
+      For over a thousand years, it has served as:
+    </p>
+    <ul>
+      <li>Philosophy for the learned</li>
+      <li>Story for the simple</li>
+      <li>Poetry for the artistic</li>
+      <li>Guide for the practicing</li>
+      <li>Solace for the suffering</li>
+      <li>Inspiration for the devoted</li>
+    </ul>
+    <p>
+      Having completed this introduction, you now possess the foundation
+      to explore the Bhagavata yourself. Whether through continued
+      study, artistic engagement, or devotional practice, may this
+      ancient text illuminate your path.
+    </p>
+    <blockquote>
+      <em>"This Bhagavata Purana is as brilliant as the sun.
+      It has arisen just after Lord Krishna departed for His abode.
+      Those who have lost their vision in the darkness of this age
+      will get light from this Purana."</em>
+      <br/>— Bhagavata Purana 1.3.43
+    </blockquote>
+  `,
 };

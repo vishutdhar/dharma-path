@@ -6,30 +6,31 @@
 
 ## Current State (as of January 2025)
 
-### Learn Section (59 lessons, 4 levels → expanding to 5 levels)
+### Learn Section (67 lessons, 5 levels)
 | Level | Title | Lessons | Content | Status |
 |-------|-------|---------|---------|--------|
 | 1 | The Foundation | 14 | Core concepts, deities, basics | ✅ Complete |
 | 2 | The Stories | 12 | Ramayana (5) + Mahabharata (7) | ✅ Complete |
 | 3 | The Gita | 17 | Chapter-by-chapter journey | ✅ Complete |
 | 4 | Going Deeper | 16 | Upanishads, traditions, Vedas, practice | ✅ Complete |
-| **5** | **The Puranas** | **~20** | **Bhagavata, Shiva, Devi stories** | ❌ Planned |
+| 5 | The Puranas | 8+ | Bhagavata (8), Shiva (5 locked), Devi (4 locked) | 🔶 Module 5-1 Complete |
 
 ### Scripture Sections (verse-by-verse reading)
 | Scripture | Status | Verses | Notes |
 |-----------|--------|--------|-------|
 | Bhagavad Gita | ✅ Complete | 701 | All 18 chapters |
 | Upanishads | ✅ Complete | 688 | All 13 principal texts |
+| Vedic Hymns | ✅ Complete | 58 | 6 key hymns (Gayatri, Nasadiya, Purusha, Agni, Sri, Shanti) |
 | Ramayana | ❌ Not needed | - | Covered via lessons (story format) |
 | Mahabharata | ❌ Not needed | - | Covered via lessons (story format) |
-| Vedic Hymns | ❌ Missing | - | Next priority |
-| Puranas | ❌ Missing | - | Future priority |
+| Puranas | ❌ Not needed | - | Covered via lessons (story format) |
 
 ### Bridge Links Status
 | From | To | Status |
 |------|-----|--------|
 | Level 4 Upanishad lessons | /upanishads/* | ✅ Complete |
-| Level 3 Gita lessons | /gita/* | ❌ Missing |
+| Level 3 Gita lessons | /gita/* | ✅ Complete |
+| Level 4 Vedas lessons | /vedas/* | ✅ Complete |
 
 ---
 
@@ -289,7 +290,7 @@ Level 5: The Puranas
 
 - [x] **Step 1**: Gita bridge links ✅ (Completed January 2025)
 - [x] **Step 2**: Key Vedic Hymns scripture section ✅ (Completed January 2025)
-- [ ] **Step 3**: Bhagavata Purana lessons
+- [x] **Step 3**: Bhagavata Purana lessons ✅ (Completed January 2025)
 - [ ] **Step 4**: Shiva Purana lessons
 - [ ] **Step 4**: Devi Mahatmya lessons
 
