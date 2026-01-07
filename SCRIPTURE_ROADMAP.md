@@ -93,7 +93,7 @@ SMRITI ("What is remembered" - Human authored, accessible)
 | **2A** | Foundation: types.ts, index.ts, Nasadiya Sukta (7v), Gayatri (1v) | ✅ Complete |
 | **2B** | Pages: /vedas, /vedas/[hymn], /vedas/[hymn]/[verse] | ✅ Complete |
 | **2C** | More hymns: Purusha (16v), Agni (9v), Sri (15v), Shanti (10v) | ✅ Complete |
-| **2D** | Search integration + Bridge links from Level 4 | Pending |
+| **2D** | Search integration + Bridge links from Level 4 | ✅ Complete |
 
 **Key Hymns to Include**:
 | Hymn | Source | Verses | Significance |
@@ -288,7 +288,7 @@ Level 5: The Puranas
 ## Progress Tracking
 
 - [x] **Step 1**: Gita bridge links ✅ (Completed January 2025)
-- [ ] **Step 2**: Key Vedic Hymns scripture section
+- [x] **Step 2**: Key Vedic Hymns scripture section ✅ (Completed January 2025)
 - [ ] **Step 3**: Bhagavata Purana lessons
 - [ ] **Step 4**: Shiva Purana lessons
 - [ ] **Step 4**: Devi Mahatmya lessons
