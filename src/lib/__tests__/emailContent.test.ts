@@ -3,8 +3,8 @@ import { getEmailContentForDay, TOTAL_DAYS } from '../emailContent';
 
 describe('emailContent', () => {
   describe('TOTAL_DAYS', () => {
-    it('should be 77 days', () => {
-      expect(TOTAL_DAYS).toBe(77);
+    it('should be 94 days', () => {
+      expect(TOTAL_DAYS).toBe(94);
     });
   });
 
@@ -18,10 +18,10 @@ describe('emailContent', () => {
       expect(content?.htmlContent).toBeTruthy();
     });
 
-    it('should return content for day 77 (last day)', () => {
-      const content = getEmailContentForDay(77);
+    it('should return content for day 94 (last day)', () => {
+      const content = getEmailContentForDay(94);
       expect(content).not.toBeNull();
-      expect(content?.day).toBe(77);
+      expect(content?.day).toBe(94);
       expect(content?.type).toBe('chapter');
     });
 
@@ -30,8 +30,8 @@ describe('emailContent', () => {
       expect(content).toBeNull();
     });
 
-    it('should return null for day 78 (beyond total)', () => {
-      const content = getEmailContentForDay(78);
+    it('should return null for day 95 (beyond total)', () => {
+      const content = getEmailContentForDay(95);
       expect(content).toBeNull();
     });
 
@@ -40,15 +40,16 @@ describe('emailContent', () => {
       expect(content).toBeNull();
     });
 
-    it('should return lessons for days 1-59', () => {
-      const content = getEmailContentForDay(30);
+    it('should return lessons for days 1-76', () => {
+      // Test a day from Level 5 (days 60-76)
+      const content = getEmailContentForDay(65);
       expect(content).not.toBeNull();
       expect(content?.type).toBe('lesson');
       expect(content?.lessonId).toBeTruthy();
     });
 
-    it('should return chapters for days 60-77', () => {
-      const content = getEmailContentForDay(65);
+    it('should return chapters for days 77-94', () => {
+      const content = getEmailContentForDay(80);
       expect(content).not.toBeNull();
       expect(content?.type).toBe('chapter');
       expect(content?.chapterNumber).toBeTruthy();

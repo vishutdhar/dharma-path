@@ -1,13 +1,14 @@
 /**
  * Email Content Helper
- * Maps day numbers (1-77) to lesson/chapter content for daily emails
+ * Maps day numbers (1-94) to lesson/chapter content for daily emails
  *
  * Day mapping:
  * - Days 1-14: Level 1 - The Foundation (14 lessons)
  * - Days 15-26: Level 2 - The Stories (12 lessons)
  * - Days 27-43: Level 3 - The Gita (17 lessons)
  * - Days 44-59: Level 4 - Going Deeper (16 lessons)
- * - Days 60-77: Gita Chapters 1-18 (chapter summaries)
+ * - Days 60-76: Level 5 - The Puranas (17 lessons)
+ * - Days 77-94: Gita Chapters 1-18 (chapter summaries)
  */
 
 import { curriculum, Lesson, Level, Module } from '@/data/curriculum';
@@ -39,7 +40,7 @@ const gitaChapters = [
   chapter13, chapter14, chapter15, chapter16, chapter17, chapter18
 ];
 
-export const TOTAL_DAYS = 77;
+export const TOTAL_DAYS = 94;
 
 export interface EmailContent {
   day: number;
@@ -205,6 +206,7 @@ export function getLevelForDay(day: number): string {
   if (day <= 26) return 'Level 2: The Stories';
   if (day <= 43) return 'Level 3: The Gita';
   if (day <= 59) return 'Level 4: Going Deeper';
+  if (day <= 76) return 'Level 5: The Puranas';
   return 'Bhagavad Gita Chapters';
 }
 
@@ -260,10 +262,13 @@ export function getMilestoneMessage(day: number): string | null {
     return "You've completed the Gita overview! Time to go deeper into advanced topics.";
   }
   if (day === 59) {
+    return "Level 4 complete! Tomorrow, we explore the Puranas — the great mythological texts.";
+  }
+  if (day === 76) {
     return "All lessons complete! For the final 18 days, we'll journey through each chapter of the Gita.";
   }
-  if (day === 77) {
-    return "You did it! 77 days of learning complete. You now have a comprehensive understanding of Hindu philosophy and the Bhagavad Gita.";
+  if (day === 94) {
+    return "You did it! 94 days of learning complete. You now have a comprehensive understanding of Hindu philosophy, the Puranas, and the Bhagavad Gita.";
   }
 
   // Weekly milestones
