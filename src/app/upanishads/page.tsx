@@ -6,16 +6,15 @@ import Navigation from '@/components/Navigation';
 import {
   getAllUpanishadSummaries,
   getVedaName,
-  upanishads,
   UpanishadSummary,
 } from '@/data/upanishads';
 
 export default function UpanishadsPage() {
   const allUpanishads = getAllUpanishadSummaries();
 
-  // Group by availability (has content vs placeholder)
-  const availableUpanishads = allUpanishads.filter((u) => upanishads[u.id]);
-  const comingSoonUpanishads = allUpanishads.filter((u) => !upanishads[u.id]);
+  // All 13 Upanishads are now complete
+  const availableUpanishads = allUpanishads;
+  const comingSoonUpanishads: UpanishadSummary[] = [];
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
