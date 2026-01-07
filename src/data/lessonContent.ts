@@ -11975,4 +11975,3999 @@ export const lessonContent: Record<string, string> = {
       Salutations, salutations, salutations to Her."
     </blockquote>
   `,
+
+  // ============================================
+  // LEVEL 6: STUDY THE GITA
+  // Module 6-1: Arjuna's Crisis & The Soul
+  // ============================================
+
+  "6-1-1": `
+    <h2>Chapter 1: The Yoga of Arjuna's Dejection</h2>
+    <p>
+      We begin our verse-by-verse journey through the Bhagavad Gita at the most
+      dramatic moment possible: two massive armies face each other on the field
+      of Kurukshetra. Arjuna, the greatest warrior of his time, asks Krishna to
+      drive his chariot between the armies. What he sees there shatters him.
+    </p>
+    <p>
+      This chapter contains no philosophical teaching yet—it's pure setup. But
+      this setup is essential. Without understanding Arjuna's crisis, we cannot
+      appreciate Krishna's response.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1.1 — The Opening Question</h3>
+      <p class="sanskrit">धृतराष्ट्र उवाच।<br/>
+      धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।<br/>
+      मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय।।</p>
+      <p class="transliteration"><em>dhṛtarāṣṭra uvāca: dharma-kṣetre kuru-kṣetre
+      samavetā yuyutsavaḥ māmakāḥ pāṇḍavāś caiva kim akurvata sañjaya</em></p>
+      <p><strong>"Dhritarashtra said: O Sanjaya, assembled on the sacred field
+      of Kurukshetra, eager to fight, what did my sons and the sons of Pandu do?"</strong></p>
+      <p>
+        The blind king's very first words reveal his bias: "my sons" versus
+        "the sons of Pandu." The Gita opens with a question about dharma—and
+        immediately shows us how attachment clouds our judgment.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.28-29 — Arjuna Sees His Family</h3>
+      <p class="sanskrit">दृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम्।<br/>
+      सीदन्ति मम गात्राणि मुखं च परिशुष्यति।।</p>
+      <p class="transliteration"><em>dṛṣṭvemaṁ sva-janaṁ kṛṣṇa yuyutsuṁ samupasthitam
+      sīdanti mama gātrāṇi mukhaṁ ca pariśuṣyati</em></p>
+      <p><strong>"Seeing these kinsmen, O Krishna, arrayed and eager to fight,
+      my limbs give way, my mouth is parched."</strong></p>
+      <p>
+        This is the moment of crisis. Arjuna doesn't see "the enemy"—he sees
+        his grandfather Bhishma, his teacher Drona, his cousins. The abstract
+        concept of war becomes terrifyingly personal. His body responds before
+        his mind can process it.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.46 — Arjuna Drops His Bow</h3>
+      <p class="sanskrit">सञ्जय उवाच।<br/>
+      एवमुक्त्वार्जुनः संख्ये रथोपस्थ उपाविशत्।<br/>
+      विसृज्य सशरं चापं शोकसंविग्नमानसः।।</p>
+      <p class="transliteration"><em>sañjaya uvāca: evam uktvārjunaḥ saṅkhye rathopastha
+      upāviśat visṛjya sa-śaraṁ cāpaṁ śoka-saṁvigna-mānasaḥ</em></p>
+      <p><strong>"Sanjaya said: Having spoken thus on the battlefield, Arjuna
+      cast aside his bow and arrows, and sat down on the seat of his chariot,
+      his mind overwhelmed with grief."</strong></p>
+      <p>
+        This is the ultimate moment of surrender—not to God yet, but to his
+        own confusion. The greatest archer in the world becomes unable to even
+        hold his weapon. This breakdown is the necessary precondition for
+        spiritual breakthrough.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Cost of War</strong> — Arjuna faces the reality that victory
+      means killing those he loves. The Gita doesn't romanticize conflict.</li>
+      <li><strong>Attachment and Duty</strong> — Arjuna's attachments paralyze him.
+      He cannot act because he cannot see beyond his personal relationships.</li>
+      <li><strong>The Breakdown Before Breakthrough</strong> — Sometimes we must
+      reach complete confusion before we're ready to receive wisdom.</li>
+      <li><strong>Dharma in Conflict</strong> — Multiple duties clash: duty to
+      family, duty as a warrior, duty to justice. The Gita begins in this tension.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>When have you experienced a moment where your body responded to stress
+      before your mind caught up (like Arjuna's trembling)?</li>
+      <li>Have you ever faced a situation where two duties seemed to directly conflict?</li>
+      <li>What does Arjuna's breakdown teach us about the relationship between
+      emotional crisis and spiritual readiness?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      You've read the key verses of Chapter 1. Now explore the complete chapter
+      with all 47 verses, detailed commentary, and practical applications.
+    </p>
+    <p><strong>→ <a href="/gita/1">Read Chapter 1: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-1-2": `
+    <h2>Chapter 2: The Yoga of Knowledge</h2>
+    <p>
+      This is the most important chapter of the Gita. In response to Arjuna's
+      breakdown, Krishna delivers the core teaching that underlies everything
+      else: <em>you are not the body</em>. The soul is eternal, unchanging,
+      indestructible. Once this is understood, the entire framework shifts.
+    </p>
+    <p>
+      Chapter 2 is often called "the Gita in miniature"—it contains the seeds
+      of every teaching that will be expanded in later chapters.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 2.11 — The Teaching Begins</h3>
+      <p class="sanskrit">श्रीभगवानुवाच।<br/>
+      अशोच्यानन्वशोचस्त्वं प्रज्ञावादांश्च भाषसे।<br/>
+      गतासूनगतासूंश्च नानुशोचन्ति पण्डिताः।।</p>
+      <p class="transliteration"><em>śrī-bhagavān uvāca: aśocyān anvaśocas tvaṁ
+      prajñā-vādāṁś ca bhāṣase gatāsūn agatāsūṁś ca nānuśocanti paṇḍitāḥ</em></p>
+      <p><strong>"The Blessed Lord said: You grieve for those who should not be
+      grieved for, yet you speak words of wisdom. The wise grieve neither for
+      the living nor for the dead."</strong></p>
+      <p>
+        Krishna begins by pointing out Arjuna's contradiction: he speaks
+        philosophically but acts from emotional confusion. True wisdom
+        transforms how we relate to life and death.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2.20 — The Eternal Soul</h3>
+      <p class="sanskrit">न जायते म्रियते वा कदाचिन्<br/>
+      नायं भूत्वा भविता वा न भूयः।<br/>
+      अजो नित्यः शाश्वतोऽयं पुराणो<br/>
+      न हन्यते हन्यमाने शरीरे।।</p>
+      <p class="transliteration"><em>na jāyate mriyate vā kadācin nāyaṁ bhūtvā
+      bhavitā vā na bhūyaḥ ajo nityaḥ śāśvato 'yaṁ purāṇo na hanyate hanyamāne śarīre</em></p>
+      <p><strong>"The soul is never born, nor does it ever die; nor having once
+      existed, does it cease to be. Unborn, eternal, changeless, ancient—it is
+      not killed when the body is killed."</strong></p>
+      <p>
+        This is one of the most famous verses. The Self (Atman) is beyond birth
+        and death. Understanding this transforms our relationship with mortality
+        and loss.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2.47 — The Heart of Karma Yoga</h3>
+      <p class="sanskrit">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br/>
+      मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि।।</p>
+      <p class="transliteration"><em>karmaṇy evādhikāras te mā phaleṣu kadācana
+      mā karma-phala-hetur bhūr mā te saṅgo 'stv akarmaṇi</em></p>
+      <p><strong>"You have a right to action alone, never to its fruits. Let not
+      the fruit of action be your motive, nor let your attachment be to inaction."</strong></p>
+      <p>
+        Perhaps the most quoted verse of the Gita. Act because it's right, not
+        for reward. But this doesn't mean passive acceptance—attachment to
+        inaction is equally problematic.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2.62-63 — The Chain of Destruction</h3>
+      <p class="sanskrit">ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते।<br/>
+      सङ्गात्सञ्जायते कामः कामात्क्रोधोऽभिजायते।।</p>
+      <p class="transliteration"><em>dhyāyato viṣayān puṁsaḥ saṅgas teṣūpajāyate
+      saṅgāt sañjāyate kāmaḥ kāmāt krodho 'bhijāyate</em></p>
+      <p><strong>"Contemplating sense objects, one develops attachment. From
+      attachment arises desire; from desire, anger is born."</strong></p>
+      <p>
+        Krishna maps the psychology of destruction: thought → attachment →
+        desire → anger → delusion → loss of memory → loss of intelligence →
+        destruction. Guard your thoughts.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Eternal Self</strong> — You are not the body. The Atman
+      is unborn, undying, unchanging.</li>
+      <li><strong>Karma Yoga</strong> — Act without attachment to results.
+      This is freedom in action.</li>
+      <li><strong>Equanimity</strong> — Remain balanced in success and failure,
+      pleasure and pain.</li>
+      <li><strong>The Sthitaprajna</strong> — The person of steady wisdom,
+      unmoved by circumstances.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What would change in your life if you truly believed you are not the body?</li>
+      <li>Think of a recent action. Were you attached to the outcome? How did
+      that attachment affect you?</li>
+      <li>Where in your life do you see the "chain of destruction" (thought →
+      attachment → desire → anger)?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 2 contains 72 verses packed with foundational teachings.
+      Explore the complete chapter with every verse explained.
+    </p>
+    <p><strong>→ <a href="/gita/2">Read Chapter 2: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-1-3": `
+    <h2>Chapter 3: The Yoga of Action</h2>
+    <p>
+      Arjuna is confused. Krishna just taught about the eternal soul and
+      detachment—so why should he fight at all? In Chapter 3, Krishna clarifies:
+      renunciation doesn't mean inaction. Everyone must act. The question is
+      <em>how</em> to act without being bound by action.
+    </p>
+    <p>
+      This chapter introduces Karma Yoga in full detail: the path of selfless
+      action as a means to spiritual liberation.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 3.4 — You Cannot Avoid Action</h3>
+      <p class="sanskrit">न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।<br/>
+      न च संन्यसनादेव सिद्धिं समधिगच्छति।।</p>
+      <p class="transliteration"><em>na karmaṇām anārambhān naiṣkarmyaṁ puruṣo 'śnute
+      na ca sannyasanād eva siddhiṁ samadhigacchati</em></p>
+      <p><strong>"Not by abstaining from action does one attain freedom from
+      action, nor by renunciation alone does one attain perfection."</strong></p>
+      <p>
+        Simply stopping action doesn't lead to liberation. The mind still
+        churns with desires. True freedom comes from acting without attachment,
+        not from avoiding action altogether.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.9 — Action as Sacrifice</h3>
+      <p class="sanskrit">यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः।<br/>
+      तदर्थं कर्म कौन्तेय मुक्तसङ्गः समाचर।।</p>
+      <p class="transliteration"><em>yajñārthāt karmaṇo 'nyatra loko 'yaṁ karma-bandhanaḥ
+      tad-arthaṁ karma kaunteya mukta-saṅgaḥ samācara</em></p>
+      <p><strong>"Action performed as sacrifice alone does not bind. Therefore,
+      O Arjuna, perform your work as a sacrifice, free from attachment."</strong></p>
+      <p>
+        This is the key insight: action binds us only when we're attached to
+        results. When we offer our work as sacrifice—to something greater than
+        ourselves—it becomes liberating.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.21 — Leadership by Example</h3>
+      <p class="sanskrit">यद्यदाचरति श्रेष्ठस्तत्तदेवेतरो जनः।<br/>
+      स यत्प्रमाणं कुरुते लोकस्तदनुवर्तते।।</p>
+      <p class="transliteration"><em>yad yad ācarati śreṣṭhas tat tad evetaro janaḥ
+      sa yat pramāṇaṁ kurute lokas tad anuvartate</em></p>
+      <p><strong>"Whatever a great person does, others follow. Whatever standards
+      they set, the world pursues."</strong></p>
+      <p>
+        We're all leaders in some sphere. Our actions ripple outward.
+        This verse places responsibility on those who have influence—they must
+        act rightly because others learn from watching them.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.35 — Better Your Own Dharma</h3>
+      <p class="sanskrit">श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।<br/>
+      स्वधर्मे निधनं श्रेयः परधर्मो भयावहः।।</p>
+      <p class="transliteration"><em>śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt
+      sva-dharme nidhanaṁ śreyaḥ para-dharmo bhayāvahaḥ</em></p>
+      <p><strong>"Better is one's own dharma, though imperfectly performed, than
+      the dharma of another well performed. It is better to die in one's own
+      dharma; the dharma of another brings danger."</strong></p>
+      <p>
+        Don't try to be someone else. Your unique path, with all its flaws, is
+        better than perfectly imitating another's journey. Authenticity matters.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Action is Inescapable</strong> — Even sitting still, the mind
+      acts. We must engage with the world.</li>
+      <li><strong>Yajna (Sacrifice)</strong> — Transform action into offering.
+      This removes the binding power of karma.</li>
+      <li><strong>Svadharma</strong> — Follow your own nature and duty, not
+      someone else's.</li>
+      <li><strong>The Cosmic Wheel</strong> — Action sustains the universe.
+      We're all interconnected in this dance.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Are there areas of your life where you avoid action, thinking that
+      withdrawal is the spiritual path?</li>
+      <li>How might you transform your daily work into a "sacrifice"—an offering
+      to something greater?</li>
+      <li>What is your svadharma? What work are you uniquely suited for?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 3's 43 verses lay out the complete path of Karma Yoga.
+      Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/3">Read Chapter 3: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-1-4": `
+    <h2>Chapter 4: The Yoga of Divine Knowledge</h2>
+    <p>
+      Krishna reveals something extraordinary: this wisdom isn't new. It's
+      ancient—passed down from the sun god at the dawn of creation, through
+      royal sages, until it was lost. Now Krishna restores it to Arjuna.
+    </p>
+    <p>
+      This chapter also contains Krishna's famous declaration about his
+      incarnations—why the Divine takes human form whenever dharma declines.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 4.7-8 — The Divine Incarnations</h3>
+      <p class="sanskrit">यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।<br/>
+      अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्।।<br/>
+      परित्राणाय साधूनां विनाशाय च दुष्कृताम्।<br/>
+      धर्मसंस्थापनार्थाय सम्भवामि युगे युगे।।</p>
+      <p class="transliteration"><em>yadā yadā hi dharmasya glānir bhavati bhārata
+      abhyutthānam adharmasya tadātmānaṁ sṛjāmy aham
+      paritrāṇāya sādhūnāṁ vināśāya ca duṣkṛtām
+      dharma-saṁsthāpanārthāya sambhavāmi yuge yuge</em></p>
+      <p><strong>"Whenever dharma declines and adharma rises, O Bharata, I
+      manifest myself. For the protection of the good, the destruction of the
+      wicked, and the establishment of dharma, I appear age after age."</strong></p>
+      <p>
+        This is perhaps the most famous pair of verses, explaining the doctrine
+        of avatara. The Divine doesn't abandon the world—whenever darkness rises,
+        light appears to restore balance.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 4.18 — Action in Inaction</h3>
+      <p class="sanskrit">कर्मण्यकर्म यः पश्येदकर्मणि च कर्म यः।<br/>
+      स बुद्धिमान्मनुष्येषु स युक्तः कृत्स्नकर्मकृत्।।</p>
+      <p class="transliteration"><em>karmaṇy akarma yaḥ paśyed akarmaṇi ca karma yaḥ
+      sa buddhimān manuṣyeṣu sa yuktaḥ kṛtsna-karma-kṛt</em></p>
+      <p><strong>"One who sees inaction in action, and action in inaction—that
+      one is wise among humans, that one is a yogi, performing all actions."</strong></p>
+      <p>
+        A profound paradox: the wise person acts but is not acting (the Self
+        remains unmoved), and in apparent stillness, subtle action continues.
+        This is enlightened activity.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 4.33 — Knowledge as Supreme</h3>
+      <p class="sanskrit">श्रेयान्द्रव्यमयाद्यज्ञाज्ज्ञानयज्ञः परन्तप।<br/>
+      सर्वं कर्माखिलं पार्थ ज्ञाने परिसमाप्यते।।</p>
+      <p class="transliteration"><em>śreyān dravya-mayād yajñāj jñāna-yajñaḥ parantapa
+      sarvaṁ karmākhilaṁ pārtha jñāne parisamāpyate</em></p>
+      <p><strong>"Superior to material sacrifice is the sacrifice of knowledge,
+      O scorcher of foes. All actions, in their entirety, culminate in knowledge."</strong></p>
+      <p>
+        All spiritual practices ultimately lead to knowledge—understanding the
+        truth of reality. This is the highest sacrifice.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 4.38 — Nothing Equals Knowledge</h3>
+      <p class="sanskrit">न हि ज्ञानेन सदृशं पवित्रमिह विद्यते।<br/>
+      तत्स्वयं योगसंसिद्धः कालेनात्मनि विन्दति।।</p>
+      <p class="transliteration"><em>na hi jñānena sadṛśaṁ pavitram iha vidyate
+      tat svayaṁ yoga-saṁsiddhaḥ kālenātmani vindati</em></p>
+      <p><strong>"Indeed, there is nothing in this world as purifying as
+      knowledge. In due time, one who is perfected in yoga discovers this
+      knowledge within the Self."</strong></p>
+      <p>
+        Knowledge purifies like nothing else. And this knowledge isn't imported
+        from outside—through yoga, we discover it already present within us.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Divine Incarnation</strong> — God takes form to restore balance
+      whenever dharma declines.</li>
+      <li><strong>Ancient Wisdom Restored</strong> — The Gita isn't invention
+      but recovery of eternal truth.</li>
+      <li><strong>Action in Inaction</strong> — The enlightened see the stillness
+      within movement, movement within stillness.</li>
+      <li><strong>Jnana Yajna</strong> — The sacrifice of knowledge is the
+      highest offering.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Where in your life do you see dharma declining? What role might you
+      play in its restoration?</li>
+      <li>What does "seeing inaction in action" mean to you? Can you think of
+      an example from your own experience?</li>
+      <li>How has knowledge—true understanding—purified or transformed some
+      aspect of your life?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 4's 42 verses reveal the ancient lineage of wisdom and the
+      supremacy of knowledge. Explore every verse in detail.
+    </p>
+    <p><strong>→ <a href="/gita/4">Read Chapter 4: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  // ==========================================================================
+  // LEVEL 6 MODULE 6-2: THE YOGA OF PRACTICE (Chapters 5-8)
+  // ==========================================================================
+
+  "6-2-1": `
+    <h2>Chapter 5: The Yoga of Renunciation</h2>
+    <p>
+      Arjuna asks the question many seekers ask: Which is better—giving up action
+      entirely, or performing action with yoga? Krishna's answer resolves this
+      apparent contradiction with a profound insight.
+    </p>
+    <p>
+      Chapter 5 teaches that true renunciation isn't about what you do externally,
+      but about your internal state. The one who acts without attachment is the
+      true renunciant—not the one who merely stops doing things.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 5.2 — Yoga of Action is Better</h3>
+      <p class="sanskrit">संन्यासः कर्मयोगश्च निःश्रेयसकरावुभौ।<br/>
+      तयोस्तु कर्मसंन्यासात्कर्मयोगो विशिष्यते।।</p>
+      <p class="transliteration"><em>sannyāsaḥ karma-yogaś ca niḥśreyasa-karāv ubhau
+      tayos tu karma-sannyāsāt karma-yogo viśiṣyate</em></p>
+      <p><strong>"Both renunciation and yoga of action lead to liberation. But of
+      the two, yoga of action is superior to renunciation of action."</strong></p>
+      <p>
+        Krishna is clear: both paths work, but karma yoga (selfless action) has
+        an edge. Why? Because renunciation without inner transformation is
+        incomplete, while selfless action naturally develops wisdom.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 5.10 — The Lotus Leaf</h3>
+      <p class="sanskrit">ब्रह्मण्याधाय कर्माणि सङ्गं त्यक्त्वा करोति यः।<br/>
+      लिप्यते न स पापेन पद्मपत्रमिवाम्भसा।।</p>
+      <p class="transliteration"><em>brahmaṇy ādhāya karmāṇi saṅgaṁ tyaktvā karoti yaḥ
+      lipyate na sa pāpena padma-patram ivāmbhasā</em></p>
+      <p><strong>"One who acts offering all actions to Brahman, abandoning
+      attachment, is not touched by sin—like a lotus leaf by water."</strong></p>
+      <p>
+        This beautiful metaphor captures the essence: the lotus floats on water
+        but never gets wet. Similarly, the wise person lives and acts in the
+        world but remains untouched by it. The key is offering actions to the
+        Divine and releasing attachment to outcomes.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 5.18 — Equal Vision</h3>
+      <p class="sanskrit">विद्याविनयसम्पन्ने ब्राह्मणे गवि हस्तिनि।<br/>
+      शुनि चैव श्वपाके च पण्डिताः समदर्शिनः।।</p>
+      <p class="transliteration"><em>vidyā-vinaya-sampanne brāhmaṇe gavi hastini
+      śuni caiva śva-pāke ca paṇḍitāḥ sama-darśinaḥ</em></p>
+      <p><strong>"The wise see the same in a learned and humble brahmin, in a cow,
+      an elephant, a dog, and an outcaste."</strong></p>
+      <p>
+        This is radical equality. The truly wise see the same Self in everyone—
+        from the highest scholar to the lowest social position, in humans and
+        animals alike. Forms differ vastly, but the essence is one.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 5.29 — Krishna as Friend</h3>
+      <p class="sanskrit">भोक्तारं यज्ञतपसां सर्वलोकमहेश्वरम्।<br/>
+      सुहृदं सर्वभूतानां ज्ञात्वा मां शान्तिमृच्छति।।</p>
+      <p class="transliteration"><em>bhoktāraṁ yajña-tapasāṁ sarva-loka-maheśvaram
+      suhṛdaṁ sarva-bhūtānāṁ jñātvā māṁ śāntim ṛcchati</em></p>
+      <p><strong>"Knowing Me as the enjoyer of all sacrifices and austerities, the
+      great Lord of all worlds, and the friend of all beings—one attains peace."</strong></p>
+      <p>
+        The chapter's beautiful conclusion: God is not just cosmic ruler but
+        intimate friend. "Suhridam sarva-bhutanam"—the friend of all beings.
+        When you know this, peace becomes natural.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>True Renunciation is Internal</strong> — Not about giving up
+      actions, but giving up attachment and ego.</li>
+      <li><strong>Karma Yoga and Sannyasa Converge</strong> — Both paths lead to
+      the same destination when practiced correctly.</li>
+      <li><strong>The Lotus Metaphor</strong> — Act in the world without being
+      stained by it.</li>
+      <li><strong>Equal Vision</strong> — See the same Self in all beings,
+      regardless of external form or status.</li>
+      <li><strong>God as Friend</strong> — The Divine is not distant but intimate,
+      the well-wisher of all.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Where in your life could you practice "offering actions to Brahman"
+      rather than seeking personal reward?</li>
+      <li>Can you think of situations where you've treated people differently
+      based on their social position? How might equal vision change this?</li>
+      <li>What does it mean to you that God is the "friend of all beings"?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 5's 29 verses resolve the apparent conflict between renunciation
+      and action. Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/5">Read Chapter 5: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-2-2": `
+    <h2>Chapter 6: The Yoga of Meditation</h2>
+    <p>
+      This is one of the most practical chapters of the Gita. Krishna gives
+      actual meditation instructions—where to sit, how to sit, what to focus on,
+      and how to deal with the restless mind. He also reveals a profound truth:
+      you are your own best friend and your own worst enemy.
+    </p>
+    <p>
+      Chapter 6 is the heart of yoga practice. It teaches that the mind can be
+      controlled through practice and dispassion, and that even imperfect effort
+      carries forward across lifetimes.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 6.5 — Self as Friend or Enemy</h3>
+      <p class="sanskrit">उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।<br/>
+      आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः।।</p>
+      <p class="transliteration"><em>uddhared ātmanātmānaṁ nātmānam avasādayet
+      ātmaiva hy ātmano bandhur ātmaiva ripur ātmanaḥ</em></p>
+      <p><strong>"Let a person lift themselves by their own self; let them not
+      degrade themselves. For the self alone is the friend of the self, and the
+      self alone is the enemy of the self."</strong></p>
+      <p>
+        A powerful teaching on self-responsibility. No one else can save you or
+        destroy you the way you can. You have the power to lift yourself up or
+        bring yourself down.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 6.10-14 — Meditation Instructions</h3>
+      <p class="sanskrit">योगी युञ्जीत सततमात्मानं रहसि स्थितः।<br/>
+      एकाकी यतचित्तात्मा निराशीरपरिग्रहः।।</p>
+      <p class="transliteration"><em>yogī yuñjīta satatam ātmānaṁ rahasi sthitaḥ
+      ekākī yata-cittātmā nirāśīr aparigrahaḥ</em></p>
+      <p><strong>"The yogi should constantly practice meditation, dwelling in
+      solitude, alone, with mind and body controlled, free from desires and
+      possessiveness."</strong></p>
+      <p>
+        Practical setup: Find a quiet place. Be alone. Control the mind and body.
+        Let go of expectations and the need to possess. These are the conditions
+        for deep meditation.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 6.34-35 — The Restless Mind</h3>
+      <p class="sanskrit">चञ्चलं हि मनः कृष्ण प्रमाथि बलवद्दृढम्।<br/>
+      तस्याहं निग्रहं मन्ये वायोरिव सुदुष्करम्।।</p>
+      <p class="transliteration"><em>cañcalaṁ hi manaḥ kṛṣṇa pramāthi balavad dṛḍham
+      tasyāhaṁ nigrahaṁ manye vāyor iva su-duṣkaram</em></p>
+      <p><strong>"The mind is restless, turbulent, powerful, and obstinate, O
+      Krishna. I think controlling it is as difficult as controlling the wind."</strong></p>
+      <p>
+        Arjuna voices what every meditator knows! The mind is incredibly
+        difficult to control. Krishna's response is encouraging: yes, it's hard,
+        but it's achievable through practice (abhyasa) and dispassion (vairagya).
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 6.47 — The Greatest Yogi</h3>
+      <p class="sanskrit">योगिनामपि सर्वेषां मद्गतेनान्तरात्मना।<br/>
+      श्रद्धावान्भजते यो मां स मे युक्ततमो मतः।।</p>
+      <p class="transliteration"><em>yoginām api sarveṣāṁ mad-gatenāntar-ātmanā
+      śraddhāvān bhajate yo māṁ sa me yuktatamo mataḥ</em></p>
+      <p><strong>"Of all yogis, one who worships Me with faith, whose inner self
+      is absorbed in Me—that one I consider the most united in yoga."</strong></p>
+      <p>
+        The chapter ends with a surprise: the highest yogi isn't the one with
+        the most advanced techniques, but the one with the deepest devotion.
+        Faith and love for the Divine are the pinnacle of yoga.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Self-Mastery</strong> — You are your own friend or enemy
+      depending on whether you conquer or are conquered by the mind.</li>
+      <li><strong>Practical Meditation</strong> — Specific instructions on
+      posture, place, focus, and attitude for meditation.</li>
+      <li><strong>The Restless Mind</strong> — It can be controlled through
+      practice (abhyasa) and dispassion (vairagya).</li>
+      <li><strong>No Effort is Lost</strong> — Even imperfect spiritual practice
+      carries forward across lifetimes.</li>
+      <li><strong>Devotion is Supreme</strong> — The highest yoga is loving
+      absorption in the Divine.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>In what ways is your mind your friend? In what ways is it your enemy?</li>
+      <li>What conditions help you meditate most effectively? What distracts you?</li>
+      <li>How do you respond when your mind wanders during meditation—with
+      frustration or with patience?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 6's 47 verses provide the complete guide to meditation. Explore
+      every verse with detailed explanations and practical applications.
+    </p>
+    <p><strong>→ <a href="/gita/6">Read Chapter 6: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-2-3": `
+    <h2>Chapter 7: The Yoga of Knowledge and Wisdom</h2>
+    <p>
+      Krishna reveals his divine nature in full. He explains both theoretical
+      knowledge (jnana) and realized wisdom (vijnana), describing his two
+      natures—material and spiritual—and explaining why most people don't
+      recognize him.
+    </p>
+    <p>
+      This chapter contains one of the Gita's most profound declarations:
+      "Vasudevah sarvam"—Krishna is everything. It also explains why the Divine
+      remains hidden from most, and who truly finds the path to realization.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 7.4-5 — Two Divine Natures</h3>
+      <p class="sanskrit">भूमिरापोऽनलो वायुः खं मनो बुद्धिरेव च।<br/>
+      अहङ्कार इतीयं मे भिन्ना प्रकृतिरष्टधा।।</p>
+      <p class="transliteration"><em>bhūmir āpo 'nalo vāyuḥ khaṁ mano buddhir eva ca
+      ahaṅkāra itīyaṁ me bhinnā prakṛtir aṣṭadhā</em></p>
+      <p><strong>"Earth, water, fire, air, space, mind, intellect, and ego—these
+      eight comprise My lower material nature. But beyond this, know My higher
+      nature—the living beings by which this world is sustained."</strong></p>
+      <p>
+        Krishna distinguishes between his lower nature (prakriti—the material
+        elements including mind and ego) and his higher nature (the conscious
+        souls). Even our mind and intellect are material—not our true Self!
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 7.7 — The String of Pearls</h3>
+      <p class="sanskrit">मत्तः परतरं नान्यत्किञ्चिदस्ति धनञ्जय।<br/>
+      मयि सर्वमिदं प्रोतं सूत्रे मणिगणा इव।।</p>
+      <p class="transliteration"><em>mattaḥ parataraṁ nānyat kiñcid asti dhanañjaya
+      mayi sarvam idaṁ protaṁ sūtre maṇi-gaṇā iva</em></p>
+      <p><strong>"There is nothing whatsoever higher than Me, O Arjuna. All this
+      is strung on Me like pearls on a thread."</strong></p>
+      <p>
+        A beautiful image: You see the pearls but not the thread that holds them
+        together. Similarly, we see the world's diversity but not the divine
+        unity that sustains it. Krishna is that invisible thread.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 7.14 — Crossing Maya Through Surrender</h3>
+      <p class="sanskrit">दैवी ह्येषा गुणमयी मम माया दुरत्यया।<br/>
+      मामेव ये प्रपद्यन्ते मायामेतां तरन्ति ते।।</p>
+      <p class="transliteration"><em>daivī hy eṣā guṇa-mayī mama māyā duratyayā
+      mām eva ye prapadyante māyām etāṁ taranti te</em></p>
+      <p><strong>"This divine energy of Mine, consisting of the three modes, is
+      very difficult to overcome. But those who surrender unto Me cross over
+      this illusion."</strong></p>
+      <p>
+        Maya (illusion) is powerful—you can't intellectually figure your way
+        past it. But there's a simple solution: surrender to Krishna. Devotion
+        accomplishes what mere thinking cannot.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 7.19 — Vasudeva is Everything</h3>
+      <p class="sanskrit">बहूनां जन्मनामन्ते ज्ञानवान्मां प्रपद्यते।<br/>
+      वासुदेवः सर्वमिति स महात्मा सुदुर्लभः।।</p>
+      <p class="transliteration"><em>bahūnāṁ janmanām ante jñānavān māṁ prapadyate
+      vāsudevaḥ sarvam iti sa mahātmā su-durlabhaḥ</em></p>
+      <p><strong>"After many births, one who has true knowledge surrenders unto
+      Me, knowing 'Vasudeva is everything.' Such a great soul is very rare."</strong></p>
+      <p>
+        One of the Gita's most profound statements. Not "Vasudeva is important"
+        or "Vasudeva created everything"—but "Vasudeva IS everything." This
+        realization comes after many lifetimes, and such realized souls are
+        extremely rare.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Two Natures</strong> — The lower material nature (including
+      mind/ego) and the higher spiritual nature (consciousness).</li>
+      <li><strong>Divine Immanence</strong> — Krishna is in everything as its
+      essence—taste in water, light in sun, ability in humans.</li>
+      <li><strong>Maya</strong> — Illusion is powerful but can be crossed
+      through surrender.</li>
+      <li><strong>Four Types of Seekers</strong> — The distressed, the curious,
+      the wealth-seeker, and the wise.</li>
+      <li><strong>Vasudeva Sarvam</strong> — Everything is Krishna—the ultimate
+      non-dual realization.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>In what everyday experiences can you recognize the Divine—taste,
+      light, ability?</li>
+      <li>What originally brought you to spirituality? Distress? Curiosity?
+      Wanting something? Or wisdom?</li>
+      <li>What does "Vasudeva is everything" mean to you? Is it intellectual
+      understanding or lived experience?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 7's 30 verses reveal Krishna's divine nature and the path from
+      ignorance to wisdom. Explore every verse in detail.
+    </p>
+    <p><strong>→ <a href="/gita/7">Read Chapter 7: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-2-4": `
+    <h2>Chapter 8: The Yoga of the Imperishable Brahman</h2>
+    <p>
+      What happens at death? This is one of humanity's deepest questions, and
+      Chapter 8 addresses it directly. Krishna teaches that whatever we think of
+      at the moment of death determines our next destination—and more importantly,
+      that daily practice shapes what we'll think of at that crucial moment.
+    </p>
+    <p>
+      This chapter also explains cosmic cycles—the vast scales of time in which
+      the universe breathes—and the two paths souls take after death: one leading
+      to return, one to liberation.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 8.5-6 — The Thought at Death</h3>
+      <p class="sanskrit">अन्तकाले च मामेव स्मरन्मुक्त्वा कलेवरम्।<br/>
+      यः प्रयाति स मद्भावं याति नास्त्यत्र संशयः।।</p>
+      <p class="transliteration"><em>anta-kāle ca mām eva smaran muktvā kalevaram
+      yaḥ prayāti sa mad-bhāvaṁ yāti nāsty atra saṁśayaḥ</em></p>
+      <p><strong>"Whoever, at the time of death, leaves the body remembering Me
+      alone—that person attains My nature. Of this there is no doubt."</strong></p>
+      <p>
+        The teaching is clear: think of Krishna at death and you attain His
+        nature. But this isn't about forcing a thought at the last second—it's
+        about what your mind naturally goes to under pressure. Death reveals
+        your deepest attachments.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 8.7 — Remember Always and Fight</h3>
+      <p class="sanskrit">तस्मात्सर्वेषु कालेषु मामनुस्मर युध्य च।<br/>
+      मय्यर्पितमनोबुद्धिर्मामेवैष्यस्यसंशयम्।।</p>
+      <p class="transliteration"><em>tasmāt sarveṣu kāleṣu mām anusmara yudhya ca
+      mayy arpita-mano-buddhir mām evaiṣyasy asaṁśayam</em></p>
+      <p><strong>"Therefore, at all times remember Me and fight. With mind and
+      intellect surrendered to Me, you will certainly come to Me—have no doubt."</strong></p>
+      <p>
+        The practical instruction: remember Krishna at ALL times, not just at
+        death. And don't stop working—"yudhya" (fight, do your duty). Constant
+        remembrance with action ensures the right consciousness at death.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 8.14 — Easily Attained</h3>
+      <p class="sanskrit">अनन्यचेताः सततं यो मां स्मरति नित्यशः।<br/>
+      तस्याहं सुलभः पार्थ नित्ययुक्तस्य योगिनः।।</p>
+      <p class="transliteration"><em>ananya-cetāḥ satataṁ yo māṁ smarati nityaśaḥ
+      tasyāhaṁ sulabhaḥ pārtha nitya-yuktasya yoginaḥ</em></p>
+      <p><strong>"For one who remembers Me without deviation, constantly and
+      daily, I am easy to attain, O Arjuna—for such an ever-connected yogi."</strong></p>
+      <p>
+        Beautiful reassurance: Krishna is EASY to attain for those who remember
+        Him constantly. Not difficult—easy. The complication is in our
+        distraction, not in divine distance.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 8.21 — The Supreme Destination</h3>
+      <p class="sanskrit">अव्यक्तोऽक्षर इत्युक्तस्तमाहुः परमां गतिम्।<br/>
+      यं प्राप्य न निवर्तन्ते तद्धाम परमं मम।।</p>
+      <p class="transliteration"><em>avyakto 'kṣara ity uktas tam āhuḥ paramāṁ gatim
+      yaṁ prāpya na nivartante tad dhāma paramaṁ mama</em></p>
+      <p><strong>"That unmanifest is called the Imperishable—they call it the
+      supreme destination. Those who attain it never return. That is My supreme
+      abode."</strong></p>
+      <p>
+        Beyond even the cycles of cosmic creation and dissolution, there's a
+        realm from which souls never return. This is Krishna's supreme abode—
+        the ultimate destination of the spiritual journey.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Death Consciousness</strong> — What you think at death
+      determines your destination, shaped by lifelong practice.</li>
+      <li><strong>Constant Remembrance</strong> — Remember the Divine at all
+      times, not just in crisis or at death.</li>
+      <li><strong>Cosmic Cycles</strong> — Even heavenly realms are temporary;
+      only Krishna's abode is eternal.</li>
+      <li><strong>Two Paths</strong> — The path of light (no return) and the
+      path of darkness (return to rebirth).</li>
+      <li><strong>Divine Accessibility</strong> — For the constant rememberer,
+      God is easy to attain.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What do you think about most during an ordinary day? That pattern
+      reveals where your mind will go under pressure.</li>
+      <li>How might you practice "constant remembrance" while still fully
+      engaged in daily life?</li>
+      <li>Does the teaching about death motivate or frighten you? How can you
+      transform fear into practice?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 8's 28 verses explain death, cosmic cycles, and the path to the
+      eternal abode. Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/8">Read Chapter 8: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  // ==========================================================================
+  // LEVEL 6 MODULE 6-3: DIVINE REVELATION (Chapters 9-12)
+  // ==========================================================================
+
+  "6-3-1": `
+    <h2>Chapter 9: The Royal Secret</h2>
+    <p>
+      Krishna calls this the "king of knowledge" (raja vidya) and "king of secrets"
+      (raja guhya)—the most confidential teaching. He reveals how he pervades
+      everything yet remains transcendent, how he accepts even the simplest
+      offerings with love, and how anyone—regardless of background—can reach him
+      through devotion.
+    </p>
+    <p>
+      This chapter is the heart of bhakti yoga. It emphasizes accessibility:
+      God is not distant or demanding, but intimate and accepting.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 9.2 — The Royal Knowledge</h3>
+      <p class="sanskrit">राजविद्या राजगुह्यं पवित्रमिदमुत्तमम्।<br/>
+      प्रत्यक्षावगमं धर्म्यं सुसुखं कर्तुमव्ययम्।।</p>
+      <p class="transliteration"><em>rāja-vidyā rāja-guhyaṁ pavitram idam uttamam
+      pratyakṣāvagamaṁ dharmyaṁ su-sukhaṁ kartum avyayam</em></p>
+      <p><strong>"This is the king of knowledge, the king of secrets, the supreme
+      purifier. It is directly realizable, righteous, joyful to practice, and
+      imperishable."</strong></p>
+      <p>
+        Krishna describes what he's about to teach: purifying, directly
+        experiential, ethically sound, joyful, and permanent. These qualities
+        distinguish authentic spirituality.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 9.22 — Krishna Provides for Devotees</h3>
+      <p class="sanskrit">अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते।<br/>
+      तेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम्।।</p>
+      <p class="transliteration"><em>ananyāś cintayanto māṁ ye janāḥ paryupāsate
+      teṣāṁ nityābhiyuktānāṁ yoga-kṣemaṁ vahāmy aham</em></p>
+      <p><strong>"To those who worship Me alone, thinking of no other, to those
+      ever-united with Me, I carry what they lack and preserve what they have."</strong></p>
+      <p>
+        A beautiful promise: for devoted souls, Krishna himself ensures their
+        welfare. "Yoga-kshemam" means both acquiring what's needed and protecting
+        what's already gained. The Divine becomes the provider.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 9.26 — The Simple Offering</h3>
+      <p class="sanskrit">पत्रं पुष्पं फलं तोयं यो मे भक्त्या प्रयच्छति।<br/>
+      तदहं भक्त्युपहृतमश्नामि प्रयतात्मनः।।</p>
+      <p class="transliteration"><em>patraṁ puṣpaṁ phalaṁ toyaṁ yo me bhaktyā prayacchati
+      tad ahaṁ bhakty-upahṛtam aśnāmi prayatātmanaḥ</em></p>
+      <p><strong>"Whoever offers Me with devotion a leaf, a flower, a fruit, or
+      water—that offering of love from the pure-hearted, I accept."</strong></p>
+      <p>
+        One of the Gita's most beloved verses. God doesn't want expensive
+        offerings—a leaf, a flower, fruit, water. What matters is devotion
+        (bhakti) and purity of heart (prayatatmanah). Simplicity is enough.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 9.32 — All Can Reach the Supreme</h3>
+      <p class="sanskrit">मां हि पार्थ व्यपाश्रित्य येऽपि स्युः पापयोनयः।<br/>
+      स्त्रियो वैश्यास्तथा शूद्रास्तेऽपि यान्ति परां गतिम्।।</p>
+      <p class="transliteration"><em>māṁ hi pārtha vyapāśritya ye 'pi syuḥ pāpa-yonayaḥ
+      striyo vaiśyās tathā śūdrās te 'pi yānti parāṁ gatim</em></p>
+      <p><strong>"For taking refuge in Me, O Arjuna, even those of sinful birth,
+      women, merchants, and workers—they too attain the supreme destination."</strong></p>
+      <p>
+        A revolutionary statement for its time: the path to God is open to
+        everyone, regardless of birth, gender, or social status. Devotion
+        transcends all worldly categories.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Royal Knowledge</strong> — The highest, most purifying teaching
+      that is joyful and directly realizable.</li>
+      <li><strong>Divine Paradox</strong> — Krishna pervades everything yet
+      nothing contains Him; all exists in Him yet He's not confined to them.</li>
+      <li><strong>Simple Devotion</strong> — God accepts the humblest offering
+      when given with love.</li>
+      <li><strong>Universal Access</strong> — Everyone, regardless of background,
+      can reach the supreme through devotion.</li>
+      <li><strong>Divine Protection</strong> — Krishna personally ensures the
+      welfare of His devoted ones.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What simple offering could you make today with genuine devotion?</li>
+      <li>Do you trust that the Divine will provide for your needs? What
+      prevents that trust?</li>
+      <li>How does knowing that everyone can reach God—regardless of background—
+      change how you view yourself and others?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 9's 34 verses reveal the royal secret of devotion. Explore every
+      verse with detailed explanations and practical applications.
+    </p>
+    <p><strong>→ <a href="/gita/9">Read Chapter 9: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-3-2": `
+    <h2>Chapter 10: Divine Manifestations</h2>
+    <p>
+      Krishna reveals His "vibhutis"—divine manifestations in the world. He is
+      the best of everything: the sun among luminaries, Vishnu among gods, Om
+      among words, the Himalayas among mountains. This chapter trains the mind
+      to recognize the Divine everywhere by seeing it in extraordinary things.
+    </p>
+    <p>
+      Learning to see God in the excellent helps us eventually see God in
+      everything. This is practical training in divine perception.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 10.8 — The Source of All</h3>
+      <p class="sanskrit">अहं सर्वस्य प्रभवो मत्तः सर्वं प्रवर्तते।<br/>
+      इति मत्वा भजन्ते मां बुधा भावसमन्विताः।।</p>
+      <p class="transliteration"><em>ahaṁ sarvasya prabhavo mattaḥ sarvaṁ pravartate
+      iti matvā bhajante māṁ budhā bhāva-samanvitāḥ</em></p>
+      <p><strong>"I am the source of everything; from Me all proceeds. Knowing
+      this, the wise worship Me with loving devotion."</strong></p>
+      <p>
+        Krishna is the origin (prabhava) of all that exists. Everything proceeds
+        (pravartate) from Him. Those who understand this worship with genuine
+        emotion (bhava)—not just ritual, but heartfelt devotion.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 10.20 — I Am the Self in All</h3>
+      <p class="sanskrit">अहमात्मा गुडाकेश सर्वभूताशयस्थितः।<br/>
+      अहमादिश्च मध्यं च भूतानामन्त एव च।।</p>
+      <p class="transliteration"><em>aham ātmā guḍākeśa sarva-bhūtāśaya-sthitaḥ
+      aham ādiś ca madhyaṁ ca bhūtānām anta eva ca</em></p>
+      <p><strong>"I am the Self, O Arjuna, dwelling in the heart of all beings.
+      I am the beginning, middle, and end of all beings."</strong></p>
+      <p>
+        Before listing external manifestations, Krishna reveals His most
+        intimate presence: He is the Atman—the Self within every being. He's
+        also the beginning, middle, and end of all existence.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 10.21-22 — Examples of Vibhuti</h3>
+      <p class="sanskrit">आदित्यानामहं विष्णुर्ज्योतिषां रविरंशुमान्।<br/>
+      मरीचिर्मरुतामस्मि नक्षत्राणामहं शशी।।</p>
+      <p class="transliteration"><em>ādityānām ahaṁ viṣṇur jyotiṣāṁ ravir aṁśumān
+      marīcir marutām asmi nakṣatrāṇām ahaṁ śaśī</em></p>
+      <p><strong>"Of the Adityas I am Vishnu, of lights I am the radiant sun,
+      of the Maruts I am Marichi, of the stars I am the moon."</strong></p>
+      <p>
+        Krishna begins His famous list: the most glorious in each category
+        represents Him. See excellence, see the Divine. The sun, the moon,
+        the brightest star—these are doorways to recognizing God.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 10.41 — Whatever is Glorious...</h3>
+      <p class="sanskrit">यद्यद्विभूतिमत्सत्त्वं श्रीमदूर्जितमेव वा।<br/>
+      तत्तदेवावगच्छ त्वं मम तेजोऽंशसम्भवम्।।</p>
+      <p class="transliteration"><em>yad yad vibhūtimat sattvaṁ śrīmad ūrjitam eva vā
+      tat tad evāvagaccha tvaṁ mama tejo-'ṁśa-sambhavam</em></p>
+      <p><strong>"Whatever being is glorious, prosperous, or powerful—know
+      that to be a manifestation of a fragment of My splendor."</strong></p>
+      <p>
+        The summary principle: wherever you see glory, prosperity, or power,
+        there is a spark of Krishna. He doesn't list every example—He gives
+        the principle so you can recognize Him everywhere.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Divine Origin</strong> — Krishna is the source from which
+      everything flows.</li>
+      <li><strong>The Inner Self</strong> — Before external manifestations,
+      Krishna is the Atman in every heart.</li>
+      <li><strong>Excellence as Divine</strong> — The best in every category
+      manifests divine presence.</li>
+      <li><strong>Seeing God Everywhere</strong> — This chapter trains
+      perception to recognize the Divine in the world.</li>
+      <li><strong>The Universal Principle</strong> — Wherever there is glory,
+      there is God's spark.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What excellences in nature or human achievement move you? Can you
+      see these as glimpses of the Divine?</li>
+      <li>When you meet someone remarkable, can you recognize Krishna's
+      presence in their gifts?</li>
+      <li>How might this teaching change your appreciation of the world's
+      beauty and achievement?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 10's 42 verses catalog divine manifestations, training you to
+      see God in all that is excellent. Explore every verse in detail.
+    </p>
+    <p><strong>→ <a href="/gita/10">Read Chapter 10: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-3-3": `
+    <h2>Chapter 11: The Cosmic Vision</h2>
+    <p>
+      The climax of the Bhagavad Gita. Arjuna asks to see Krishna's cosmic
+      form, and Krishna grants him divine vision. What follows is overwhelming:
+      the entire universe in one place, all beings, all time, creation and
+      destruction simultaneously. Arjuna is terrified and begs Krishna to
+      return to His gentle form.
+    </p>
+    <p>
+      This chapter reveals that the personal, loving Krishna and the awesome
+      cosmic reality are one and the same. Both aspects are true.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 11.9-10 — The Vision Begins</h3>
+      <p class="sanskrit">सञ्जय उवाच।<br/>
+      एवमुक्त्वा ततो राजन्महायोगेश्वरो हरिः।<br/>
+      दर्शयामास पार्थाय परमं रूपमैश्वरम्।।</p>
+      <p class="transliteration"><em>sañjaya uvāca
+      evam uktvā tato rājan mahā-yogeśvaro hariḥ
+      darśayām āsa pārthāya paramaṁ rūpam aiśvaram</em></p>
+      <p><strong>"Sanjaya said: Having thus spoken, O King, the great Lord of
+      Yoga, Hari, revealed to Arjuna His supreme cosmic form."</strong></p>
+      <p>
+        The narrator Sanjaya describes the moment. Krishna, called here
+        "Maha-yogeshvara" (great Lord of Yoga), shows His cosmic form (paramam
+        rupam aishvaram). What follows is unprecedented.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 11.12 — The Brilliance of a Thousand Suns</h3>
+      <p class="sanskrit">दिवि सूर्यसहस्रस्य भवेद्युगपदुत्थिता।<br/>
+      यदि भाः सदृशी सा स्याद्भासस्तस्य महात्मनः।।</p>
+      <p class="transliteration"><em>divi sūrya-sahasrasya bhaved yugapad utthitā
+      yadi bhāḥ sadṛśī sā syād bhāsas tasya mahātmanaḥ</em></p>
+      <p><strong>"If the splendor of a thousand suns were to blaze forth all
+      at once in the sky, that might resemble the radiance of that great Soul."</strong></p>
+      <p>
+        Perhaps the Gita's most famous image. The vision is so bright that
+        even a thousand suns rising simultaneously might only approximate it.
+        This verse was famously quoted by Robert Oppenheimer witnessing the
+        first nuclear explosion.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 11.32 — I Am Time</h3>
+      <p class="sanskrit">कालोऽस्मि लोकक्षयकृत्प्रवृद्धो<br/>
+      लोकान्समाहर्तुमिह प्रवृत्तः।।</p>
+      <p class="transliteration"><em>kālo 'smi loka-kṣaya-kṛt pravṛddho
+      lokān samāhartum iha pravṛttaḥ</em></p>
+      <p><strong>"I am Time, the great destroyer of worlds, here engaged in
+      destroying all beings."</strong></p>
+      <p>
+        Another verse quoted by Oppenheimer. Krishna reveals He is Kala—Time
+        itself—the ultimate destroyer. This terrifying aspect shows that
+        creation and destruction are both divine.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 11.54 — Only Through Devotion</h3>
+      <p class="sanskrit">भक्त्या त्वनन्यया शक्य अहमेवंविधोऽर्जुन।<br/>
+      ज्ञातुं द्रष्टुं च तत्त्वेन प्रवेष्टुं च परन्तप।।</p>
+      <p class="transliteration"><em>bhaktyā tv ananyayā śakya aham evaṁ-vidho 'rjuna
+      jñātuṁ draṣṭuṁ ca tattvena praveṣṭuṁ ca parantapa</em></p>
+      <p><strong>"But by single-minded devotion alone, O Arjuna, can I be known,
+      seen in this way, and truly entered into."</strong></p>
+      <p>
+        After the cosmic vision, Krishna explains how to truly know Him:
+        through exclusive devotion (ananya bhakti). Not techniques, not
+        knowledge alone—but love.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Cosmic Form</strong> — The entire universe visible in one
+      place, including past, present, and future.</li>
+      <li><strong>Terror and Wonder</strong> — Arjuna experiences both awe and
+      fear—the full spectrum of encountering infinity.</li>
+      <li><strong>Time as Destroyer</strong> — Krishna reveals He is Kala,
+      showing that death too is divine.</li>
+      <li><strong>Devotion as the Key</strong> — Only through exclusive love
+      can this reality be truly known.</li>
+      <li><strong>Return to the Personal</strong> — Arjuna begs Krishna to
+      resume His gentle, human form.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>How do you reconcile the gentle, loving God with the terrifying
+      cosmic reality?</li>
+      <li>If you could see the entire universe in one place, what emotions
+      would arise?</li>
+      <li>Why might Arjuna prefer Krishna's human form to His cosmic form?
+      What does this say about relationship with the Divine?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 11's 55 verses describe the most extraordinary vision in all
+      of scripture. Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/11">Read Chapter 11: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-3-4": `
+    <h2>Chapter 12: The Path of Devotion</h2>
+    <p>
+      After the overwhelming cosmic vision, Arjuna asks a practical question:
+      Is it better to worship God with form, or to meditate on the formless
+      Absolute? Krishna's answer is clear: devotion to the personal God is
+      easier and more accessible for embodied beings.
+    </p>
+    <p>
+      This chapter also presents the famous "ladder of accessibility"—multiple
+      options for those at different levels of spiritual capacity.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 12.2 — Devotees Are the Best Yogis</h3>
+      <p class="sanskrit">श्रीभगवानुवाच।<br/>
+      मय्यावेश्य मनो ये मां नित्ययुक्ता उपासते।<br/>
+      श्रद्धया परयोपेतास्ते मे युक्ततमा मताः।।</p>
+      <p class="transliteration"><em>śrī-bhagavān uvāca
+      mayy āveśya mano ye māṁ nitya-yuktā upāsate
+      śraddhayā parayopetās te me yuktatamā matāḥ</em></p>
+      <p><strong>"The Supreme Lord said: Those who, fixing their minds on Me,
+      worship Me with ever-steadfast devotion and supreme faith—them I consider
+      the most perfect in yoga."</strong></p>
+      <p>
+        Krishna's clear answer: those who worship the personal God with love
+        and faith are the "most perfect" (yuktatamah) yogis. Relationship
+        and devotion excel.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 12.5 — The Difficulty of the Formless</h3>
+      <p class="sanskrit">क्लेशोऽधिकतरस्तेषामव्यक्तासक्तचेतसाम्।<br/>
+      अव्यक्ता हि गतिर्दुःखं देहवद्भिरवाप्यते।।</p>
+      <p class="transliteration"><em>kleśo 'dhikataras teṣām avyaktāsakta-cetasām
+      avyaktā hi gatir duḥkhaṁ dehavadbhir avāpyate</em></p>
+      <p><strong>"Greater is the difficulty of those whose minds are attached to
+      the unmanifested, for the goal of the unmanifested is very hard to reach
+      for embodied beings."</strong></p>
+      <p>
+        A practical insight: we have bodies! It's hard to focus on nothing.
+        Meditating on the formless is difficult for embodied beings. The
+        personal path uses our natural capacities for love and relationship.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 12.7 — Divine Rescue</h3>
+      <p class="sanskrit">तेषामहं समुद्धर्ता मृत्युसंसारसागरात्।<br/>
+      भवामि नचिरात्पार्थ मय्यावेशितचेतसाम्।।</p>
+      <p class="transliteration"><em>teṣām ahaṁ samuddhartā mṛtyu-saṁsāra-sāgarāt
+      bhavāmi na cirāt pārtha mayy āveśita-cetasām</em></p>
+      <p><strong>"For them whose minds are set on Me, I become the deliverer
+      from the ocean of mortal samsara—not long hence, O Arjuna."</strong></p>
+      <p>
+        A powerful promise: "I myself will rescue you from the ocean of birth
+        and death—and soon!" The bhakti path invokes divine grace; you don't
+        have to save yourself through effort alone.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 12.13-14 — Qualities of the Devotee</h3>
+      <p class="sanskrit">अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।<br/>
+      निर्ममो निरहङ्कारः समदुःखसुखः क्षमी।।</p>
+      <p class="transliteration"><em>adveṣṭā sarva-bhūtānāṁ maitraḥ karuṇa eva ca
+      nirmamo nirahaṅkāraḥ sama-duḥkha-sukhaḥ kṣamī</em></p>
+      <p><strong>"One who hates no being, who is friendly and compassionate,
+      free from possessiveness and ego, equal in happiness and distress,
+      forgiving..."</strong></p>
+      <p>
+        Krishna describes the beloved devotee: non-hateful, friendly,
+        compassionate, humble, equanimous, forgiving. These qualities
+        naturally develop through devotion.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Personal Path Preferred</strong> — Devotion to the personal
+      God is more accessible than formless meditation.</li>
+      <li><strong>Embodied Limitations</strong> — We have bodies and minds that
+      naturally relate through form and emotion.</li>
+      <li><strong>Divine Grace</strong> — Krishna actively saves devotees;
+      it's not just self-effort.</li>
+      <li><strong>Ladder of Practice</strong> — Multiple options for different
+      capacities: constant focus, or practice, or work, or surrender.</li>
+      <li><strong>Devotee Qualities</strong> — Love of God naturally develops
+      compassion, humility, and equanimity.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Do you find it easier to relate to God with form or without? Why?</li>
+      <li>Which rung of Krishna's ladder suits your current capacity: constant
+      remembrance, regular practice, dedicated work, or surrender of results?</li>
+      <li>Which qualities of the devotee do you embody? Which need development?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 12's 20 verses present the accessible path of devotion and the
+      beautiful qualities of the beloved devotee. Explore every verse in detail.
+    </p>
+    <p><strong>→ <a href="/gita/12">Read Chapter 12: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  // ==========================================================================
+  // LEVEL 6 MODULE 6-4: KNOWLEDGE & LIBERATION (Chapters 13-18)
+  // ==========================================================================
+
+  "6-4-1": `
+    <h2>Chapter 13: The Field and the Knower</h2>
+    <p>
+      Krishna introduces the distinction between the "field" (kshetra)—the body,
+      mind, and all of matter—and the "knower of the field" (kshetrajna)—the
+      conscious Self that observes. This is Samkhya philosophy at its clearest:
+      knowing who you really are versus what you merely experience.
+    </p>
+    <p>
+      Understanding this distinction is the beginning of liberation. You are not
+      your body, not your thoughts, not your emotions—you are the awareness that
+      knows all these.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 13.1-2 — Field and Knower</h3>
+      <p class="sanskrit">इदं शरीरं कौन्तेय क्षेत्रमित्यभिधीयते।<br/>
+      एतद्यो वेत्ति तं प्राहुः क्षेत्रज्ञ इति तद्विदः।।</p>
+      <p class="transliteration"><em>idaṁ śarīraṁ kaunteya kṣetram ity abhidhīyate
+      etad yo vetti taṁ prāhuḥ kṣetra-jña iti tad-vidaḥ</em></p>
+      <p><strong>"This body, O Arjuna, is called the field. One who knows it is
+      called the knower of the field by those who know."</strong></p>
+      <p>
+        The fundamental teaching: your body is a "field" (kshetra) in which
+        experiences happen. But YOU are the knower (kshetrajna) who observes
+        the field. The seer is different from the seen.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 13.13 — Brahman, the Knowable</h3>
+      <p class="sanskrit">ज्ञेयं यत्तत्प्रवक्ष्यामि यज्ज्ञात्वाऽमृतमश्नुते।<br/>
+      अनादिमत्परं ब्रह्म न सत्तन्नासदुच्यते।।</p>
+      <p class="transliteration"><em>jñeyaṁ yat tat pravakṣyāmi yaj jñātvāmṛtam aśnute
+      anādimat paraṁ brahma na sat tan nāsad ucyate</em></p>
+      <p><strong>"I shall declare that which is to be known, knowing which one
+      attains immortality. It is beginningless supreme Brahman, said to be neither
+      existent nor non-existent."</strong></p>
+      <p>
+        Brahman transcends ordinary categories. It's not "existent" in the way
+        objects exist, nor "non-existent" like a fantasy. It's beyond our
+        usual dualistic categories—and knowing this brings immortality.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 13.27 — Equal in All</h3>
+      <p class="sanskrit">समं सर्वेषु भूतेषु तिष्ठन्तं परमेश्वरम्।<br/>
+      विनश्यत्स्वविनश्यन्तं यः पश्यति स पश्यति।।</p>
+      <p class="transliteration"><em>samaṁ sarveṣu bhūteṣu tiṣṭhantaṁ parameśvaram
+      vinaśyatsv avinaśyantaṁ yaḥ paśyati sa paśyati</em></p>
+      <p><strong>"One who sees the Supreme Lord dwelling equally in all beings,
+      the imperishable within the perishable—that one truly sees."</strong></p>
+      <p>
+        The test of vision: do you see the same divine presence in everyone?
+        Bodies perish but the Lord within is imperishable. Seeing this unity
+        in diversity is true sight.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Field vs. Knower</strong> — The body/mind/world is the field;
+      you are the conscious witness of it.</li>
+      <li><strong>Brahman Beyond Categories</strong> — Ultimate reality transcends
+      existence and non-existence.</li>
+      <li><strong>Equal Vision</strong> — Seeing the same Self in all beings is
+      the mark of true knowledge.</li>
+      <li><strong>Liberation Through Knowledge</strong> — Understanding the
+      distinction between field and knower frees you.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Can you observe your body and mind without identifying with them?
+      What does it feel like to be the "knower"?</li>
+      <li>What does it mean to you that Brahman is "neither existent nor
+      non-existent"?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 13's 35 verses reveal the distinction between matter and consciousness.
+      Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/13">Read Chapter 13: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-4-2": `
+    <h2>Chapter 14: The Three Gunas</h2>
+    <p>
+      Krishna explains the three gunas (qualities) of nature: sattva (clarity,
+      goodness), rajas (activity, passion), and tamas (inertia, darkness). These
+      three modes govern all of material existence, including our personalities,
+      choices, and experiences.
+    </p>
+    <p>
+      Understanding the gunas helps you recognize why you feel certain ways at
+      certain times—and ultimately, how to transcend all three.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 14.5 — The Three Modes</h3>
+      <p class="sanskrit">सत्त्वं रजस्तम इति गुणाः प्रकृतिसम्भवाः।<br/>
+      निबध्नन्ति महाबाहो देहे देहिनमव्ययम्।।</p>
+      <p class="transliteration"><em>sattvaṁ rajas tama iti guṇāḥ prakṛti-sambhavāḥ
+      nibadhnanti mahā-bāho dehe dehinam avyayam</em></p>
+      <p><strong>"Sattva, rajas, and tamas—these modes born of material nature
+      bind the imperishable Self to the body, O mighty-armed one."</strong></p>
+      <p>
+        The three gunas arise from prakriti (nature) and bind the eternal Self
+        to the body. Even sattva binds—though with a golden chain rather than
+        iron.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 14.6-8 — How Each Guna Binds</h3>
+      <p class="sanskrit">तत्र सत्त्वं निर्मलत्वात्प्रकाशकमनामयम्।<br/>
+      सुखसङ्गेन बध्नाति ज्ञानसङ्गेन चानघ।।</p>
+      <p class="transliteration"><em>tatra sattvaṁ nirmalatvāt prakāśakam anāmayam
+      sukha-saṅgena badhnāti jñāna-saṅgena cānagha</em></p>
+      <p><strong>"Of these, sattva being pure, is illuminating and healthy. It
+      binds through attachment to happiness and attachment to knowledge."</strong></p>
+      <p>
+        Even sattva has its trap: attachment to happiness and knowledge. Rajas
+        binds through craving and action; tamas binds through ignorance and
+        negligence.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 14.22-25 — Transcending the Gunas</h3>
+      <p class="sanskrit">उदासीनवदासीनो गुणैर्यो न विचाल्यते।<br/>
+      गुणा वर्तन्त इत्येवं योऽवतिष्ठति नेङ्गते।।</p>
+      <p class="transliteration"><em>udāsīna-vad āsīno guṇair yo na vicālyate
+      guṇā vartanta ity evaṁ yo 'vatiṣṭhati neṅgate</em></p>
+      <p><strong>"One who sits like a witness, undisturbed by the gunas, knowing
+      that gunas alone act, remains firmly established, unshaken."</strong></p>
+      <p>
+        The liberated person watches the gunas operate without being disturbed.
+        "The gunas act among the gunas"—the Self merely observes.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Three Qualities</strong> — Sattva (light/clarity), rajas
+      (activity/passion), tamas (inertia/darkness).</li>
+      <li><strong>All Three Bind</strong> — Even sattva, though golden, is still
+      a chain.</li>
+      <li><strong>Self-Observation</strong> — Notice which guna dominates you at
+      different times.</li>
+      <li><strong>Transcendence</strong> — The goal is to rise above all three,
+      watching them like a witness.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Which guna dominates in you most often? How does it manifest?</li>
+      <li>Can you observe the gunas operating in yourself without identifying
+      with them?</li>
+      <li>How might attachment to "being good" (sattva) still be a form of
+      bondage?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 14's 27 verses explain the three modes that govern all of nature.
+      Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/14">Read Chapter 14: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-4-3": `
+    <h2>Chapter 15: The Supreme Person</h2>
+    <p>
+      Krishna presents the image of the cosmic tree (ashvattha) with its roots
+      above and branches below—representing the inverted world of material
+      existence. The wise cut down this tree with the axe of detachment and seek
+      the supreme destination.
+    </p>
+    <p>
+      This chapter culminates in "Purushottama Yoga"—the yoga of the Supreme
+      Person, who transcends both the perishable and the imperishable.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 15.1 — The Cosmic Tree</h3>
+      <p class="sanskrit">ऊर्ध्वमूलमधःशाखमश्वत्थं प्राहुरव्ययम्।<br/>
+      छन्दांसि यस्य पर्णानि यस्तं वेद स वेदवित्।।</p>
+      <p class="transliteration"><em>ūrdhva-mūlam adhaḥ-śākham aśvatthaṁ prāhur avyayam
+      chandāṁsi yasya parṇāni yas taṁ veda sa veda-vit</em></p>
+      <p><strong>"They speak of an eternal ashvattha tree with roots above and
+      branches below, whose leaves are the Vedic hymns. One who knows it knows
+      the Vedas."</strong></p>
+      <p>
+        The world is like an inverted tree: its roots (source) are in the
+        transcendent; its branches (manifestation) spread downward. The Vedas
+        are its leaves. Understanding this tree is true Vedic knowledge.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 15.3-4 — Cutting the Tree</h3>
+      <p class="sanskrit">न रूपमस्येह तथोपलभ्यते नान्तो न चादिर्न च सम्प्रतिष्ठा।<br/>
+      अश्वत्थमेनं सुविरूढमूलमसङ्गशस्त्रेण दृढेन छित्त्वा।।</p>
+      <p class="transliteration"><em>na rūpam asyeha tathopalabhyate nānto na cādir na ca sampratiṣṭhā
+      aśvattham enaṁ su-virūḍha-mūlam asaṅga-śastreṇa dṛḍhena chittvā</em></p>
+      <p><strong>"Its form is not perceived as such here, neither its end nor
+      origin nor foundation. Having cut down this deep-rooted ashvattha with
+      the strong axe of detachment..."</strong></p>
+      <p>
+        The world-tree must be cut with the axe of detachment (asanga-shastra).
+        Then seek the place from which there is no return—the supreme goal.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 15.18 — The Supreme Person</h3>
+      <p class="sanskrit">यस्मात्क्षरमतीतोऽहमक्षरादपि चोत्तमः।<br/>
+      अतोऽस्मि लोके वेदे च प्रथितः पुरुषोत्तमः।।</p>
+      <p class="transliteration"><em>yasmāt kṣaram atīto 'ham akṣarād api cottamaḥ
+      ato 'smi loke vede ca prathitaḥ puruṣottamaḥ</em></p>
+      <p><strong>"Since I transcend the perishable and am above even the
+      imperishable, I am known in the world and in the Vedas as the Supreme
+      Person (Purushottama)."</strong></p>
+      <p>
+        Krishna declares His ultimate nature: beyond both the perishable
+        (ksara) and the imperishable (akshara). This is Purushottama—the
+        Supreme Person who transcends all categories.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Inverted Tree</strong> — Material existence has its roots
+      in the transcendent.</li>
+      <li><strong>Detachment as Axe</strong> — Non-attachment cuts the binding
+      power of the world.</li>
+      <li><strong>Three Categories</strong> — Perishable beings, imperishable
+      Self, and Supreme Person above both.</li>
+      <li><strong>Purushottama</strong> — Krishna is the Supreme Person, beyond
+      all dualities.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What does the image of an inverted tree tell you about the relationship
+      between spirit and matter?</li>
+      <li>What would it mean to "cut" the tree of samsara with the axe of
+      detachment?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 15's 20 verses present the cosmic tree and the Supreme Person.
+      Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/15">Read Chapter 15: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-4-4": `
+    <h2>Chapter 16: Divine and Demonic Natures</h2>
+    <p>
+      Krishna contrasts two types of people: those with divine qualities (daivi
+      sampad) and those with demonic qualities (asuri sampad). This isn't about
+      supernatural beings—it's about human character. Which qualities do you
+      cultivate?
+    </p>
+    <p>
+      The divine qualities lead to liberation; the demonic lead to bondage. This
+      chapter is a mirror for honest self-examination.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 16.1-3 — Divine Qualities</h3>
+      <p class="sanskrit">अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः।<br/>
+      दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्।।</p>
+      <p class="transliteration"><em>abhayaṁ sattva-saṁśuddhir jñāna-yoga-vyavasthitiḥ
+      dānaṁ damaś ca yajñaś ca svādhyāyas tapa ārjavam</em></p>
+      <p><strong>"Fearlessness, purity of heart, steadfastness in knowledge and
+      yoga, charity, self-control, sacrifice, study, austerity, straightforwardness..."</strong></p>
+      <p>
+        Krishna lists 26 divine qualities, beginning with fearlessness (abhaya)
+        and purity (sattva-samshuddhi). These qualities lead to liberation and
+        represent the character of a spiritually mature person.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 16.4 — Demonic Qualities</h3>
+      <p class="sanskrit">दम्भो दर्पोऽभिमानश्च क्रोधः पारुष्यमेव च।<br/>
+      अज्ञानं चाभिजातस्य पार्थ सम्पदमासुरीम्।।</p>
+      <p class="transliteration"><em>dambho darpo 'bhimānaś ca krodhaḥ pāruṣyam eva ca
+      ajñānaṁ cābhijātasya pārtha sampadam āsurīm</em></p>
+      <p><strong>"Hypocrisy, arrogance, conceit, anger, harshness, and ignorance—
+      these belong to one born of demonic nature, O Arjuna."</strong></p>
+      <p>
+        Six demonic qualities: hypocrisy (pretending virtue), arrogance,
+        self-importance, anger, cruelty of speech, and ignorance. These lead
+        to bondage.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 16.21 — The Three Gates to Hell</h3>
+      <p class="sanskrit">त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः।<br/>
+      कामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्।।</p>
+      <p class="transliteration"><em>tri-vidhaṁ narakasyedaṁ dvāraṁ nāśanam ātmanaḥ
+      kāmaḥ krodhas tathā lobhas tasmād etat trayaṁ tyajet</em></p>
+      <p><strong>"Lust, anger, and greed—these are the three gates to hell,
+      destructive of the self. Therefore, one should abandon these three."</strong></p>
+      <p>
+        Three enemies destroy the soul: kama (lust/desire), krodha (anger),
+        and lobha (greed). These are the gates through which people fall.
+        They must be abandoned.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Divine Qualities</strong> — 26 virtues including fearlessness,
+      purity, compassion, humility.</li>
+      <li><strong>Demonic Qualities</strong> — Hypocrisy, arrogance, anger,
+      cruelty, ignorance.</li>
+      <li><strong>Self-Examination</strong> — Honest assessment of which
+      qualities dominate in you.</li>
+      <li><strong>Three Gates to Hell</strong> — Lust, anger, and greed destroy
+      the soul.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Which divine qualities are strong in you? Which need cultivation?</li>
+      <li>Do you recognize any demonic tendencies in yourself? How do they
+      manifest?</li>
+      <li>Which of the three gates (lust, anger, greed) is most challenging
+      for you?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 16's 24 verses distinguish divine and demonic natures. Explore
+      every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/16">Read Chapter 16: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-4-5": `
+    <h2>Chapter 17: Three Types of Faith</h2>
+    <p>
+      Everything humans do is colored by the three gunas—including faith itself.
+      Krishna explains how sattva, rajas, and tamas express themselves in faith,
+      food, sacrifice, austerity, and charity. He also reveals the sacred mantra
+      "Om Tat Sat."
+    </p>
+    <p>
+      This chapter helps you examine the quality of your spiritual practice:
+      is it sattvic (pure), rajasic (ambitious), or tamasic (confused)?
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 17.3 — Faith Reflects Nature</h3>
+      <p class="sanskrit">सत्त्वानुरूपा सर्वस्य श्रद्धा भवति भारत।<br/>
+      श्रद्धामयोऽयं पुरुषो यो यच्छ्रद्धः स एव सः।।</p>
+      <p class="transliteration"><em>sattvānurūpā sarvasya śraddhā bhavati bhārata
+      śraddhā-mayo 'yaṁ puruṣo yo yac-chraddhaḥ sa eva saḥ</em></p>
+      <p><strong>"The faith of each person is according to their nature, O Bharata.
+      A person is made of faith; as is their faith, so are they."</strong></p>
+      <p>
+        You are what you believe. Faith shapes identity. Different natures
+        produce different kinds of faith—and understanding this helps you
+        elevate your own faith to a higher quality.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 17.14-16 — Three Types of Austerity</h3>
+      <p class="sanskrit">देवद्विजगुरुप्राज्ञपूजनं शौचमार्जवम्।<br/>
+      ब्रह्मचर्यमहिंसा च शारीरं तप उच्यते।।</p>
+      <p class="transliteration"><em>deva-dvija-guru-prājña-pūjanaṁ śaucam ārjavam
+      brahmacaryam ahiṁsā ca śārīraṁ tapa ucyate</em></p>
+      <p><strong>"Worship of the gods, the twice-born, teachers, and the wise;
+      purity, straightforwardness, celibacy, and non-violence—this is called
+      austerity of the body."</strong></p>
+      <p>
+        Krishna distinguishes three types of austerity: physical (body),
+        verbal (speech), and mental (mind). Each has sattvic, rajasic, and
+        tamasic forms. True austerity is done without desire for reward.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 17.23 — Om Tat Sat</h3>
+      <p class="sanskrit">ॐ तत्सदिति निर्देशो ब्रह्मणस्त्रिविधः स्मृतः।<br/>
+      ब्राह्मणास्तेन वेदाश्च यज्ञाश्च विहिताः पुरा।।</p>
+      <p class="transliteration"><em>oṁ tat sad iti nirdeśo brahmaṇas tri-vidhaḥ smṛtaḥ
+      brāhmaṇās tena vedāś ca yajñāś ca vihitāḥ purā</em></p>
+      <p><strong>"'Om Tat Sat'—this is the threefold designation of Brahman. By
+      this were the Brahmins, the Vedas, and sacrifices created in ancient times."</strong></p>
+      <p>
+        The sacred mantra: Om (the divine sound), Tat (That, the Absolute),
+        Sat (the Real, the Good). This triple designation of Brahman sanctifies
+        all genuine spiritual actions.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Faith Shaped by Guna</strong> — Sattvic, rajasic, and tamasic
+      people have different types of faith.</li>
+      <li><strong>You Are Your Faith</strong> — Belief shapes identity and
+      destiny.</li>
+      <li><strong>Three Austerities</strong> — Physical, verbal, and mental
+      disciplines, each with three qualities.</li>
+      <li><strong>Om Tat Sat</strong> — The sacred mantra that sanctifies all
+      spiritual practice.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What is the quality of your faith? Is it drawn to purity, ambition,
+      or confusion?</li>
+      <li>Which type of austerity (body, speech, mind) is easiest for you?
+      Which most difficult?</li>
+      <li>What does "Om Tat Sat" mean to you as a spiritual invocation?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 17's 28 verses examine the three types of faith and the sacred
+      Om Tat Sat. Explore every verse with detailed explanations.
+    </p>
+    <p><strong>→ <a href="/gita/17">Read Chapter 17: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "6-4-6": `
+    <h2>Chapter 18: Liberation Through Surrender</h2>
+    <p>
+      The final chapter—the longest and most comprehensive. Krishna synthesizes
+      everything taught throughout the Gita: the nature of renunciation, the
+      three gunas applied to knowledge and action, the different types of workers,
+      and ultimately, the supreme instruction: surrender completely to Krishna.
+    </p>
+    <p>
+      The Gita ends not with technique but with relationship. The ultimate
+      teaching is love and trust in the Divine.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 18.55 — Through Devotion, One Knows Me</h3>
+      <p class="sanskrit">भक्त्या मामभिजानाति यावान्यश्चास्मि तत्त्वतः।<br/>
+      ततो मां तत्त्वतो ज्ञात्वा विशते तदनन्तरम्।।</p>
+      <p class="transliteration"><em>bhaktyā mām abhijānāti yāvān yaś cāsmi tattvataḥ
+      tato māṁ tattvato jñātvā viśate tad-anantaram</em></p>
+      <p><strong>"Through devotion one knows Me in truth—who I am and what I am.
+      Then, knowing Me in truth, one enters into Me immediately."</strong></p>
+      <p>
+        Knowledge of God comes through devotion (bhakti), not just intellect.
+        And knowing Krishna truly leads to entering into Him—complete union.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 18.65 — The Supreme Instruction</h3>
+      <p class="sanskrit">मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु।<br/>
+      मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे।।</p>
+      <p class="transliteration"><em>man-manā bhava mad-bhakto mad-yājī māṁ namaskuru
+      mām evaiṣyasi satyaṁ te pratijāne priyo 'si me</em></p>
+      <p><strong>"Fix your mind on Me, be devoted to Me, sacrifice to Me, bow to
+      Me—you shall come to Me alone. I promise you truly, for you are dear to Me."</strong></p>
+      <p>
+        Krishna's personal invitation: think of Me, love Me, worship Me, honor
+        Me—and you will come to Me. This is spoken with deep affection:
+        "You are dear to Me" (priyo 'si me).
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 18.66 — The Final Teaching</h3>
+      <p class="sanskrit">सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।<br/>
+      अहं त्वा सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः।।</p>
+      <p class="transliteration"><em>sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja
+      ahaṁ tvā sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ</em></p>
+      <p><strong>"Abandoning all dharmas, take refuge in Me alone. I shall
+      liberate you from all sins; do not grieve."</strong></p>
+      <p>
+        The most famous verse—the charama shloka (final teaching). Let go of
+        all other supports and surrender completely to Krishna. He promises
+        liberation from all sins. "Do not grieve"—the answer to Arjuna's
+        original sorrow.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 18.78 — Wherever Krishna and Arjuna...</h3>
+      <p class="sanskrit">यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः।<br/>
+      तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम।।</p>
+      <p class="transliteration"><em>yatra yogeśvaraḥ kṛṣṇo yatra pārtho dhanur-dharaḥ
+      tatra śrīr vijayo bhūtir dhruvā nītir matir mama</em></p>
+      <p><strong>"Wherever there is Krishna, the Lord of Yoga, and wherever
+      there is Arjuna, the archer—there surely are fortune, victory, prosperity,
+      and firm righteousness. This is my conviction."</strong></p>
+      <p>
+        Sanjaya's final words: where God and the devoted soul unite, there
+        is all auspiciousness. The combination of divine grace and human
+        effort brings all good things.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>True Renunciation</strong> — Not giving up action, but giving
+      up attachment to results.</li>
+      <li><strong>Devotion as Supreme</strong> — Knowledge comes through love;
+      union comes through surrender.</li>
+      <li><strong>Complete Surrender</strong> — The final instruction: abandon
+      all other supports and take refuge in Krishna alone.</li>
+      <li><strong>Divine Promise</strong> — Krishna vows to liberate those who
+      surrender.</li>
+      <li><strong>Victory Assured</strong> — Where God and devotee meet, all
+      good follows.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What would it mean for you to "abandon all dharmas" and take refuge
+      in God alone?</li>
+      <li>What prevents complete surrender? What would you have to release?</li>
+      <li>How has your understanding of the Gita's teaching evolved through
+      this journey?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Chapter 18's 78 verses bring the Gita to its powerful conclusion. Explore
+      every verse with detailed explanations and the final teaching of surrender.
+    </p>
+    <p><strong>→ <a href="/gita/18">Read Chapter 18: Complete Verse-by-Verse</a></strong></p>
+
+    <div class="mt-8 p-6 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-orange-900/30 dark:to-amber-900/30 rounded-xl border border-orange-200 dark:border-orange-700">
+      <h3 class="font-heading text-xl font-semibold text-orange-900 dark:text-orange-200 mb-3">
+        Congratulations!
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 mb-4">
+        You have completed your study of all 18 chapters of the Bhagavad Gita.
+        You now carry Krishna's teachings with you—may they guide your journey.
+      </p>
+      <p class="text-orange-800 dark:text-orange-300 italic">
+        "Whatever you do, whatever you eat, whatever you offer, whatever you give,
+        whatever austerity you perform—do that as an offering to Me." (9.27)
+      </p>
+    </div>
+  `,
+
+  // ============================================
+  // LEVEL 7: STUDY THE UPANISHADS
+  // ============================================
+
+  // ============================================
+  // MODULE 7-1: THE SHORT UPANISHADS
+  // ============================================
+
+  "7-1-1": `
+    <h2>The Isha Upanishad: The Lord Dwells in All</h2>
+    <p>
+      The Isha Upanishad is one of the shortest yet most profound of the Upanishads.
+      In just 18 verses, it teaches that the Divine pervades everything, shows how
+      to live in the world while remaining spiritually free, and offers guidance
+      for the moment of death. Gandhi considered its first verse to be the essence
+      of Hinduism.
+    </p>
+    <p>
+      From the Shukla Yajur Veda, this Upanishad takes its name from its opening
+      word "Isha" (Lord) — declaring that everything in the universe is pervaded
+      by the Divine.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1 — The Foundation: God Pervades All</h3>
+      <p class="sanskrit">ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्।<br/>
+      तेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम्।।</p>
+      <p class="transliteration"><em>īśāvāsyam idaṁ sarvaṁ yat kiñca jagatyāṁ jagat
+      tena tyaktena bhuñjīthā mā gṛdhaḥ kasya svid dhanam</em></p>
+      <p><strong>"All this — whatever exists in this changing universe — should
+      be covered by the Lord. Protect yourself through detachment. Do not covet,
+      for whose is wealth?"</strong></p>
+      <p>
+        This opening verse contains the entire teaching of the Upanishad. See
+        God in all things, enjoy life without grasping, and remember that nothing
+        ultimately belongs to anyone.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 6 — Seeing the Self in All</h3>
+      <p class="sanskrit">यस्तु सर्वाणि भूतान्यात्मन्येवानुपश्यति।<br/>
+      सर्वभूतेषु चात्मानं ततो न विजुगुप्सते।।</p>
+      <p class="transliteration"><em>yas tu sarvāṇi bhūtāny ātmany evānupaśyati
+      sarva-bhūteṣu cātmānaṁ tato na vijugupsate</em></p>
+      <p><strong>"One who sees all beings in the Self alone, and the Self in
+      all beings, does not feel hatred or revulsion toward anyone."</strong></p>
+      <p>
+        When you truly see that the same consciousness that looks out through
+        your eyes also looks out through every other being's eyes, how can you
+        hate anyone? This is the ethical consequence of non-dual realization.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 11 — Integration of Knowledge and Action</h3>
+      <p class="sanskrit">विद्यां चाविद्यां च यस्तद्वेदोभयं सह।<br/>
+      अविद्यया मृत्युं तीर्त्वा विद्ययाऽमृतमश्नुते।।</p>
+      <p class="transliteration"><em>vidyāṁ cāvidyāṁ ca yas tad vedobhayaṁ saha
+      avidyayā mṛtyuṁ tīrtvā vidyayā 'mṛtam aśnute</em></p>
+      <p><strong>"One who knows both knowledge and action together, crosses
+      over death through action and attains immortality through knowledge."</strong></p>
+      <p>
+        The central teaching: don't choose between knowledge and action —
+        integrate both. Through proper action, overcome the obstacles of mortal
+        life. Through true knowledge, realize your immortal nature.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 15 — Prayer for the Removal of the Veil</h3>
+      <p class="sanskrit">हिरण्मयेन पात्रेण सत्यस्यापिहितं मुखम्।<br/>
+      तत्त्वं पूषन्नपावृणु सत्यधर्माय दृष्टये।।</p>
+      <p class="transliteration"><em>hiraṇmayena pātreṇa satyasyāpihitaṁ mukham
+      tat tvaṁ pūṣann apāvṛṇu satya-dharmāya dṛṣṭaye</em></p>
+      <p><strong>"The face of Truth is covered by a golden disc. O Pushan,
+      remove it, so that I, devoted to truth, may see It."</strong></p>
+      <p>
+        The Truth is right here but covered by something dazzling — like a
+        golden lid. The seeker prays: remove what hides the truth so I can
+        see directly.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 17 — Prayer at Death</h3>
+      <p class="sanskrit">वायुरनिलममृतमथेदं भस्मान्तं शरीरम्।<br/>
+      ॐ क्रतो स्मर कृतं स्मर क्रतो स्मर कृतं स्मर।।</p>
+      <p class="transliteration"><em>vāyur anilam amṛtam athedam bhasmāntaṁ śarīram
+      oṁ krato smara kṛtaṁ smara krato smara kṛtaṁ smara</em></p>
+      <p><strong>"Let this life-breath merge into the immortal Air. Let this
+      body end in ashes. OM! O mind, remember — remember what has been done.
+      O mind, remember — remember what has been done."</strong></p>
+      <p>
+        A prayer for the moment of death: the breath returns to cosmic air,
+        the body to ash. But the urgent call to the mind: remember! Remember
+        your purpose. Don't forget at the crucial moment.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Divine Pervades Everything</strong> — See God in all things;
+      this transforms how you interact with the world.</li>
+      <li><strong>Enjoyment Through Detachment</strong> — Enjoy life, but
+      don't grasp at possessions or outcomes.</li>
+      <li><strong>Integration Not Rejection</strong> — Both knowledge and
+      action are needed for complete liberation.</li>
+      <li><strong>Universal Compassion</strong> — Seeing the Self in all
+      beings naturally dissolves hatred.</li>
+      <li><strong>Remembrance at Death</strong> — Live so that when death
+      comes, you have something worth remembering.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What would change in your daily life if you truly saw everything
+      as pervaded by the Divine?</li>
+      <li>How do you balance enjoying life with practicing non-attachment?</li>
+      <li>What do you most want to remember at the moment of death?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Isha Upanishad with all 18 verses, detailed explanations,
+      and practical applications.
+    </p>
+    <p><strong>→ <a href="/upanishads/isha">Read the Isha Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "7-1-2": `
+    <h2>The Mandukya Upanishad: OM and the Four States</h2>
+    <p>
+      The Mandukya Upanishad is the shortest of the principal Upanishads — just
+      12 verses — yet Shankaracharya said that if one could study only one
+      Upanishad, it should be this one. Why? Because it contains the complete
+      teaching of Vedanta in its most essential form.
+    </p>
+    <p>
+      From the Atharva Veda, this Upanishad analyzes the sacred syllable OM and
+      maps it to the four states of consciousness: waking, dreaming, deep sleep,
+      and the "fourth" (Turiya) — your true Self beyond all states.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1 — OM is Everything</h3>
+      <p class="sanskrit">ॐ इत्येतदक्षरमिदं सर्वं तस्योपव्याख्यानं भूतं भवद्भविष्यदिति सर्वमोङ्कार एव।<br/>
+      यच्चान्यत्त्रिकालातीतं तदप्योङ्कार एव।।</p>
+      <p class="transliteration"><em>oṁ ity etad akṣaram idaṁ sarvaṁ tasyopavyākhyānaṁ
+      bhūtaṁ bhavad bhaviṣyad iti sarvam oṅkāra eva
+      yac cānyat trikālātītaṁ tad apy oṅkāra eva</em></p>
+      <p><strong>"OM — this syllable is all this. All that is past, present,
+      and future is truly OM. And whatever transcends the three times — that
+      too is OM."</strong></p>
+      <p>
+        The Upanishad opens with a sweeping declaration: OM is not just a
+        mantra — it IS reality itself. Everything that exists in time, and
+        even the timeless itself, is contained in this sound.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2 — This Self is Brahman (Mahavakya)</h3>
+      <p class="sanskrit">सर्वं ह्येतद्ब्रह्मायमात्मा ब्रह्म सोऽयमात्मा चतुष्पात्।।</p>
+      <p class="transliteration"><em>sarvaṁ hy etad brahmāyam ātmā brahma so 'yam ātmā catuṣpāt</em></p>
+      <p><strong>"All this is indeed Brahman. This Self is Brahman. This Self
+      has four quarters (aspects)."</strong></p>
+      <p>
+        This verse contains the Mahavakya (Great Saying): "Ayam Ātmā Brahma" —
+        This Self is Brahman. Your innermost Self is the ultimate reality,
+        understood through four aspects.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 5 — Deep Sleep: A Mass of Consciousness</h3>
+      <p class="sanskrit">सुषुप्तस्थान एकीभूतः प्रज्ञानघन एवानन्दमयो ह्यानन्दभुक्चेतोमुखः प्राज्ञस्तृतीयः पादः।।</p>
+      <p class="transliteration"><em>suṣupta-sthāna ekībhūtaḥ prajñāna-ghana evānandamayo
+      hy ānanda-bhuk ceto-mukhaḥ prājñas tṛtīyaḥ pādaḥ</em></p>
+      <p><strong>"The third quarter is Prajna, whose sphere is deep sleep, who
+      has become unified, who is a mass of consciousness, who is full of bliss,
+      who experiences bliss, and whose face is consciousness."</strong></p>
+      <p>
+        In deep sleep, consciousness becomes undifferentiated and blissful.
+        Why do you feel restored after deep sleep? Because you've returned to
+        your source — unified awareness without the burden of ego.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 7 — Turiya: The Fourth (Your True Self)</h3>
+      <p class="sanskrit">नान्तःप्रज्ञं न बहिष्प्रज्ञं नोभयतःप्रज्ञं न प्रज्ञानघनं न प्रज्ञं नाप्रज्ञम्।<br/>
+      अदृष्टं... एकात्मप्रत्ययसारं प्रपञ्चोपशमं शान्तं शिवमद्वैतं चतुर्थं मन्यन्ते स आत्मा स विज्ञेयः।।</p>
+      <p class="transliteration"><em>nāntaḥ-prajñaṁ na bahiṣ-prajñaṁ nobhayataḥ-prajñaṁ
+      na prajñāna-ghanaṁ na prajñaṁ nāprajñam... ekātma-pratyaya-sāraṁ
+      prapañcopaśamaṁ śāntaṁ śivam advaitaṁ caturthaṁ manyante sa ātmā sa vijñeyaḥ</em></p>
+      <p><strong>"Not inwardly conscious, not outwardly conscious, not conscious
+      both ways, not a mass of consciousness, not conscious, not unconscious...
+      the essence of the awareness of one Self, the cessation of the world,
+      peaceful, auspicious, non-dual — this they consider the fourth. This is
+      the Self. This is to be known."</strong></p>
+      <p>
+        The fourth state (Turiya) is described by what it is NOT — because it
+        cannot be grasped by thought or described by words. It's not a state
+        among other states but the awareness in which all states appear.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 12 — The Self Enters the Self</h3>
+      <p class="sanskrit">अमात्रश्चतुर्थोऽव्यवहार्यः प्रपञ्चोपशमः शिवोऽद्वैत एवमोङ्कार आत्मैव।<br/>
+      संविशत्यात्मनाऽऽत्मानं य एवं वेद।।</p>
+      <p class="transliteration"><em>amātraś caturtho 'vyavahāryaḥ prapañcopaśamaḥ śivo 'dvaita
+      evam oṅkāra ātmaiva saṁviśaty ātmanātmānaṁ ya evaṁ veda</em></p>
+      <p><strong>"The fourth is without measure, beyond transaction, the cessation
+      of the world-appearance, auspicious, non-dual. Thus OM is verily the Self.
+      One who knows this enters the Self by the Self."</strong></p>
+      <p>
+        The final verse: liberation is the Self recognizing itself as itself,
+        without any intermediary. The silence after A-U-M is where the Self
+        rests as itself.
+      </p>
+    </div>
+
+    <h2>The Structure of OM</h2>
+    <ul>
+      <li><strong>A (ah)</strong> — Waking state (Vaishvanara) — outward consciousness</li>
+      <li><strong>U (oo)</strong> — Dream state (Taijasa) — inward consciousness</li>
+      <li><strong>M (mm)</strong> — Deep sleep (Prajna) — unified consciousness</li>
+      <li><strong>Silence</strong> — The Fourth (Turiya) — pure awareness itself</li>
+    </ul>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>OM Encompasses All</strong> — Past, present, future, and
+      the timeless are all contained in OM.</li>
+      <li><strong>Four States of Consciousness</strong> — Waking, dreaming,
+      deep sleep, and the transcendent fourth.</li>
+      <li><strong>Your True Self is Turiya</strong> — Not a state you achieve
+      but your ever-present nature to recognize.</li>
+      <li><strong>Self-Recognition</strong> — Liberation is the Self knowing
+      itself by itself.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What is present in waking, dreaming, and deep sleep? What remains
+      unchanged through all three states?</li>
+      <li>When you chant OM, can you experience each part — A, U, M — and
+      then rest in the silence after?</li>
+      <li>Why might deep sleep feel so refreshing, even though you're not
+      "doing" anything?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Mandukya Upanishad with all 12 verses and detailed
+      explanations of each state of consciousness.
+    </p>
+    <p><strong>→ <a href="/upanishads/mandukya">Read the Mandukya Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "7-1-3": `
+    <h2>The Kena Upanishad: By Whom?</h2>
+    <p>
+      "By whom (kena) is the mind directed?" — with this question, the Kena
+      Upanishad begins its inquiry into the ultimate power behind all our
+      faculties. From the Sama Veda, this Upanishad explores what powers our
+      senses and mind, revealing that Brahman is the power behind all powers,
+      unknowable through ordinary means.
+    </p>
+    <p>
+      The Kena also contains a beautiful story of how the gods learned humility
+      when confronted with the mysterious power of Brahman, taught by the goddess
+      Uma.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1.1 — The Opening Question</h3>
+      <p class="sanskrit">केनेषितं पतति प्रेषितं मनः<br/>
+      केन प्राणः प्रथमः प्रैति युक्तः।<br/>
+      केनेषितां वाचमिमां वदन्ति<br/>
+      चक्षुः श्रोत्रं क उ देवो युनक्ति।।</p>
+      <p class="transliteration"><em>keneṣitaṁ patati preṣitaṁ manaḥ
+      kena prāṇaḥ prathamaḥ praiti yuktaḥ
+      keneṣitāṁ vācam imāṁ vadanti
+      cakṣuḥ śrotraṁ ka u devo yunakti</em></p>
+      <p><strong>"By whom directed does the mind go forth to its object? By whom
+      commanded does the first life-breath move? By whom impelled do people utter
+      speech? What god directs the eyes and ears?"</strong></p>
+      <p>
+        The deepest possible question: What is the power behind our powers?
+        Our mind thinks, but what makes it think? Our eyes see, but what
+        enables sight?
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.2 — The Teacher's Answer</h3>
+      <p class="sanskrit">श्रोत्रस्य श्रोत्रं मनसो मनो यद्<br/>
+      वाचो ह वाचं स उ प्राणस्य प्राणः।<br/>
+      चक्षुषश्चक्षुरतिमुच्य धीराः<br/>
+      प्रेत्यास्माल्लोकादमृता भवन्ति।।</p>
+      <p class="transliteration"><em>śrotrasya śrotraṁ manaso mano yad
+      vāco ha vācaṁ sa u prāṇasya prāṇaḥ
+      cakṣuṣaś cakṣur atimucya dhīrāḥ
+      pretyāsmāl lokād amṛtā bhavanti</em></p>
+      <p><strong>"It is the Ear of the ear, the Mind of the mind, the Speech
+      of speech, the Life of life, the Eye of the eye. The wise, freeing
+      themselves from identification with these, become immortal."</strong></p>
+      <p>
+        Brahman is what enables the ear to hear, the mind to think, speech to
+        speak. It's the power behind all our powers. Those who realize this
+        attain immortality.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.3 — Beyond the Senses</h3>
+      <p class="sanskrit">न तत्र चक्षुर्गच्छति न वाग्गच्छति नो मनः।<br/>
+      न विद्मो न विजानीमो यथैतदनुशिष्यात्।।</p>
+      <p class="transliteration"><em>na tatra cakṣur gacchati na vāg gacchati no manaḥ
+      na vidmo na vijānīmo yathaitad anuśiṣyāt</em></p>
+      <p><strong>"The eye does not go there, nor speech, nor the mind. We do
+      not know It, we do not understand how one can teach about It."</strong></p>
+      <p>
+        Brahman cannot be seen with eyes, described with words, or grasped by
+        the mind. It's not that we lack information — the tools we use for
+        knowing simply don't apply here.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.5 — That Which Speech Cannot Reveal</h3>
+      <p class="sanskrit">यद्वाचानभ्युदितं येन वागभ्युद्यते।<br/>
+      तदेव ब्रह्म त्वं विद्धि नेदं यदिदमुपासते।।</p>
+      <p class="transliteration"><em>yad vācā anabhyuditaṁ yena vāg abhyudyate
+      tad eva brahma tvaṁ viddhi nedaṁ yad idam upāsate</em></p>
+      <p><strong>"That which is not expressed by speech, but by which speech
+      is expressed — know That alone to be Brahman, not what people worship
+      as this."</strong></p>
+      <p>
+        Brahman is not something words can describe, but it's what gives words
+        their power. Whatever concept of God you worship, if it can be defined
+        and limited, it's not the ultimate.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2.4 — Known to the Unknowing</h3>
+      <p class="sanskrit">यस्यामतं तस्य मतं मतं यस्य न वेद सः।<br/>
+      अविज्ञातं विजानतां विज्ञातमविजानताम्।।</p>
+      <p class="transliteration"><em>yasyāmataṁ tasya mataṁ mataṁ yasya na veda saḥ
+      avijñātaṁ vijānatāṁ vijñātam avijānatām</em></p>
+      <p><strong>"To whom It is unknown, to him It is known. To whom It is known,
+      he knows It not. It is unknown to those who know, and known to those who
+      know not."</strong></p>
+      <p>
+        A beautiful paradox: those who think they "know" Brahman as an object
+        don't really know. Those who recognize that Brahman cannot be objectified
+        are closer to truth.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Power Behind Powers</strong> — Brahman is the ear of the
+      ear, the mind of the mind — that which enables all faculties.</li>
+      <li><strong>Beyond All Instruments</strong> — Eyes, speech, and mind
+      cannot reach Brahman because it is their very source.</li>
+      <li><strong>Different from the Known and Unknown</strong> — Brahman
+      transcends both what is known and what is unknown.</li>
+      <li><strong>Known Through Not-Knowing</strong> — Those who think they've
+      grasped it haven't; those who recognize its mystery are closer.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What is aware that you are thinking right now? Can you make that
+      awareness into an object?</li>
+      <li>If Brahman cannot be known through the mind, how can it be "known"
+      at all?</li>
+      <li>What is the difference between knowing about something and being
+      that something?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Kena Upanishad with all 35 verses, including the
+      beautiful story of Uma teaching the gods about Brahman.
+    </p>
+    <p><strong>→ <a href="/upanishads/kena">Read the Kena Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "7-1-4": `
+    <h2>The Aitareya Upanishad: Consciousness is Brahman</h2>
+    <p>
+      The Aitareya Upanishad, from the Rig Veda, describes the creation of the
+      universe and the human body, how the Self enters and animates the body,
+      and culminates in one of the four Mahavakyas (Great Sayings) of Vedanta:
+      "Prajnanam Brahma" — Consciousness is Brahman.
+    </p>
+    <p>
+      This Upanishad beautifully illustrates how the cosmic Self becomes the
+      individual self, showing that your own consciousness is identical with
+      the ultimate reality.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1.1.1 — In the Beginning, the Self Alone</h3>
+      <p class="sanskrit">आत्मा वा इदमेक एवाग्र आसीत्।<br/>
+      नान्यत्किञ्चन मिषत्।<br/>
+      स ईक्षत लोकान्नु सृजा इति।।</p>
+      <p class="transliteration"><em>ātmā vā idam eka evāgra āsīt
+      nānyat kiñcana miṣat
+      sa īkṣata lokān nu sṛjā iti</em></p>
+      <p><strong>"In the beginning, the Self alone existed. Nothing else was there.
+      He thought: 'Let me create the worlds.'"</strong></p>
+      <p>
+        Before creation, only pure Consciousness (Atman) existed — nothing else.
+        This Self, through mere intention, decided to create the universe.
+        Creation begins with thought, with will.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.1.4 — The Body's Cosmic Origins</h3>
+      <p class="sanskrit">तमभ्यतपत् तस्याभितप्तस्य मुखं निरभिद्यत यथाऽण्डम्।<br/>
+      मुखाद्वाग्वाचोऽग्निः।</p>
+      <p class="transliteration"><em>tam abhyatapat tasyābhitaptasya mukhaṁ nirabhidyata yathā'ṇḍam
+      mukhād vāg vāco 'gniḥ</em></p>
+      <p><strong>"He brooded over him. From the brooded-upon Person, the mouth
+      opened like an egg. From the mouth came speech; from speech came Fire."</strong></p>
+      <p>
+        Through divine contemplation (tapas), the cosmic Person's body develops.
+        Each organ is connected to a cosmic element: mouth to speech to Fire,
+        nostrils to breath to Air. Your body is a microcosm of the universe.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.1.5 — Eyes to Sun, Mind to Moon</h3>
+      <p class="sanskrit">अक्षिणी निरभिद्येतामक्षिभ्यां चक्षुश्चक्षुष आदित्यः।<br/>
+      हृदयं निरभिद्यत हृदयान्मनो मनसश्चन्द्रमाः।।</p>
+      <p class="transliteration"><em>akṣiṇī nirabhidyetām akṣibhyāṁ cakṣuś cakṣuṣa ādityaḥ
+      hṛdayaṁ nirabhidyata hṛdayān mano manasaś candramāḥ</em></p>
+      <p><strong>"The eyes opened; from them came sight; from sight came the Sun.
+      The heart opened; from it came mind; from mind came the Moon."</strong></p>
+      <p>
+        The Sun that lights the world outside is the same power that enables
+        your seeing. Your mind's fluctuating nature mirrors the Moon's phases.
+        Microcosm mirrors macrocosm — you are the cosmos in miniature.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.1.3 — Consciousness is Brahman (Mahavakya)</h3>
+      <p class="sanskrit">प्रज्ञानं ब्रह्म।।</p>
+      <p class="transliteration"><em>prajñānaṁ brahma</em></p>
+      <p><strong>"Consciousness is Brahman."</strong></p>
+      <p>
+        One of the four Mahavakyas. Prajna (consciousness, awareness, knowing)
+        is not just a product of the brain — it IS Brahman, the ultimate reality.
+        The consciousness reading these words right now is the Divine.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.1.1 — What is this Self?</h3>
+      <p class="sanskrit">को अयमात्मेति वयमुपास्महे। कतरः स आत्मा।<br/>
+      येन वा पश्यति येन वा शृणोति...<br/>
+      सर्वं तत्प्रज्ञानेत्रं प्रज्ञाने प्रतिष्ठितं प्रज्ञानेत्रो लोकः प्रज्ञा प्रतिष्ठा प्रज्ञानं ब्रह्म।।</p>
+      <p class="transliteration"><em>ko 'yam ātmeti vayam upāsmahe kataraḥ sa ātmā
+      yena vā paśyati yena vā śṛṇoti...
+      sarvaṁ tat prajñānetraṁ prajñāne pratiṣṭhitaṁ prajñānetro lokaḥ
+      prajñā pratiṣṭhā prajñānaṁ brahma</em></p>
+      <p><strong>"Who is this Self we worship? Which one is the Self? Is it that
+      by which we see, by which we hear... All this is guided by consciousness,
+      founded on consciousness. The world is guided by consciousness. Consciousness
+      is the foundation. Consciousness is Brahman."</strong></p>
+      <p>
+        The Upanishad asks: which faculty is the true Self? It concludes that
+        consciousness (prajna) is the foundation of everything — sight, hearing,
+        thinking, everything is rooted in awareness.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Creation from Consciousness</strong> — The universe arises from
+      the Self's intention, not from unconscious matter.</li>
+      <li><strong>Microcosm-Macrocosm</strong> — Each organ corresponds to a cosmic
+      element; you are the universe in miniature.</li>
+      <li><strong>The Self Enters the Body</strong> — Consciousness animates the
+      body; without it, the body is mere matter.</li>
+      <li><strong>Consciousness is Ultimate</strong> — The Mahavakya "Prajnanam
+      Brahma" declares that awareness itself is the Absolute.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>If your consciousness is identical with Brahman, what does this mean
+      for how you view yourself?</li>
+      <li>How does the teaching that you are a microcosm of the universe change
+      your relationship with nature?</li>
+      <li>What is the relationship between your individual awareness and
+      universal Consciousness?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Aitareya Upanishad with all 33 verses covering creation,
+      embodiment, and the nature of consciousness.
+    </p>
+    <p><strong>→ <a href="/upanishads/aitareya">Read the Aitareya Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  // ============================================
+  // MODULE 7-2: THE STORY UPANISHADS
+  // ============================================
+
+  "7-2-1": `
+    <h2>The Katha Upanishad: Death's Teaching to Nachiketa</h2>
+    <p>
+      The Katha Upanishad is one of the most beloved of all Upanishads, telling
+      the dramatic story of young Nachiketa who travels to the realm of Death
+      (Yama) and receives profound teachings on the immortal Self. It contains
+      the famous chariot metaphor for the body-mind-Self relationship.
+    </p>
+    <p>
+      From the Krishna Yajur Veda, this Upanishad combines compelling narrative
+      with the deepest philosophy, making eternal truths accessible through story.
+    </p>
+
+    <h2>The Story</h2>
+    <p>
+      Young Nachiketa's father performs a sacrifice but gives away only old,
+      worthless cows. Nachiketa, disturbed by this dishonesty, asks his father
+      repeatedly: "To whom will you give me?" In anger, the father replies:
+      "I give you to Death!"
+    </p>
+    <p>
+      Taking his father's words seriously, Nachiketa travels to Yama's realm
+      and waits three nights without food while Death is away. Impressed by
+      the boy's courage and patience, Yama offers three boons.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1.2.12 — The Two Paths</h3>
+      <p class="sanskrit">श्रेयश्च प्रेयश्च मनुष्यमेतस्तौ सम्परीत्य विविनक्ति धीरः।<br/>
+      श्रेयो हि धीरोऽभि प्रेयसो वृणीते प्रेयो मन्दो योगक्षेमाद्वृणीते।।</p>
+      <p class="transliteration"><em>śreyaś ca preyaś ca manuṣyam etas tau samparītya vivinakti dhīraḥ
+      śreyo hi dhīro 'bhi preyaso vṛṇīte preyo mando yoga-kṣemād vṛṇīte</em></p>
+      <p><strong>"The good (shreyas) and the pleasant (preyas) both approach a person.
+      The wise one, examining them carefully, chooses the good over the pleasant.
+      The fool, seeking comfort and security, chooses the pleasant."</strong></p>
+      <p>
+        Yama tests Nachiketa with worldly pleasures, but the boy refuses everything,
+        demanding only knowledge of the Self. This verse distinguishes the wise
+        who choose lasting good over immediate gratification.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.2.18 — The Birthless Self</h3>
+      <p class="sanskrit">न जायते म्रियते वा विपश्चिन्<br/>
+      नायं कुतश्चिन्न बभूव कश्चित्।<br/>
+      अजो नित्यः शाश्वतोऽयं पुराणो<br/>
+      न हन्यते हन्यमाने शरीरे।।</p>
+      <p class="transliteration"><em>na jāyate mriyate vā vipaścin
+      nāyaṁ kutaścin na babhūva kaścit
+      ajo nityaḥ śāśvato 'yaṁ purāṇo
+      na hanyate hanyamāne śarīre</em></p>
+      <p><strong>"The wise Self is neither born nor does it die. It did not
+      come from anywhere, nor did anyone come from it. Unborn, eternal,
+      everlasting, ancient — it is not killed when the body is killed."</strong></p>
+      <p>
+        This famous verse (also found in the Gita) declares the eternal nature
+        of the Self. Birth and death apply only to the body, not to consciousness
+        itself.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.3.3-4 — The Chariot Metaphor</h3>
+      <p class="sanskrit">आत्मानं रथिनं विद्धि शरीरं रथमेव तु।<br/>
+      बुद्धिं तु सारथिं विद्धि मनः प्रग्रहमेव च।।</p>
+      <p class="transliteration"><em>ātmānaṁ rathinaṁ viddhi śarīraṁ ratham eva tu
+      buddhiṁ tu sārathiṁ viddhi manaḥ pragraham eva ca</em></p>
+      <p><strong>"Know the Self as the rider of the chariot, the body as the chariot.
+      Know the intellect as the charioteer, and the mind as the reins."</strong></p>
+      <p>
+        Perhaps the most famous teaching of the Katha Upanishad. The senses are
+        the horses; sense objects are the roads. When the rider (Self), charioteer
+        (intellect), and horses (senses) work in harmony, the journey succeeds.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.2.20 — Smaller than Small, Greater than Great</h3>
+      <p class="sanskrit">अणोरणीयान्महतो महीयान्<br/>
+      आत्मास्य जन्तोर्निहितो गुहायाम्।</p>
+      <p class="transliteration"><em>aṇor aṇīyān mahato mahīyān
+      ātmāsya jantor nihito guhāyām</em></p>
+      <p><strong>"Smaller than the smallest, greater than the greatest, the Self
+      dwells hidden in the cave of the heart of every creature."</strong></p>
+      <p>
+        The Self is beyond all dimensions — infinitely subtle yet infinitely vast.
+        It dwells in the secret cave (guha) of the heart, the innermost chamber
+        of being.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2.3.14 — Arise, Awake!</h3>
+      <p class="sanskrit">उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत।<br/>
+      क्षुरस्य धारा निशिता दुरत्यया दुर्गं पथस्तत्कवयो वदन्ति।।</p>
+      <p class="transliteration"><em>uttiṣṭhata jāgrata prāpya varān nibodhata
+      kṣurasya dhārā niśitā duratyayā durgaṁ pathas tat kavayo vadanti</em></p>
+      <p><strong>"Arise! Awake! Having obtained boons, understand them! The
+      path is sharp as a razor's edge, difficult to cross, hard to tread —
+      thus the wise declare."</strong></p>
+      <p>
+        This stirring call to spiritual awakening became the motto of Swami
+        Vivekananda's teachings. The spiritual path is difficult but must be
+        walked with alert wakefulness.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Good vs. The Pleasant</strong> — The wise choose lasting
+      good (shreyas) over immediate pleasure (preyas).</li>
+      <li><strong>The Eternal Self</strong> — The Self is never born and never
+      dies; only bodies come and go.</li>
+      <li><strong>The Chariot Metaphor</strong> — Self-mastery comes from proper
+      relationship between Self, intellect, mind, and senses.</li>
+      <li><strong>The Hidden Self</strong> — The Self is subtle, hidden in the
+      heart, yet vaster than all creation.</li>
+      <li><strong>The Razor's Edge</strong> — The spiritual path is difficult
+      and demands constant alertness.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>When faced with choices, do you typically choose the good (shreyas)
+      or the pleasant (preyas)?</li>
+      <li>In the chariot metaphor, which part do you struggle with most — the
+      charioteer (intellect), the reins (mind), or the horses (senses)?</li>
+      <li>What would it mean to truly "arise and awake" in your daily life?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Katha Upanishad with all its verses covering Nachiketa's
+      dramatic journey to Death and back.
+    </p>
+    <p><strong>→ <a href="/upanishads/katha">Read the Katha Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "7-2-2": `
+    <h2>The Mundaka Upanishad: Two Birds and the Tree</h2>
+    <p>
+      The Mundaka Upanishad teaches the crucial distinction between higher
+      knowledge (para vidya) that liberates and lower knowledge (apara vidya)
+      that prepares. It contains the famous "two birds on a tree" metaphor and
+      the imagery of bow, arrow, and target for meditation practice.
+    </p>
+    <p>
+      From the Atharva Veda, this Upanishad is named "Mundaka" (from "mund,"
+      meaning to shave) — it "shaves away" ignorance to reveal the truth.
+    </p>
+
+    <h2>Key Verses</h2>
+
+    <div class="verse-card">
+      <h3>Verse 1.1.3 — The Ultimate Question</h3>
+      <p class="sanskrit">कस्मिन्नु भगवो विज्ञाते सर्वमिदं विज्ञातं भवतीति।।</p>
+      <p class="transliteration"><em>kasminnu bhagavo vijñāte sarvam idaṁ vijñātaṁ bhavatīti</em></p>
+      <p><strong>"Revered sir, what is that by knowing which everything becomes known?"</strong></p>
+      <p>
+        Shaunaka asks the fundamental question of Vedanta: Is there one thing
+        whose knowledge reveals everything else? This is the quest for the
+        ultimate knowledge.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 1.1.4-5 — Two Kinds of Knowledge</h3>
+      <p class="sanskrit">द्वे विद्ये वेदितव्ये इति ह स्म यद्ब्रह्मविदो वदन्ति परा चैवापरा च।<br/>
+      अथ परा यया तदक्षरमधिगम्यते।।</p>
+      <p class="transliteration"><em>dve vidye veditavye iti ha sma yad brahmavido vadanti parā caivāparā ca
+      atha parā yayā tad akṣaram adhigamyate</em></p>
+      <p><strong>"Two kinds of knowledge are to be known — the higher (para) and
+      the lower (apara). The higher is that by which the Imperishable is realized."</strong></p>
+      <p>
+        This revolutionary verse declares that even the Vedas are "lower" knowledge!
+        They prepare the mind, but higher knowledge is direct realization of
+        Brahman. Study is a bridge, not the destination.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.1.1 — Two Birds on a Tree</h3>
+      <p class="sanskrit">द्वा सुपर्णा सयुजा सखाया समानं वृक्षं परिषस्वजाते।<br/>
+      तयोरन्यः पिप्पलं स्वाद्वत्त्यनश्नन्नन्यो अभिचाकशीति।।</p>
+      <p class="transliteration"><em>dvā suparṇā sayujā sakhāyā samānaṁ vṛkṣaṁ pariṣasvajāte
+      tayor anyaḥ pippalaṁ svādv atty anaśnann anyo abhicākaśīti</em></p>
+      <p><strong>"Two birds, companions always united, cling to the same tree.
+      One of them eats the sweet fruit; the other looks on without eating."</strong></p>
+      <p>
+        The most famous metaphor of the Mundaka. The tree is the body; the two
+        birds are the individual soul (eating fruits of action) and the witness
+        Self (eternally at peace). You are both, but your true nature is the
+        watching bird.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3.1.2 — Liberation from Sorrow</h3>
+      <p class="sanskrit">समाने वृक्षे पुरुषो निमग्नोऽनीशया शोचति मुह्यमानः।<br/>
+      जुष्टं यदा पश्यत्यन्यमीशमस्य महिमानमिति वीतशोकः।।</p>
+      <p class="transliteration"><em>samāne vṛkṣe puruṣo nimagno 'nīśayā śocati muhyamānaḥ
+      juṣṭaṁ yadā paśyaty anyam īśam asya mahimānam iti vīta-śokaḥ</em></p>
+      <p><strong>"On the same tree, the individual soul is immersed and grieves,
+      bewildered by its own powerlessness. But when it sees the other — the
+      Lord, the beloved, and His glory — it becomes free from sorrow."</strong></p>
+      <p>
+        As long as you identify with the bird eating fruits (the ego experiencing
+        pleasure and pain), you suffer. When you recognize the witness bird as
+        your true Self, sorrow ends.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2.2.3-4 — The Bow, Arrow, and Target</h3>
+      <p class="sanskrit">प्रणवो धनुः शरो ह्यात्मा ब्रह्म तल्लक्ष्यमुच्यते।<br/>
+      अप्रमत्तेन वेद्धव्यं शरवत्तन्मयो भवेत्।।</p>
+      <p class="transliteration"><em>praṇavo dhanuḥ śaro hy ātmā brahma tal lakṣyam ucyate
+      apramattena veddhavyaṁ śaravat tanmayo bhavet</em></p>
+      <p><strong>"OM is the bow, the Self is the arrow, Brahman is called the
+      target. With full alertness, one should pierce it. Like the arrow, one
+      becomes one with it."</strong></p>
+      <p>
+        A beautiful meditation instruction: use OM as the bow, let your
+        focused attention (the Self) be the arrow, and aim for Brahman.
+        When the arrow hits the target, it merges with it — and so do you.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Two Types of Knowledge</strong> — Lower knowledge prepares;
+      higher knowledge liberates. Don't mistake study for realization.</li>
+      <li><strong>Two Birds</strong> — You are both the experiencer and the
+      witness, but your true nature is the unchanging witness.</li>
+      <li><strong>Liberation from Sorrow</strong> — When you see your true
+      Self, suffering ends naturally.</li>
+      <li><strong>OM as Practice</strong> — Use OM, focus, and target-awareness
+      for meditation on Brahman.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>How much of your knowledge is "lower" (about things) versus "higher"
+      (direct awareness of Self)?</li>
+      <li>Right now, which bird are you identified with — the one eating fruits
+      or the one watching?</li>
+      <li>What would it mean to practice meditation as "piercing the target"?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Mundaka Upanishad with all its verses on the two birds,
+      the nature of Brahman, and the path to liberation.
+    </p>
+    <p><strong>→ <a href="/upanishads/mundaka">Read the Mundaka Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "7-2-3": `
+    <h2>The Prashna Upanishad: Six Questions to the Sage</h2>
+    <p>
+      The Prashna Upanishad ("Upanishad of Questions") records six profound
+      questions asked by sincere seekers to the sage Pippalada. Before answering,
+      the sage requires them to practice austerity for a year — teaching that
+      wisdom requires a prepared mind.
+    </p>
+    <p>
+      From the Atharva Veda, this Upanishad covers creation, life-force (prana),
+      states of consciousness, and the nature of the Divine — all through the
+      format of question and answer.
+    </p>
+
+    <h2>The Six Questions</h2>
+
+    <div class="verse-card">
+      <h3>Question 1: From where are creatures born?</h3>
+      <p>
+        Sage Pippalada answers: Prajapati created two cosmic principles — Rayi
+        (matter) and Prana (life-energy). All creation comes from their union.
+        The sun is Prana (life-giver), the moon is Rayi (matter). Together they
+        produce the entire cosmos.
+      </p>
+      <p class="sanskrit">प्रजाकामो वै प्रजापतिः स तपोऽतप्यत स मिथुनमुत्पादयते।<br/>
+      रयिं च प्राणं चेत्येतौ मे बहुधा प्रजाः करिष्यत इति।।</p>
+      <p class="transliteration"><em>prajākāmo vai prajāpatiḥ sa tapo 'tapyata
+      sa mithunam utpādayate rayiṁ ca prāṇaṁ cetyetau me bahudhā prajāḥ kariṣyata iti</em></p>
+      <p><strong>"Prajapati, desiring offspring, performed austerity. He created
+      a pair — Rayi and Prana — thinking: These two will produce creatures for me."</strong></p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Question 2: How many powers support the body?</h3>
+      <p>
+        The sage describes how five pranas (life-energies), mind, speech, and other
+        powers work together to sustain the body. But prana (the main life-breath)
+        is supreme — when it departs, all others follow.
+      </p>
+      <p class="sanskrit">अथ हैनमाश्वलायनः पप्रच्छ भगवन्कत्येव देवाः प्रजां विधारयन्ते कतर एतत्प्रकाशयन्ते कः पुनरेषां वरिष्ठ इति।।</p>
+      <p class="transliteration"><em>atha hainam āśvalāyanaḥ papraccha bhagavan katy eva devāḥ
+      prajāṁ vidhārayante katara etat prakāśayante kaḥ punar eṣāṁ variṣṭha iti</em></p>
+      <p><strong>"How many powers support the creature? Which illumine it? And
+      which is the greatest among them?"</strong></p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Question 3: From where does prana arise?</h3>
+      <p>
+        Prana arises from the Self (Atman). Just as a shadow follows a person,
+        prana follows the Self's entry into the body. The five pranas are
+        compared to a king assigning ministers to different provinces.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Question 4: What sleeps, what wakes, who sees dreams?</h3>
+      <p class="sanskrit">अत्रैष देवः स्वप्ने महिमानमनुभवति।<br/>
+      यद्दृष्टं दृष्टमनुपश्यति श्रुतं श्रुतमेवानुशृणोति।।</p>
+      <p class="transliteration"><em>atraiṣa devaḥ svapne mahimānam anubhavati
+      yad dṛṣṭaṁ dṛṣṭam anupaśyati śrutaṁ śrutam evānuśṛṇoti</em></p>
+      <p><strong>"In dreams, this god (the mind) experiences its glory, seeing
+      again what was seen, hearing again what was heard."</strong></p>
+      <p>
+        In waking, the senses go outward. In dreams, the mind creates its own
+        world from memories. In deep sleep, the mind rests in prana. The Self
+        remains as witness through all three states.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Question 5: What is gained by meditating on OM?</h3>
+      <p>
+        Meditation on OM leads to different results depending on its depth.
+        Meditation on one syllable brings swift rebirth. Two syllables lead to
+        the lunar world. Complete meditation on all three syllables leads to
+        knowledge of Brahman.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Question 6: The Person with sixteen parts</h3>
+      <p class="sanskrit">स प्राणमसृजत प्राणाच्छ्रद्धां खं वायुर्ज्योतिरापः पृथिवीन्द्रियं मनः।<br/>
+      अन्नमन्नाद्वीर्यं तपो मन्त्राः कर्म लोका लोकेषु च नाम च।।</p>
+      <p class="transliteration"><em>sa prāṇam asṛjata prāṇāc chraddhāṁ khaṁ vāyur jyotir āpaḥ
+      pṛthivīndriyaṁ manaḥ annam annād vīryaṁ tapo mantrāḥ karma lokā lokeṣu ca nāma ca</em></p>
+      <p><strong>"He created prana; from prana, faith, space, air, fire, water,
+      earth, senses, mind, food; from food, vigor, austerity, mantras, action,
+      worlds, and name."</strong></p>
+      <p>
+        The final question explores how the Supreme Person (Purusha) manifests
+        through sixteen parts. When these parts dissolve back into the Supreme,
+        liberation is attained.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Creation from Duality</strong> — Matter (Rayi) and Life-Energy
+      (Prana) together create the universe.</li>
+      <li><strong>Prana as Supreme Force</strong> — Life-breath sustains all other
+      faculties; when it departs, the body dies.</li>
+      <li><strong>Three States of Consciousness</strong> — Waking, dreaming, and
+      deep sleep each have distinct characteristics.</li>
+      <li><strong>OM as Path</strong> — Meditation on OM leads to progressively
+      higher realizations.</li>
+      <li><strong>Sixteen Parts</strong> — The cosmos unfolds through sixteen
+      principles from the Supreme.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>How aware are you of your prana (life-breath) in daily life? What
+      happens when you pay attention to it?</li>
+      <li>What do your dreams reveal about the contents of your mind?</li>
+      <li>How does your meditation on OM change when you focus on each part
+      separately versus the whole?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Prashna Upanishad with all six questions and answers
+      exploring creation, prana, sleep, and liberation.
+    </p>
+    <p><strong>→ <a href="/upanishads/prashna">Read the Prashna Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  // ============================================
+  // MODULE 7-3: THE GREAT UPANISHADS
+  // ============================================
+
+  "7-3-1": `
+    <h2>The Taittiriya & Shvetashvatara Upanishads</h2>
+    <p>
+      This lesson explores two complementary Upanishads. The Taittiriya Upanishad
+      teaches the five sheaths (koshas) and contains the famous graduation address.
+      The Shvetashvatara Upanishad synthesizes different paths and offers a
+      comprehensive theology of the personal God.
+    </p>
+
+    <h2>Part 1: The Taittiriya Upanishad — Five Sheaths</h2>
+    <p>
+      From the Krishna Yajur Veda, this Upanishad is famous for its teaching on
+      the five koshas (sheaths) that cover the Self, its ethical instructions
+      for students, and its ascending scale of bliss.
+    </p>
+
+    <h3>The Graduation Address</h3>
+    <p>
+      After completing their studies, students receive this ethical charge:
+    </p>
+    <div class="verse-card">
+      <p class="sanskrit">सत्यं वद। धर्मं चर। स्वाध्यायान्मा प्रमदः।<br/>
+      मातृदेवो भव। पितृदेवो भव। आचार्यदेवो भव। अतिथिदेवो भव।</p>
+      <p class="transliteration"><em>satyaṁ vada | dharmaṁ cara | svādhyāyān mā pramadaḥ
+      mātṛ-devo bhava | pitṛ-devo bhava | ācārya-devo bhava | atithi-devo bhava</em></p>
+      <p><strong>"Speak truth. Practice dharma. Never neglect self-study.
+      Let your mother be as God. Let your father be as God. Let your teacher
+      be as God. Let your guest be as God."</strong></p>
+    </div>
+
+    <h3>The Five Sheaths (Pancha Kosha)</h3>
+    <p>
+      The Self is covered by five sheaths, from gross to subtle:
+    </p>
+    <ul>
+      <li><strong>Annamaya Kosha</strong> — The food sheath (physical body)</li>
+      <li><strong>Pranamaya Kosha</strong> — The breath/energy sheath</li>
+      <li><strong>Manomaya Kosha</strong> — The mental/emotional sheath</li>
+      <li><strong>Vijnanamaya Kosha</strong> — The wisdom/intellect sheath</li>
+      <li><strong>Anandamaya Kosha</strong> — The bliss sheath</li>
+    </ul>
+    <p>
+      The Self is beyond all five — it is the awareness that knows each sheath.
+    </p>
+
+    <div class="verse-card">
+      <h3>The Ascending Scale of Bliss</h3>
+      <p class="sanskrit">मनुष्याणां यद् आनन्दः... ब्रह्मण आनन्दः।</p>
+      <p><strong>The Taittiriya describes how bliss multiplies exponentially:
+      human bliss × 100 = celestial bliss... until reaching Brahman's bliss,
+      which is infinite.</strong></p>
+      <p>
+        This teaching shows that even the highest worldly or celestial joy is
+        only a fraction of the bliss that is your true nature.
+      </p>
+    </div>
+
+    <h2>Part 2: The Shvetashvatara Upanishad — Comprehensive Synthesis</h2>
+    <p>
+      This unique Upanishad synthesizes different approaches to God — the
+      personal and impersonal, devotion and knowledge, theism and Vedantic
+      non-dualism. It praises the one God by many names.
+    </p>
+
+    <div class="verse-card">
+      <h3>Verse 3.8 — Beyond Darkness</h3>
+      <p class="sanskrit">वेदाहमेतं पुरुषं महान्तम् आदित्यवर्णं तमसः परस्तात्।<br/>
+      तमेव विदित्वाऽतिमृत्युमेति नान्यः पन्था विद्यतेऽयनाय।।</p>
+      <p class="transliteration"><em>vedāham etaṁ puruṣaṁ mahāntam āditya-varṇaṁ tamasaḥ parastāt
+      tam eva viditvā 'timṛtyum eti nānyaḥ panthā vidyate 'yanāya</em></p>
+      <p><strong>"I know this great Purusha, radiant as the sun, beyond darkness.
+      Only by knowing Him does one pass beyond death. There is no other path."</strong></p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 4.3 — The Divine in All Forms</h3>
+      <p class="sanskrit">त्वं स्त्री त्वं पुमानसि त्वं कुमार उत वा कुमारी।<br/>
+      त्वं जीर्णो दण्डेन वञ्चसि त्वं जातो भवसि विश्वतोमुखः।।</p>
+      <p class="transliteration"><em>tvaṁ strī tvaṁ pumān asi tvaṁ kumāra uta vā kumārī
+      tvaṁ jīrṇo daṇḍena vañcasi tvaṁ jāto bhavasi viśvato-mukhaḥ</em></p>
+      <p><strong>"You are the woman, You are the man; You are the youth and the
+      maiden too. You are the old one tottering on a staff. You are born with
+      faces in every direction."</strong></p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Five Sheaths</strong> — The Self is covered by body, breath,
+      mind, wisdom, and bliss — yet beyond all.</li>
+      <li><strong>Ethical Foundation</strong> — Truth, dharma, respect for parents,
+      teachers, and guests form the basis of spiritual life.</li>
+      <li><strong>Bliss as Nature</strong> — Your true nature is infinite bliss;
+      worldly pleasures are pale reflections.</li>
+      <li><strong>One God, Many Names</strong> — The Divine is called by many
+      names but is one reality appearing as all.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>Which of the five sheaths do you most identify with? What would it
+      mean to know yourself as the witness of all five?</li>
+      <li>How do you honor parents, teachers, and guests in your life?</li>
+      <li>If the Divine is in all forms, how does that change how you see
+      the people around you?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore these Upanishads in full with their complete teachings on the
+      koshas, ethics, and the nature of God.
+    </p>
+    <p><strong>→ <a href="/upanishads/taittiriya">Read the Taittiriya Upanishad</a></strong></p>
+  `,
+
+  "7-3-2": `
+    <h2>The Chandogya Upanishad: Tat Tvam Asi — You Are That</h2>
+    <p>
+      The Chandogya Upanishad is one of the oldest and largest of the principal
+      Upanishads, containing the Mahavakya "Tat Tvam Asi" (You Are That) — the
+      central teaching that your individual self is identical with the ultimate
+      reality. This declaration is repeated nine times to the student Shvetaketu
+      by his father Uddalaka.
+    </p>
+    <p>
+      From the Sama Veda, this Upanishad contains many teaching stories,
+      including the famous dialogue between father and son that leads to
+      spiritual realization.
+    </p>
+
+    <h2>The Story of Shvetaketu</h2>
+    <p>
+      Young Shvetaketu returns home after 12 years of Vedic study, proud and
+      arrogant with his learning. His father Uddalaka asks: "Did you ask for
+      that instruction by which the unheard becomes heard, the unthought becomes
+      thought, the unknown becomes known?"
+    </p>
+    <p>
+      Humbled, Shvetaketu asks for this teaching. Through a series of examples,
+      Uddalaka reveals the ultimate truth.
+    </p>
+
+    <h2>Key Verses and Teachings</h2>
+
+    <div class="verse-card">
+      <h3>All This Is Brahman</h3>
+      <p class="sanskrit">सर्वं खल्विदं ब्रह्म तज्जलानिति शान्त उपासीत।</p>
+      <p class="transliteration"><em>sarvaṁ khalv idaṁ brahma tajjalān iti śānta upāsīta</em></p>
+      <p><strong>"All this is indeed Brahman. One should meditate on it peacefully
+      as tajjalan — that from which all is born, into which all dissolves, and
+      by which all lives."</strong></p>
+      <p>
+        Everything you see IS Brahman. Not "comes from" Brahman, not "reflects"
+        Brahman — IS Brahman. The world is not illusion; it is the Divine appearing
+        as the world.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>The Salt in Water — First Example</h3>
+      <p class="sanskrit">स य एषोऽणिमैतदात्म्यमिदं सर्वं तत्सत्यं स आत्मा तत्त्वमसि श्वेतकेतो।।</p>
+      <p class="transliteration"><em>sa ya eṣo 'ṇimaitad ātmyam idaṁ sarvaṁ tat satyaṁ sa ātmā tat tvam asi śvetaketo</em></p>
+      <p><strong>"That subtle essence is the Self of all this. That is the Truth.
+      That is the Self. YOU ARE THAT, Shvetaketu."</strong></p>
+      <p>
+        Uddalaka has Shvetaketu dissolve salt in water. The salt becomes invisible
+        but can be tasted throughout. Similarly, Brahman is invisible but pervades
+        everything. And YOU are that Brahman.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>The Seed and the Tree — Second Example</h3>
+      <p>
+        "Bring me a fruit from this banyan tree." "Here it is, sir."
+        "Break it." "It is broken."
+        "What do you see?" "These tiny seeds."
+        "Break one of them." "It is broken."
+        "What do you see?" "Nothing, sir."
+      </p>
+      <p>
+        "My son, that subtle essence which you do not perceive — from that very
+        essence this great banyan tree exists. That subtle essence is the Self
+        of all this. That is the Truth. That is the Self. YOU ARE THAT, Shvetaketu."
+      </p>
+      <p>
+        The power that makes a tiny seed become a huge tree is invisible, yet
+        utterly real. That power is Brahman. And you ARE that.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Rivers Flowing to the Ocean — Third Example</h3>
+      <p class="sanskrit">यथा सोम्येमा नद्यः स्यन्दमानाः समुद्रायणाः समुद्रं प्राप्याऽस्तं गच्छन्ति।</p>
+      <p class="transliteration"><em>yathā somyemā nadyaḥ syandamānāḥ samudrāyaṇāḥ
+      samudraṁ prāpyāstaṁ gacchanti</em></p>
+      <p><strong>"Just as these rivers, flowing eastward and westward, merge into
+      the ocean and become one with it — they don't know 'I am this river' or
+      'I am that river'..."</strong></p>
+      <p>
+        Individual rivers lose their names upon merging with the ocean. Similarly,
+        beings arise from Brahman and return to it, not knowing they were ever
+        separate. The separation was always an appearance.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Smaller than Small, Greater than Great</h3>
+      <p class="sanskrit">एष म आत्माऽन्तर्हृदये अणीयानव्रीहेर्वा यवाद्वा...<br/>
+      एष म आत्माऽन्तर्हृदये ज्यायान्पृथिव्या...</p>
+      <p class="transliteration"><em>eṣa ma ātmāntarhṛdaye aṇīyān vrīher vā yavād vā...
+      eṣa ma ātmāntarhṛdaye jyāyān pṛthivyā...</em></p>
+      <p><strong>"This is my Self within the heart, smaller than a grain of rice...
+      This is my Self within the heart, greater than the earth, greater than
+      the sky, greater than all these worlds."</strong></p>
+      <p>
+        The paradox of the Self: infinitely subtle, hidden in the heart's cave,
+        yet containing all universes. The smallest and the greatest are the same.
+      </p>
+    </div>
+
+    <h2>The Nine Declarations of "Tat Tvam Asi"</h2>
+    <p>
+      The phrase "Tat Tvam Asi" (You Are That) is repeated nine times through
+      different examples — salt in water, seed in tree, rivers in ocean, sleeping
+      and waking, life and death — each time driving home the same truth:
+      <strong>Your true Self is Brahman.</strong>
+    </p>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Identity of Self and Brahman</strong> — The individual self
+      (Atman) is identical with the universal Self (Brahman).</li>
+      <li><strong>Teaching Through Examples</strong> — Abstract truth becomes
+      clear through concrete illustrations.</li>
+      <li><strong>The Invisible Essence</strong> — The most real thing is the
+      subtlest, invisible to the senses.</li>
+      <li><strong>Beyond Pride in Learning</strong> — Even 12 years of Vedic
+      study isn't complete without direct realization.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What is your immediate response when you hear "You Are That"? Doubt?
+      Wonder? Recognition?</li>
+      <li>Like salt dissolved in water, can you recognize the invisible essence
+      pervading all your experience?</li>
+      <li>What would change if you truly understood yourself to be Brahman?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Read the complete Chandogya Upanishad with all the teachings and examples
+      leading to the great declaration.
+    </p>
+    <p><strong>→ <a href="/upanishads/chandogya">Read the Chandogya Upanishad: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  "7-3-3": `
+    <h2>The Brihadaranyaka Upanishad: I Am Brahman</h2>
+    <p>
+      The Brihadaranyaka is the largest and one of the oldest Upanishads, containing
+      some of the most profound dialogues in Indian philosophy. It features the great
+      sage Yajnavalkya, whose penetrating wisdom challenges even the most learned
+      scholars. This Upanishad contains the Mahavakya "Aham Brahmasmi" — I Am Brahman.
+    </p>
+    <p>
+      From the Shukla Yajur Veda, its name means "Great Forest Upanishad" — it is a
+      vast forest of wisdom containing treasures for those who explore it deeply.
+    </p>
+
+    <h2>The Dialogues of Yajnavalkya</h2>
+
+    <div class="verse-card">
+      <h3>With Maitreyi: On the Immortal Self</h3>
+      <p>
+        When Yajnavalkya decides to renounce the world, his wife Maitreyi asks
+        for the knowledge that leads to immortality rather than wealth. He responds:
+      </p>
+      <p class="sanskrit">आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यो मैत्रेयि।<br/>
+      आत्मनो वा अरे दर्शनेन श्रवणेन मत्या विज्ञानेनेदं सर्वं विदितम्।।</p>
+      <p class="transliteration"><em>ātmā vā are draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavyo maitreyi
+      ātmano vā are darśanena śravaṇena matyā vijñānenedaṁ sarvaṁ viditam</em></p>
+      <p><strong>"Indeed, it is the Self, my dear, that should be seen, heard, reflected
+      on, and meditated upon. By seeing, hearing, reflecting on, and knowing the Self,
+      all this becomes known."</strong></p>
+      <p>
+        All knowledge is contained in Self-knowledge. By knowing the Self, everything
+        is known — because the Self IS everything.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>With Gargi: What is Reality Woven Upon?</h3>
+      <p>
+        The scholar Gargi challenges Yajnavalkya with a series of questions: "Upon
+        what is water woven?" "Upon air." "Upon what is air woven?" And so on,
+        until finally asking: "Upon what is the Imperishable woven?"
+      </p>
+      <p class="sanskrit">एतद्वै तदक्षरं गार्गि ब्राह्मणा अभिवदन्त्यदृष्टं द्रष्टृ...<br/>
+      एतस्मिन्नु खल्वक्षरे गार्ग्याकाश ओतश्च प्रोतश्च।।</p>
+      <p class="transliteration"><em>etad vai tad akṣaraṁ gārgi brāhmaṇā abhivadanty adṛṣṭaṁ draṣṭṛ...
+      etasminn u khalv akṣare gārgy ākāśa otaś ca protaś ca</em></p>
+      <p><strong>"This, O Gargi, is the Imperishable which the wise declare: unseen,
+      the seer; unheard, the hearer... Upon this Imperishable, space is woven."</strong></p>
+      <p>
+        Yajnavalkya warns: don't question beyond this point, or your head will
+        shatter! The Imperishable is the final foundation of everything.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>In the Beginning: I Am</h3>
+      <p class="sanskrit">आत्मैवेदमग्र आसीत्पुरुषविधः।<br/>
+      सोऽनुवीक्ष्य नान्यदात्मनोऽपश्यत्।<br/>
+      सोऽहमस्मीत्यग्रे व्याहरत्।</p>
+      <p class="transliteration"><em>ātmaivedamagra āsīt puruṣavidhaḥ
+      so 'nuvīkṣya nānyad ātmano 'paśyat
+      so 'ham asmīty agre vyāharat</em></p>
+      <p><strong>"In the beginning, this was Self alone, in the form of a Person.
+      Looking around, he saw nothing other than himself. He first said: 'I am.'"</strong></p>
+      <p>
+        "I Am" (Aham Asmi) was the first word of creation. The sense of "I" comes
+        from the original Self-awareness of Brahman. Your sense of "I" is a reflection
+        of the cosmic "I Am."
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Aham Brahmasmi — I Am Brahman (Mahavakya)</h3>
+      <p class="sanskrit">अहं ब्रह्मास्मि।</p>
+      <p class="transliteration"><em>ahaṁ brahmāsmi</em></p>
+      <p><strong>"I Am Brahman."</strong></p>
+      <p>
+        One of the four Mahavakyas. This is not ego-assertion but the recognition
+        of what has always been true. The "I" that speaks is not the limited ego
+        but the universal Self recognizing its own nature.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Fear Comes from the "Second"</h3>
+      <p class="sanskrit">द्वितीयाद्वै भयं भवति।</p>
+      <p class="transliteration"><em>dvitīyād vai bhayaṁ bhavati</em></p>
+      <p><strong>"Fear arises from a second."</strong></p>
+      <p>
+        When the Self perceived itself as alone, it felt fear. But then realized:
+        "Of what am I afraid? There is nothing other than me." All fear comes
+        from perceiving a "second" — another, a threat. In non-duality, fear ends.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>The Self is the Light</h3>
+      <p class="sanskrit">को अयमात्मेति। योऽयं विज्ञानमयः प्राणेषु हृद्यन्तर्ज्योतिः पुरुषः।</p>
+      <p class="transliteration"><em>ko 'yam ātmeti yo 'yaṁ vijñānamayaḥ prāṇeṣu hṛdy antar-jyotiḥ puruṣaḥ</em></p>
+      <p><strong>"What is this Self? It is the Person made of consciousness, the
+      light within the heart among the life-breaths."</strong></p>
+      <p>
+        When asked "What is the Self?", Yajnavalkya answers: it is consciousness
+        itself, the inner light. By this light, all else is known. Sun, moon,
+        fire, speech — all are secondary lights. The Self is the primary light.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Self-Knowledge is Complete Knowledge</strong> — By knowing the
+      Self, all is known because the Self IS all.</li>
+      <li><strong>The Imperishable Foundation</strong> — Everything is woven upon
+      the Imperishable Brahman, which cannot be further reduced.</li>
+      <li><strong>"I Am" as Primary</strong> — The sense of "I" is the first
+      principle, reflected from cosmic Self-awareness.</li>
+      <li><strong>Fear from Duality</strong> — All fear arises from perceiving
+      an "other." In non-duality, fear ends.</li>
+      <li><strong>The Self as Light</strong> — Consciousness illumines everything;
+      it is the light by which all lights are known.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>When you say "I," what do you mean? Who or what is the "I"?</li>
+      <li>What would it mean for your fears if you truly realized there is
+      no "second," no other?</li>
+      <li>What is the "light" by which you know your thoughts, feelings, and
+      perceptions?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the vast forest of the Brihadaranyaka Upanishad with its many
+      dialogues, stories, and profound teachings.
+    </p>
+    <p><strong>→ <a href="/upanishads/brihadaranyaka">Read the Brihadaranyaka Upanishad: Complete Verse-by-Verse</a></strong></p>
+
+    <div class="mt-8 p-6 bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900/30 dark:to-indigo-900/30 rounded-xl border border-purple-200 dark:border-purple-700">
+      <h3 class="font-heading text-xl font-semibold text-purple-900 dark:text-purple-200 mb-3">
+        Congratulations!
+      </h3>
+      <p class="text-purple-800 dark:text-purple-300 mb-4">
+        You have completed your study of the ten principal Upanishads. You now carry
+        the wisdom of the ancient forest texts with you — the great declarations of
+        identity between Self and Brahman.
+      </p>
+      <p class="text-purple-800 dark:text-purple-300 italic">
+        "That subtle essence which you do not perceive — that is the Self of all this.
+        That is the Truth. That is the Self. You Are That." (Chandogya 6.12.3)
+      </p>
+    </div>
+  `,
+
+  // ============================================
+  // LEVEL 8: STUDY THE VEDIC HYMNS
+  // ============================================
+
+  // ============================================
+  // MODULE 8-1: THE SACRED MANTRAS
+  // ============================================
+
+  '8-1-1': `
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Gayatri Mantra</strong> is the most sacred and widely chanted verse in
+      Hinduism. Found in Rig Veda 3.62.10, it is a prayer to Savitri (the divine Sun)
+      for enlightenment — asking that the divine light illuminate our understanding.
+    </p>
+    <p>
+      Called the "Mother of the Vedas," the Gayatri is considered the essence of all
+      Vedic wisdom condensed into a single verse. Traditionally, it was imparted during
+      the sacred thread ceremony (Upanayana) as the beginning of spiritual education.
+      For thousands of years, it has been chanted daily by millions at sunrise, noon,
+      and sunset. Gandhi called it "the most precious jewel in all of Vedic literature."
+    </p>
+
+    <h2>The Gayatri Mantra</h2>
+    <div class="verse-card">
+      <p class="sanskrit">ॐ भूर्भुवः स्वः<br/>
+      तत्सवितुर्वरेण्यं<br/>
+      भर्गो देवस्य धीमहि<br/>
+      धियो यो नः प्रचोदयात् ॥</p>
+      <p class="transliteration"><em>oṃ bhūr bhuvaḥ svaḥ<br/>
+      tat savitur vareṇyaṃ<br/>
+      bhargo devasya dhīmahi<br/>
+      dhiyo yo naḥ pracodayāt</em></p>
+      <p><strong>"Om. Earth, Atmosphere, Heaven.<br/>
+      We meditate on that excellent glory<br/>
+      Of the divine Sun (Savitri).<br/>
+      May it inspire our understanding."</strong></p>
+      <p>
+        The Gayatri is a prayer for enlightenment. We meditate on the brilliant light
+        of the divine Sun — not just the physical sun, but the inner light of consciousness
+        — and ask that it illuminate our minds and guide our thoughts toward truth.
+      </p>
+      <p>
+        The three vyahritis (bhur, bhuvaḥ, svaḥ) represent the three worlds: physical,
+        subtle, and causal — or body, mind, and spirit. "Savitri" refers to the divine
+        creative force that impels all existence. "Bharga" is the radiant light that
+        dispels ignorance. The mantra is a complete spiritual practice: recognition of
+        the cosmic order, meditation on divine light, and prayer for illumination.
+      </p>
+    </div>
+
+    <h2>Key Terms</h2>
+    <ul>
+      <li><strong>Om (ॐ)</strong> — The primordial sound, representing ultimate reality</li>
+      <li><strong>Bhūr (भूः)</strong> — Earth, the physical plane</li>
+      <li><strong>Bhuvaḥ (भुवः)</strong> — Atmosphere, the subtle/mental plane</li>
+      <li><strong>Svaḥ (स्वः)</strong> — Heaven, the causal/spiritual plane</li>
+      <li><strong>Tat (तत्)</strong> — That (referring to Brahman/ultimate reality)</li>
+      <li><strong>Savitṛ (सवितृ)</strong> — The Sun god, divine creative force</li>
+      <li><strong>Vareṇya (वरेण्य)</strong> — Excellent, worthy of worship</li>
+      <li><strong>Bharga (भर्ग)</strong> — Radiance, glory, light that dispels ignorance</li>
+      <li><strong>Dhīmahi (धीमहि)</strong> — We meditate upon</li>
+      <li><strong>Dhī (धी)</strong> — Understanding, intelligence, wisdom</li>
+      <li><strong>Pracodayāt (प्रचोदयात्)</strong> — May it inspire, impel, guide</li>
+    </ul>
+
+    <h2>When to Chant the Gayatri</h2>
+    <ul>
+      <li><strong>Daily sandhya vandana</strong> — twilight prayers at dawn and dusk</li>
+      <li><strong>Upanayana</strong> — sacred thread ceremony initiation</li>
+      <li><strong>Morning meditation</strong> — to begin the day with clarity</li>
+      <li><strong>Before study</strong> — to invoke understanding</li>
+      <li><strong>Before important decisions</strong> — when clarity is needed</li>
+      <li><strong>Homas and pujas</strong> — fire rituals and worship</li>
+    </ul>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Meditation on Divine Light</strong> — The practice is focused meditation
+      on the radiant light of consciousness.</li>
+      <li><strong>Three Planes of Existence</strong> — The vyahritis acknowledge physical,
+      mental, and spiritual dimensions of reality.</li>
+      <li><strong>Prayer for Illumination</strong> — Rather than asking for material things,
+      this prayer seeks understanding and wisdom.</li>
+      <li><strong>The Sun as Symbol</strong> — The physical sun represents the inner light
+      of consciousness that illumines all knowing.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What is the "light" that allows you to understand anything? What illumines
+      your thoughts?</li>
+      <li>How might your day change if you began with a prayer for wisdom rather than
+      a list of desires?</li>
+      <li>What would it mean to let divine light "guide your understanding"?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the Gayatri Mantra in depth with commentary and practice guidance.
+    </p>
+    <p><strong>→ <a href="/vedas/gayatri">Study the Gayatri Mantra: Complete Guide</a></strong></p>
+  `,
+
+  '8-1-2': `
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Agni Sukta</strong> (Rig Veda 1.1) is the very first hymn of humanity's
+      oldest religious text. It establishes fire (Agni) as the central deity of Vedic
+      religion — the divine priest and messenger between humans and gods.
+    </p>
+    <p>
+      That the Vedas begin with Agni reveals fire's central role in Vedic spirituality.
+      Agni is not merely an element but a divine person — priest, messenger, guardian of
+      cosmic order, and as accessible as a father. This hymn has been recited daily for
+      over 3,000 years in Hindu ritual.
+    </p>
+
+    <h2>Key Verses</h2>
+    <div class="verse-card">
+      <h3>Verse 1 — The Opening of the Vedas</h3>
+      <p class="sanskrit">अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम् ।<br/>
+      होतारं रत्नधातमम् ॥</p>
+      <p class="transliteration"><em>agnim īḷe purohitaṃ yajñasya devam ṛtvijam |<br/>
+      hotāraṃ ratnadhātamam ||</em></p>
+      <p><strong>"I praise Agni, the household priest, the divine minister of the sacrifice,
+      the invoker, bestower of treasures."</strong></p>
+      <p>
+        The Rig Veda opens with praise to Agni — fire personified as divine priest. Agni
+        serves as purohita (the priest who goes before), the god of sacrifice, and the
+        invoker who carries offerings to the gods. He bestows both material and spiritual wealth.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2 — Ancient and Modern</h3>
+      <p class="sanskrit">अग्निः पूर्वेभिर्ऋषिभिरीड्यो नूतनैरुत ।<br/>
+      स देवाँ एह वक्षति ॥</p>
+      <p class="transliteration"><em>agniḥ pūrvebhir ṛṣibhir īḍyo nūtanair uta |<br/>
+      sa devāṃ eha vakṣati ||</em></p>
+      <p><strong>"Agni, worthy of praise by ancient seers and by modern ones alike —
+      may he bring the gods here."</strong></p>
+      <p>
+        This establishes continuity of tradition. The "ancient seers" and "modern ones"
+        are united in their praise of Agni. The fire on your altar is the same fire that
+        burned for your ancestors. Tradition is a living flame.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 7 — Daily Practice</h3>
+      <p class="sanskrit">उप त्वाग्ने दिवेदिवे दोषावस्तर्धिया वयम् ।<br/>
+      नमो भरन्त एमसि ॥</p>
+      <p class="transliteration"><em>upa tvāgne dive-dive doṣāvastar dhiyā vayam |<br/>
+      namo bharanta emasi ||</em></p>
+      <p><strong>"To you, O Agni, day by day, at dusk and dawn,
+      we come bearing homage with our thoughts."</strong></p>
+      <p>
+        "Dive-dive" (day by day) emphasizes daily practice. "Dhiyā" (with thought/meditation)
+        shows that worship is not mere ritual but engaged consciousness. Worship is an
+        active approach, not passive waiting.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 8 — Guardian of Cosmic Order</h3>
+      <p class="sanskrit">राजन्तमध्वराणां गोपामृतस्य दीदिविम् ।<br/>
+      वर्धमानं स्वे दमे ॥</p>
+      <p class="transliteration"><em>rājantam adhvarāṇāṃ gopām ṛtasya dīdivim |<br/>
+      vardhamānaṃ sve dame ||</em></p>
+      <p><strong>"Ruling over sacrifices, guardian of cosmic order, shining bright,
+      growing strong in your own house."</strong></p>
+      <p>
+        Agni as "gopā ṛtasya" (guardian of cosmic order) is profound — fire upholds the
+        natural law. "Sve dame" (in his own house) refers to both the altar and the
+        household hearth. Agni grows stronger the more he is fed — like tended devotion.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 9 — The Divine Father</h3>
+      <p class="sanskrit">स नः पितेव सूनवेऽग्ने सूपायनो भव ।<br/>
+      सचस्वा नः स्वस्तये ॥</p>
+      <p class="transliteration"><em>sa naḥ piteva sūnave 'gne sūpāyano bhava |<br/>
+      sacasvā naḥ svastaye ||</em></p>
+      <p><strong>"Be easy of access to us, like a father to his son, O Agni.
+      Stay with us for our well-being."</strong></p>
+      <p>
+        The hymn closes with tender intimacy: be approachable (sūpāyana) like a father to
+        his child. Agni is asked to remain present for the worshippers' welfare (svasti).
+        The divine is accessible, not remote.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Fire as Divine Priest</strong> — Agni mediates between human and divine
+      realms, carrying offerings to the gods.</li>
+      <li><strong>Continuity of Tradition</strong> — The same fire praised by ancient
+      seers is worshipped today.</li>
+      <li><strong>Daily Practice</strong> — "Day by day, at dawn and dusk" establishes
+      the rhythm of spiritual life.</li>
+      <li><strong>Guardian of Cosmic Order (Ṛta)</strong> — Fire upholds truth and
+      natural law.</li>
+      <li><strong>Divine Accessibility</strong> — The sacred is as approachable as a
+      loving father.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What does fire represent to you? How might you see it as sacred?</li>
+      <li>What daily practice do you tend "day by day, at dawn and dusk"?</li>
+      <li>How does your experience of the sacred relate to the image of a father
+      who is "easy of access"?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the complete Agni Sukta — the hymn that opens the Rig Veda and establishes
+      fire as the heart of Vedic practice.
+    </p>
+    <p><strong>→ <a href="/vedas/agni-sukta">Read the Agni Sukta: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  '8-1-3': `
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Sri Sukta</strong> is one of the most widely chanted hymns for invoking
+      prosperity, wealth, and the blessings of goddess Lakshmi (Sri). Found in the Rig Veda
+      Khilani (Appendix), it is recited during Diwali, Lakshmi puja, and whenever abundance
+      is sought.
+    </p>
+    <p>
+      Unlike some prosperity prayers, the Sri Sukta emphasizes "anapagāminī" — Lakshmi who
+      never departs, indicating stable rather than fleeting fortune. The hymn also addresses
+      Alakshmi (misfortune), making it a complete practice for both inviting good and
+      releasing bad.
+    </p>
+
+    <h2>Key Verses</h2>
+    <div class="verse-card">
+      <h3>Verse 1 — Invoking the Golden Goddess</h3>
+      <p class="sanskrit">हिरण्यवर्णां हरिणीं सुवर्णरजतस्रजाम् ।<br/>
+      चन्द्रां हिरण्मयीं लक्ष्मीं जातवेदो म आवह ॥</p>
+      <p class="transliteration"><em>hiraṇyavarṇāṃ hariṇīṃ suvarṇarajatasrajām |<br/>
+      candrāṃ hiraṇmayīṃ lakṣmīṃ jātavedo ma āvaha ||</em></p>
+      <p><strong>"Of golden hue, beautiful as a deer, adorned with gold and silver garlands,
+      radiant as the moon, golden Lakshmi — O Jataveda (Fire), bring her to me."</strong></p>
+      <p>
+        The hymn opens by describing Lakshmi's radiant beauty — she is golden-colored,
+        graceful like a deer, adorned with precious metals, and luminous like the moon.
+        Agni (fire, called Jataveda) is asked to bring her to the worshipper.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2 — The Lakshmi Who Never Leaves</h3>
+      <p class="sanskrit">तां म आवह जातवेदो लक्ष्मीमनपगामिनीम् ।<br/>
+      यस्यां हिरण्यं विन्देयं गामश्वं पुरुषानहम् ॥</p>
+      <p class="transliteration"><em>tāṃ ma āvaha jātavedo lakṣmīm anapagāminīm |<br/>
+      yasyāṃ hiraṇyaṃ vindeyaṃ gām aśvaṃ puruṣān aham ||</em></p>
+      <p><strong>"Bring to me, O Jataveda, that Lakshmi who never departs,
+      through whom I may obtain gold, cattle, horses, and servants."</strong></p>
+      <p>
+        "Anapagāminī" (never-departing) is the key word. True prosperity stays — it's not
+        windfall luck that vanishes. The Vedic list of wealth includes living beings
+        (cattle, horses, people) not just inert gold, showing wealth as relationship
+        and responsibility.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 4 — The Lotus Goddess</h3>
+      <p class="sanskrit">कां सोस्मितां हिरण्यप्राकारामार्द्रां ज्वलन्तीं तृप्तां तर्पयन्तीम् ।<br/>
+      पद्मे स्थितां पद्मवर्णां तामिहोपह्वये श्रियम् ॥</p>
+      <p class="transliteration"><em>kāṃ sosmitāṃ hiraṇyaprākārām ārdrāṃ jvalantīṃ tṛptāṃ tarpayantīm |<br/>
+      padme sthitāṃ padmavarṇāṃ tām ihopahvaye śriyam ||</em></p>
+      <p><strong>"She who is smiling, surrounded by golden ramparts, moist (with compassion), radiant,
+      content and contentment-giving, standing on a lotus, lotus-colored — I invoke that Sri here."</strong></p>
+      <p>
+        "Tṛptā tarpayantī" (content and contentment-giving) is profound — true prosperity is
+        both having enough and giving enough. The lotus symbolizes purity amid worldly waters.
+        "Ārdrā" (moist/tender) shows the goddess as compassionate, not cold.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 5 — Choosing Abundance</h3>
+      <p class="sanskrit">चन्द्रां प्रभासां यशसा ज्वलन्तीं श्रियं लोके देवजुष्टामुदाराम् ।<br/>
+      तां पद्मिनीमीं शरणमहं प्रपद्येऽलक्ष्मीर्मे नश्यतां त्वां वृणे ॥</p>
+      <p class="transliteration"><em>candrāṃ prabhāsāṃ yaśasā jvalantīṃ śriyaṃ loke devajuṣṭām udārām |<br/>
+      tāṃ padminīm īṃ śaraṇam ahaṃ prapadye 'lakṣmīr me naśyatāṃ tvāṃ vṛṇe ||</em></p>
+      <p><strong>"Radiant as the moon, luminous, blazing with glory, Sri who is honored by the gods, generous —
+      to her, the lotus-goddess, I take refuge. May misfortune be destroyed! I choose you."</strong></p>
+      <p>
+        "Alakṣmī" (misfortune, the opposite of Lakshmi) is directly addressed — asking not
+        just for fortune but for the removal of its opposite. "Tvāṃ vṛṇe" (I choose you)
+        shows prosperity as an active choice, not passive luck.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 8 — Destroying Misfortune</h3>
+      <p class="sanskrit">क्षुत्पिपासामलां ज्येष्ठामलक्ष्मीं नाशयाम्यहम् ।<br/>
+      अभूतिमसमृद्धिं च सर्वां निर्णुद मे गृहात् ॥</p>
+      <p class="transliteration"><em>kṣutpipāsāmalāṃ jyeṣṭhām alakṣmīṃ nāśayāmy aham |<br/>
+      abhūtim asamṛddhiṃ ca sarvāṃ nirṇuda me gṛhāt ||</em></p>
+      <p><strong>"I destroy the elder sister Alakshmi, who is stained by hunger and thirst.
+      Drive out from my home all non-prosperity and lack of abundance."</strong></p>
+      <p>
+        Alakshmi (misfortune) is called "jyeṣṭhā" (elder sister) — in mythology, she emerged
+        before Lakshmi. She is characterized by hunger and thirst — the experience of lack.
+        The worshipper actively destroys her and asks for all poverty to leave the home.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Permanent Prosperity</strong> — The prayer seeks Lakshmi who never departs,
+      not fleeting luck.</li>
+      <li><strong>Both Invite and Release</strong> — True prosperity practice invites good
+      AND releases scarcity consciousness.</li>
+      <li><strong>Wealth as Relationship</strong> — Vedic prosperity includes cattle, horses,
+      community — not just gold.</li>
+      <li><strong>Contentment that Gives</strong> — True abundance is both satisfied and
+      satisfying to others.</li>
+      <li><strong>Active Choice</strong> — "I choose you" — prosperity is chosen, not just
+      wished for.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What would "prosperity that never departs" look like in your life?</li>
+      <li>Where do you experience "hunger and thirst" — the consciousness of lack?</li>
+      <li>How might you actively "choose" abundance rather than passively hope for it?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the complete Sri Sukta — the ancient hymn for invoking lasting prosperity
+      and releasing the consciousness of scarcity.
+    </p>
+    <p><strong>→ <a href="/vedas/sri-sukta">Read the Sri Sukta: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  // ============================================
+  // MODULE 8-2: THE COSMIC HYMNS
+  // ============================================
+
+  '8-2-1': `
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Nasadiya Sukta</strong> (Rig Veda 10.129) is one of the most philosophically
+      profound hymns in world literature. Composed over 3,000 years ago, it contemplates
+      the mystery of creation with remarkable intellectual honesty and humility.
+    </p>
+    <p>
+      Rather than providing definitive answers, it raises profound questions about the
+      origin of existence — questions that remain unanswered even today. This hymn is
+      celebrated for its extraordinary admission of uncertainty: even the gods cannot
+      know what preceded creation, and perhaps not even the highest being knows.
+    </p>
+
+    <h2>Key Verses</h2>
+    <div class="verse-card">
+      <h3>Verse 1 — Beyond Being and Non-Being</h3>
+      <p class="sanskrit">नासदासीन्नो सदासीत्तदानीं नासीद्रजो नो व्योमा परो यत् ।<br/>
+      किमावरीवः कुह कस्य शर्मन्नम्भः किमासीद्गहनं गभीरम् ॥</p>
+      <p class="transliteration"><em>nāsadāsīnno sadāsīttadānīṃ nāsīdrajo no vyomā paro yat |<br/>
+      kimāvarīvaḥ kuha kasya śarmannambhaḥ kimāsīdgahanaṃ gabhīram ||</em></p>
+      <p><strong>"There was neither existence nor non-existence then.
+      There was no realm of space, nor the sky beyond.
+      What covered it? Where was it? In whose protection?
+      Was there water, deep and unfathomable?"</strong></p>
+      <p>
+        Before creation, there was no "something" or "nothing" as we understand them.
+        Even space and sky did not exist. This verse transcends the duality of being
+        and non-being, pointing to a state beyond all categories of thought.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 2 — That One</h3>
+      <p class="sanskrit">न मृत्युरासीदमृतं न तर्हि न रात्र्या अह्न आसीत्प्रकेतः ।<br/>
+      आनीदवातं स्वधया तदेकं तस्माद्धान्यन्न परः किञ्चनास ॥</p>
+      <p class="transliteration"><em>na mṛtyurāsīdamṛtaṃ na tarhi na rātryā ahna āsītpraketaḥ |<br/>
+      ānīdavātaṃ svadhayā tadekaṃ tasmāddhānyannapara ḥkiñcanāsa ||</em></p>
+      <p><strong>"There was neither death nor immortality then.
+      There was no sign of night or day.
+      That One breathed, windless, by its own power.
+      Other than That, there was nothing else."</strong></p>
+      <p>
+        "Breathing without wind" suggests consciousness or life-force that needs no
+        external support. This "That One" (tad ekam) is the ultimate reality beyond
+        all dualities — neither mortal nor immortal, neither temporal nor eternal.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 4 — Desire as the First Seed</h3>
+      <p class="sanskrit">कामस्तदग्रे समवर्तताधि मनसो रेतः प्रथमं यदासीत् ।<br/>
+      सतो बन्धुमसति निरविन्दन् हृदि प्रतीष्या कवयो मनीषा ॥</p>
+      <p class="transliteration"><em>kāmastadagre samavartatādhi manaso retaḥ prathamaṃ yadāsīt |<br/>
+      sato bandhumasati niravindanhṛdi pratīṣyā kavayo manīṣā ||</em></p>
+      <p><strong>"In the beginning, desire arose —
+      The first seed of mind.
+      Sages, searching in their hearts with wisdom,
+      Found the connection between existence and non-existence."</strong></p>
+      <p>
+        Kama here is not ordinary desire but the primordial creative impulse — the will
+        to manifest. The sages (kavis) found this truth not through external observation
+        but through inner search, in the heart (hṛdi).
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 6 — The Limits of Divine Knowledge</h3>
+      <p class="sanskrit">को अद्धा वेद क इह प्र वोचत् कुत आजाता कुत इयं विसृष्टिः ।<br/>
+      अर्वाग्देवा अस्य विसर्जनेनाथा को वेद यत आबभूव ॥</p>
+      <p class="transliteration"><em>ko addhā veda ka iha pra vocat kuta ājātā kuta iyaṃ visṛṣṭiḥ |<br/>
+      arvāgdevā asya visarjanenāthā ko veda yata ābabhūva ||</em></p>
+      <p><strong>"Who really knows? Who can say here
+      From where this creation arose, from where it came?
+      The gods came later, after the creation of this world.
+      So who knows from where it came into being?"</strong></p>
+      <p>
+        This remarkable verse admits uncertainty even about ultimate questions. Even the
+        gods came after creation, so they cannot know what preceded them. This is not
+        despair but profound humility.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 7 — Perhaps Even He Does Not Know</h3>
+      <p class="sanskrit">इयं विसृष्टिर्यत आबभूव यदि वा दधे यदि वा न ।<br/>
+      यो अस्याध्यक्षः परमे व्योमन् त्सो अङ्ग वेद यदि वा न वेद ॥</p>
+      <p class="transliteration"><em>iyaṃ visṛṣṭiryata ābabhūva yadi vā dadhe yadi vā na |<br/>
+      yo asyādhyakṣaḥ parame vyoman tso aṅga veda yadi vā na veda ||</em></p>
+      <p><strong>"This creation, from where it arose —
+      Whether it was made or whether it was not —
+      He who surveys it from the highest heaven,
+      He alone knows. Or perhaps even He does not know."</strong></p>
+      <p>
+        "Perhaps even He does not know" (yadi vā na veda) is one of the most remarkable
+        statements in religious literature. It suggests that the mystery of existence may
+        be so profound that even ultimate consciousness encounters it as mystery.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Beyond Duality</strong> — Before creation, there was neither being nor
+      non-being, neither death nor immortality.</li>
+      <li><strong>That One</strong> — A self-sustaining reality that breathes without air,
+      the source of all manifestation.</li>
+      <li><strong>Desire as Creative Impulse</strong> — Kama (desire) was the first seed
+      of mind, the will to manifest.</li>
+      <li><strong>Intellectual Humility</strong> — Even the gods don't know the ultimate
+      origin; perhaps not even the highest overseer knows.</li>
+      <li><strong>Mystery as Sacred</strong> — Not-knowing is not failure but reverence
+      before the unfathomable.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>How do you relate to the statement that "perhaps even He does not know"?</li>
+      <li>What would it mean to honor mystery rather than needing all answers?</li>
+      <li>What is your relationship to "That One" — the self-sustaining source behind
+      all existence?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the Nasadiya Sukta — the ancient hymn that asks the deepest questions about
+      existence and creation.
+    </p>
+    <p><strong>→ <a href="/vedas/nasadiya-sukta">Read the Nasadiya Sukta: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  '8-2-2': `
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Purusha Sukta</strong> (Rig Veda 10.90) describes how the universe emerged
+      from the primordial cosmic being, Purusha, through a cosmic sacrifice. It presents
+      creation as an act of divine self-offering, explaining the origin of animals, elements,
+      the Vedas, cosmic bodies, and social order.
+    </p>
+    <p>
+      This is one of the most important hymns in the Vedas, recited daily in temples and
+      rituals across India. It establishes fundamental Hindu concepts: the universe as the
+      body of God, creation through sacrifice, and the correspondence between microcosm
+      and macrocosm.
+    </p>
+
+    <h2>Key Verses</h2>
+    <div class="verse-card">
+      <h3>Verse 1 — The Infinite Being</h3>
+      <p class="sanskrit">सहस्रशीर्षा पुरुषः सहस्राक्षः सहस्रपात् ।<br/>
+      स भूमिं विश्वतो वृत्वात्यतिष्ठद्दशाङ्गुलम् ॥</p>
+      <p class="transliteration"><em>sahasraśīrṣā puruṣaḥ sahasrākṣaḥ sahasrapāt |<br/>
+      sa bhūmiṃ viśvato vṛtvātyatiṣṭhaddaśāṅgulam ||</em></p>
+      <p><strong>"The Cosmic Person has a thousand heads, a thousand eyes, a thousand feet.
+      He pervades the earth on all sides and extends beyond it by ten fingers' breadth."</strong></p>
+      <p>
+        Purusha, the Cosmic Person, is infinite — "thousand" means countless. The "ten
+        fingers beyond" suggests that reality transcends what can be measured or grasped.
+        Purusha is both immanent (pervading all) and transcendent (beyond all).
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 3 — Three-Fourths Remain Unmanifest</h3>
+      <p class="sanskrit">एतावानस्य महिमातो ज्यायांश्च पूरुषः ।<br/>
+      पादोऽस्य विश्वा भूतानि त्रिपादस्यामृतं दिवि ॥</p>
+      <p class="transliteration"><em>etāvānasya mahimāto jyāyāṃśca pūruṣaḥ |<br/>
+      pādo'sya viśvā bhūtāni tripādasyāmṛtaṃ divi ||</em></p>
+      <p><strong>"Such is his greatness, yet Purusha is greater still.
+      One quarter of him is all beings; three quarters are the immortal in heaven."</strong></p>
+      <p>
+        The entire manifest universe — all beings, all worlds — is only one-fourth of
+        Purusha. Three-fourths remains unmanifest, eternal, in the divine realm. What
+        we see is a fraction of ultimate reality.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 6 — The Cosmic Sacrifice</h3>
+      <p class="sanskrit">यत्पुरुषेण हविषा देवा यज्ञमतन्वत ।<br/>
+      वसन्तो अस्यासीदाज्यं ग्रीष्म इध्मः शरद्धविः ॥</p>
+      <p class="transliteration"><em>yatpuruṣeṇa haviṣā devā yajñamatanvata |<br/>
+      vasanto asyāsīdājyaṃ grīṣma idhmaḥ śaraddhaviḥ ||</em></p>
+      <p><strong>"When the gods performed the sacrifice with Purusha as the offering,
+      spring was the clarified butter, summer was the fuel, and autumn was the oblation."</strong></p>
+      <p>
+        This metaphor reveals that creation is an act of self-offering. The cosmos arises
+        through divine self-sacrifice — not violence but generous self-giving. The seasons
+        as ritual elements show that time itself is part of the offering.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 9 — The Vedas Were Born</h3>
+      <p class="sanskrit">तस्माद्यज्ञात्सर्वहुत ऋचः सामानि जज्ञिरे ।<br/>
+      छन्दांसि जज्ञिरे तस्माद्यजुस्तस्मादजायत ॥</p>
+      <p class="transliteration"><em>tasmādyajñātsarvahuta ṛcaḥ sāmāni jajñire |<br/>
+      chandāṃsi jajñire tasmādyajustasmādajāyata ||</em></p>
+      <p><strong>"From that sacrifice completely offered were born the Rig verses and the Sama chants.
+      The meters were born from it; from it the Yajur formulas arose."</strong></p>
+      <p>
+        From the cosmic sacrifice, the Vedas themselves were born — hymns, melodies, meters,
+        and ritual formulas. This reveals that the Vedas are not human compositions but
+        cosmic emanations. Knowledge is as fundamental as matter.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 13 — The Cosmic Correspondences</h3>
+      <p class="sanskrit">चन्द्रमा मनसो जातश्चक्षोः सूर्यो अजायत ।<br/>
+      मुखादिन्द्रश्चाग्निश्च प्राणाद्वायुरजायत ॥</p>
+      <p class="transliteration"><em>candramā manaso jātaścakṣoḥ sūryo ajāyata |<br/>
+      mukhādindraścāgniśca prāṇādvāyurajāyata ||</em></p>
+      <p><strong>"The Moon was born from his mind; from his eye the Sun was born.
+      From his mouth came Indra and Agni; from his breath Vayu (wind) was born."</strong></p>
+      <p>
+        Purusha's faculties became cosmic powers: mind became Moon, eye became Sun, mouth
+        produced Indra and Agni, breath became Wind. This establishes the correspondence
+        between human and cosmic — the macrocosm mirrors the microcosm.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Verse 16 — The First Dharma</h3>
+      <p class="sanskrit">यज्ञेन यज्ञमयजन्त देवास्तानि धर्माणि प्रथमान्यासन् ।<br/>
+      ते ह नाकं महिमानः सचन्त यत्र पूर्वे साध्याः सन्ति देवाः ॥</p>
+      <p class="transliteration"><em>yajñena yajñamayajanta devāstāni dharmāṇi prathamānyāsan |<br/>
+      te ha nākaṃ mahimānaḥ sacanta yatra pūrve sādhyāḥ santi devāḥ ||</em></p>
+      <p><strong>"With sacrifice the gods sacrificed to sacrifice. These were the first ordinances.
+      These mighty ones attained the heights of heaven, where the ancient Sadhyas and gods dwell."</strong></p>
+      <p>
+        "With sacrifice they sacrificed to sacrifice" is profound — the cosmos is built on
+        reciprocity. Giving creates the capacity to receive. This is the first law (dharma).
+        Those who participate consciously in this exchange attain the highest states.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>The Universe as Divine Body</strong> — All of creation is the body of
+      the one Cosmic Person.</li>
+      <li><strong>Three-Fourths Unmanifest</strong> — What we see is only one-fourth;
+      infinite potential remains beyond.</li>
+      <li><strong>Creation through Self-Sacrifice</strong> — The cosmos arises through
+      divine self-giving, not violence.</li>
+      <li><strong>Microcosm-Macrocosm</strong> — Human faculties correspond to cosmic
+      powers; you carry the universe within.</li>
+      <li><strong>Reciprocity as First Law</strong> — The principle of sacrifice (giving
+      to receive) is the foundation of dharma.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>What does it mean to you that you are part of a "cosmic body"?</li>
+      <li>If what we see is only one-fourth of reality, how does that change your
+      perspective on limitations?</li>
+      <li>How do you experience the principle of reciprocity — that giving creates
+      receiving — in your life?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the Purusha Sukta — the ancient hymn describing creation as the self-offering
+      of the Cosmic Person.
+    </p>
+    <p><strong>→ <a href="/vedas/purusha-sukta">Read the Purusha Sukta: Complete Verse-by-Verse</a></strong></p>
+  `,
+
+  '8-2-3': `
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Shanti Suktas</strong> (Peace Invocations) are sacred mantras that
+      traditionally open and close Vedic study. They invoke peace (śānti) at all levels
+      of existence — personal, communal, cosmic, and beyond.
+    </p>
+    <p>
+      The threefold repetition of "śāntiḥ" invokes peace against three types of suffering:
+      ādhidaivika (cosmic/divine), ādhibhautika (environmental), and ādhyātmika (personal).
+      These mantras transform the space of study into sacred ground and remind us that
+      individual peace depends on universal peace.
+    </p>
+
+    <h2>Key Shanti Mantras</h2>
+    <div class="verse-card">
+      <h3>Teacher-Student Peace</h3>
+      <p class="sanskrit">ॐ सह नाववतु । सह नौ भुनक्तु ।<br/>
+      सह वीर्यं करवावहै ।<br/>
+      तेजस्वि नावधीतमस्तु मा विद्विषावहै ।<br/>
+      ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      <p class="transliteration"><em>oṃ saha nāvavatu | saha nau bhunaktu |<br/>
+      saha vīryaṃ karavāvahai |<br/>
+      tejasvi nāvadhītam astu mā vidviṣāvahai |<br/>
+      oṃ śāntiḥ śāntiḥ śāntiḥ ||</em></p>
+      <p><strong>"Om. May we both be protected. May we both be nourished.
+      May we work together with great energy.
+      May our study be brilliant and effective. May we not hate each other.
+      Om, peace, peace, peace."</strong></p>
+      <p>
+        This prayer is recited together by teacher and student before study. The dual
+        forms ("nau" = both of us) emphasize that learning is relationship. Knowledge
+        flows when teacher and student are unified.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>The Fullness Mantra</h3>
+      <p class="sanskrit">ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते ।<br/>
+      पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते ।<br/>
+      ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      <p class="transliteration"><em>oṃ pūrṇam adaḥ pūrṇam idaṃ pūrṇāt pūrṇam udacyate |<br/>
+      pūrṇasya pūrṇam ādāya pūrṇam evāvaśiṣyate |<br/>
+      oṃ śāntiḥ śāntiḥ śāntiḥ ||</em></p>
+      <p><strong>"Om. That is complete, this is complete. From completeness comes completeness.
+      When completeness is taken from completeness, completeness alone remains.
+      Om, peace, peace, peace."</strong></p>
+      <p>
+        One of the most profound mathematical-mystical statements in world literature.
+        Like infinity minus infinity still equals infinity, the fullness of Brahman is
+        never diminished by creation. You are already complete. Nothing needs to be added to you.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Lead Me from Darkness to Light</h3>
+      <p class="sanskrit">ॐ असतो मा सद्गमय । तमसो मा ज्योतिर्गमय ।<br/>
+      मृत्योर्मा अमृतं गमय ।<br/>
+      ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      <p class="transliteration"><em>oṃ asato mā sadgamaya | tamaso mā jyotirgamaya |<br/>
+      mṛtyormā amṛtaṃ gamaya |<br/>
+      oṃ śāntiḥ śāntiḥ śāntiḥ ||</em></p>
+      <p><strong>"Om. Lead me from the unreal to the real.
+      Lead me from darkness to light.
+      Lead me from death to immortality.
+      Om, peace, peace, peace."</strong></p>
+      <p>
+        Three profound prayers expressing one truth: from unreality to reality, from
+        darkness/ignorance to light/knowledge, from death to deathlessness. The journey
+        is from illusion to awakening.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>May All Beings Be Happy</h3>
+      <p class="sanskrit">ॐ सर्वेषां स्वस्तिर्भवतु । सर्वेषां शान्तिर्भवतु ।<br/>
+      सर्वेषां पूर्णं भवतु । सर्वेषां मङ्गलं भवतु ।<br/>
+      ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      <p class="transliteration"><em>oṃ sarveṣāṃ svastir bhavatu | sarveṣāṃ śāntir bhavatu |<br/>
+      sarveṣāṃ pūrṇaṃ bhavatu | sarveṣāṃ maṅgalaṃ bhavatu |<br/>
+      oṃ śāntiḥ śāntiḥ śāntiḥ ||</em></p>
+      <p><strong>"Om. May all beings be well. May all beings have peace.
+      May all beings be complete. May all beings be blessed.
+      Om, peace, peace, peace."</strong></p>
+      <p>
+        A universal blessing for all beings: svasti (well-being), śānti (peace), pūrṇa
+        (completeness/fullness), and maṅgala (auspiciousness/blessing). "Sarveṣāṃ" (of all)
+        is emphasized four times — this is universal compassion.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>May All the Worlds Be Happy</h3>
+      <p class="sanskrit">लोकाः समस्ताः सुखिनो भवन्तु ।<br/>
+      ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      <p class="transliteration"><em>lokāḥ samastāḥ sukhino bhavantu |<br/>
+      oṃ śāntiḥ śāntiḥ śāntiḥ ||</em></p>
+      <p><strong>"May all the worlds be happy.
+      Om, peace, peace, peace."</strong></p>
+      <p>
+        The most concise universal blessing. "Lokāḥ samastāḥ" (all worlds/realms) includes
+        not just earth but all planes of existence. This takes three seconds to recite.
+        Simple practices, repeated often, transform consciousness.
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <h3>Peace in All Realms</h3>
+      <p class="sanskrit">ॐ द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः ।<br/>
+      वनस्पतयः शान्तिर्विश्वेदेवाः शान्तिर्ब्रह्म शान्तिः सर्वं शान्तिः शान्तिरेव शान्तिः ।<br/>
+      सा मा शान्तिरेधि । ॐ शान्तिः शान्तिः शान्तिः ॥</p>
+      <p class="transliteration"><em>oṃ dyauḥ śāntir antarikṣaṃ śāntiḥ pṛthivī śāntir āpaḥ śāntir oṣadhayaḥ śāntiḥ |<br/>
+      vanaspatayaḥ śāntir viśve devāḥ śāntir brahma śāntiḥ sarvaṃ śāntiḥ śāntir eva śāntiḥ |<br/>
+      sā mā śāntir edhi | oṃ śāntiḥ śāntiḥ śāntiḥ ||</em></p>
+      <p><strong>"Om. May there be peace in heaven, peace in the atmosphere, peace on earth,
+      peace in water, peace in plants, peace in trees, peace in the gods, peace in Brahman,
+      peace in all things. May that peace come to me.
+      Om, peace, peace, peace."</strong></p>
+      <p>
+        This magnificent prayer systematically invokes peace in every layer of creation:
+        sky, atmosphere, earth, water, herbs, trees, all gods, Brahman itself, and everything.
+        "Śāntir eva śāntiḥ" (peace itself is peace) — the ultimate reality IS peace.
+      </p>
+    </div>
+
+    <h2>Main Themes</h2>
+    <ul>
+      <li><strong>Teacher-Student Unity</strong> — Learning happens in relationship;
+      both are protected, both grow together.</li>
+      <li><strong>Completeness Already Present</strong> — You are already full; nothing
+      needs to be added to your essential nature.</li>
+      <li><strong>The Threefold Journey</strong> — From unreality to reality, darkness to
+      light, death to immortality.</li>
+      <li><strong>Universal Blessing</strong> — True peace extends beyond self to include
+      all beings in all worlds.</li>
+      <li><strong>Peace in Nature</strong> — Sky, water, plants, trees all participate
+      in the cosmic peace we seek.</li>
+    </ul>
+
+    <h2>Reflection Questions</h2>
+    <ol>
+      <li>How does your learning change when you see it as relationship rather than
+      individual acquisition?</li>
+      <li>What would it mean to live from the recognition that you are already complete?</li>
+      <li>How do you extend peace beyond yourself to "all beings in all worlds"?</li>
+    </ol>
+
+    <h2>Continue Your Study</h2>
+    <p>
+      Explore the complete collection of Shanti Suktas — the peace invocations that open
+      and close Vedic study.
+    </p>
+    <p><strong>→ <a href="/vedas/shanti-suktas">Read the Shanti Suktas: Complete Verse-by-Verse</a></strong></p>
+
+    <div class="mt-8 p-6 bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 rounded-xl border border-amber-200 dark:border-amber-700">
+      <h3 class="font-heading text-xl font-semibold text-amber-900 dark:text-amber-200 mb-3">
+        🙏 Your Journey is Complete
+      </h3>
+      <p class="text-amber-800 dark:text-amber-300 mb-4">
+        You have completed the entire Dharma Path curriculum. You have journeyed through the
+        foundations of Sanatana Dharma, heard the great epics of the Ramayana and Mahabharata,
+        contemplated the teachings of the Bhagavad Gita, explored the wisdom of the Upanishads,
+        encountered the divine in the Puranas, and now studied the most sacred Vedic hymns.
+      </p>
+      <p class="text-amber-800 dark:text-amber-300 mb-4">
+        But remember — in Hindu philosophy, every ending is a beginning. The Vedas are infinite,
+        and your study continues throughout life. These texts are meant to be returned to again
+        and again, revealing new depths with each encounter.
+      </p>
+      <p class="text-amber-800 dark:text-amber-300 italic">
+        "May all beings be well. May all beings have peace. May all beings be complete.
+        May all beings be blessed. Om, peace, peace, peace."
+      </p>
+    </div>
+  `,
 };

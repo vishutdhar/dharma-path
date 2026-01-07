@@ -679,6 +679,324 @@ export const curriculum: Level[] = [
       },
     ],
   },
+  // ============================================
+  // LEVEL 6: STUDY THE GITA
+  // 18 lessons - One per chapter, verse-by-verse study
+  // ============================================
+  {
+    id: 6,
+    title: "Study the Gita",
+    subtitle: "Read the Scripture",
+    description: "Now that you've learned about the Bhagavad Gita, it's time to read it. Journey through all 18 chapters, studying the key verses with guidance and reflection.",
+    color: "saffron",
+    requiredLevel: 5,
+    modules: [
+      {
+        id: "6-1",
+        title: "Arjuna's Crisis & The Soul",
+        description: "Chapters 1-4: From despair to divine knowledge",
+        icon: "BookOpen",
+        lessons: [
+          {
+            id: "6-1-1",
+            title: "Chapter 1: Arjuna's Despair",
+            description: "The battlefield crisis that sparked the greatest conversation",
+            duration: "15 min",
+          },
+          {
+            id: "6-1-2",
+            title: "Chapter 2: The Eternal Soul",
+            description: "Krishna's first teaching — you are not the body",
+            duration: "20 min",
+          },
+          {
+            id: "6-1-3",
+            title: "Chapter 3: The Path of Action",
+            description: "Karma Yoga — why action is superior to inaction",
+            duration: "18 min",
+          },
+          {
+            id: "6-1-4",
+            title: "Chapter 4: Divine Knowledge",
+            description: "The ancient wisdom and the nature of the Divine",
+            duration: "18 min",
+          },
+        ],
+      },
+      {
+        id: "6-2",
+        title: "The Yoga of Practice",
+        description: "Chapters 5-8: Renunciation, meditation, and the eternal",
+        icon: "Flame",
+        lessons: [
+          {
+            id: "6-2-1",
+            title: "Chapter 5: Renunciation Through Action",
+            description: "How to act in the world while remaining free",
+            duration: "15 min",
+          },
+          {
+            id: "6-2-2",
+            title: "Chapter 6: The Path of Meditation",
+            description: "Dhyana Yoga — mastering the mind through practice",
+            duration: "18 min",
+          },
+          {
+            id: "6-2-3",
+            title: "Chapter 7: Knowledge & Realization",
+            description: "Understanding the Divine in all its forms",
+            duration: "15 min",
+          },
+          {
+            id: "6-2-4",
+            title: "Chapter 8: The Eternal Brahman",
+            description: "What happens at death — and how to prepare",
+            duration: "15 min",
+          },
+        ],
+      },
+      {
+        id: "6-3",
+        title: "Divine Revelation",
+        description: "Chapters 9-12: The royal secret and cosmic vision",
+        icon: "Eye",
+        lessons: [
+          {
+            id: "6-3-1",
+            title: "Chapter 9: The Royal Secret",
+            description: "The most confidential knowledge of the Divine",
+            duration: "18 min",
+          },
+          {
+            id: "6-3-2",
+            title: "Chapter 10: Divine Manifestations",
+            description: "Krishna reveals where to find him in the world",
+            duration: "18 min",
+          },
+          {
+            id: "6-3-3",
+            title: "Chapter 11: The Cosmic Vision",
+            description: "Arjuna sees the Universal Form — awe and terror",
+            duration: "20 min",
+          },
+          {
+            id: "6-3-4",
+            title: "Chapter 12: The Path of Devotion",
+            description: "Bhakti Yoga — the way of love and surrender",
+            duration: "15 min",
+          },
+        ],
+      },
+      {
+        id: "6-4",
+        title: "Knowledge & Liberation",
+        description: "Chapters 13-18: The field, the gunas, and final freedom",
+        icon: "Sunrise",
+        lessons: [
+          {
+            id: "6-4-1",
+            title: "Chapter 13: The Field & Knower",
+            description: "Body, soul, and the witness within",
+            duration: "18 min",
+          },
+          {
+            id: "6-4-2",
+            title: "Chapter 14: The Three Gunas",
+            description: "Sattva, Rajas, Tamas — the forces that bind and free",
+            duration: "15 min",
+          },
+          {
+            id: "6-4-3",
+            title: "Chapter 15: The Supreme Person",
+            description: "The eternal tree and the Purushottama",
+            duration: "15 min",
+          },
+          {
+            id: "6-4-4",
+            title: "Chapter 16: Divine & Demonic Natures",
+            description: "Two paths of character — choose wisely",
+            duration: "15 min",
+          },
+          {
+            id: "6-4-5",
+            title: "Chapter 17: Three Types of Faith",
+            description: "How the gunas shape worship, food, and action",
+            duration: "15 min",
+          },
+          {
+            id: "6-4-6",
+            title: "Chapter 18: Liberation Through Surrender",
+            description: "The final teaching — abandon all and come to Me",
+            duration: "20 min",
+          },
+        ],
+      },
+    ],
+  },
+  // ============================================
+  // LEVEL 7: STUDY THE UPANISHADS
+  // 10 lessons - Key Upanishads with verse study
+  // ============================================
+  {
+    id: 7,
+    title: "Study the Upanishads",
+    subtitle: "The Philosophical Depths",
+    description: "Explore the ancient wisdom texts that form the philosophical foundation of Hinduism. Read the key verses of the principal Upanishads.",
+    color: "gold",
+    requiredLevel: 6,
+    modules: [
+      {
+        id: "7-1",
+        title: "The Short Upanishads",
+        description: "Four complete Upanishads — compact but profound",
+        icon: "Scroll",
+        lessons: [
+          {
+            id: "7-1-1",
+            title: "Isha Upanishad",
+            description: "18 verses on renunciation and the unity of all — complete study",
+            duration: "25 min",
+          },
+          {
+            id: "7-1-2",
+            title: "Mandukya Upanishad",
+            description: "12 verses on AUM and the four states of consciousness",
+            duration: "20 min",
+          },
+          {
+            id: "7-1-3",
+            title: "Kena Upanishad",
+            description: "35 verses — who is the power behind the powers?",
+            duration: "25 min",
+          },
+          {
+            id: "7-1-4",
+            title: "Aitareya Upanishad",
+            description: "33 verses on creation and consciousness",
+            duration: "20 min",
+          },
+        ],
+      },
+      {
+        id: "7-2",
+        title: "The Story Upanishads",
+        description: "Wisdom teachings wrapped in narrative",
+        icon: "Feather",
+        lessons: [
+          {
+            id: "7-2-1",
+            title: "Katha Upanishad",
+            description: "Nachiketa and Death — the secret of immortality",
+            duration: "30 min",
+          },
+          {
+            id: "7-2-2",
+            title: "Mundaka Upanishad",
+            description: "Two birds on a tree — higher and lower knowledge",
+            duration: "25 min",
+          },
+          {
+            id: "7-2-3",
+            title: "Prashna Upanishad",
+            description: "Six seekers, six questions — the dialogue of truth",
+            duration: "25 min",
+          },
+        ],
+      },
+      {
+        id: "7-3",
+        title: "The Great Upanishads",
+        description: "The longest and most profound texts — curated selections",
+        icon: "Mountain",
+        lessons: [
+          {
+            id: "7-3-1",
+            title: "Taittiriya & Shvetashvatara",
+            description: "The five koshas and Shaiva synthesis",
+            duration: "30 min",
+          },
+          {
+            id: "7-3-2",
+            title: "Chandogya: Tat Tvam Asi",
+            description: "The great teaching of 'You are That'",
+            duration: "30 min",
+          },
+          {
+            id: "7-3-3",
+            title: "Brihadaranyaka: Yajnavalkya's Dialogues",
+            description: "The philosopher-sage and the Maitreyi teaching",
+            duration: "30 min",
+          },
+        ],
+      },
+    ],
+  },
+  // ============================================
+  // LEVEL 8: STUDY THE VEDIC HYMNS
+  // 6 lessons - The source mantras
+  // ============================================
+  {
+    id: 8,
+    title: "Study the Vedic Hymns",
+    subtitle: "The Source",
+    description: "Return to the source. Study the ancient hymns that seeded all of Hindu philosophy — mantras still chanted today after thousands of years.",
+    color: "maroon",
+    requiredLevel: 7,
+    modules: [
+      {
+        id: "8-1",
+        title: "The Sacred Mantras",
+        description: "Hymns for daily practice and worship",
+        icon: "Sun",
+        lessons: [
+          {
+            id: "8-1-1",
+            title: "Gayatri Mantra",
+            description: "The supreme prayer — one verse that illuminates all",
+            duration: "20 min",
+          },
+          {
+            id: "8-1-2",
+            title: "Agni Sukta",
+            description: "The first hymn of the Rig Veda — invoking the sacred fire",
+            duration: "20 min",
+          },
+          {
+            id: "8-1-3",
+            title: "Sri Sukta",
+            description: "Hymn to Lakshmi — abundance and grace",
+            duration: "25 min",
+          },
+        ],
+      },
+      {
+        id: "8-2",
+        title: "The Cosmic Hymns",
+        description: "Profound contemplations on creation and existence",
+        icon: "Stars",
+        lessons: [
+          {
+            id: "8-2-1",
+            title: "Nasadiya Sukta",
+            description: "The Creation Hymn — questioning the origin of all",
+            duration: "25 min",
+          },
+          {
+            id: "8-2-2",
+            title: "Purusha Sukta",
+            description: "The Cosmic Person — universe from divine sacrifice",
+            duration: "30 min",
+          },
+          {
+            id: "8-2-3",
+            title: "Shanti Suktas",
+            description: "Peace invocations — may there be peace in all worlds",
+            duration: "20 min",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Helper function to calculate total duration of a level

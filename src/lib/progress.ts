@@ -136,6 +136,22 @@ export function findNextIncompleteLesson(completedLessons: string[]): { lessonId
     '4-2-1', '4-2-2', '4-2-3', '4-2-4', '4-2-5', // Module 4-2: Four Traditions
     '4-3-1', '4-3-2', '4-3-3', // Module 4-3: Vedas
     '4-4-1', '4-4-2', '4-4-3', // Module 4-4: Hindu Practice
+    // Level 5: The Puranas (17 lessons)
+    '5-1-1', '5-1-2', '5-1-3', '5-1-4', '5-1-5', '5-1-6', '5-1-7', '5-1-8', // Module 5-1: Bhagavata Purana
+    '5-2-1', '5-2-2', '5-2-3', '5-2-4', '5-2-5', // Module 5-2: Shiva Purana
+    '5-3-1', '5-3-2', '5-3-3', '5-3-4', // Module 5-3: Devi Mahatmya
+    // Level 6: Study the Gita (18 lessons)
+    '6-1-1', '6-1-2', '6-1-3', '6-1-4', // Module 6-1: Chapters 1-4
+    '6-2-1', '6-2-2', '6-2-3', '6-2-4', // Module 6-2: Chapters 5-8
+    '6-3-1', '6-3-2', '6-3-3', '6-3-4', // Module 6-3: Chapters 9-12
+    '6-4-1', '6-4-2', '6-4-3', '6-4-4', '6-4-5', '6-4-6', // Module 6-4: Chapters 13-18
+    // Level 7: Study the Upanishads (10 lessons)
+    '7-1-1', '7-1-2', '7-1-3', '7-1-4', // Module 7-1: Short Upanishads
+    '7-2-1', '7-2-2', '7-2-3', // Module 7-2: Story Upanishads
+    '7-3-1', '7-3-2', '7-3-3', // Module 7-3: Great Upanishads
+    // Level 8: Study the Vedic Hymns (6 lessons)
+    '8-1-1', '8-1-2', '8-1-3', // Module 8-1: Sacred Mantras
+    '8-2-1', '8-2-2', '8-2-3', // Module 8-2: Cosmic Hymns
   ];
 
   for (const lessonId of lessonOrder) {
@@ -164,7 +180,7 @@ export function completeLesson(lessonId: string): UserProgress {
     } else {
       // All lessons completed
       progress.currentLesson = null;
-      progress.currentLevel = 4; // Stay on last level
+      progress.currentLevel = 8; // Stay on last level
     }
 
     saveProgress(progress);

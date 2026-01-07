@@ -1,6 +1,6 @@
 /**
  * Email Content Helper
- * Maps day numbers (1-94) to lesson/chapter content for daily emails
+ * Maps day numbers (1-128) to lesson/chapter content for daily emails
  *
  * Day mapping:
  * - Days 1-14: Level 1 - The Foundation (14 lessons)
@@ -8,7 +8,10 @@
  * - Days 27-43: Level 3 - The Gita (17 lessons)
  * - Days 44-59: Level 4 - Going Deeper (16 lessons)
  * - Days 60-76: Level 5 - The Puranas (17 lessons)
- * - Days 77-94: Gita Chapters 1-18 (chapter summaries)
+ * - Days 77-94: Level 6 - Study the Gita (18 lessons)
+ * - Days 95-104: Level 7 - Study the Upanishads (10 lessons)
+ * - Days 105-110: Level 8 - Study the Vedic Hymns (6 lessons)
+ * - Days 111-128: Gita Chapters 1-18 (chapter summaries)
  */
 
 import { curriculum, Lesson, Level, Module } from '@/data/curriculum';
@@ -40,7 +43,7 @@ const gitaChapters = [
   chapter13, chapter14, chapter15, chapter16, chapter17, chapter18
 ];
 
-export const TOTAL_DAYS = 94;
+export const TOTAL_DAYS = 128;
 
 export interface EmailContent {
   day: number;
