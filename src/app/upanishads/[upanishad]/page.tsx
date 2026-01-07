@@ -136,8 +136,8 @@ export default function UpanishadDetailPage() {
                   Curated Selection ({upanishad.includedVerses} of {upanishad.totalVerses} verses)
                 </p>
                 <p className="text-xs text-amber-700 dark:text-amber-300 mt-1">
-                  This collection focuses on the core philosophical teachings. The full {upanishad.name.english} contains
-                  additional sections on rituals and ceremonies that are less relevant for modern spiritual practice.
+                  A curated selection of key philosophical passages. The complete {upanishad.name.english} contains
+                  additional sections on meditation techniques and sacred practices.
                 </p>
               </div>
             </div>
