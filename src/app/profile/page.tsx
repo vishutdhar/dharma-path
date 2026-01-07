@@ -20,7 +20,8 @@ import {
   Sun,
   Moon,
   Monitor,
-  Heart
+  Heart,
+  X
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import ProgressRing from '@/components/ProgressRing';
@@ -47,6 +48,9 @@ export default function ProfilePage() {
   const [emailSubscription, setEmailSubscription] = useState<EmailSubscription | null>(null);
   const [isLoadingSubscription, setIsLoadingSubscription] = useState(false);
   const [isUpdatingSubscription, setIsUpdatingSubscription] = useState(false);
+
+  // UPI donation modal
+  const [showUPIModal, setShowUPIModal] = useState(false);
 
   useEffect(() => {
     const userProgress = getProgress();
@@ -746,13 +750,13 @@ export default function ProfilePage() {
             </a>
 
             {/* India - UPI */}
-            <a
-              href="upi://pay?pa=6005817706@ptyes&pn=Dharma%20Path&cu=INR"
+            <button
+              onClick={() => setShowUPIModal(true)}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
             >
               <Heart size={18} />
               India (UPI)
-            </a>
+            </button>
           </div>
         </div>
 
@@ -762,6 +766,65 @@ export default function ProfilePage() {
           <p className="mt-1">Made with 🧡 for seekers everywhere</p>
         </div>
       </div>
+
+      {/* UPI Donation Modal */}
+      {showUPIModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl max-w-sm w-full p-6 relative">
+            {/* Close button */}
+            <button
+              onClick={() => setShowUPIModal(false)}
+              className="absolute top-4 right-4 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Content */}
+            <div className="text-center">
+              <h3 className="font-heading text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                Donate via UPI
+              </h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                Scan with any UPI app (Google Pay, PhonePe, Paytm)
+              </p>
+
+              {/* QR Code */}
+              <div className="bg-white p-4 rounded-xl inline-block mb-4">
+                <img
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('upi://pay?pa=6005817706@ptyes&pn=Dharma Path&cu=INR')}`}
+                  alt="UPI QR Code"
+                  width={200}
+                  height={200}
+                  className="mx-auto"
+                />
+              </div>
+
+              {/* UPI ID with copy */}
+              <div className="bg-cream-100 dark:bg-gray-700 rounded-xl p-3 mb-4">
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">UPI ID</p>
+                <div className="flex items-center justify-center gap-2">
+                  <code className="text-sm font-mono text-gray-800 dark:text-gray-200">
+                    6005817706@ptyes
+                  </code>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText('6005817706@ptyes');
+                      alert('UPI ID copied!');
+                    }}
+                    className="text-xs px-2 py-1 bg-saffron-500 hover:bg-saffron-600 text-white rounded-lg transition-colors"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <p className="text-xs text-gray-400 dark:text-gray-500">
+                Thank you for supporting Dharma Path 🙏
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Navigation */}
       <Navigation />
