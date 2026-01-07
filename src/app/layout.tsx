@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Providers from '@/components/Providers'
+import StructuredData from '@/components/StructuredData'
 
 export const metadata: Metadata = {
   // Basic metadata
@@ -123,6 +124,9 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* JSON-LD Structured Data for SEO */}
+        <StructuredData />
       </head>
       <body className="min-h-screen bg-cream-100 dark:bg-gray-900 bg-sacred-pattern transition-colors duration-300">
         <Providers>
