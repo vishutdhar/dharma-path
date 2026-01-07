@@ -30,8 +30,12 @@ function createSupabaseClient(): SupabaseClient {
 export const supabase = createSupabaseClient();
 
 // Database types
-export interface DbUserProgress {
-  id: string;
+
+/**
+ * Core progress data fields (used by sync functions)
+ * This contains only the user-controlled data, not auto-generated DB fields
+ */
+export interface DbUserProgressCore {
   user_id: string;
   completed_lessons: string[];
   current_level: number;
@@ -40,6 +44,14 @@ export interface DbUserProgress {
   last_visit: string;
   start_date: string;
   bookmarks: string[];
+}
+
+/**
+ * Full database record including auto-generated fields
+ * Extends DbUserProgressCore with id and timestamps
+ */
+export interface DbUserProgress extends DbUserProgressCore {
+  id: string;
   created_at: string;
   updated_at: string;
 }

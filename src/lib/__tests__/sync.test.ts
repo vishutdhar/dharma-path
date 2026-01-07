@@ -6,7 +6,7 @@ import {
   isLocalProgressOwnedBy,
   isLocalProgressFromDifferentUser,
   createFreshProgress,
-  DbUserProgress,
+  DbUserProgressCore,
 } from '../sync';
 import { UserProgress } from '../progress';
 
@@ -22,7 +22,7 @@ describe('Sync Logic', () => {
     bookmarks: ['2:47', '3:30'],
   };
 
-  const baseCloudProgress: DbUserProgress = {
+  const baseCloudProgress: DbUserProgressCore = {
     user_id: 'user-123',
     completed_lessons: ['1-1-1', '1-1-3'],
     current_level: 1,
@@ -164,7 +164,7 @@ describe('Sync Logic', () => {
     });
 
     it('handles empty cloud arrays gracefully', () => {
-      const emptyCloud: DbUserProgress = {
+      const emptyCloud: DbUserProgressCore = {
         user_id: 'user-123',
         completed_lessons: [],
         current_level: 1,
@@ -203,7 +203,7 @@ describe('Sync Logic', () => {
     });
 
     it('handles null/undefined cloud values with defaults', () => {
-      const partialCloud: DbUserProgress = {
+      const partialCloud: DbUserProgressCore = {
         user_id: 'user-123',
         completed_lessons: [],
         current_level: 0,
@@ -323,7 +323,7 @@ describe('Sync Logic', () => {
 
   describe('Edge Cases', () => {
     it('handles merge with identical data', () => {
-      const identical: DbUserProgress = {
+      const identical: DbUserProgressCore = {
         user_id: 'user-123',
         completed_lessons: ['1-1-1', '1-1-2'],
         current_level: 1,
@@ -347,7 +347,7 @@ describe('Sync Logic', () => {
         ...baseLocalProgress,
         completedLessons: manyLessons.slice(0, 50),
       };
-      const cloudManyLessons: DbUserProgress = {
+      const cloudManyLessons: DbUserProgressCore = {
         ...baseCloudProgress,
         completed_lessons: manyLessons.slice(25, 75),
       };

@@ -4,10 +4,10 @@
  */
 
 import { UserProgress } from './progress';
-import { DbUserProgress } from './supabase';
+import { DbUserProgress, DbUserProgressCore } from './supabase';
 
 // Re-export for convenience
-export type { DbUserProgress };
+export type { DbUserProgress, DbUserProgressCore };
 
 /**
  * Merge local and cloud progress, keeping the best of both
@@ -21,7 +21,7 @@ export type { DbUserProgress };
  * - currentLevel: Keep the higher value (most progress)
  * - currentLesson: Prefer local if set, otherwise use cloud
  */
-export function mergeProgress(local: UserProgress, cloud: DbUserProgress): UserProgress {
+export function mergeProgress(local: UserProgress, cloud: DbUserProgressCore): UserProgress {
   // Merge completed lessons (union of both)
   const completedLessons = Array.from(new Set([
     ...local.completedLessons,
@@ -61,7 +61,7 @@ export function mergeProgress(local: UserProgress, cloud: DbUserProgress): UserP
 /**
  * Convert cloud progress to local format
  */
-export function cloudToLocal(cloud: DbUserProgress, userId: string): UserProgress {
+export function cloudToLocal(cloud: DbUserProgressCore, userId: string): UserProgress {
   return {
     completedLessons: cloud.completed_lessons || [],
     currentLevel: cloud.current_level || 1,
