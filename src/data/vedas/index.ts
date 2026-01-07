@@ -170,5 +170,6 @@ export function isHymnAvailable(id: VedicHymnId): boolean {
 // =============================================================================
 
 export type { VedicHymn, VedicHymnId, VedicHymnSummary, VedicVerse, VedaSource } from './types';
+export { getVedaName, getHymnPath, getVersePath, formatVerseRef, getHymnDisplayName } from './types';
 export { nasadiyaSukta } from './nasadiya-sukta';
 export { gayatri } from './gayatri';

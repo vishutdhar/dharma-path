@@ -87,6 +87,14 @@ SMRITI ("What is remembered" - Human authored, accessible)
 
 **Scope**: ~50-100 verses total (NOT all 20,000 mantras)
 
+**Implementation Phases** (to manage context/token limits):
+| Phase | Description | Status |
+|-------|-------------|--------|
+| **2A** | Foundation: types.ts, index.ts, Nasadiya Sukta (7v), Gayatri (1v) | ✅ Complete |
+| **2B** | Pages: /vedas, /vedas/[hymn], /vedas/[hymn]/[verse] | ✅ Complete |
+| **2C** | More hymns: Purusha (16v), Agni (9v), Sri (15v), Shanti (~10v) | Pending |
+| **2D** | Search integration + Bridge links from Level 4 | Pending |
+
 **Key Hymns to Include**:
 | Hymn | Source | Verses | Significance |
 |------|--------|--------|--------------|
