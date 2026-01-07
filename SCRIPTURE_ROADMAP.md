@@ -92,7 +92,7 @@ SMRITI ("What is remembered" - Human authored, accessible)
 |-------|-------------|--------|
 | **2A** | Foundation: types.ts, index.ts, Nasadiya Sukta (7v), Gayatri (1v) | ✅ Complete |
 | **2B** | Pages: /vedas, /vedas/[hymn], /vedas/[hymn]/[verse] | ✅ Complete |
-| **2C** | More hymns: Purusha (16v), Agni (9v), Sri (15v), Shanti (~10v) | Pending |
+| **2C** | More hymns: Purusha (16v), Agni (9v), Sri (15v), Shanti (10v) | ✅ Complete |
 | **2D** | Search integration + Bridge links from Level 4 | Pending |
 
 **Key Hymns to Include**:
