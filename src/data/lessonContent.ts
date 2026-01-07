@@ -8764,6 +8764,13 @@ export const lessonContent: Record<string, string> = {
   // ============================================
 
   "5-1-1": `
+    <p style="font-style: italic; color: #666; border-left: 3px solid #F97316; padding-left: 16px; margin-bottom: 24px;">
+      Having explored how Hinduism is practiced — through daily worship, sacred festivals,
+      and the samskaras that mark life's journey — we now turn to the sacred stories that
+      inspire and give meaning to these practices. The Puranas are the treasure house of
+      Hindu mythology, the tales of gods and devotees that have shaped Hindu culture for millennia.
+    </p>
+
     <h2>The Crown Jewel of Devotion</h2>
     <p>
       Among the eighteen Mahapuranas, the <strong>Bhagavata Purana</strong>
