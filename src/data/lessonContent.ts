@@ -10124,4 +10124,1855 @@ export const lessonContent: Record<string, string> = {
       <br/>— Bhagavata Purana 1.3.43
     </blockquote>
   `,
+
+  // ============================================
+  // MODULE 5-2: THE SHIVA PURANA
+  // ============================================
+
+  "5-2-1": `
+    <h2>The God Who Dances the Universe</h2>
+    <p>
+      If you've ever seen an Indian bronze statue of a deity dancing
+      within a ring of fire, you've encountered one of Hinduism's most
+      powerful images: <strong>Nataraja</strong> — Shiva as the Lord
+      of Dance.
+    </p>
+    <p>
+      This single image encapsulates the entire Shiva Purana's teaching:
+      the universe is not a static machine but a cosmic dance, and Shiva
+      is the dancer whose every movement creates, sustains, and dissolves
+      all of existence.
+    </p>
+
+    <h2>Understanding Shiva</h2>
+    <p>
+      Shiva presents a paradox that can puzzle newcomers:
+    </p>
+    <ul>
+      <li>He is the <strong>ascetic</strong> who sits in meditation for eons,
+      smeared with ash, withdrawn from the world</li>
+      <li>He is the <strong>householder</strong> who loves his wife Parvati
+      and plays with his sons Ganesha and Kartikeya</li>
+      <li>He is the <strong>destroyer</strong> whose third eye can reduce
+      universes to ash</li>
+      <li>He is the <strong>benevolent one</strong> (Shankara) who grants
+      blessings even to demons</li>
+      <li>He is <strong>terrible</strong> (Rudra) and <strong>beautiful</strong>
+      (Sundaresha) at once</li>
+    </ul>
+    <p>
+      The Shiva Purana teaches that these aren't contradictions — they
+      reveal that ultimate reality transcends all limited categories.
+    </p>
+
+    <h2>The Nataraja: A Symbol Decoded</h2>
+    <p>
+      The dancing Shiva image contains layers of meaning:
+    </p>
+
+    <h3>The Four Arms</h3>
+    <ul>
+      <li><strong>Upper right hand</strong> holds a drum (<em>damaru</em>) —
+      the sound of creation, the cosmic vibration from which all emerges</li>
+      <li><strong>Upper left hand</strong> holds fire (<em>agni</em>) —
+      the force of dissolution, which clears the way for new creation</li>
+      <li><strong>Lower right hand</strong> is raised in <em>abhaya mudra</em> —
+      "fear not," the gesture of protection and grace</li>
+      <li><strong>Lower left hand</strong> points to the raised foot —
+      indicating liberation and refuge</li>
+    </ul>
+
+    <h3>The Posture</h3>
+    <ul>
+      <li><strong>One foot</strong> crushes the dwarf demon <em>Apasmara</em>
+      (ignorance/forgetfulness) — liberation comes through overcoming
+      spiritual blindness</li>
+      <li><strong>One foot</strong> is raised in dance — representing
+      liberation itself, the soul freed from ignorance</li>
+      <li><strong>The ring of fire</strong> (<em>prabha mandala</em>) —
+      represents <em>samsara</em>, the cycle of existence, but also
+      the transformative fire of consciousness</li>
+    </ul>
+
+    <h3>The Hair</h3>
+    <p>
+      Shiva's wild, flying hair contains:
+    </p>
+    <ul>
+      <li>The <strong>Ganga</strong> — the sacred river he caught in his
+      locks to break her fall from heaven</li>
+      <li>The <strong>crescent moon</strong> — representing the cycles
+      of time he transcends</li>
+      <li>A <strong>skull</strong> — signifying his victory over death</li>
+      <li>The <strong>cobra</strong> — representing kundalini energy
+      and mastery over fear</li>
+    </ul>
+
+    <h2>The Five Acts of Shiva</h2>
+    <p>
+      The Shiva Purana teaches that Shiva performs five cosmic functions
+      (<em>panchakritya</em>):
+    </p>
+    <ol>
+      <li><strong>Srishti</strong> (Creation) — symbolized by the drum</li>
+      <li><strong>Sthiti</strong> (Preservation) — symbolized by the
+      protecting hand</li>
+      <li><strong>Samhara</strong> (Destruction) — symbolized by fire</li>
+      <li><strong>Tirobhava</strong> (Concealment) — the foot pressing
+      down the dwarf, representing the veiling of truth</li>
+      <li><strong>Anugraha</strong> (Grace/Liberation) — the raised
+      foot, representing revelation and release</li>
+    </ol>
+    <blockquote>
+      <em>"The dance of Shiva is not mere metaphor. The universe itself
+      is his dance — atoms spin, galaxies wheel, and consciousness
+      pulses to his cosmic rhythm."</em>
+      <br/>— Shaiva teaching
+    </blockquote>
+
+    <h2>Shiva's Forms</h2>
+    <p>
+      The Shiva Purana describes numerous forms of Shiva:
+    </p>
+    <ul>
+      <li><strong>Rudra</strong> — the fierce, howling one (Vedic origin)</li>
+      <li><strong>Mahakala</strong> — Lord of Time, the great death</li>
+      <li><strong>Bhairava</strong> — the terrifying protector</li>
+      <li><strong>Dakshinamurti</strong> — the south-facing teacher,
+      young yet infinitely wise, teaching through silence</li>
+      <li><strong>Ardhanarishvara</strong> — half-male, half-female,
+      showing the unity of Shiva and Shakti</li>
+      <li><strong>Pashupati</strong> — Lord of Animals, protector of
+      all creatures</li>
+      <li><strong>Gangadhara</strong> — Bearer of the Ganga</li>
+      <li><strong>Neelakantha</strong> — the blue-throated one who
+      swallowed cosmic poison to save creation</li>
+    </ul>
+
+    <h2>The Lingam</h2>
+    <p>
+      Shiva is uniquely worshipped in an abstract form: the
+      <strong>Shiva Lingam</strong> — an oval stone representing the
+      formless absolute.
+    </p>
+    <p>
+      While sometimes misunderstood, the lingam is primarily a symbol
+      of the <em>arupa</em> (formless) nature of ultimate reality. It
+      represents:
+    </p>
+    <ul>
+      <li>The pillar of infinite light Shiva revealed to Brahma and Vishnu</li>
+      <li>The point where form emerges from formlessness</li>
+      <li>The union of consciousness (Shiva) and energy (Shakti)</li>
+    </ul>
+    <blockquote>
+      <em>"The lingam is not an image of Shiva but a symbol of
+      Shiva's nature — beyond form, beyond limitation, yet the source
+      of all forms."</em>
+      <br/>— Shiva Purana
+    </blockquote>
+
+    <h2>Why Shiva Matters</h2>
+    <p>
+      The cosmic dancer teaches us that:
+    </p>
+    <ul>
+      <li>Destruction is not evil but necessary for renewal</li>
+      <li>The universe is dynamic, not static — a constant dance</li>
+      <li>Opposites (creation/destruction, householder/ascetic) can
+      coexist in one being</li>
+      <li>Liberation comes through the grace of consciousness crushing
+      our ignorance</li>
+    </ul>
+    <p>
+      In the next lesson, we explore one of Hinduism's greatest love
+      stories: how the eternal ascetic came to marry the devoted Parvati.
+    </p>
+  `,
+
+  "5-2-2": `
+    <h2>The Greatest Love Story</h2>
+    <p>
+      How do you win the heart of a god who has renounced desire itself?
+      This is the challenge faced by <strong>Parvati</strong> — and her
+      success became one of Hinduism's most celebrated tales.
+    </p>
+    <p>
+      The marriage of Shiva and Parvati represents far more than divine
+      romance. It symbolizes the union of consciousness (Shiva) with
+      energy (Shakti) — a union without which nothing can exist.
+    </p>
+
+    <h2>The Background: Sati's Sacrifice</h2>
+    <p>
+      Before Parvati, there was <strong>Sati</strong> — Shiva's first wife.
+    </p>
+    <p>
+      Sati was the daughter of <strong>Daksha</strong>, a powerful king
+      who disapproved of his daughter's marriage to the ash-smeared
+      ascetic Shiva. When Daksha held a great sacrifice and deliberately
+      excluded Shiva, Sati was humiliated.
+    </p>
+    <p>
+      Unable to bear this insult to her husband, Sati immolated herself
+      in the sacrificial fire. (This act gave rise to the term "sati,"
+      though the practice it later named was a much later, and always
+      controversial, development.)
+    </p>
+    <blockquote>
+      <em>"When Shiva learned of Sati's death, his grief shook the
+      universe. He performed the terrible Tandava dance of destruction,
+      carrying her body across the worlds."</em>
+      <br/>— Shiva Purana
+    </blockquote>
+    <p>
+      Eventually, Vishnu intervened, using his discus to gradually
+      dismember Sati's body, pieces of which fell to earth as sacred
+      sites (<em>Shakti Peethas</em>). Shiva, exhausted by grief,
+      withdrew into deep meditation.
+    </p>
+
+    <h2>The Birth of Parvati</h2>
+    <p>
+      Sati was reborn as <strong>Parvati</strong> ("daughter of the
+      mountain"), child of the Himalaya king. From childhood, she felt
+      an inexplicable pull toward Shiva, who sat motionless on Mount
+      Kailash, lost in samadhi.
+    </p>
+    <p>
+      She began serving him — bringing flowers, sweeping the area where
+      he meditated, singing devotional songs. But Shiva remained
+      unmoved, eyes closed, consciousness absorbed in the infinite.
+    </p>
+
+    <h3>Kamadeva's Intervention</h3>
+    <p>
+      The gods needed Shiva to marry and father a warrior who could
+      defeat the demon Tarakasura. They sent <strong>Kamadeva</strong>,
+      the god of desire (similar to Cupid), to pierce Shiva with his
+      flower-arrow.
+    </p>
+    <p>
+      Kamadeva crept near. Just as he released his arrow, Shiva opened
+      his third eye. A beam of fire reduced Kamadeva to ash.
+    </p>
+    <blockquote>
+      <em>"Desire itself was burned by the fire of consciousness —
+      a teaching that attachment, even to good things, cannot disturb
+      the truly awakened."</em>
+      <br/>— Traditional interpretation
+    </blockquote>
+    <p>
+      (Later, at Parvati's request after their marriage, Shiva would
+      restore Kamadeva — but in formless form, teaching that love
+      exists but shouldn't be attached to external appearance.)
+    </p>
+
+    <h2>Parvati's Tapas</h2>
+    <p>
+      Parvati realized that Shiva could not be won through beauty or
+      external devotion alone. She retired to the forest to perform
+      <strong>tapas</strong> — severe austerities.
+    </p>
+    <p>
+      For years (some accounts say thousands of years), she practiced:
+    </p>
+    <ul>
+      <li>Fasting on fallen leaves, then on nothing at all</li>
+      <li>Standing in freezing water during winter</li>
+      <li>Sitting amidst blazing fires in summer</li>
+      <li>Meditating through monsoons without shelter</li>
+      <li>Ultimately, surviving on air alone — earning the name
+      <strong>Aparna</strong> ("without even leaves")</li>
+    </ul>
+    <p>
+      Her austerities generated such spiritual heat that the gods
+      themselves grew alarmed.
+    </p>
+
+    <h2>The Test</h2>
+    <p>
+      Shiva decided to test Parvati. He appeared as a young brahmin
+      and began criticizing Shiva mercilessly:
+    </p>
+    <p>
+      "Why do you want to marry that strange ascetic? He has no home,
+      no wealth, no family. He smears himself with ashes from
+      cremation grounds. He wears snakes and skulls. His companions
+      are ghosts. Are you mad?"
+    </p>
+    <p>
+      Parvati's response revealed her understanding:
+    </p>
+    <blockquote>
+      <em>"You see ashes; I see the transcendence of attachment.
+      You see snakes; I see mastery over fear.
+      You see no home; I see one who is at home everywhere.
+      You see strangeness; I see the one who is beyond all convention.
+      I seek not his appearance but his essence — and that essence
+      is infinite consciousness itself."</em>
+      <br/>— Parvati to the disguised Shiva
+    </blockquote>
+    <p>
+      Shiva revealed himself and accepted her.
+    </p>
+
+    <h2>The Divine Wedding</h2>
+    <p>
+      The marriage of Shiva and Parvati was a cosmic celebration:
+    </p>
+    <ul>
+      <li>All the gods attended</li>
+      <li>Vishnu served as the bride's brother</li>
+      <li>Brahma performed the ceremonies</li>
+      <li>Celestial musicians provided music</li>
+      <li>The Ganga flowed specially for the occasion</li>
+    </ul>
+    <p>
+      But Shiva's wedding procession was deliberately unconventional:
+      ghosts, goblins, and strange beings accompanied him.
+      <strong>Mena</strong>, Parvati's mother, fainted at the sight.
+    </p>
+    <p>
+      At Parvati's request, Shiva revealed his beautiful form —
+      reminding everyone that the one who appears fearsome is also
+      the source of all beauty.
+    </p>
+
+    <h2>The Teaching of the Marriage</h2>
+    <p>
+      The Shiva-Parvati marriage illustrates profound truths:
+    </p>
+
+    <h3>Consciousness Needs Energy</h3>
+    <p>
+      Shiva alone, absorbed in meditation, does nothing. Shakti (Parvati)
+      provides the dynamic energy that manifests creation. Neither is
+      complete without the other.
+    </p>
+
+    <h3>The Power of Devotion</h3>
+    <p>
+      Parvati won Shiva not through seduction but through tapas and
+      devotion. The lesson: sincere spiritual practice attracts
+      divine response.
+    </p>
+
+    <h3>Beyond Appearances</h3>
+    <p>
+      Parvati's ability to see past Shiva's unconventional appearance
+      to his true nature is a model for spiritual vision.
+    </p>
+
+    <h3>Partnership in Divinity</h3>
+    <p>
+      Shiva and Parvati are depicted as equals, discussing philosophy,
+      sharing insights, playfully debating. Their relationship models
+      sacred partnership.
+    </p>
+
+    <h2>Their Life Together</h2>
+    <p>
+      On Mount Kailash, Shiva and Parvati:
+    </p>
+    <ul>
+      <li>Engage in philosophical dialogues (many tantric texts are
+      presented as their conversations)</li>
+      <li>Play games (including dice, which Parvati often wins)</li>
+      <li>Dance together in cosmic harmony</li>
+      <li>Raise their divine children</li>
+    </ul>
+    <p>
+      Their relationship — combining transcendence with intimacy,
+      philosophy with play — remains the model for sacred marriage
+      in Hindu tradition.
+    </p>
+    <p>
+      In the next lesson, we meet the divine children born from this
+      union: the beloved Ganesha and the warrior Kartikeya.
+    </p>
+  `,
+
+  "5-2-3": `
+    <h2>The Divine Family</h2>
+    <p>
+      The children of Shiva and Parvati — <strong>Ganesha</strong> and
+      <strong>Kartikeya</strong> (also called Skanda or Murugan) — are
+      among Hinduism's most beloved deities. Their birth stories reveal
+      deep truths about consciousness, devotion, and the nature of
+      divine grace.
+    </p>
+
+    <h2>Ganesha: The Remover of Obstacles</h2>
+    <p>
+      You've likely seen him: the elephant-headed god with a rotund
+      belly, often shown holding sweets and riding a mouse. Ganesha
+      is invoked at the beginning of any undertaking — prayers, journeys,
+      businesses, books, and even this lesson.
+    </p>
+
+    <h3>The Birth Story</h3>
+    <p>
+      The most popular account tells how Parvati, wanting privacy while
+      bathing, created a boy from the sandalwood paste on her body and
+      brought him to life.
+    </p>
+    <p>
+      "Guard the door," she told him. "Let no one enter."
+    </p>
+    <p>
+      Soon Shiva returned home and found his way blocked by a boy he
+      didn't recognize.
+    </p>
+    <p>
+      "I am Parvati's son. She ordered me to let no one pass."
+    </p>
+    <p>
+      "I am Shiva, her husband. Stand aside."
+    </p>
+    <p>
+      "I know no Shiva. I obey only my mother."
+    </p>
+    <p>
+      A fierce battle ensued. Shiva, enraged, cut off the boy's head.
+    </p>
+    <p>
+      When Parvati emerged and saw what had happened, her grief and
+      fury shook the cosmos. She threatened to destroy everything.
+    </p>
+    <blockquote>
+      <em>"Without Shakti's consent, not even Shiva can act. Her
+      anger revealed that consciousness without energy is impotent."</em>
+      <br/>— Shiva Purana teaching
+    </blockquote>
+    <p>
+      Shiva immediately sent his followers: "Bring me the head of
+      the first creature you find facing north."
+    </p>
+    <p>
+      They returned with the head of an elephant. Shiva attached it
+      to the boy's body and restored him to life. He declared:
+    </p>
+    <p>
+      "This is my son Ganesha. He shall be worshipped first among gods.
+      No undertaking shall succeed without first honoring him."
+    </p>
+
+    <h3>The Symbolism of Ganesha</h3>
+    <ul>
+      <li><strong>Elephant head</strong> — wisdom, memory, and the ability
+      to remove obstacles (as elephants clear paths through jungle)</li>
+      <li><strong>Large ears</strong> — attentive listening</li>
+      <li><strong>Small eyes</strong> — concentration</li>
+      <li><strong>One broken tusk</strong> — sacrifice for knowledge
+      (he broke his tusk to write the Mahabharata)</li>
+      <li><strong>Large belly</strong> — ability to digest all experiences,
+      good and bad</li>
+      <li><strong>Mouse vehicle</strong> — humility; even the smallest
+      creature serves the highest purpose; also represents desire,
+      which Ganesha controls</li>
+      <li><strong>Modaka (sweet)</strong> — the reward of spiritual practice</li>
+    </ul>
+
+    <h3>Why Worship Ganesha First?</h3>
+    <p>
+      Ganesha is called <strong>Vighnaharta</strong> (remover of obstacles)
+      and <strong>Vighneshvara</strong> (lord of obstacles). He both
+      removes obstacles for devotees and places obstacles before those
+      who need lessons.
+    </p>
+    <p>
+      The teaching: obstacles are not random — they either test us,
+      teach us, or redirect us. Ganesha governs this cosmic curriculum.
+    </p>
+
+    <h2>Kartikeya: The Divine Warrior</h2>
+    <p>
+      While Ganesha is worshipped across India, <strong>Kartikeya</strong>
+      (also called Skanda, Murugan, Subrahmanya) is especially beloved
+      in South India, where he is the supreme deity for many.
+    </p>
+
+    <h3>The Birth Story</h3>
+    <p>
+      Kartikeya was born to defeat the demon <strong>Tarakasura</strong>,
+      who had a boon that only a son of Shiva could kill him (believing
+      the eternal ascetic would never have a child).
+    </p>
+    <p>
+      Kartikeya's birth was extraordinary:
+    </p>
+    <ul>
+      <li>Shiva's fiery seed was so powerful that even Agni (fire god)
+      couldn't contain it</li>
+      <li>It was passed to the Ganga, who bore it to a forest of reeds</li>
+      <li>The six Krittikas (Pleiades stars) nursed the child, who
+      developed six heads to drink from all mothers simultaneously</li>
+      <li>Hence his name Kartikeya ("son of the Krittikas") and his
+      six-headed form (<strong>Shanmukha</strong>)</li>
+    </ul>
+    <p>
+      The child grew instantly into a mighty warrior. He led the divine
+      armies against Tarakasura and destroyed him, fulfilling the
+      purpose of his incarnation.
+    </p>
+
+    <h3>The Symbolism of Kartikeya</h3>
+    <ul>
+      <li><strong>Six heads</strong> — perception in all directions;
+      the six chakras; the six schools of philosophy; mastery of the
+      five senses plus mind</li>
+      <li><strong>Twelve arms</strong> — wielding many weapons, showing
+      mastery over all forces</li>
+      <li><strong>Peacock vehicle</strong> — beauty, immortality, and
+      the destruction of serpent-like negativity (peacocks eat snakes)</li>
+      <li><strong>Vel (spear)</strong> — the weapon of divine knowledge
+      that pierces ignorance; gift from Parvati, representing Shakti's
+      power</li>
+    </ul>
+
+    <h2>The Race Around the World</h2>
+    <p>
+      A famous story highlights the difference between the two brothers:
+    </p>
+    <p>
+      The sage Narada gave Shiva and Parvati a divine mango of knowledge,
+      which couldn't be divided. "Give it to whichever son first
+      circumambulates the universe three times," he suggested.
+    </p>
+    <p>
+      Kartikeya immediately mounted his peacock and raced around the
+      cosmos at tremendous speed.
+    </p>
+    <p>
+      Ganesha simply walked around his parents three times and bowed.
+      "My parents are my universe. Circumambulating them is
+      circumambulating all that exists."
+    </p>
+    <p>
+      He received the mango. (Some versions say Kartikeya, upset, left
+      for the southern hills — explaining his special worship in
+      South India.)
+    </p>
+    <blockquote>
+      <em>"The story teaches that devotion and wisdom outpace
+      physical effort. Understanding the essence exceeds traversing
+      the appearance."</em>
+      <br/>— Traditional interpretation
+    </blockquote>
+
+    <h2>Complementary Energies</h2>
+    <p>
+      Together, the brothers represent complementary aspects of
+      spiritual life:
+    </p>
+    <table>
+      <tr>
+        <th>Ganesha</th>
+        <th>Kartikeya</th>
+      </tr>
+      <tr>
+        <td>Beginning (invoked first)</td>
+        <td>Culmination (final victory)</td>
+      </tr>
+      <tr>
+        <td>Wisdom and intellect</td>
+        <td>Courage and action</td>
+      </tr>
+      <tr>
+        <td>Householder (married)</td>
+        <td>Celibate (in most traditions)</td>
+      </tr>
+      <tr>
+        <td>Removes inner obstacles</td>
+        <td>Destroys external demons</td>
+      </tr>
+      <tr>
+        <td>Slow, patient, thoughtful</td>
+        <td>Swift, fierce, decisive</td>
+      </tr>
+    </table>
+    <p>
+      Both are needed: wisdom to see clearly and courage to act rightly.
+    </p>
+
+    <h2>The Divine Family Teaching</h2>
+    <p>
+      The Shiva family models spiritual truths:
+    </p>
+    <ul>
+      <li>Ultimate reality (Shiva) united with creative energy (Parvati)
+      produces wisdom (Ganesha) and power (Kartikeya)</li>
+      <li>Both contemplation (Shiva's meditation) and engagement
+      (Parvati's activity) are sacred</li>
+      <li>The divine is accessible through family relationships —
+      as father, mother, child, protector</li>
+      <li>Even gods have family dynamics, disagreements, and
+      reconciliations — making them relatable</li>
+    </ul>
+    <p>
+      In our next lesson, we explore the <strong>Jyotirlingas</strong> —
+      twelve sacred sites where Shiva manifested as pillars of light.
+    </p>
+  `,
+
+  "5-2-4": `
+    <h2>Pillars of Light</h2>
+    <p>
+      Scattered across India are twelve sites of extraordinary sanctity:
+      the <strong>Jyotirlingas</strong> ("pillars of light"). These
+      are not ordinary temples — they mark locations where, according
+      to the Shiva Purana, Shiva manifested as an infinite column of
+      radiance.
+    </p>
+    <p>
+      For Shiva devotees, pilgrimage to all twelve Jyotirlingas is a
+      supreme spiritual achievement — a journey that can take a lifetime.
+    </p>
+
+    <h2>The Origin Story</h2>
+    <p>
+      Once, Brahma and Vishnu argued about who was supreme. Their
+      debate escalated until they were ready to battle.
+    </p>
+    <p>
+      Suddenly, a column of fire appeared between them — infinite,
+      extending beyond sight in both directions. Both gods decided
+      to find its end.
+    </p>
+    <p>
+      Brahma took the form of a swan and flew upward for thousands
+      of years. Vishnu became a boar and dug downward for an equal
+      time. Neither could find an end to the pillar.
+    </p>
+    <p>
+      When they returned, Shiva emerged from the column:
+    </p>
+    <blockquote>
+      <em>"This light has no beginning and no end, for I am the
+      infinite. Both of you arise from me and will dissolve into me.
+      The Supreme is beyond your conflict."</em>
+      <br/>— Shiva to Brahma and Vishnu
+    </blockquote>
+    <p>
+      Both gods acknowledged Shiva's supremacy. The pillar of light
+      manifested at twelve points on earth as the Jyotirlingas.
+    </p>
+
+    <h2>The Twelve Jyotirlingas</h2>
+
+    <h3>1. Somnath — Gujarat</h3>
+    <p>
+      Located on the western coast, Somnath ("Lord of the Moon") is
+      considered the first Jyotirlinga. Legend says the Moon god
+      (Soma), cursed to wane, was healed by worshipping Shiva here.
+    </p>
+    <p>
+      Somnath has been destroyed and rebuilt numerous times through
+      history, symbolizing the eternal return of the sacred.
+    </p>
+
+    <h3>2. Mallikarjuna — Srisailam, Andhra Pradesh</h3>
+    <p>
+      Set in the Nallamala Hills, this ancient temple is one of the
+      few sites sacred to both Shiva and Shakti. The name means
+      "Lord white as jasmine."
+    </p>
+    <p>
+      Kartikeya is said to have come here after the mango incident,
+      and Shiva-Parvati followed to console him.
+    </p>
+
+    <h3>3. Mahakaleshwar — Ujjain, Madhya Pradesh</h3>
+    <p>
+      <strong>Mahakala</strong> means "Great Time" or "Lord of Death."
+      This is one of the most powerful Jyotirlingas, unique because
+      it is <em>swayambhu</em> (self-manifested) and <em>dakshinamukhi</em>
+      (south-facing — associated with tantric power).
+    </p>
+    <p>
+      Ujjain was one of ancient India's greatest cities, located on
+      the prime meridian of traditional Indian geography.
+    </p>
+
+    <h3>4. Omkareshwar — Madhya Pradesh</h3>
+    <p>
+      Located on an island in the Narmada River shaped like the sacred
+      syllable <strong>Om</strong>, this temple's very geography is
+      a prayer. The island is called Mandhata after a king who
+      meditated here for millennia.
+    </p>
+
+    <h3>5. Kedarnath — Uttarakhand</h3>
+    <p>
+      At 11,755 feet in the Himalayas, Kedarnath is among the most
+      dramatically situated temples in the world. Accessible only
+      by trek, it remains snowbound for half the year.
+    </p>
+    <p>
+      Legend says the Pandavas, seeking Shiva's forgiveness after
+      the Mahabharata war, pursued him here. Shiva, avoiding them,
+      took the form of a bull and dove into the ground. The hump
+      remained — worshipped as the lingam at Kedarnath.
+    </p>
+
+    <h3>6. Bhimashankar — Maharashtra</h3>
+    <p>
+      Set in the Sahyadri hills, this temple marks where Shiva
+      destroyed the demon Bhima. The sweat from Shiva's fierce
+      battle became the Bhima River.
+    </p>
+
+    <h3>7. Kashi Vishwanath — Varanasi, Uttar Pradesh</h3>
+    <p>
+      <strong>Kashi</strong> (Varanasi/Benares) is considered the
+      oldest continuously inhabited city in the world and Shiva's
+      favorite dwelling place. He is said to whisper the <em>taraka
+      mantra</em> (liberating mantra) into the ear of everyone who
+      dies here.
+    </p>
+    <blockquote>
+      <em>"Death in Kashi is liberation. Shiva himself carries the
+      soul across."</em>
+      <br/>— Traditional belief
+    </blockquote>
+
+    <h3>8. Trimbakeshwar — Maharashtra</h3>
+    <p>
+      The source of the Godavari River, this is where the three-eyed
+      (trimbaka) Shiva manifested. The lingam here is unique — three
+      faces representing Brahma, Vishnu, and Shiva.
+    </p>
+
+    <h3>9. Vaidyanath — Jharkhand</h3>
+    <p>
+      Also called Baidyanath, this temple celebrates Shiva as the
+      "Lord of Physicians." Ravana, the demon king, worshipped Shiva
+      here and was granted healing powers.
+    </p>
+
+    <h3>10. Nageshwar — Gujarat</h3>
+    <p>
+      "Lord of Serpents" — this Jyotirlinga is associated with Shiva's
+      control over nagas (serpent beings). It marks where Shiva
+      defeated a demon who had trapped devotees.
+    </p>
+
+    <h3>11. Rameshwaram — Tamil Nadu</h3>
+    <p>
+      Where India almost touches Sri Lanka, Rameshwaram marks where
+      Rama worshipped Shiva before crossing to Lanka to rescue Sita.
+      The temple has extraordinarily long corridors and 22 sacred wells.
+    </p>
+    <p>
+      Notably, this is where Vishnu's avatar (Rama) worships Shiva —
+      demonstrating the harmony between Vaishnavism and Shaivism at
+      the highest level.
+    </p>
+
+    <h3>12. Grishneshwar — Maharashtra</h3>
+    <p>
+      The last of the twelve, located near the Ellora caves. The name
+      means "Lord of Compassion." The lingam here was established
+      by a devoted woman whose faith resurrected her murdered son.
+    </p>
+
+    <h2>The Purpose of Pilgrimage</h2>
+    <p>
+      Why travel to these sites when Shiva is everywhere?
+    </p>
+    <ul>
+      <li><strong>Concentration of energy:</strong> Certain places
+      accumulate spiritual power through millennia of worship</li>
+      <li><strong>Transformation through journey:</strong> The
+      hardship of pilgrimage purifies the pilgrim</li>
+      <li><strong>Connecting with lineage:</strong> Walking where
+      countless saints have walked links us to tradition</li>
+      <li><strong>Physical engagement:</strong> The body participates
+      in what might otherwise remain abstract</li>
+      <li><strong>Darshan:</strong> Being "seen" by the deity at
+      these powerful sites is considered transformative</li>
+    </ul>
+    <blockquote>
+      <em>"The Jyotirlinga is not made of stone. The stone is a
+      doorway. Those with eyes to see perceive the infinite light
+      streaming through."</em>
+      <br/>— Shaiva teaching
+    </blockquote>
+
+    <h2>Shiva's Accessibility</h2>
+    <p>
+      The Shiva Purana emphasizes that while pilgrimage to Jyotirlingas
+      is meritorious, Shiva can be worshipped anywhere:
+    </p>
+    <ul>
+      <li>Any river-smoothed stone can represent Shiva</li>
+      <li>Devotion in the heart exceeds elaborate ritual</li>
+      <li>Shiva is pleased by simple offerings — bilva leaves, water,
+      sincere prayer</li>
+      <li>He is called <strong>Bholenath</strong> — the "innocent
+      lord," easily pleased, quick to bless</li>
+    </ul>
+    <p>
+      In our final lesson, we explore the philosophy that emerged
+      from Shiva worship — how Kashmir Shaivism and Shaiva Siddhanta
+      articulated profound understandings of consciousness and reality.
+    </p>
+  `,
+
+  "5-2-5": `
+    <h2>The Philosophy of Shiva</h2>
+    <p>
+      Beyond mythology, the Shiva Purana points toward sophisticated
+      philosophical systems that developed from Shiva worship. These
+      schools — particularly <strong>Kashmir Shaivism</strong> and
+      <strong>Shaiva Siddhanta</strong> — offer profound insights
+      into the nature of consciousness, reality, and liberation.
+    </p>
+
+    <h2>Shiva as Pure Consciousness</h2>
+    <p>
+      In Shaiva philosophy, Shiva is not primarily a deity with a
+      form but <strong>pure consciousness</strong> itself — the aware
+      presence in which all experience arises.
+    </p>
+    <blockquote>
+      <em>"Shiva is not someone you worship. Shiva is that which
+      is aware right now, reading these words. Recognition of this
+      is liberation."</em>
+      <br/>— Kashmir Shaivism teaching
+    </blockquote>
+    <p>
+      This doesn't deny devotional practice but gives it a deeper
+      context: when you worship Shiva externally, you're preparing
+      to recognize Shiva as your own essential nature.
+    </p>
+
+    <h2>Kashmir Shaivism</h2>
+    <p>
+      Flourishing from the 9th-11th centuries in Kashmir, this tradition
+      developed some of Hinduism's most sophisticated philosophy.
+    </p>
+
+    <h3>The Core Teaching: Recognition (Pratyabhijña)</h3>
+    <p>
+      The central insight: you are already Shiva — you've simply
+      forgotten. Liberation is not achieving something new but
+      <em>recognizing</em> what has always been true.
+    </p>
+    <p>
+      The master <strong>Abhinavagupta</strong> articulated this:
+      consciousness contracts and forgets itself, appearing as
+      limited individuals. Through grace and practice, it recognizes
+      itself again — not as an experience that comes and goes but
+      as the ever-present witness of all experience.
+    </p>
+
+    <h3>The Thirty-Six Tattvas</h3>
+    <p>
+      Kashmir Shaivism maps the entire universe as thirty-six levels
+      (<em>tattvas</em>) of consciousness, from pure Shiva-awareness
+      down through subtle and gross elements to physical matter:
+    </p>
+    <ul>
+      <li><strong>Shiva/Shakti</strong> — Pure consciousness and its
+      power (tattvas 1-2)</li>
+      <li><strong>Sadashiva through Maya</strong> — The beginnings of
+      limitation and differentiation (tattvas 3-6)</li>
+      <li><strong>The Kanchukas</strong> — Five "cloaks" that limit
+      infinite consciousness (tattvas 7-11)</li>
+      <li><strong>Purusha/Prakriti</strong> — The limited individual
+      and nature (tattvas 12-13)</li>
+      <li><strong>The remaining 23</strong> — Mind, senses, elements,
+      the building blocks of experienced reality</li>
+    </ul>
+    <p>
+      This isn't just theoretical — practitioners use this map to
+      trace consciousness back from identification with the body
+      through subtler levels to its unlimited source.
+    </p>
+
+    <h3>Spanda: The Divine Vibration</h3>
+    <p>
+      Another key teaching: consciousness is not static but vibrant —
+      pulsing, creative, dynamic. This <strong>spanda</strong>
+      (vibration) is the source of all manifestation.
+    </p>
+    <p>
+      When you feel the aliveness of awareness — the fact that you
+      are aware right now — you're touching spanda.
+    </p>
+
+    <h2>Shaiva Siddhanta</h2>
+    <p>
+      Developed primarily in South India, Shaiva Siddhanta offers a
+      more devotional and dualistic approach compared to Kashmir
+      Shaivism's non-dualism.
+    </p>
+
+    <h3>The Three Eternal Realities</h3>
+    <p>
+      Shaiva Siddhanta teaches that three things are eternally real:
+    </p>
+    <ol>
+      <li><strong>Pati</strong> — The Lord (Shiva), the supreme
+      consciousness who creates, sustains, and liberates</li>
+      <li><strong>Pashu</strong> — The bound soul, which is eternal
+      but currently limited by impurities</li>
+      <li><strong>Pasha</strong> — The bonds that limit the soul:
+      <em>anava mala</em> (sense of smallness), <em>karma</em>
+      (accumulated actions), <em>maya</em> (material limitation)</li>
+    </ol>
+
+    <h3>The Path of Liberation</h3>
+    <p>
+      Through Shiva's grace (<em>shaktipata</em>), proper initiation
+      (<em>diksha</em>), and a balanced path of:
+    </p>
+    <ul>
+      <li><strong>Charya</strong> — External worship, temple service</li>
+      <li><strong>Kriya</strong> — Ritual worship, mantra practice</li>
+      <li><strong>Yoga</strong> — Internal practice, meditation</li>
+      <li><strong>Jnana</strong> — Knowledge, philosophical understanding</li>
+    </ul>
+    <p>
+      The soul gradually sheds its impurities and realizes its nature
+      as identical with Shiva — though it remains eternally distinct
+      as a devotee.
+    </p>
+
+    <h2>Common Shaiva Practices</h2>
+
+    <h3>Mantra</h3>
+    <p>
+      The five-syllable mantra <strong>Om Namah Shivaya</strong>
+      ("I bow to Shiva") is central to all Shaiva traditions. Each
+      syllable corresponds to one of Shiva's five faces and functions.
+    </p>
+    <p>
+      More elaborate mantras and the chanting of texts like the
+      <strong>Shri Rudram</strong> (from the Yajur Veda) are also
+      practiced.
+    </p>
+
+    <h3>Yoga</h3>
+    <p>
+      Shiva is considered the original yogi. The <strong>Shiva
+      Sutras</strong> and <strong>Vijnana Bhairava Tantra</strong>
+      describe numerous meditation techniques — from focusing on
+      the space between thoughts to dissolving into sound or sensation.
+    </p>
+    <blockquote>
+      <em>"There are one hundred and twelve ways to enter reality.
+      Choose the one that suits your temperament."</em>
+      <br/>— Vijnana Bhairava Tantra
+    </blockquote>
+
+    <h3>Worship (Puja)</h3>
+    <p>
+      Traditional Shiva worship includes:
+    </p>
+    <ul>
+      <li>Offering water (abhisheka) over the lingam</li>
+      <li>Bilva leaves — three-lobed, representing Shiva's three eyes</li>
+      <li>Dhatura flowers — sacred to Shiva despite being poisonous</li>
+      <li>Rudraksha beads — the "tears of Shiva" worn as rosary</li>
+    </ul>
+
+    <h3>Festivals</h3>
+    <ul>
+      <li><strong>Maha Shivaratri</strong> — The "Great Night of Shiva"
+      when devotees fast, stay awake, and worship through the night</li>
+      <li><strong>Mondays</strong> — Especially sacred to Shiva</li>
+      <li><strong>Pradosha</strong> — The 13th day of each lunar fortnight</li>
+    </ul>
+
+    <h2>The Tantric Dimension</h2>
+    <p>
+      Much Shaiva philosophy is tantric — meaning it:
+    </p>
+    <ul>
+      <li>Uses the body as a tool for spiritual transformation</li>
+      <li>Includes practices beyond traditional Vedic ritual</li>
+      <li>Works with subtle energy (kundalini, chakras)</li>
+      <li>May use unconventional means to transcend conventional
+      limitations</li>
+    </ul>
+    <p>
+      The tantric approach affirms: nothing is excluded from the
+      spiritual path. What limits us can become what liberates us
+      when approached with right understanding.
+    </p>
+
+    <h2>Living Shaiva Traditions Today</h2>
+    <p>
+      Shaivism remains vibrantly alive:
+    </p>
+    <ul>
+      <li>Temple traditions continue across India and the diaspora</li>
+      <li>The Shaiva Siddhanta Church based in Hawaii preserves
+      traditional practice while adapting to the modern world</li>
+      <li>Kashmir Shaivism has experienced revival through teachers
+      like Swami Lakshmanjoo and his students</li>
+      <li>Academic study continues to illuminate these traditions</li>
+    </ul>
+
+    <h2>The Essence of Shiva</h2>
+    <p>
+      Whether understood as a personal deity, cosmic principle, or
+      one's own essential nature, Shiva represents:
+    </p>
+    <ul>
+      <li><strong>Consciousness</strong> — That which is aware in you</li>
+      <li><strong>Liberation</strong> — Freedom from all limitation</li>
+      <li><strong>Transcendence</strong> — Beyond all categories</li>
+      <li><strong>Compassion</strong> — Grace freely given to all</li>
+      <li><strong>Presence</strong> — Available here and now</li>
+    </ul>
+    <blockquote>
+      <em>"Shiva is not far away. Shiva is not difficult to please.
+      Shiva is the nearest of the near, the simplest of the simple —
+      your own awareness, looking out through your eyes."</em>
+      <br/>— Traditional teaching
+    </blockquote>
+    <p>
+      Having explored the Shiva Purana's teachings, we now turn to
+      the third major section of Level 5: the Devi Mahatmya and the
+      glory of the Divine Mother.
+    </p>
+  `,
+
+  // ============================================
+  // MODULE 5-3: DEVI MAHATMYA
+  // ============================================
+
+  "5-3-1": `
+    <h2>The Glory of the Goddess</h2>
+    <p>
+      The <strong>Devi Mahatmya</strong> ("Glory of the Goddess") is
+      one of Hinduism's most powerful texts — 700 verses describing
+      how the Divine Mother emerged to destroy evil when the gods
+      themselves had failed.
+    </p>
+    <p>
+      Part of the larger Markandeya Purana, this text is the scriptural
+      foundation for <strong>Shakta</strong> Hinduism — the tradition
+      that worships the Goddess as the Supreme Being.
+    </p>
+    <blockquote>
+      <em>"When the gods could not overcome the demons, the Goddess
+      arose. What they could not accomplish divided, She accomplished
+      unified."</em>
+      <br/>— Devi Mahatmya essence
+    </blockquote>
+
+    <h2>The Crisis of the Gods</h2>
+    <p>
+      The story begins with cosmic catastrophe. The demon
+      <strong>Mahishasura</strong> (the buffalo demon) had received a
+      boon that no man or god could kill him. Armed with this seeming
+      invincibility, he conquered the three worlds.
+    </p>
+    <p>
+      The gods — Indra, Vishnu, Shiva, all of them — were defeated and
+      driven from heaven. They wandered the earth as refugees, stripped
+      of power and dignity.
+    </p>
+    <p>
+      In desperation, they gathered and directed their collective anger
+      toward Mahishasura. Something extraordinary happened.
+    </p>
+
+    <h2>The Emergence of Devi</h2>
+    <p>
+      From the blazing fury of all the gods combined, a divine light
+      emerged — coalescing into the form of a woman of incomparable
+      power and beauty:
+    </p>
+    <ul>
+      <li>From <strong>Shiva</strong>'s light came her face</li>
+      <li>From <strong>Vishnu</strong>'s light came her arms</li>
+      <li>From <strong>Brahma</strong>'s light came her feet</li>
+      <li>From <strong>Yama</strong>'s light came her hair</li>
+      <li>From <strong>Agni</strong>'s light came her three eyes</li>
+      <li>Each god contributed his essence to her form</li>
+    </ul>
+    <p>
+      Then each god gave her a weapon:
+    </p>
+    <ul>
+      <li>Shiva gave his <strong>trident</strong></li>
+      <li>Vishnu gave his <strong>discus</strong></li>
+      <li>Indra gave his <strong>thunderbolt</strong></li>
+      <li>Varuna gave a <strong>conch</strong></li>
+      <li>Agni gave a <strong>spear</strong></li>
+      <li>Vayu gave a <strong>bow and arrows</strong></li>
+      <li>The Himalaya gave a <strong>lion</strong> to carry her</li>
+    </ul>
+    <blockquote>
+      <em>"She was not a combination of the gods — She was their
+      source revealed. What had been divided among them was unified
+      in Her."</em>
+      <br/>— Shakta interpretation
+    </blockquote>
+
+    <h2>The Meaning of the Emergence</h2>
+    <p>
+      This origin story carries profound teaching:
+    </p>
+
+    <h3>Unity from Division</h3>
+    <p>
+      The gods, powerful individually, were defeated separately.
+      Only when their energies combined did victory become possible.
+      This suggests that fragmented consciousness is weak; unified
+      consciousness is invincible.
+    </p>
+
+    <h3>The Feminine as Supreme</h3>
+    <p>
+      Each male god contributed a part; the Goddess is the whole.
+      She is not derivative — She is the original power that had
+      been distributed among them. Her emergence is not creation
+      but <em>revelation</em>.
+    </p>
+
+    <h3>Shakti: The Power Behind the Powers</h3>
+    <p>
+      <strong>Shakti</strong> (divine power/energy) is feminine in
+      Hindu thought. Each god has his Shakti without which he is
+      inert. The Devi Mahatmya declares that She is Shakti itself —
+      the power behind all powers.
+    </p>
+
+    <h2>The Goddess's Names</h2>
+    <p>
+      The newly emerged Goddess is called by many names:
+    </p>
+    <ul>
+      <li><strong>Durga</strong> — "The Invincible," "The Fortress"</li>
+      <li><strong>Chandika</strong> — "The Fierce"</li>
+      <li><strong>Ambika</strong> — "The Mother"</li>
+      <li><strong>Devi</strong> — "The Goddess" (generic but profound)</li>
+      <li><strong>Mahishasuramardini</strong> — "Destroyer of Mahishasura"</li>
+    </ul>
+    <p>
+      Each name emphasizes a different aspect of her nature — from
+      fierce protector to nurturing mother.
+    </p>
+
+    <h2>The Challenge</h2>
+    <p>
+      When Mahishasura's generals saw the Goddess, they were captivated
+      by her beauty. They reported to their king: "A woman of
+      extraordinary radiance has appeared. Perhaps you should marry her."
+    </p>
+    <p>
+      Mahishasura sent messengers with a marriage proposal. The
+      Goddess's response revealed her true nature:
+    </p>
+    <blockquote>
+      <em>"I have taken a vow: I will marry only one who defeats me
+      in battle. Send your armies, demon. Let us see who conquers whom."</em>
+      <br/>— Devi to Mahishasura's messengers
+    </blockquote>
+    <p>
+      The demons laughed. A woman defeating their invincible king?
+      Impossible. They would soon learn their error.
+    </p>
+
+    <h2>The Nature of the Divine Feminine</h2>
+    <p>
+      The Devi Mahatmya presents the Goddess as:
+    </p>
+    <ul>
+      <li><strong>Supreme Reality</strong> — Not a consort but the Absolute</li>
+      <li><strong>Creator</strong> — The universe emerges from Her</li>
+      <li><strong>Preserver</strong> — She sustains all beings</li>
+      <li><strong>Destroyer</strong> — She annihilates evil</li>
+      <li><strong>Liberator</strong> — She grants moksha</li>
+      <li><strong>Immanent</strong> — She is in all beings as life itself</li>
+      <li><strong>Transcendent</strong> — She is beyond all manifestation</li>
+    </ul>
+    <p>
+      This is full-fledged monotheism with the Divine conceived as
+      feminine — a perspective often misunderstood or underappreciated
+      in discussions of world religions.
+    </p>
+
+    <h2>Why This Text Matters</h2>
+    <p>
+      The Devi Mahatmya:
+    </p>
+    <ul>
+      <li>Elevates the feminine to ultimate status in a world often
+      dominated by masculine imagery of God</li>
+      <li>Shows that fierce protection and nurturing love are both
+      divine qualities</li>
+      <li>Teaches that evil cannot be accommodated — it must be
+      decisively defeated</li>
+      <li>Remains the liturgical centerpiece of Navaratri celebrations</li>
+      <li>Inspires millions who see in Durga the power to overcome
+      their own demons</li>
+    </ul>
+    <p>
+      In the next lesson, we witness the great battle between the
+      Goddess and Mahishasura — one of the most dramatic episodes
+      in all Hindu scripture.
+    </p>
+  `,
+
+  "5-3-2": `
+    <h2>The Great Battle</h2>
+    <p>
+      The battle between <strong>Durga</strong> and <strong>Mahishasura</strong>
+      is one of the most vivid and symbolically rich episodes in Hindu
+      scripture. Over nine days (commemorated during Navaratri), the
+      Goddess systematically destroyed the demon armies before
+      confronting their king.
+    </p>
+
+    <h2>The Demon Generals</h2>
+    <p>
+      Mahishasura did not fight immediately. He sent wave after wave
+      of generals, each more powerful than the last:
+    </p>
+    <ul>
+      <li><strong>Chikshura</strong> led the first attack — The Goddess
+      destroyed his army with such ease that the demons were shocked</li>
+      <li><strong>Chamara</strong> came next — She killed him with
+      arrows while laughing</li>
+      <li><strong>Udagra, Mahahanu, Asiloma, Baskala</strong> — Each
+      fell in turn, their armies scattered</li>
+      <li><strong>Durdhara</strong> lasted longer but met the same fate</li>
+    </ul>
+    <p>
+      The Goddess fought not with grim determination but with
+      <strong>joy</strong>. The text repeatedly describes her as
+      smiling, laughing, playing with her opponents. This is
+      <em>lila</em> — divine play. What terrifies mortals delights
+      the Divine.
+    </p>
+
+    <h2>Chanda and Munda</h2>
+    <p>
+      Two particularly fearsome generals, <strong>Chanda</strong> and
+      <strong>Munda</strong>, attacked together. To defeat them, the
+      Goddess emanated from her forehead a terrifying form:
+      <strong>Kali</strong> — dark-skinned, emaciated, wild-haired,
+      wearing a garland of skulls.
+    </p>
+    <p>
+      Kali tore through the demon armies with unrestrained fury,
+      drinking their blood, crushing their bones, dancing on their
+      corpses. She beheaded Chanda and Munda, bringing their heads
+      to Durga like offerings.
+    </p>
+    <blockquote>
+      <em>"Because you have brought me Chanda and Munda, you shall
+      be known as Chamunda."</em>
+      <br/>— Durga naming Kali
+    </blockquote>
+    <p>
+      This episode reveals that even within the Goddess, there are
+      layers — the protective mother can manifest the terrible
+      destroyer when necessary.
+    </p>
+
+    <h2>Raktabija</h2>
+    <p>
+      The most challenging opponent was <strong>Raktabija</strong>
+      ("Blood-Seed"). He had a terrifying power: every drop of his
+      blood that touched the ground would spawn a new demon identical
+      to himself.
+    </p>
+    <p>
+      The Goddess and her emanations attacked him, but with each wound,
+      thousands of new Raktabijas appeared. The battlefield filled
+      with copies of the demon.
+    </p>
+    <p>
+      Kali solved the problem: she spread her enormous tongue across
+      the battlefield, catching every drop of blood before it hit the
+      ground. She drank his blood, drained his duplicates, and finally
+      killed the original.
+    </p>
+    <p>
+      <strong>The symbolism:</strong> Raktabija represents desires or
+      negative tendencies that multiply when attacked directly. You
+      suppress one, three more arise. Only by absorbing them at their
+      source — before they take root — can they be overcome.
+    </p>
+
+    <h2>Mahishasura Himself</h2>
+    <p>
+      Finally, the buffalo demon king entered battle. But Mahishasura
+      was a shape-shifter — he transformed constantly to confuse and
+      evade:
+    </p>
+    <ul>
+      <li>As a <strong>buffalo</strong>, he charged with horns lowered</li>
+      <li>As a <strong>lion</strong>, he clawed and bit</li>
+      <li>As an <strong>elephant</strong>, he swung his trunk like a club</li>
+      <li>As a <strong>human warrior</strong>, he wielded sword and shield</li>
+    </ul>
+    <p>
+      Each time he changed form, the Goddess adapted. When he was
+      a buffalo, she threw nooses. When he was a lion, she shot arrows.
+      When he was an elephant, she cut off his trunk. When he was a
+      man, she attacked with her trident.
+    </p>
+    <p>
+      <strong>The symbolism:</strong> Evil takes many forms. It disguises
+      itself, adapts, evolves. The spiritual warrior must be equally
+      adaptable, recognizing evil in all its manifestations.
+    </p>
+
+    <h2>The Final Moment</h2>
+    <p>
+      At last, the Goddess pinned Mahishasura down with her foot on
+      his neck. He attempted one final transformation — emerging from
+      the buffalo's mouth in his original form — but she had anticipated
+      this.
+    </p>
+    <blockquote>
+      <em>"Roar if you will, demon! When I drink the blood of you and
+      your army, the gods themselves will roar with joy!"</em>
+      <br/>— Durga to Mahishasura
+    </blockquote>
+    <p>
+      She beheaded him with her sword at the moment of transformation,
+      when he was neither fully buffalo nor fully himself — ending
+      his existence at his most vulnerable.
+    </p>
+
+    <h2>The Aftermath</h2>
+    <p>
+      With Mahishasura's death:
+    </p>
+    <ul>
+      <li>The gods regained their heavenly kingdoms</li>
+      <li>The three worlds were restored to order</li>
+      <li>The gods sang hymns of praise to the Goddess</li>
+      <li>She promised to return whenever evil threatened</li>
+    </ul>
+    <p>
+      The famous hymn they sang, the <strong>Devi Stuti</strong>, is
+      recited daily by devotees:
+    </p>
+    <blockquote>
+      <em>"Ya Devi sarva bhuteshu shakti rupena samsthita,
+      Namastasyai namastasyai namastasyai namo namah."</em>
+      <br/>"To that Goddess who dwells in all beings as power,
+      Salutations, salutations, salutations to Her."
+    </blockquote>
+
+    <h2>Levels of Meaning</h2>
+    <p>
+      The battle operates on multiple levels:
+    </p>
+
+    <h3>Cosmic</h3>
+    <p>
+      The eternal struggle between divine order (dharma) and chaos
+      (adharma). The Goddess represents the power that maintains
+      cosmic balance.
+    </p>
+
+    <h3>Psychological</h3>
+    <p>
+      Mahishasura represents our own inner demons — pride, lust,
+      greed, anger. The Goddess is the awakened consciousness that
+      can defeat them. Each demon general represents a different
+      negative quality to overcome.
+    </p>
+
+    <h3>Social</h3>
+    <p>
+      The victory of righteousness over tyranny. Evil powers may
+      seem invincible, but divine justice ultimately prevails.
+    </p>
+
+    <h3>Spiritual</h3>
+    <p>
+      The individual soul (trapped by demons/delusions) is liberated
+      by grace (the Goddess). We cannot defeat our demons alone;
+      divine power must intervene.
+    </p>
+
+    <h2>The Image of Durga</h2>
+    <p>
+      The iconic image of Durga — riding her lion, weapons in her
+      many hands, foot on Mahishasura's neck — captures this moment
+      of victory. It is one of Hinduism's most reproduced images,
+      especially during Durga Puja festivals.
+    </p>
+    <p>
+      In the next lesson, we explore how this victory is celebrated
+      during <strong>Navaratri</strong> — nine nights of worship
+      honoring the Goddess's triumph.
+    </p>
+  `,
+
+  "5-3-3": `
+    <h2>Nine Nights of the Goddess</h2>
+    <p>
+      <strong>Navaratri</strong> ("nine nights") is one of Hinduism's
+      greatest festivals — a celebration of the Divine Feminine that
+      transforms communities across India and the diaspora. It
+      commemorates the Goddess's victory over evil as told in the
+      Devi Mahatmya.
+    </p>
+
+    <h2>When Navaratri Occurs</h2>
+    <p>
+      Navaratri occurs multiple times per year, but the most
+      celebrated are:
+    </p>
+    <ul>
+      <li><strong>Sharad Navaratri</strong> (September-October) —
+      The "autumn Navaratri," the most widely observed, falling
+      during the bright fortnight of Ashwin month</li>
+      <li><strong>Vasant Navaratri</strong> (March-April) —
+      The "spring Navaratri," particularly important in North India</li>
+      <li><strong>Gupt Navaratri</strong> — "Secret" Navaratris
+      observed by tantric practitioners</li>
+    </ul>
+    <p>
+      The tenth day following Sharad Navaratri is <strong>Vijayadashami</strong>
+      (Dussehra) — "Victory Tenth" — celebrating the Goddess's
+      final triumph over Mahishasura.
+    </p>
+
+    <h2>The Nine Nights Structure</h2>
+    <p>
+      The nine nights are traditionally divided into three groups
+      of three, each honoring a different aspect of the Goddess:
+    </p>
+
+    <h3>Days 1-3: Durga (Kali)</h3>
+    <p>
+      The first three nights focus on <strong>Durga/Kali</strong> —
+      the fierce, destructive aspect. Just as She destroyed the
+      demons, She destroys the impurities within us: anger, lust,
+      greed, attachment.
+    </p>
+    <p>
+      <strong>Color:</strong> Red — representing action and power
+    </p>
+
+    <h3>Days 4-6: Lakshmi</h3>
+    <p>
+      The middle three nights honor <strong>Lakshmi</strong> —
+      the goddess of wealth, abundance, and beauty. Once impurities
+      are removed, positive qualities can grow: prosperity, love,
+      creativity.
+    </p>
+    <p>
+      <strong>Color:</strong> White — representing purity and peace
+    </p>
+
+    <h3>Days 7-9: Saraswati</h3>
+    <p>
+      The final three nights celebrate <strong>Saraswati</strong> —
+      goddess of wisdom, arts, and learning. With impurities removed
+      and positive qualities established, true knowledge can dawn.
+    </p>
+    <p>
+      <strong>Color:</strong> Yellow — representing knowledge and learning
+    </p>
+
+    <h3>Day 10: Vijayadashami</h3>
+    <p>
+      The tenth day celebrates complete victory. This is also called
+      <strong>Dussehra</strong> — from "dasha" (ten) + "hara" (defeat),
+      commemorating Rama's victory over ten-headed Ravana, which is
+      also celebrated on this day.
+    </p>
+
+    <h2>Regional Celebrations</h2>
+    <p>
+      Navaratri is celebrated differently across India:
+    </p>
+
+    <h3>Gujarat: Garba and Dandiya</h3>
+    <p>
+      Gujarat's Navaratri is world-famous. Every night, communities
+      gather for <strong>Garba</strong> — circular dances around a
+      clay lamp or image of the Goddess — and <strong>Dandiya Raas</strong> —
+      dances with decorated sticks representing swords.
+    </p>
+    <p>
+      The dancing is vibrant, joyous, and inclusive. All ages participate.
+      The circular movement represents the cycle of time with the
+      Goddess at the center.
+    </p>
+
+    <h3>West Bengal: Durga Puja</h3>
+    <p>
+      In Bengal, Navaratri culminates in <strong>Durga Puja</strong> —
+      arguably India's largest and most elaborate festival. Massive
+      temporary structures (<em>pandals</em>) house stunning clay
+      idols of Durga defeating Mahishasura.
+    </p>
+    <p>
+      The idols are works of art, taking months to create. The final
+      night, <strong>Bijoya Dashami</strong>, includes emotional
+      immersion of the idols in rivers — symbolizing Durga's return
+      to her cosmic home, with prayers for her return next year.
+    </p>
+
+    <h3>South India: Golu/Bommai Kolu</h3>
+    <p>
+      In Tamil Nadu, Karnataka, and Andhra Pradesh, families set up
+      <strong>Golu</strong> — displays of dolls and figurines on
+      stepped platforms. These represent the hierarchy of creation
+      and the many forms of the Divine.
+    </p>
+    <p>
+      The eighth or ninth day includes <strong>Saraswati Puja</strong>
+      and <strong>Ayudha Puja</strong> — worship of tools, instruments,
+      and vehicles as embodiments of divine energy.
+    </p>
+
+    <h3>North India: Ram Lila and Dussehra</h3>
+    <p>
+      In much of North India, the focus is on <strong>Ram Lila</strong> —
+      dramatic performances of the Ramayana — culminating in Dussehra's
+      burning of giant effigies of Ravana, Kumbhakarna, and Meghanada.
+    </p>
+
+    <h2>Practices During Navaratri</h2>
+
+    <h3>Fasting</h3>
+    <p>
+      Many devotees observe fasts during Navaratri — some eating only
+      fruits and milk, others abstaining from grains or specific foods.
+      The discipline purifies body and mind.
+    </p>
+
+    <h3>Recitation</h3>
+    <p>
+      The <strong>Devi Mahatmya</strong> is recited in full during
+      these nights. Completing all 700 verses during the festival
+      is considered highly meritorious. Many also recite:
+    </p>
+    <ul>
+      <li><strong>Durga Saptashati</strong> (another name for Devi Mahatmya)</li>
+      <li><strong>Lalita Sahasranama</strong> (1000 names of Lalita)</li>
+      <li><strong>Devi Stuti</strong> (praise hymns)</li>
+    </ul>
+
+    <h3>Kanya Puja</h3>
+    <p>
+      On the eighth or ninth day, young girls are worshipped as
+      embodiments of the Goddess. They are fed, given gifts, and
+      their feet are washed and touched with reverence.
+    </p>
+    <p>
+      This practice honors the divine feminine in its most innocent
+      form and reinforces that the Goddess dwells in all beings.
+    </p>
+
+    <h3>Havan/Yajna</h3>
+    <p>
+      Sacred fire rituals are performed, with offerings made to
+      invoke the Goddess's blessings for the coming year.
+    </p>
+
+    <h2>The Deeper Teaching</h2>
+    <p>
+      Beyond festival, Navaratri teaches a spiritual process:
+    </p>
+    <ol>
+      <li><strong>Destruction of negativity</strong> (Durga days) —
+      We must first eliminate what holds us back</li>
+      <li><strong>Cultivation of virtue</strong> (Lakshmi days) —
+      We then develop positive qualities</li>
+      <li><strong>Attainment of wisdom</strong> (Saraswati days) —
+      Finally, knowledge dawns</li>
+      <li><strong>Victory</strong> (Vijayadashami) —
+      Complete integration and triumph</li>
+    </ol>
+    <p>
+      This mirrors any transformative journey — whether overcoming
+      addiction, mastering a skill, or awakening spiritually.
+    </p>
+
+    <h2>Navaratri Today</h2>
+    <p>
+      Navaratri has grown into a global phenomenon:
+    </p>
+    <ul>
+      <li>Garba events draw thousands in cities worldwide</li>
+      <li>Durga Puja pandals have become tourist attractions</li>
+      <li>The festival promotes women's empowerment, honoring the
+      feminine as divine</li>
+      <li>It brings communities together across caste and class lines</li>
+      <li>It preserves traditional arts — music, dance, craft</li>
+    </ul>
+    <p>
+      In our final lesson, we explore the many forms of the Divine
+      Mother — how the one Goddess manifests as the countless
+      goddesses worshipped across India.
+    </p>
+  `,
+
+  "5-3-4": `
+    <h2>One Goddess, Many Forms</h2>
+    <p>
+      The Devi Mahatmya declares that the Goddess is one — but she
+      appears in countless forms to accomplish different purposes
+      and appeal to different devotees. Understanding these forms
+      reveals the full scope of divine feminine power.
+    </p>
+    <blockquote>
+      <em>"I am the sovereign power of the Supreme Lord. I am Brahman,
+      from whom this universe has come. I am all gods. I am the eight
+      forms of existence. I am everything — and yet I transcend all."</em>
+      <br/>— Devi Mahatmya
+    </blockquote>
+
+    <h2>The Three Great Goddesses</h2>
+    <p>
+      While the Goddess is ultimately one, three primary forms
+      (corresponding to the Trimurti's shaktis) are especially
+      worshipped:
+    </p>
+
+    <h3>Durga — The Invincible Warrior</h3>
+    <p>
+      <strong>Durga</strong> represents protective, fierce maternal
+      love — the mother who will destroy anything that threatens
+      her children.
+    </p>
+    <ul>
+      <li><strong>Iconography:</strong> Multiple arms holding weapons,
+      riding a lion or tiger, beautiful yet fierce</li>
+      <li><strong>Function:</strong> Protection, removal of obstacles,
+      destruction of evil</li>
+      <li><strong>Consort association:</strong> Shakti of Shiva</li>
+      <li><strong>Major festival:</strong> Durga Puja/Navaratri</li>
+      <li><strong>Mantra:</strong> "Om Dum Durgayei Namaha"</li>
+    </ul>
+
+    <h3>Lakshmi — The Goddess of Abundance</h3>
+    <p>
+      <strong>Lakshmi</strong> (Sri) represents prosperity, beauty,
+      and auspiciousness in all forms — material and spiritual.
+    </p>
+    <ul>
+      <li><strong>Iconography:</strong> Golden-hued, standing on or
+      near a lotus, coins flowing from her hands, flanked by elephants</li>
+      <li><strong>Function:</strong> Bestowing wealth, fortune, beauty,
+      fertility, and success</li>
+      <li><strong>Consort association:</strong> Shakti of Vishnu</li>
+      <li><strong>Major festival:</strong> Diwali (Lakshmi Puja)</li>
+      <li><strong>Mantra:</strong> "Om Shreem Mahalakshmyai Namaha"</li>
+    </ul>
+    <p>
+      Lakshmi's eight forms (<em>Ashtalakshmi</em>) represent different
+      aspects of abundance: wealth, fertility, courage, learning,
+      victory, offspring, food, and spiritual wealth.
+    </p>
+
+    <h3>Saraswati — The Goddess of Wisdom</h3>
+    <p>
+      <strong>Saraswati</strong> represents knowledge, arts, music,
+      and learning — the illuminating power of consciousness.
+    </p>
+    <ul>
+      <li><strong>Iconography:</strong> White-clad, seated on a lotus
+      or swan, holding a veena (lute), book, and rosary</li>
+      <li><strong>Function:</strong> Bestowing knowledge, creativity,
+      eloquence, and artistic skill</li>
+      <li><strong>Consort association:</strong> Shakti of Brahma</li>
+      <li><strong>Major festival:</strong> Vasant Panchami, Saraswati Puja</li>
+      <li><strong>Mantra:</strong> "Om Aim Saraswatyai Namaha"</li>
+    </ul>
+
+    <h2>Fierce Forms (Ugra)</h2>
+    <p>
+      The Goddess also manifests terrifying forms that embody cosmic
+      destruction and liberation:
+    </p>
+
+    <h3>Kali — The Dark Mother</h3>
+    <p>
+      <strong>Kali</strong> is time (<em>kala</em>) personified — she
+      devours everything that exists, returning it to the void.
+    </p>
+    <ul>
+      <li><strong>Iconography:</strong> Black or deep blue, wild hair,
+      garland of skulls, tongue extended, standing on Shiva</li>
+      <li><strong>Symbolism:</strong> The skulls represent ego-deaths
+      (liberation); the tongue shows embarrassment at stepping on Shiva
+      (in one story); her darkness is the color before light, the womb
+      of creation</li>
+      <li><strong>Function:</strong> Destruction of ego, liberation,
+      protection from extreme dangers</li>
+      <li><strong>Worship:</strong> Particularly in Bengal and tantric traditions</li>
+    </ul>
+    <p>
+      Though terrifying in appearance, Kali is profoundly maternal
+      to her devotees. Sri Ramakrishna called her "my Mother" and
+      experienced her as pure, loving presence.
+    </p>
+
+    <h3>Chinnamasta — The Self-Decapitated</h3>
+    <p>
+      One of the ten <em>Mahavidyas</em> (great wisdom goddesses),
+      Chinnamasta holds her own severed head while blood streams
+      from her neck, feeding herself and two attendants.
+    </p>
+    <p>
+      <strong>Symbolism:</strong> Self-sacrifice, the recycling of life
+      energy, transcendence of the body, the kundalini rising.
+    </p>
+
+    <h3>Dhumavati — The Widow</h3>
+    <p>
+      An inauspicious goddess representing poverty, sorrow, and the
+      void — yet worshipped for transcending attachment to worldly
+      fortune.
+    </p>
+
+    <h2>The Nine Durgas (Navadurga)</h2>
+    <p>
+      During Navaratri, nine forms of Durga are honored, one per night:
+    </p>
+    <ol>
+      <li><strong>Shailaputri</strong> — Daughter of the Mountain</li>
+      <li><strong>Brahmacharini</strong> — The Ascetic</li>
+      <li><strong>Chandraghanta</strong> — The Bell-Adorned</li>
+      <li><strong>Kushmanda</strong> — Creator of the Cosmic Egg</li>
+      <li><strong>Skandamata</strong> — Mother of Skanda</li>
+      <li><strong>Katyayani</strong> — Daughter of Katyayana</li>
+      <li><strong>Kalaratri</strong> — Dark Night (fierce form)</li>
+      <li><strong>Mahagauri</strong> — The Great White One</li>
+      <li><strong>Siddhidatri</strong> — Giver of Supernatural Powers</li>
+    </ol>
+
+    <h2>Village Goddesses</h2>
+    <p>
+      Across India, local goddesses (<em>gramadevatas</em>) are
+      worshipped — often more fervently than the pan-Indian forms.
+      These are understood as local manifestations of the one Devi:
+    </p>
+    <ul>
+      <li><strong>Mariamman</strong> (South India) — Goddess of disease
+      and healing</li>
+      <li><strong>Shitala</strong> (North India) — Goddess of smallpox
+      and cooling</li>
+      <li><strong>Yellamma</strong> (Karnataka) — Goddess of fertility</li>
+      <li><strong>Vaishno Devi</strong> (Kashmir) — Draws millions
+      of pilgrims yearly</li>
+    </ul>
+    <p>
+      These goddesses are often associated with specific diseases,
+      natural features (rivers, trees, hills), or community needs.
+      They remind us that the Divine Mother is not distant but
+      immediately present and accessible.
+    </p>
+
+    <h2>The Ten Mahavidyas</h2>
+    <p>
+      Tantric tradition identifies ten "Great Wisdom Goddesses"
+      representing different aspects of supreme knowledge:
+    </p>
+    <ol>
+      <li><strong>Kali</strong> — Eternal Time</li>
+      <li><strong>Tara</strong> — The Guiding Star</li>
+      <li><strong>Tripura Sundari</strong> — Beauty of the Three Worlds</li>
+      <li><strong>Bhuvaneshwari</strong> — Queen of Worlds</li>
+      <li><strong>Bhairavi</strong> — The Fierce One</li>
+      <li><strong>Chinnamasta</strong> — The Self-Decapitated</li>
+      <li><strong>Dhumavati</strong> — The Widow</li>
+      <li><strong>Bagalamukhi</strong> — The Paralyzer</li>
+      <li><strong>Matangi</strong> — The Outcast</li>
+      <li><strong>Kamala</strong> — The Lotus Goddess (Lakshmi)</li>
+    </ol>
+    <p>
+      These range from beautiful to terrifying, from conventional
+      to transgressive — teaching that the Goddess encompasses all
+      of reality without exception.
+    </p>
+
+    <h2>The Divine Feminine Teaching</h2>
+    <p>
+      What does Goddess worship teach us?
+    </p>
+
+    <h3>Power Is Feminine</h3>
+    <p>
+      <strong>Shakti</strong> — the power that animates everything —
+      is feminine. The gods are powerless without their shaktis.
+      This elevates the feminine from secondary to primary.
+    </p>
+
+    <h3>The Sacred Is Embodied</h3>
+    <p>
+      Unlike traditions that associate the feminine with matter (and
+      therefore bondage), Shakta Hinduism sees matter itself as
+      divine — the Goddess's body. The world is not to be escaped
+      but embraced as her manifestation.
+    </p>
+
+    <h3>Fierce Protection Is Love</h3>
+    <p>
+      The terrifying forms remind us that true love protects — and
+      sometimes protection requires ferocity. A mother fighting for
+      her child is more terrifying than any demon.
+    </p>
+
+    <h3>Unity in Diversity</h3>
+    <p>
+      The thousands of goddess forms are not separate beings but
+      one Reality appearing differently according to need and
+      understanding. This models how unity and diversity coexist.
+    </p>
+
+    <h2>Living Goddess Traditions</h2>
+    <p>
+      The worship of Devi remains vibrant today:
+    </p>
+    <ul>
+      <li>Temples to various goddess forms dot every village and city</li>
+      <li>The Shakta tradition maintains sophisticated philosophical
+      and tantric lineages</li>
+      <li>Feminist scholars increasingly draw on goddess traditions</li>
+      <li>Artists continue to depict her infinite forms</li>
+      <li>Devotees experience her as living presence</li>
+    </ul>
+    <blockquote>
+      <em>"The Goddess is not merely a concept or symbol. She is
+      alive — as alive as you are. More alive. She is aliveness itself."</em>
+      <br/>— Contemporary Shakta teacher
+    </blockquote>
+
+    <h2>Conclusion: The Mother's Embrace</h2>
+    <p>
+      Having journeyed through the Devi Mahatmya, you now understand:
+    </p>
+    <ul>
+      <li>The Goddess emerged to accomplish what divided powers could not</li>
+      <li>She defeats evil in all its forms</li>
+      <li>She is celebrated through Navaratri and countless festivals</li>
+      <li>She appears in infinite forms — fierce and gentle, local
+      and cosmic</li>
+      <li>She is ultimately one — the power of consciousness itself</li>
+    </ul>
+    <p>
+      With the completion of this module, you have explored all three
+      major Puranic traditions of Level 5: the Bhagavata (Vaishnava),
+      the Shiva Purana (Shaiva), and the Devi Mahatmya (Shakta).
+      Together, they reveal the full spectrum of Hindu devotion.
+    </p>
+    <blockquote>
+      <em>"Ya Devi sarva bhuteshu matri rupena samsthita,
+      Namastasyai namastasyai namastasyai namo namah."</em>
+      <br/>"To that Goddess who dwells in all beings as the Mother,
+      Salutations, salutations, salutations to Her."
+    </blockquote>
+  `,
 };

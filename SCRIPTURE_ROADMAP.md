@@ -6,14 +6,14 @@
 
 ## Current State (as of January 2025)
 
-### Learn Section (67 lessons, 5 levels)
+### Learn Section (76 lessons, 5 levels)
 | Level | Title | Lessons | Content | Status |
 |-------|-------|---------|---------|--------|
 | 1 | The Foundation | 14 | Core concepts, deities, basics | ✅ Complete |
 | 2 | The Stories | 12 | Ramayana (5) + Mahabharata (7) | ✅ Complete |
 | 3 | The Gita | 17 | Chapter-by-chapter journey | ✅ Complete |
 | 4 | Going Deeper | 16 | Upanishads, traditions, Vedas, practice | ✅ Complete |
-| 5 | The Puranas | 8+ | Bhagavata (8), Shiva (5 locked), Devi (4 locked) | 🔶 Module 5-1 Complete |
+| 5 | The Puranas | 17 | Bhagavata (8), Shiva (5), Devi (4) | ✅ Complete |
 
 ### Scripture Sections (verse-by-verse reading)
 | Scripture | Status | Verses | Notes |
@@ -291,8 +291,8 @@ Level 5: The Puranas
 - [x] **Step 1**: Gita bridge links ✅ (Completed January 2025)
 - [x] **Step 2**: Key Vedic Hymns scripture section ✅ (Completed January 2025)
 - [x] **Step 3**: Bhagavata Purana lessons ✅ (Completed January 2025)
-- [ ] **Step 4**: Shiva Purana lessons
-- [ ] **Step 4**: Devi Mahatmya lessons
+- [x] **Step 4**: Shiva Purana lessons ✅ (Completed January 2025)
+- [x] **Step 4**: Devi Mahatmya lessons ✅ (Completed January 2025)
 
 ---
 

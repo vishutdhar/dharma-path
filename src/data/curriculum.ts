@@ -612,7 +612,6 @@ export const curriculum: Level[] = [
         title: "The Shiva Purana",
         description: "The cosmic dancer, the ascetic, the destroyer — Shiva's tales",
         icon: "Moon",
-        locked: true,
         lessons: [
           {
             id: "5-2-1",
@@ -651,7 +650,6 @@ export const curriculum: Level[] = [
         title: "Devi Mahatmya",
         description: "The glory of the Goddess — Durga's triumph over evil",
         icon: "Sparkles",
-        locked: true,
         lessons: [
           {
             id: "5-3-1",
