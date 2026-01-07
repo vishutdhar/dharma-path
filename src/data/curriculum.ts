@@ -538,6 +538,149 @@ export const curriculum: Level[] = [
       },
     ],
   },
+
+  // ============================================
+  // LEVEL 5: THE PURANAS
+  // ~20 lessons across 3 modules (starting with Bhagavata)
+  // ============================================
+  {
+    id: 5,
+    title: "The Puranas",
+    subtitle: "Stories of the Gods",
+    description: "The Puranas — ancient tales of creation, gods, and devotees that have shaped Hindu devotion for millennia. These stories carry profound wisdom through narrative, bringing philosophy to life.",
+    color: "saffron",
+    requiredLevel: 4,
+    modules: [
+      {
+        id: "5-1",
+        title: "The Bhagavata Purana",
+        description: "The crown jewel of devotional literature — Krishna's life and the path of bhakti",
+        icon: "Heart",
+        lessons: [
+          {
+            id: "5-1-1",
+            title: "What is the Bhagavata Purana?",
+            description: "The 'Fifth Veda' — introduction, structure, and significance",
+            duration: "10 min",
+          },
+          {
+            id: "5-1-2",
+            title: "Creation and Cosmic Cycles",
+            description: "The universe's birth, destruction, and rebirth — the eternal dance",
+            duration: "12 min",
+          },
+          {
+            id: "5-1-3",
+            title: "The Devotee Kings: Dhruva and Prahlada",
+            description: "Two child-devotees who faced impossible odds with unshakeable faith",
+            duration: "15 min",
+          },
+          {
+            id: "5-1-4",
+            title: "Krishna's Birth and Childhood",
+            description: "The divine child — miraculous birth, escape from Kamsa, and early wonders",
+            duration: "15 min",
+          },
+          {
+            id: "5-1-5",
+            title: "Krishna in Vrindavan",
+            description: "The butter thief, the gopis, and the rasa lila — divine love in human form",
+            duration: "15 min",
+          },
+          {
+            id: "5-1-6",
+            title: "Krishna's Later Life",
+            description: "From Mathura to Dwarka — warrior, king, and friend",
+            duration: "12 min",
+          },
+          {
+            id: "5-1-7",
+            title: "The Uddhava Gita",
+            description: "Krishna's final teaching — wisdom for the age of Kali",
+            duration: "12 min",
+          },
+          {
+            id: "5-1-8",
+            title: "The Bhagavata's Legacy",
+            description: "How this text shaped bhakti movements and Hindu devotion",
+            duration: "10 min",
+          },
+        ],
+      },
+      {
+        id: "5-2",
+        title: "The Shiva Purana",
+        description: "The cosmic dancer, the ascetic, the destroyer — Shiva's tales",
+        icon: "Moon",
+        locked: true,
+        lessons: [
+          {
+            id: "5-2-1",
+            title: "Shiva: The Cosmic Dancer",
+            description: "Nataraja and the dance of creation and destruction",
+            duration: "12 min",
+          },
+          {
+            id: "5-2-2",
+            title: "The Marriage of Shiva and Parvati",
+            description: "The divine union — asceticism meets devotion",
+            duration: "12 min",
+          },
+          {
+            id: "5-2-3",
+            title: "Ganesha and Kartikeya",
+            description: "The divine sons — remover of obstacles and commander of armies",
+            duration: "12 min",
+          },
+          {
+            id: "5-2-4",
+            title: "The Twelve Jyotirlingas",
+            description: "Sacred sites of Shiva's light across India",
+            duration: "10 min",
+          },
+          {
+            id: "5-2-5",
+            title: "Shaiva Philosophy",
+            description: "Kashmir Shaivism, Shaiva Siddhanta — the path of Shiva",
+            duration: "12 min",
+          },
+        ],
+      },
+      {
+        id: "5-3",
+        title: "Devi Mahatmya",
+        description: "The glory of the Goddess — Durga's triumph over evil",
+        icon: "Sparkles",
+        locked: true,
+        lessons: [
+          {
+            id: "5-3-1",
+            title: "The Goddess Awakens",
+            description: "How the Divine Mother emerged from the gods' combined power",
+            duration: "12 min",
+          },
+          {
+            id: "5-3-2",
+            title: "The Battle with Mahishasura",
+            description: "The buffalo demon's defeat — evil conquered by divine feminine power",
+            duration: "15 min",
+          },
+          {
+            id: "5-3-3",
+            title: "The Nine Nights: Navaratri",
+            description: "The festival celebrating the Goddess's victory",
+            duration: "10 min",
+          },
+          {
+            id: "5-3-4",
+            title: "Forms of the Divine Mother",
+            description: "Durga, Lakshmi, Saraswati — the Goddess in all her aspects",
+            duration: "12 min",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Helper function to calculate total duration of a level

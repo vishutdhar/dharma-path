@@ -8754,4 +8754,444 @@ export const lessonContent: Record<string, string> = {
       from ignorance to wisdom, from bondage to liberation.
     </p>
   `,
+
+  // ============================================
+  // LEVEL 5: THE PURANAS
+  // ============================================
+
+  // ============================================
+  // MODULE 5-1: THE BHAGAVATA PURANA
+  // ============================================
+
+  "5-1-1": `
+    <h2>The Crown Jewel of Devotion</h2>
+    <p>
+      Among the eighteen Mahapuranas, the <strong>Bhagavata Purana</strong>
+      (also called the Srimad Bhagavatam) stands supreme. It is the most
+      widely read, most commented upon, and most beloved of all the Puranas —
+      and arguably the most influential text in Hindu devotional tradition.
+    </p>
+    <p>
+      While the Bhagavad Gita teaches the philosophy of devotion, the Bhagavata
+      Purana <em>demonstrates</em> it through story after story of divine love,
+      surrender, and the transformative power of bhakti.
+    </p>
+    <blockquote>
+      <em>"The Bhagavata is the essence of all the Vedanta literature.
+      One who has enjoyed its nectar is never attracted to any other literature."</em>
+      <br/>— Bhagavata Purana 12.13.15
+    </blockquote>
+
+    <h2>The "Fifth Veda"</h2>
+    <p>
+      The Bhagavata is often called the "Fifth Veda" — not because it claims
+      the authority of Shruti, but because it makes the essence of Vedic
+      wisdom accessible to everyone. What the Vedas encoded in ritual and
+      the Upanishads in philosophy, the Bhagavata reveals through story.
+    </p>
+    <p>
+      Traditional dating places its composition around 500 CE, though it
+      claims to be narrated by the sage Vyasa (the same who composed the
+      Mahabharata). Regardless of historical dating, its spiritual impact
+      has been immeasurable.
+    </p>
+
+    <h2>Structure: Twelve Books</h2>
+    <p>
+      The Bhagavata consists of 12 Skandhas (books) containing about 18,000
+      verses. Each Skandha has its own focus:
+    </p>
+    <ul>
+      <li><strong>Skandhas 1-2:</strong> Framework — King Parikshit's question and the nature of reality</li>
+      <li><strong>Skandhas 3-4:</strong> Creation — cosmic origins and early avatars</li>
+      <li><strong>Skandhas 5-6:</strong> Cosmology — structure of the universe</li>
+      <li><strong>Skandha 7:</strong> Prahlada — the child devotee and Narasimha avatar</li>
+      <li><strong>Skandhas 8-9:</strong> Avatars — Vamana, Matsya, Kurma, and royal lineages</li>
+      <li><strong>Skandha 10:</strong> Krishna Lila — the heart of the text, Krishna's life</li>
+      <li><strong>Skandha 11:</strong> Uddhava Gita — Krishna's final teachings</li>
+      <li><strong>Skandha 12:</strong> Kali Yuga — prophecies and conclusion</li>
+    </ul>
+    <p>
+      Skandha 10 (Krishna's life) alone comprises about one-quarter of
+      the entire text — it is the Bhagavata's heart and the source of most
+      of its devotional practices.
+    </p>
+
+    <h2>The Story Within a Story</h2>
+    <p>
+      The Bhagavata has a beautiful narrative frame: King Parikshit, grandson
+      of Arjuna, has been cursed to die in seven days. Renouncing his kingdom,
+      he goes to the banks of the Ganges asking: "What should a person about
+      to die hear, chant, and remember?"
+    </p>
+    <p>
+      The sage Shuka (Vyasa's son) appears and spends the seven days
+      narrating the Bhagavata — the stories of Vishnu and his avatars,
+      especially Krishna. This frame reminds us that we are all "about to
+      die" — our time is limited, and these teachings are what matter most.
+    </p>
+
+    <h2>Central Themes</h2>
+    <p>
+      Throughout its 18,000 verses, several themes recur:
+    </p>
+    <ul>
+      <li><strong>Bhakti (Devotion):</strong> Love for God is the highest path and accessible to all</li>
+      <li><strong>Lila (Divine Play):</strong> God's actions are not ordinary karma but playful sport</li>
+      <li><strong>Surrender:</strong> Complete self-offering to the Divine is the ultimate solution</li>
+      <li><strong>God's accessibility:</strong> The Lord responds to sincere devotion, regardless of status</li>
+      <li><strong>Nama (Holy Name):</strong> Simply chanting God's name can liberate</li>
+    </ul>
+    <blockquote>
+      <em>"Even a moment's association with a pure devotee can open the door
+      to liberation."</em>
+      <br/>— Bhagavata Purana 1.18.13
+    </blockquote>
+
+    <h2>Why It Matters</h2>
+    <p>
+      The Bhagavata Purana has shaped Hindu devotion more than almost any other text:
+    </p>
+    <ul>
+      <li>It is the scriptural foundation of the <strong>Hare Krishna movement</strong> (ISKCON)</li>
+      <li>It inspired the <strong>bhakti saints</strong> of medieval India — Chaitanya, Mirabai, Surdas</li>
+      <li>Its stories are performed in <strong>Ras Lila</strong> dramas across India</li>
+      <li>It gave us the <strong>Krishna we worship</strong> — the butter-thief, the flute-player, the lover of the gopis</li>
+      <li>It offers a <strong>complete spirituality</strong> — philosophy, stories, practices, and poetry combined</li>
+    </ul>
+    <p>
+      In the lessons ahead, we'll explore the Bhagavata's most beloved
+      stories — tales that have inspired millions for over a thousand years
+      and continue to transform hearts today.
+    </p>
+  `,
+
+  "5-1-2": `
+    <h2>Before the Beginning</h2>
+    <p>
+      The Bhagavata Purana opens not with creation, but with what exists
+      <em>before</em> creation — and what remains when creation dissolves.
+      This is the eternal ground from which all universes arise and into
+      which they return.
+    </p>
+    <blockquote>
+      <em>"Before the creation of the universe, there existed only the
+      Supreme Absolute Truth. This truth is self-luminous and eternal."</em>
+      <br/>— Bhagavata Purana 1.1.1
+    </blockquote>
+
+    <h2>The Cosmic Night</h2>
+    <p>
+      According to the Bhagavata, the universe goes through endless cycles
+      of creation, maintenance, and dissolution. Between these cycles is
+      the <strong>pralaya</strong> — the cosmic night when all manifested
+      existence withdraws into the unmanifest.
+    </p>
+    <p>
+      During pralaya, there is no sun, no moon, no planets — only the
+      infinite ocean of being. Vishnu (as Maha-Vishnu) lies on this ocean,
+      resting on the cosmic serpent Ananta Shesha, "sleeping" in divine
+      consciousness.
+    </p>
+
+    <h2>Creation Begins</h2>
+    <p>
+      When the time comes for creation to begin again, a lotus emerges
+      from Vishnu's navel. On this lotus sits Brahma, the creator god.
+      But Brahma doesn't know who he is or where he came from — he is
+      confused, sitting alone on a lotus in the cosmic void.
+    </p>
+    <p>
+      This is a profound image: even the creator begins in confusion.
+      Brahma meditates, seeking to understand his origin. After long
+      contemplation, he receives knowledge of the Bhagavata itself —
+      the wisdom that will guide creation.
+    </p>
+    <blockquote>
+      <em>"The Lord manifested to Brahma the four seed verses of the
+      Bhagavata Purana, revealing the nature of reality."</em>
+      <br/>— Traditional account
+    </blockquote>
+
+    <h2>The Three Modes</h2>
+    <p>
+      Creation proceeds through the interplay of three gunas (modes or qualities):
+    </p>
+    <ul>
+      <li><strong>Sattva (goodness):</strong> Creates maintenance, knowledge, purity</li>
+      <li><strong>Rajas (passion):</strong> Creates activity, desire, energy</li>
+      <li><strong>Tamas (ignorance):</strong> Creates inertia, darkness, destruction</li>
+    </ul>
+    <p>
+      These three modes combine in infinite ways to produce everything
+      in the manifest universe — from galaxies to atoms, from gods to
+      insects. The entire cosmic drama unfolds through their dance.
+    </p>
+
+    <h2>The Cosmic Hierarchy</h2>
+    <p>
+      The Bhagavata describes a vast cosmic hierarchy:
+    </p>
+    <ul>
+      <li><strong>Brahmaloka:</strong> Brahma's realm, the highest material plane</li>
+      <li><strong>Svargaloka:</strong> Heaven, realm of the devas (Indra, etc.)</li>
+      <li><strong>Bhuloka:</strong> Earth, the human realm</li>
+      <li><strong>Lower realms:</strong> Various hellish and subterranean planes</li>
+      <li><strong>Vaikuntha:</strong> Beyond material creation — the eternal spiritual realm</li>
+    </ul>
+    <p>
+      All material realms — even Brahma's — are temporary. Only Vaikuntha,
+      the abode of Vishnu, is eternal and beyond the cycle of creation
+      and destruction.
+    </p>
+
+    <h2>Time Scales Beyond Imagination</h2>
+    <p>
+      The Bhagavata's time scales dwarf anything in modern cosmology:
+    </p>
+    <ul>
+      <li><strong>Kalpa (Day of Brahma):</strong> 4.32 billion years</li>
+      <li><strong>Night of Brahma:</strong> Another 4.32 billion years (partial dissolution)</li>
+      <li><strong>Life of Brahma:</strong> 311 trillion years (full cosmic cycle)</li>
+    </ul>
+    <p>
+      We are currently in the 51st year of our Brahma's life. When his
+      life ends, the entire universe dissolves completely, and after an
+      immeasurable cosmic night, a new Brahma arises on a new lotus.
+    </p>
+
+    <h2>The Four Ages</h2>
+    <p>
+      Within each cosmic cycle, time moves through four yugas (ages):
+    </p>
+    <ol>
+      <li><strong>Satya Yuga:</strong> The golden age — dharma at 100%, humans live thousands of years</li>
+      <li><strong>Treta Yuga:</strong> Dharma at 75% — era of Rama</li>
+      <li><strong>Dvapara Yuga:</strong> Dharma at 50% — era of Krishna</li>
+      <li><strong>Kali Yuga:</strong> Dharma at 25% — our current age of decline</li>
+    </ol>
+    <p>
+      We are about 5,000 years into Kali Yuga, which lasts 432,000 years.
+      The Bhagavata was spoken specifically to prepare humanity for this
+      difficult age.
+    </p>
+
+    <h2>The Purpose of Creation</h2>
+    <p>
+      Why does creation happen at all? The Bhagavata suggests it is
+      <strong>lila</strong> — divine play. The Supreme doesn't create out
+      of need or lack, but as an expression of bliss.
+    </p>
+    <p>
+      Creation also provides an opportunity for bound souls to work out
+      their karma and ultimately find their way back to liberation. The
+      cosmic drama, with all its beauty and suffering, is the stage on
+      which consciousness evolves toward its source.
+    </p>
+    <blockquote>
+      <em>"The Supreme Lord, though complete in Himself, creates this
+      universe for His own pleasure and for the liberation of the souls."</em>
+      <br/>— Traditional teaching
+    </blockquote>
+    <p>
+      Understanding these cosmic cycles puts our human lives in perspective.
+      We are part of something vast beyond imagination — yet each individual
+      soul is precious and capable of transcending the entire cycle through
+      devotion to the Divine.
+    </p>
+  `,
+
+  "5-1-3": `
+    <h2>Two Child-Devotees</h2>
+    <p>
+      Among the Bhagavata's most beloved stories are those of Dhruva and
+      Prahlada — two boys who demonstrated that age, status, and circumstances
+      cannot limit the power of devotion. Their stories continue to inspire
+      because they show that even a child can access the highest spiritual truth.
+    </p>
+
+    <h2>The Story of Dhruva</h2>
+    <p>
+      Dhruva was a five-year-old prince, son of King Uttanapada by his
+      first wife Suniti. But the king favored his second wife Suruchi
+      and her son Uttama.
+    </p>
+    <p>
+      One day, little Dhruva climbed onto his father's lap. Suruchi cruelly
+      pulled him off, saying: "You have no right to sit there. If you want
+      to be a king, pray to be born from my womb in your next life."
+    </p>
+    <p>
+      The child ran to his mother in tears. Suniti, unable to challenge
+      her rival, could only say: "My son, if you want something, pray to
+      Lord Vishnu. Only He can give what no one else can."
+    </p>
+    <blockquote>
+      <em>"Taking his mother's words to heart, the five-year-old prince
+      left the palace to seek God in the forest."</em>
+      <br/>— Bhagavata Purana 4.8
+    </blockquote>
+
+    <h3>The Quest</h3>
+    <p>
+      Dhruva entered the forest determined to see God. The sage Narada
+      tried to dissuade him — "You're too young for such severe penance!"
+      — but seeing the boy's determination, taught him how to meditate on
+      Vishnu's form and the sacred mantra: <strong>Om Namo Bhagavate Vasudevaya</strong>.
+    </p>
+    <p>
+      The child's tapas (austerity) was extraordinary:
+    </p>
+    <ul>
+      <li>First month: eating only fruits every three days</li>
+      <li>Second month: eating dry leaves every six days</li>
+      <li>Third month: drinking only water every nine days</li>
+      <li>Fourth month: breathing only every twelve days</li>
+      <li>Fifth month: standing motionless on one foot, completely absorbed</li>
+    </ul>
+    <p>
+      His concentration became so intense that the universe itself began
+      to suffocate — the gods feared this five-year-old's power!
+    </p>
+
+    <h3>The Vision</h3>
+    <p>
+      Pleased with Dhruva's devotion, Lord Vishnu appeared before him
+      in His four-armed form. But by this time, something had changed
+      in Dhruva. He had set out seeking a kingdom greater than his
+      father's — but now, seeing God, he wanted nothing else.
+    </p>
+    <blockquote>
+      <em>"I came seeking broken glass and found diamonds. What do I need
+      with a kingdom now?"</em>
+      <br/>— Dhruva to Vishnu
+    </blockquote>
+    <p>
+      Yet Vishnu granted him both earthly kingdom and ultimate liberation.
+      Dhruva ruled wisely for thousands of years, and upon death, ascended
+      to become the Pole Star (Dhruva Nakshatra) — the fixed point around
+      which the heavens revolve.
+    </p>
+
+    <h3>The Teaching</h3>
+    <p>
+      Dhruva's story teaches:
+    </p>
+    <ul>
+      <li>Devotion can transform suffering into spiritual opportunity</li>
+      <li>No one is too young (or too old) to seek God</li>
+      <li>What we seek and what we find may be different — and the finding
+      is always greater</li>
+      <li>Steady determination (dhruva means "fixed") brings results</li>
+    </ul>
+
+    <h2>The Story of Prahlada</h2>
+    <p>
+      If Dhruva faced a cruel stepmother, Prahlada faced something worse:
+      a demonic father who was the enemy of God Himself.
+    </p>
+    <p>
+      <strong>Hiranyakashipu</strong> was a demon king who had obtained
+      a boon making him nearly invincible: he could not be killed by man
+      or beast, inside or outside, by day or night, on land or in the air,
+      by any weapon. With this power, he conquered the three worlds and
+      declared himself God.
+    </p>
+    <p>
+      But his son Prahlada, while still in his mother's womb, had heard
+      the sage Narada's teachings about Vishnu. From birth, the boy was
+      a devotee — and no amount of indoctrination could change him.
+    </p>
+    <blockquote>
+      <em>"What is the greatest learning?" his teachers asked.
+      "Devotion to Lord Vishnu," replied the child.
+      His father was furious.</em>
+      <br/>— Bhagavata Purana 7.5
+    </blockquote>
+
+    <h3>The Persecution</h3>
+    <p>
+      Hiranyakashipu tried everything to destroy his son's faith:
+    </p>
+    <ul>
+      <li>He had Prahlada thrown off cliffs — the boy floated down safely</li>
+      <li>He had him trampled by elephants — they couldn't harm him</li>
+      <li>He had him thrown into fire — the flames became cool</li>
+      <li>He had him bitten by serpents — they couldn't pierce his skin</li>
+      <li>He had him thrown into the ocean — he emerged unharmed</li>
+    </ul>
+    <p>
+      Through every torture, Prahlada remained serene, absorbed in his
+      love for Vishnu. The demon king grew increasingly enraged.
+    </p>
+
+    <h3>The Confrontation</h3>
+    <p>
+      Finally, Hiranyakashipu demanded: "Where is this Vishnu you worship?"
+    </p>
+    <p>
+      "He is everywhere, father. In you, in me, in this pillar."
+    </p>
+    <p>
+      "In this pillar?!" The demon struck the pillar with his mace.
+    </p>
+    <p>
+      The pillar exploded. From it emerged <strong>Narasimha</strong> —
+      Vishnu's half-man, half-lion avatar. Neither fully man nor beast.
+      At twilight, neither day nor night. On the threshold, neither inside
+      nor outside. Lifting Hiranyakashipu onto his lap — neither on land
+      nor in the air. With his claws — no weapon.
+    </p>
+    <p>
+      Every condition of the boon was satisfied. The demon was destroyed.
+    </p>
+    <blockquote>
+      <em>"The Lord assumes any form necessary to protect His devotee
+      and destroy evil."</em>
+      <br/>— Bhagavata teaching
+    </blockquote>
+
+    <h3>After the Battle</h3>
+    <p>
+      Even after killing Hiranyakashipu, Narasimha's fury blazed. The gods
+      trembled. Only when young Prahlada approached without fear and
+      touched His feet did the Lord become calm.
+    </p>
+    <p>
+      "What boon do you want?" Vishnu asked.
+    </p>
+    <p>
+      Prahlada asked not for kingdoms or powers, but for the liberation
+      of his father — the very demon who had tried to kill him. This
+      compassion even for enemies is the mark of a true devotee.
+    </p>
+
+    <h3>The Teaching</h3>
+    <p>
+      Prahlada's story teaches:
+    </p>
+    <ul>
+      <li>God protects His devotees through every trial</li>
+      <li>Faith cannot be destroyed by force</li>
+      <li>True devotion includes compassion even for enemies</li>
+      <li>The Lord will take any form necessary to protect the faithful</li>
+    </ul>
+
+    <h2>Why These Stories Matter</h2>
+    <p>
+      Dhruva and Prahlada have inspired countless devotees for millennia.
+      Their stories assure us that:
+    </p>
+    <ul>
+      <li>No circumstance is too difficult for divine grace</li>
+      <li>Sincerity matters more than age, caste, or status</li>
+      <li>Devotion transforms the devotee even before granting wishes</li>
+      <li>The journey itself is the reward — the destination arrives as a gift</li>
+    </ul>
+    <p>
+      In the next lesson, we meet the Bhagavata's central figure — Krishna
+      himself — whose childhood stories have enchanted the world for
+      over a thousand years.
+    </p>
+  `,
 };
