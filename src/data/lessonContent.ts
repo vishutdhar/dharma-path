@@ -3679,6 +3679,19 @@ export const lessonContent: Record<string, string> = {
     <p>
       Chapter 2 is where Krishna finally responds. The real teaching is about to begin.
     </p>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapter 1 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Experience the opening chapter of the Gita with original Sanskrit, transliteration,
+        word meanings, and detailed commentary on each verse.
+      </p>
+      <a href="/gita/1" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+        Read Chapter 1: Arjuna Vishada Yoga →
+      </a>
+    </div>
   `,
 
   "3-2-2": `
@@ -3868,6 +3881,19 @@ export const lessonContent: Record<string, string> = {
       Everything that follows in the Gita builds on these foundations. The remaining
       16 chapters explore these themes in greater depth, but Chapter 2 contains the core.
     </p>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapter 2 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Dive into the Gita's most essential chapter with all 72 verses — including the famous teachings
+        on the eternal soul, duty, and the sthitaprajna (steady-minded sage).
+      </p>
+      <a href="/gita/2" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+        Read Chapter 2: Sankhya Yoga →
+      </a>
+    </div>
   `,
 
   "3-2-3": `
@@ -4046,6 +4072,19 @@ export const lessonContent: Record<string, string> = {
       Acting from duty rather than desire. Acting for the whole rather than just for yourself.
       Acting while remaining inwardly free.
     </p>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapter 3 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore the complete Karma Yoga teachings — Krishna's explanation of why action is necessary
+        and how to act without being bound by results.
+      </p>
+      <a href="/gita/3" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+        Read Chapter 3: Karma Yoga →
+      </a>
+    </div>
   `,
 
   "3-2-4": `
@@ -4168,6 +4207,24 @@ export const lessonContent: Record<string, string> = {
       <li><strong>Knowledge burns karma:</strong> Understanding liberates</li>
       <li><strong>True renunciation is mental, not physical:</strong> It's about attachment, not location</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapters 4 & 5 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore Krishna's revelation of divine incarnation (Chapter 4) and the harmony of action
+        and renunciation (Chapter 5) with Sanskrit text and detailed commentary.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gita/4" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 4: Jnana Yoga →
+        </a>
+        <a href="/gita/5" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 5: Karma Sannyasa Yoga →
+        </a>
+      </div>
+    </div>
   `,
 
   "3-2-5": `
@@ -4323,6 +4380,19 @@ export const lessonContent: Record<string, string> = {
       <li><strong>Effort is never wasted:</strong> Even an incomplete practice carries over to the next life</li>
       <li><strong>The goal is unity:</strong> Seeing the Divine in all beings</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapter 6 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Study the Gita's complete guide to meditation — including the famous teachings on controlling
+        the restless mind and the assurance that no spiritual effort is ever lost.
+      </p>
+      <a href="/gita/6" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+        Read Chapter 6: Dhyana Yoga →
+      </a>
+    </div>
   `,
 
   "3-2-6": `
@@ -4471,6 +4541,24 @@ export const lessonContent: Record<string, string> = {
       <li><strong>All seekers are welcomed:</strong> Though the wise devotee is dearest</li>
       <li><strong>The thought at death determines the next life:</strong> Hence the importance of constant practice</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapters 7 & 8 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore Krishna's teachings on divine knowledge and realization — the two natures of God,
+        the power of maya, and how to attain liberation at the time of death.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gita/7" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 7: Jnana Vijnana Yoga →
+        </a>
+        <a href="/gita/8" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 8: Akshara Brahma Yoga →
+        </a>
+      </div>
+    </div>
   `,
 
   "3-2-7": `
@@ -4631,6 +4719,24 @@ export const lessonContent: Record<string, string> = {
       <li><strong>Excellence reveals the Divine:</strong> The best of everything is a divine manifestation</li>
       <li><strong>A fragment sustains all:</strong> The universe is but a fraction of divine glory</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapters 9 & 10 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore the "royal secret" of devotion (Chapter 9) and Krishna's cosmic manifestations
+        throughout creation (Chapter 10) with Sanskrit text and detailed commentary.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gita/9" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 9: Raja Vidya Raja Guhya Yoga →
+        </a>
+        <a href="/gita/10" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 10: Vibhuti Yoga →
+        </a>
+      </div>
+    </div>
   `,
 
   "3-2-8": `
@@ -4793,6 +4899,19 @@ export const lessonContent: Record<string, string> = {
     <p>
       He chooses understanding.
     </p>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapter 11 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Experience the Gita's most dramatic chapter — Arjuna's vision of the cosmic form (Vishvarupa),
+        with all its terrifying grandeur and the profound teachings it reveals.
+      </p>
+      <a href="/gita/11" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+        Read Chapter 11: Vishvarupa Darshana Yoga →
+      </a>
+    </div>
   `,
 
   "3-2-9": `
@@ -4916,6 +5035,19 @@ export const lessonContent: Record<string, string> = {
       <li><strong>The ideal devotee is stable and loving:</strong> Character matters</li>
       <li><strong>Devotion makes you dear to God:</strong> The relationship is mutual</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapter 12 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore the Gita's most accessible chapter — Krishna's beautiful description of the path of
+        devotion and the qualities that make a devotee dear to God.
+      </p>
+      <a href="/gita/12" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+        Read Chapter 12: Bhakti Yoga →
+      </a>
+    </div>
   `,
 
   "3-2-10": `
@@ -5076,6 +5208,24 @@ export const lessonContent: Record<string, string> = {
       <li><strong>Devotion helps transcend:</strong> Those who serve Krishna with unwavering
         devotion transcend the gunas</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapters 13 & 14 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore the Samkhya philosophy teachings — the distinction between matter and consciousness
+        (Chapter 13) and the three gunas that govern all nature (Chapter 14).
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gita/13" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 13: Kshetra Kshetrajna Vibhaga Yoga →
+        </a>
+        <a href="/gita/14" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 14: Gunatraya Vibhaga Yoga →
+        </a>
+      </div>
+    </div>
   `,
 
   "3-2-11": `
@@ -5253,6 +5403,24 @@ export const lessonContent: Record<string, string> = {
       <li><strong>Demonic qualities bind:</strong> Especially desire, anger, and greed</li>
       <li><strong>Materialism leads to anxiety:</strong> Without purpose, life becomes torment</li>
     </ul>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapters 15 & 16 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Explore the cosmic tree metaphor and the Supreme Person (Chapter 15), plus the contrasting
+        divine and demonic natures that determine liberation or bondage (Chapter 16).
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gita/15" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 15: Purushottama Yoga →
+        </a>
+        <a href="/gita/16" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 16: Daivasura Sampad Vibhaga Yoga →
+        </a>
+      </div>
+    </div>
   `,
 
   "3-2-12": `
@@ -5471,6 +5639,24 @@ export const lessonContent: Record<string, string> = {
     <p>
       <strong>The song of God has been sung. Now go and live it.</strong>
     </p>
+
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
+        📖 Read Chapters 17 & 18 Verse by Verse
+      </h3>
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
+        Complete your study of the Gita with the three types of faith (Chapter 17) and the grand
+        finale — Krishna's ultimate teaching on liberation and the famous "sarva-dharman parityajya" (Chapter 18).
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gita/17" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 17: Shraddhatraya Vibhaga Yoga →
+        </a>
+        <a href="/gita/18" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
+          Chapter 18: Moksha Sannyasa Yoga →
+        </a>
+      </div>
+    </div>
   `,
 
   // ============================================
@@ -6167,15 +6353,15 @@ export const lessonContent: Record<string, string> = {
       the Isha, Katha, and Mandukya — each offering unique windows into the infinite.
     </p>
 
-    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
-      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
         📖 Explore the Upanishads
       </h3>
-      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
         Ready to dive deeper? Explore all 13 principal Upanishads verse-by-verse, with Sanskrit,
         transliteration, translation, and commentary.
       </p>
-      <a href="/upanishads" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+      <a href="/upanishads" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
         Explore the Upanishads →
       </a>
     </div>
@@ -6298,15 +6484,15 @@ export const lessonContent: Record<string, string> = {
       as the deathless consciousness that pervades all things.
     </p>
 
-    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
-      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
         📖 Read the Isha Upanishad
       </h3>
-      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
         Experience all 18 verses of the Isha Upanishad with original Sanskrit, transliteration,
         translation, and detailed commentary on each verse.
       </p>
-      <a href="/upanishads/isha" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+      <a href="/upanishads/isha" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
         Read the Isha Upanishad →
       </a>
     </div>
@@ -6481,15 +6667,15 @@ export const lessonContent: Record<string, string> = {
       death. "So will anyone else," the text concludes, "who knows the Self in this way."
     </p>
 
-    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
-      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
         📖 Read the Katha Upanishad
       </h3>
-      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
         Explore all 119 verses of the Katha Upanishad — Nachiketa's complete dialogue with Death,
         including the famous chariot metaphor and teachings on the immortal Self.
       </p>
-      <a href="/upanishads/katha" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+      <a href="/upanishads/katha" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
         Read the Katha Upanishad →
       </a>
     </div>
@@ -6661,15 +6847,15 @@ export const lessonContent: Record<string, string> = {
       in which all experience arises.
     </p>
 
-    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
-      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
         📖 Read the Mandukya Upanishad
       </h3>
-      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
         Study all 12 verses of the Mandukya Upanishad with detailed explanations of OM,
         the four states of consciousness, and the path to Turiya.
       </p>
-      <a href="/upanishads/mandukya" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+      <a href="/upanishads/mandukya" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
         Read the Mandukya Upanishad →
       </a>
     </div>
@@ -6844,15 +7030,15 @@ export const lessonContent: Record<string, string> = {
       Realize any one of them fully, and liberation is yours.
     </p>
 
-    <div class="mt-8 p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-200 dark:border-purple-800">
-      <h3 class="font-heading text-lg font-semibold text-purple-900 dark:text-purple-200 mb-2">
+    <div class="mt-8 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
+      <h3 class="font-heading text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">
         📖 Explore the Source Texts
       </h3>
-      <p class="text-purple-800 dark:text-purple-300 text-sm mb-4">
+      <p class="text-orange-800 dark:text-orange-300 text-sm mb-4">
         Discover the Mahavakyas in their original context. Read the Chandogya (Tat Tvam Asi),
         Brihadaranyaka (Aham Brahmasmi), Aitareya (Prajnanam Brahma), and Mandukya (Ayam Atma Brahma) Upanishads.
       </p>
-      <a href="/upanishads" class="inline-flex items-center text-purple-700 dark:text-purple-300 font-medium hover:text-purple-900 dark:hover:text-purple-100">
+      <a href="/upanishads" class="inline-flex items-center text-orange-700 dark:text-orange-300 font-medium hover:text-orange-900 dark:hover:text-orange-100">
         Explore the Upanishads →
       </a>
     </div>
