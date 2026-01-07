@@ -7846,6 +7846,15 @@ export const lessonContent: Record<string, string> = {
       The Vedas remain the living foundation of Hindu tradition — ancient texts
       that continue to shape millions of lives today.
     </p>
+
+    <h2>Explore the Sacred Hymns</h2>
+    <p>
+      Ready to experience the Vedas directly? Explore key Vedic hymns with
+      Sanskrit text, transliteration, translation, and commentary:
+    </p>
+    <p>
+      <strong>→ <a href="/vedas">Read the Vedic Hymns</a></strong>
+    </p>
   `,
 
   "4-3-2": `
@@ -8007,6 +8016,16 @@ export const lessonContent: Record<string, string> = {
       families who have memorized their entire Veda, passing it down as their
       ancestors have done for over three millennia.
     </p>
+
+    <h2>Read the Key Hymns</h2>
+    <p>
+      Want to explore the hymns mentioned in this lesson? Read the Gayatri Mantra,
+      Purusha Sukta, Nasadiya Sukta, and other key Vedic texts with full
+      translation and commentary:
+    </p>
+    <p>
+      <strong>→ <a href="/vedas">Explore the Vedic Hymns</a></strong>
+    </p>
   `,
 
   "4-3-3": `
@@ -8150,6 +8169,16 @@ export const lessonContent: Record<string, string> = {
       This ancient prayer captures the essence of what the Vedas offer:
       a path from confusion to clarity, from limitation to freedom, from
       mortality to the deathless. In that sense, their relevance is eternal.
+    </p>
+
+    <h2>Begin Your Journey</h2>
+    <p>
+      Ready to experience the Vedas for yourself? Start with the Gayatri Mantra,
+      explore the profound Nasadiya Sukta (Creation Hymn), or discover the
+      peace mantras that have blessed seekers for millennia:
+    </p>
+    <p>
+      <strong>→ <a href="/vedas">Read the Vedic Hymns</a></strong>
     </p>
   `,
 

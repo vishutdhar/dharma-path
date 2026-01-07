@@ -11,6 +11,7 @@ export type { FuseResultMatch };
 import { lessonContent } from '@/data/lessonContent';
 import { festivals, Festival } from '@/data/festivals';
 import { upanishads, Upanishad, UpanishadVerse } from '@/data/upanishads';
+import { hymns, VedicHymn, VedicVerse } from '@/data/vedas';
 
 // Import all Gita chapters
 import chapter1 from '@/data/chapters/chapter1';
@@ -96,7 +97,22 @@ export interface SearchableUpanishadVerse {
   mahavakya?: boolean;
 }
 
-export type SearchableItem = SearchableLesson | SearchableVerse | SearchableGlossaryTerm | SearchableFestival | SearchableUpanishadVerse;
+export interface SearchableVedicVerse {
+  type: 'vedic-verse';
+  id: string; // "agni-sukta-1"
+  hymn: string;
+  hymnName: string;
+  verse: number;
+  reference: string; // "Agni Sukta 1"
+  translation: string;
+  explanation: string;
+  practicalApplication: string;
+  transliteration: string;
+  themes: string[];
+  famousVerse?: boolean;
+}
+
+export type SearchableItem = SearchableLesson | SearchableVerse | SearchableGlossaryTerm | SearchableFestival | SearchableUpanishadVerse | SearchableVedicVerse;
 
 export interface SearchResult {
   item: SearchableItem;
@@ -329,6 +345,36 @@ function buildUpanishadIndex(): SearchableUpanishadVerse[] {
   return verses;
 }
 
+/**
+ * Build searchable Vedic verses from all available hymns
+ */
+function buildVedicIndex(): SearchableVedicVerse[] {
+  const verses: SearchableVedicVerse[] = [];
+
+  for (const [hymnId, hymn] of Object.entries(hymns)) {
+    if (!hymn) continue;
+
+    for (const verse of hymn.verses) {
+      verses.push({
+        type: 'vedic-verse',
+        id: `${verse.hymn}-${verse.verse}`,
+        hymn: verse.hymn,
+        hymnName: hymn.name.english,
+        verse: verse.verse,
+        reference: `${hymn.name.english} ${verse.verse}`,
+        translation: verse.translation,
+        explanation: verse.explanation.simple + (verse.explanation.deeper ? ' ' + verse.explanation.deeper : ''),
+        practicalApplication: verse.practicalApplication,
+        transliteration: verse.transliteration,
+        themes: verse.themes,
+        famousVerse: verse.famousVerse,
+      });
+    }
+  }
+
+  return verses;
+}
+
 // =============================================================================
 // SEARCH ENGINE
 // =============================================================================
@@ -376,11 +422,12 @@ function getSearchIndex(): Fuse<SearchableItem> {
     const verses = buildVerseIndex();
     const festivalItems = buildFestivalIndex();
     const upanishadVerses = buildUpanishadIndex();
+    const vedicVerses = buildVedicIndex();
 
-    allItems = [...lessons, ...verses, ...glossary, ...festivalItems, ...upanishadVerses];
+    allItems = [...lessons, ...verses, ...glossary, ...festivalItems, ...upanishadVerses, ...vedicVerses];
     searchIndex = new Fuse(allItems, fuseOptions);
 
-    console.log(`Search index built: ${lessons.length} lessons, ${verses.length} Gita verses, ${upanishadVerses.length} Upanishad verses, ${glossary.length} terms, ${festivalItems.length} festivals`);
+    console.log(`Search index built: ${lessons.length} lessons, ${verses.length} Gita verses, ${upanishadVerses.length} Upanishad verses, ${vedicVerses.length} Vedic verses, ${glossary.length} terms, ${festivalItems.length} festivals`);
   }
   return searchIndex;
 }
@@ -450,6 +497,16 @@ export function searchUpanishads(query: string, limit: number = 20): SearchResul
   const results = search(query, limit * 3);
   return results
     .filter(r => r.item.type === 'upanishad-verse')
+    .slice(0, limit);
+}
+
+/**
+ * Search only Vedic verses
+ */
+export function searchVedas(query: string, limit: number = 20): SearchResult[] {
+  const results = search(query, limit * 3);
+  return results
+    .filter(r => r.item.type === 'vedic-verse')
     .slice(0, limit);
 }
 
