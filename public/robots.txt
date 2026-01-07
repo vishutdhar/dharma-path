@@ -1,0 +1,16 @@
+# Dharma Path - robots.txt
+# This file tells search engines what to crawl
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Don't crawl API routes (these are backend, not for users)
+Disallow: /api/
+
+# Don't crawl unsubscribe pages (not useful content)
+Disallow: /unsubscribed
+Disallow: /unsubscribe-error
+
+# Tell search engines where to find the sitemap
+Sitemap: https://mydharmapath.com/sitemap.xml
