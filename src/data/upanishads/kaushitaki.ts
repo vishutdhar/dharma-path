@@ -722,4 +722,5 @@ export const kaushitakiUpanishad: Upanishad = {
   includedVerses: 40,
   sections: [section1, section2, section3, section4],
   difficulty: 'advanced',
+  estimatedReadTime: '30 min',
 };

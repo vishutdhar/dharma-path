@@ -40,7 +40,8 @@ const chapter3_14Verses: UpanishadVerse[] = [
     difficulty: 'intermediate',
     famousVerse: true,
     mahavakya: {
-      statement: 'Sarvam Khalvidam Brahma',
+      statement: 'सर्वं खल्विदं ब्रह्म',
+      transliteration: 'Sarvam Khalvidam Brahma',
       meaning: 'All this is indeed Brahman',
     },
   },
@@ -378,8 +379,9 @@ const chapter6Verses: UpanishadVerse[] = [
     difficulty: 'intermediate',
     famousVerse: true,
     mahavakya: {
-      statement: 'Tat Tvam Asi',
-      meaning: 'That You Are - the identity of the individual Self with the supreme Brahman',
+      statement: 'तत् त्वम् असि',
+      transliteration: 'Tat Tvam Asi',
+      meaning: 'That You Are',
     },
   },
   {
@@ -632,8 +634,9 @@ const chapter6Verses: UpanishadVerse[] = [
     difficulty: 'beginner',
     famousVerse: true,
     mahavakya: {
-      statement: 'Tat Tvam Asi',
-      meaning: 'That You Are - the ultimate identity of Atman and Brahman',
+      statement: 'तत् त्वम् असि',
+      transliteration: 'Tat Tvam Asi',
+      meaning: 'That You Are',
     },
   },
 ];
@@ -1147,8 +1150,10 @@ export const chandogyaUpanishad: Upanishad = {
   includedVerses: 65,
   sections: [section3_14, section6, section7, section8],
   difficulty: 'advanced',
+  estimatedReadTime: '45 min',
   mahavakya: {
-    statement: 'Tat Tvam Asi',
-    meaning: 'That You Are - the identity of the individual Self (Atman) with the supreme reality (Brahman)',
+    statement: 'तत् त्वम् असि',
+    transliteration: 'Tat Tvam Asi',
+    meaning: 'That You Are',
   },
 };

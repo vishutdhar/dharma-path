@@ -570,6 +570,7 @@ export const taittiriyaUpanishad: Upanishad = {
   includedVerses: 31,
   sections: [shikshaValli, brahmanandaValli, bhriguValli],
   difficulty: 'intermediate',
+  estimatedReadTime: '25 min',
 };
 
 export default taittiriyaUpanishad;

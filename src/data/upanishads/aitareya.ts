@@ -1117,7 +1117,8 @@ sarvāṇy evaitāni prajñānasya nāmadheyāni bhavanti ||`,
     difficulty: 'intermediate',
     famousVerse: true,
     mahavakya: {
-      statement: 'Prajñānam Brahma',
+      statement: 'प्रज्ञानं ब्रह्म',
+      transliteration: 'Prajñānam Brahma',
       meaning: 'Consciousness is Brahman',
     },
   },
@@ -1239,12 +1240,14 @@ export const aitareyaUpanishad: Upanishad = {
   ],
   mahavakya: {
     statement: 'प्रज्ञानं ब्रह्म',
-    meaning: 'Prajnanam Brahma — Consciousness is Brahman',
+    transliteration: 'Prajñānam Brahma',
+    meaning: 'Consciousness is Brahman',
   },
   totalVerses: 33,
   includedVerses: 33,
   sections,
   difficulty: 'intermediate',
+  estimatedReadTime: '25 min',
 };
 
 export default aitareyaUpanishad;

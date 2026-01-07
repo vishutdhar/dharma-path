@@ -1903,6 +1903,7 @@ export const shvetashvataraUpanishad: Upanishad = {
   includedVerses: 113,
   sections: [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6],
   difficulty: 'intermediate',
+  estimatedReadTime: '60 min',
 };
 
 export default shvetashvataraUpanishad;

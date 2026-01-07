@@ -1148,6 +1148,7 @@ export const kenaUpanishad: Upanishad = {
   includedVerses: 35,
   sections,
   difficulty: 'intermediate',
+  estimatedReadTime: '25 min',
 };
 
 export default kenaUpanishad;

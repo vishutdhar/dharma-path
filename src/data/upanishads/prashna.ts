@@ -1108,6 +1108,7 @@ export const prashnaUpanishad: Upanishad = {
   includedVerses: 67,
   sections: [prashna1, prashna2, prashna3, prashna4, prashna5, prashna6],
   difficulty: 'intermediate',
+  estimatedReadTime: '40 min',
 };
 
 export default prashnaUpanishad;

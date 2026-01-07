@@ -1980,6 +1980,7 @@ export const kathaUpanishad: Upanishad = {
   includedVerses: 119,
   sections: [section1, section2, section3, section4, section5, section6],
   difficulty: 'beginner',
+  estimatedReadTime: '60 min',
 };
 
 export default kathaUpanishad;

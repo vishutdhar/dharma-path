@@ -884,4 +884,5 @@ export const maitriUpanishad: Upanishad = {
   includedVerses: 50,
   sections: [section1_2, section3, section4, section6],
   difficulty: 'advanced',
+  estimatedReadTime: '35 min',
 };

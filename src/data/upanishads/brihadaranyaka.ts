@@ -607,8 +607,9 @@ const chapter4_4Verses: UpanishadVerse[] = [
     difficulty: 'intermediate',
     famousVerse: true,
     mahavakya: {
-      statement: 'Ayam Atma Brahma',
-      meaning: 'This Self is Brahman - implicit in the verse',
+      statement: 'अयमात्मा ब्रह्म',
+      transliteration: 'Ayam Ātmā Brahma',
+      meaning: 'This Self is Brahman',
     },
   },
   {
@@ -818,8 +819,10 @@ export const brihadaranyakaUpanishad: Upanishad = {
   includedVerses: 44,
   sections: [section1_4, section2_4, section3_8, section4_4],
   difficulty: 'advanced',
+  estimatedReadTime: '35 min',
   mahavakya: {
-    statement: 'Aham Brahmasmi',
-    meaning: 'I am Brahman - the identity of the individual Self with the supreme reality',
+    statement: 'अहं ब्रह्मास्मि',
+    transliteration: 'Aham Brahmāsmi',
+    meaning: 'I am Brahman',
   },
 };
