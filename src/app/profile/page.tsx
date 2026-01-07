@@ -729,18 +729,31 @@ export default function ProfilePage() {
           <h3 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
             Support Dharma Path
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
             Help keep Dharma Path free for everyone. Your donation supports the development of daily lessons teaching Hindu philosophy and spiritual wisdom.
           </p>
-          <a
-            href="https://donate.stripe.com/fZuaEW12G7NY3iEaod8g000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md"
-          >
-            <Heart size={18} />
-            Donate
-          </a>
+
+          <div className="flex flex-col gap-3 justify-center items-center">
+            {/* US & Other Countries - Stripe */}
+            <a
+              href="https://donate.stripe.com/fZuaEW12G7NY3iEaod8g000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
+            >
+              <Heart size={18} />
+              US & Other Countries
+            </a>
+
+            {/* India - UPI */}
+            <a
+              href="upi://pay?pa=6005817706@ptyes&pn=Dharma%20Path&cu=INR"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
+            >
+              <Heart size={18} />
+              India (UPI)
+            </a>
+          </div>
         </div>
 
         {/* App Info */}
