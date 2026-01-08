@@ -67,12 +67,13 @@ async function sendEmail(to: string, subject: string, html: string): Promise<boo
 }
 
 /**
- * POST /api/cron/send-daily-emails
+ * GET /api/cron/send-daily-emails
  *
  * Triggered daily by Vercel Cron to send lesson emails to all subscribed users.
+ * Vercel Cron jobs use GET requests, so this must be the GET handler.
  * Requires CRON_SECRET header for authentication.
  */
-export async function POST(request: NextRequest) {
+export async function GET(request: NextRequest) {
   // Verify cron secret (prevents unauthorized calls)
   const authHeader = request.headers.get('authorization');
   if (CRON_SECRET && authHeader !== `Bearer ${CRON_SECRET}`) {
@@ -237,9 +238,9 @@ export async function POST(request: NextRequest) {
 }
 
 /**
- * GET handler for manual testing / health check
+ * POST handler for manual testing / health check
  */
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
   // Verify cron secret
   const authHeader = request.headers.get('authorization');
   if (CRON_SECRET && authHeader !== `Bearer ${CRON_SECRET}`) {
