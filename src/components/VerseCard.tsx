@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Bookmark, Share2, ChevronDown, ChevronUp } from 'lucide-react';
+import { Bookmark, ChevronDown, ChevronUp } from 'lucide-react';
 import { GitaVerse, formatVerseRef, getSimpleTranslation } from '@/lib/api';
+import ShareButton from './ShareButton';
 
 interface VerseCardProps {
   verse: GitaVerse;
@@ -81,20 +82,8 @@ export default function VerseCard({
   // Use custom translation if available, otherwise API translation
   const translation = verse.customContent?.translation || getSimpleTranslation(verse);
 
-  const handleShare = async () => {
-    const text = `${verseRef}\n\n"${translation}"\n\nFrom the Bhagavad Gita`;
-    
-    if (navigator.share) {
-      try {
-        await navigator.share({ text });
-      } catch (_err) {
-        // User cancelled or error
-      }
-    } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(text);
-    }
-  };
+  // Construct the URL for sharing
+  const shareUrl = `/gita/${verse.chapter}/${verse.verse}`;
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-colors">
@@ -105,13 +94,11 @@ export default function VerseCard({
             {verseRef}
           </span>
           <div className="flex items-center gap-2">
-            <button
-              onClick={handleShare}
-              className="p-2 rounded-full hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400 transition-colors"
-              aria-label="Share verse"
-            >
-              <Share2 size={18} />
-            </button>
+            <ShareButton
+              title={`Bhagavad Gita ${verseRef}`}
+              text={translation}
+              url={shareUrl}
+            />
             {onBookmark && (
               <button
                 onClick={() => onBookmark(`${verse.chapter}:${verse.verse}`)}

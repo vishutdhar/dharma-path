@@ -10,6 +10,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
+import ShareButton from '@/components/ShareButton';
 import {
   getHymn,
   VedicHymnId,
@@ -50,6 +51,9 @@ export default function VerseDetailPage() {
   // Navigation
   const prevVerse = verseIndex > 0 ? hymn.verses[verseIndex - 1] : null;
   const nextVerse = verseIndex < totalVerses - 1 ? hymn.verses[verseIndex + 1] : null;
+
+  // Construct the URL for sharing
+  const shareUrl = `/vedas/${hymnId}/${verse.verse}`;
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -109,9 +113,16 @@ export default function VerseDetailPage() {
                   </span>
                 )}
               </div>
-              <span className={`px-2 py-1 rounded text-xs ${getDifficultyColor(verse.difficulty)}`}>
-                {verse.difficulty}
-              </span>
+              <div className="flex items-center gap-2">
+                <ShareButton
+                  title={`${hymn.name.english} - Verse ${verse.verse}`}
+                  text={verse.translation}
+                  url={shareUrl}
+                />
+                <span className={`px-2 py-1 rounded text-xs ${getDifficultyColor(verse.difficulty)}`}>
+                  {verse.difficulty}
+                </span>
+              </div>
             </div>
           </div>
 

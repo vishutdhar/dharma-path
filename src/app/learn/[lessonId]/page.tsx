@@ -13,6 +13,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
+import ShareButton from '@/components/ShareButton';
 import { curriculum, Lesson, Module, Level } from '@/data/curriculum';
 import { lessonContent } from '@/data/lessonContent';
 import { completeLesson, isLessonCompleted } from '@/lib/progress';
@@ -122,6 +123,13 @@ export default function LessonPage() {
   const { lesson, module, level, prevLesson, nextLesson, lessonIndex, totalLessonsInModule } = context;
   const globalNextLesson = nextLesson || findNextLessonGlobal(lessonId);
 
+  // Construct the URL for sharing
+  const shareUrl = `/learn/${lessonId}`;
+  // Truncate description for share text (first 120 chars)
+  const shareText = lesson.description.length > 120
+    ? lesson.description.substring(0, 120) + '...'
+    : lesson.description;
+
   // Color mapping for levels
   const colorClasses: Record<string, { bg: string; text: string; border: string; darkBg: string; darkBorder: string }> = {
     saffron: { bg: 'bg-saffron-50', text: 'text-saffron-600 dark:text-saffron-400', border: 'border-saffron-200', darkBg: 'dark:bg-saffron-900/30', darkBorder: 'dark:border-saffron-800' },
@@ -151,6 +159,11 @@ export default function LessonPage() {
               <Clock size={16} />
               {lesson.duration}
             </div>
+            <ShareButton
+              title={lesson.title}
+              text={shareText}
+              url={shareUrl}
+            />
           </div>
         </div>
       </header>

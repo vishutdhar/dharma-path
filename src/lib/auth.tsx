@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { User, Session } from '@supabase/supabase-js';
+import { User, Session, PostgrestError } from '@supabase/supabase-js';
 import { supabase, isSupabaseConfigured } from './supabase';
 import { getProgress, saveProgress, UserProgress } from './progress';
 import {
@@ -140,7 +140,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         10000,
         'Sync timed out'
       );
-      const { data: cloudProgress, error } = result as { data: DbUserProgress | null; error: any };
+      const { data: cloudProgress, error } = result as { data: DbUserProgress | null; error: PostgrestError | null };
 
       if (error && error.code !== 'PGRST116') {
         // PGRST116 = no rows found (new user)
@@ -280,7 +280,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         10000,
         'Delete timed out'
       );
-      const { error } = result as { error: any };
+      const { error } = result as { error: PostgrestError | null };
 
       if (error) {
         if (process.env.NODE_ENV === 'development') {

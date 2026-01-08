@@ -8,9 +8,9 @@ import {
   ChevronRight,
   ChevronLeft,
   Star,
-  Share2,
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
+import ShareButton from '@/components/ShareButton';
 import {
   getUpanishadById,
   getVedaName,
@@ -112,19 +112,8 @@ export default function UpanishadVersePage() {
     }
   };
 
-  const handleShare = async () => {
-    const text = `${upanishad.name.english} ${sectionNum}.${verseNum}\n\n"${verse.translation}"\n\nFrom the Upanishads`;
-
-    if (navigator.share) {
-      try {
-        await navigator.share({ text });
-      } catch (_err) {
-        // User cancelled or error
-      }
-    } else {
-      navigator.clipboard.writeText(text);
-    }
-  };
+  // Construct the URL for sharing
+  const shareUrl = `/upanishads/${upanishadId}/${sectionNum}-${verseNum}`;
 
   return (
     <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
@@ -172,13 +161,11 @@ export default function UpanishadVersePage() {
                 )}
               </div>
               <div className="flex items-center gap-2">
-                <button
-                  onClick={handleShare}
-                  className="p-2 rounded-full hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400 transition-colors"
-                  aria-label="Share verse"
-                >
-                  <Share2 size={18} />
-                </button>
+                <ShareButton
+                  title={`${upanishad.name.english} ${sectionNum}.${verseNum}`}
+                  text={verse.translation}
+                  url={shareUrl}
+                />
                 <span
                   className={`px-2 py-1 rounded text-xs ${getDifficultyColor(verse.difficulty)}`}
                 >

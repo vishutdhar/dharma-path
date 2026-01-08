@@ -37,8 +37,11 @@ const API_BASE = 'https://vedicscriptures.github.io';
 const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
 const CACHE_STORAGE_KEY = 'dharma_path_api_cache';
 
+// Type for cached data - all possible types that can be cached
+type CachedData = GitaChapter[] | GitaChapter | GitaVerse;
+
 // In-memory cache (fallback if sessionStorage unavailable)
-const memoryCache: Map<string, { data: any; timestamp: number }> = new Map();
+const memoryCache: Map<string, { data: CachedData; timestamp: number }> = new Map();
 
 export interface GitaVerse {
   chapter: number;
@@ -75,7 +78,9 @@ export interface GitaVerse {
     keyTerms?: { term: string; meaning: string }[];
     themes?: string[];
   };
-  // Additional commentaries available
+  // Additional commentaries from external API (siva, purohit, chinmay, etc.)
+  // Using index signature because the API returns dynamic commentator fields
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -125,7 +130,7 @@ function getFromCache<T>(key: string): T | null {
 }
 
 // Helper to set cache (writes to both memory and sessionStorage)
-function setCache(key: string, data: any): void {
+function setCache<T extends CachedData>(key: string, data: T): void {
   const cacheEntry = { data, timestamp: Date.now() };
 
   // Always set memory cache

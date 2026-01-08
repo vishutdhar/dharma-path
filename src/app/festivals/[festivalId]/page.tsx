@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, MapPin, Sparkles, ChevronRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
+import ShareButton from '@/components/ShareButton';
 import { getFestivalById, festivals } from '@/data/festivals';
 
 export default function FestivalPage() {
@@ -35,6 +36,13 @@ export default function FestivalPage() {
   const prevFestival = currentIndex > 0 ? festivals[currentIndex - 1] : null;
   const nextFestival = currentIndex < festivals.length - 1 ? festivals[currentIndex + 1] : null;
 
+  // Construct the URL for sharing
+  const shareUrl = `/festivals/${festivalId}`;
+  // Truncate summary for share text (first 120 chars)
+  const shareText = festival.summary.length > 120
+    ? festival.summary.substring(0, 120) + '...'
+    : festival.summary;
+
   return (
     <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}
@@ -52,6 +60,11 @@ export default function FestivalPage() {
                 {festival.name}
               </h1>
             </div>
+            <ShareButton
+              title={festival.name}
+              text={shareText}
+              url={shareUrl}
+            />
           </div>
         </div>
       </header>
