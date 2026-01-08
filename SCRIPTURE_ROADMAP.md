@@ -6,7 +6,7 @@
 
 ## Current State (as of January 2025)
 
-### Learn Section (76 lessons, 5 levels)
+### Learn Section (110 lessons, 8 levels)
 | Level | Title | Lessons | Content | Status |
 |-------|-------|---------|---------|--------|
 | 1 | The Foundation | 14 | Core concepts, deities, basics | ✅ Complete |
@@ -14,6 +14,9 @@
 | 3 | The Gita | 17 | Chapter-by-chapter journey | ✅ Complete |
 | 4 | Going Deeper | 16 | Upanishads, traditions, Vedas, practice | ✅ Complete |
 | 5 | The Puranas | 17 | Bhagavata (8), Shiva (5), Devi (4) | ✅ Complete |
+| 6 | Study the Gita | 18 | Read all 18 chapters verse-by-verse | ✅ Complete |
+| 7 | Study the Upanishads | 10 | Read the 10 principal Upanishads | ✅ Complete |
+| 8 | Study the Vedic Hymns | 6 | Read the sacred mantras | ✅ Complete |
 
 ### Scripture Sections (verse-by-verse reading)
 | Scripture | Status | Verses | Notes |
@@ -293,6 +296,82 @@ Level 5: The Puranas
 - [x] **Step 3**: Bhagavata Purana lessons ✅ (Completed January 2025)
 - [x] **Step 4**: Shiva Purana lessons ✅ (Completed January 2025)
 - [x] **Step 4**: Devi Mahatmya lessons ✅ (Completed January 2025)
+- [x] **Step 5**: Study Levels (6, 7, 8) ✅ (Completed January 2025)
+
+---
+
+## Study Levels (Levels 6-8)
+
+The "Study" levels integrate actual scripture READING into the lesson flow, completing the journey from learning ABOUT scriptures to actually READING them.
+
+### Level 6: Study the Gita (18 lessons)
+```
+Module 6-1: Arjuna's Crisis & The Soul (Chapters 1-4)
+  6-1-1: Chapter 1 - Arjuna's Despair
+  6-1-2: Chapter 2 - The Eternal Soul
+  6-1-3: Chapter 3 - The Path of Action
+  6-1-4: Chapter 4 - Divine Knowledge
+
+Module 6-2: The Yoga of Practice (Chapters 5-8)
+  6-2-1: Chapter 5 - Renunciation Through Action
+  6-2-2: Chapter 6 - The Path of Meditation
+  6-2-3: Chapter 7 - Knowledge & Realization
+  6-2-4: Chapter 8 - The Eternal Brahman
+
+Module 6-3: Divine Revelation (Chapters 9-12)
+  6-3-1: Chapter 9 - The Royal Secret
+  6-3-2: Chapter 10 - Divine Manifestations
+  6-3-3: Chapter 11 - The Cosmic Vision
+  6-3-4: Chapter 12 - The Path of Devotion
+
+Module 6-4: Knowledge & Liberation (Chapters 13-18)
+  6-4-1: Chapter 13 - The Field & Knower
+  6-4-2: Chapter 14 - The Three Gunas
+  6-4-3: Chapter 15 - The Supreme Person
+  6-4-4: Chapter 16 - Divine & Demonic Natures
+  6-4-5: Chapter 17 - Three Types of Faith
+  6-4-6: Chapter 18 - Liberation Through Surrender
+```
+
+### Level 7: Study the Upanishads (10 lessons)
+```
+Module 7-1: The Short Upanishads (4 lessons)
+  7-1-1: Isha Upanishad (18 verses)
+  7-1-2: Mandukya Upanishad (12 verses)
+  7-1-3: Kena Upanishad (35 verses)
+  7-1-4: Aitareya Upanishad (33 verses)
+
+Module 7-2: The Story Upanishads (3 lessons)
+  7-2-1: Katha Upanishad - Death's Teaching
+  7-2-2: Mundaka Upanishad - Two Birds
+  7-2-3: Prashna Upanishad - Six Questions
+
+Module 7-3: The Great Upanishads (3 lessons)
+  7-3-1: Taittiriya & Shvetashvatara - Koshas & Synthesis
+  7-3-2: Chandogya - Tat Tvam Asi
+  7-3-3: Brihadaranyaka - Yajnavalkya's Dialogues
+```
+
+### Level 8: Study the Vedic Hymns (6 lessons)
+```
+Module 8-1: The Sacred Mantras (3 lessons)
+  8-1-1: Gayatri Mantra - The Supreme Prayer
+  8-1-2: Agni Sukta - The First Hymn
+  8-1-3: Sri Sukta - Hymn to Lakshmi
+
+Module 8-2: The Cosmic Hymns (3 lessons)
+  8-2-1: Nasadiya Sukta - The Creation Hymn
+  8-2-2: Purusha Sukta - The Cosmic Person
+  8-2-3: Shanti Suktas - Peace Invocations
+```
+
+### Study Lesson Structure
+Each Study lesson contains:
+- **Introduction**: Context and significance
+- **Key Verses**: 3-8 most important verses with Sanskrit, transliteration, translation, and explanation
+- **Main Themes**: Key concepts with explanations
+- **Reflection Questions**: Questions for contemplation
+- **Continue Your Study**: Link to full verse-by-verse reading
 
 ---
 

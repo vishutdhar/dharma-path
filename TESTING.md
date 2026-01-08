@@ -4,6 +4,19 @@ Use this checklist before releases to catch bugs early.
 
 ---
 
+## Automated Tests
+
+Run these commands before pushing:
+
+```bash
+npm run lint         # ESLint - 0 errors expected
+npm run test:run     # Vitest unit tests - 62 tests
+npm run test:e2e     # Playwright E2E tests - 16 tests
+npm run build        # Production build - must pass
+```
+
+---
+
 ## Quick Smoke Test (5 min)
 
 Run these after every significant change:
@@ -83,7 +96,7 @@ Test with 2 different accounts on the SAME browser:
 
 ### Profile Page
 - [ ] Shows subscription status (subscribed/unsubscribed)
-- [ ] Shows current day (Day X of 77)
+- [ ] Shows current day (Day X of 128)
 - [ ] Toggle works to unsubscribe
 - [ ] "Restart from Day 1" works
 
@@ -104,11 +117,42 @@ Test with 2 different accounts on the SAME browser:
 
 ---
 
+## Upanishads Reader Tests
+
+- [ ] All 13 Upanishads load
+- [ ] Section navigation works
+- [ ] Verses display Sanskrit + translation
+- [ ] Famous verse indicators show
+- [ ] Mahavakya (Great Sayings) marked correctly
+- [ ] Navigation between verses works
+
+---
+
+## Vedic Hymns Reader Tests
+
+- [ ] All 6 hymns load (Gayatri, Nasadiya, Purusha, Agni, Sri, Shanti)
+- [ ] Verses display Sanskrit + translation
+- [ ] Navigation between verses works
+- [ ] "Used In" section shows ritual contexts
+
+---
+
+## Festival Guide Tests
+
+- [ ] All 14 festivals display
+- [ ] Month/timing information correct
+- [ ] Celebration tips show
+- [ ] Related scriptures link correctly
+
+---
+
 ## Search Tests
 
 - [ ] Can search for terms (e.g., "karma")
-- [ ] Results show relevant verses
-- [ ] Clicking result navigates to verse
+- [ ] Results include lessons, Gita verses, Upanishad verses, Vedic verses, glossary terms, festivals
+- [ ] Result type tabs work (All, Lessons, Verses, etc.)
+- [ ] Clicking result navigates to correct page
+- [ ] Search with Sanskrit terms works
 
 ---
 
