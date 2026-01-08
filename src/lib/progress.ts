@@ -24,9 +24,28 @@ const defaultProgress: UserProgress = {
   bookmarks: [],
 };
 
-// Helper to get today's date string (YYYY-MM-DD) for comparison
+// Helper to get a date string (YYYY-MM-DD) in LOCAL timezone
+// Using local timezone ensures streak matches user's perception of "today" vs "yesterday"
+function getLocalDateString(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+// Helper to get today's date string (YYYY-MM-DD) in local timezone
 function getTodayDateString(): string {
-  return new Date().toISOString().split('T')[0];
+  return getLocalDateString(new Date());
+}
+
+// Calculate the difference in calendar days between two dates (using local timezone)
+// This correctly handles timezone edge cases by comparing calendar days, not timestamps
+function getCalendarDaysDiff(date1: Date, date2: Date): number {
+  // Create dates at midnight local time to compare calendar days
+  const d1 = new Date(date1.getFullYear(), date1.getMonth(), date1.getDate());
+  const d2 = new Date(date2.getFullYear(), date2.getMonth(), date2.getDate());
+  // Use Math.round to handle DST edge cases (23 or 25 hour days)
+  return Math.round((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
 }
 
 // Check if streak was already updated today (prevents race condition)
@@ -75,27 +94,28 @@ export function updateDailyVisit(): UserProgress {
     const lastVisit = new Date(progress.lastVisit);
     const today = new Date();
 
-    // Compare dates without time
-    const lastVisitDate = lastVisit.toISOString().split('T')[0];
-    const todayDate = today.toISOString().split('T')[0];
+    // Compare dates using LOCAL calendar days (not UTC)
+    // This ensures streak matches user's perception of "today" vs "yesterday"
+    const lastVisitDate = getLocalDateString(lastVisit);
+    const todayDate = getLocalDateString(today);
 
     if (lastVisitDate === todayDate) {
-      // Same day - no streak update needed
+      // Same local calendar day - no streak update needed
       return progress;
     }
 
-    // Calculate days difference
-    const daysDiff = Math.floor(
-      (today.getTime() - lastVisit.getTime()) / (1000 * 60 * 60 * 24)
-    );
+    // Calculate difference in calendar days (using local timezone)
+    const daysDiff = getCalendarDaysDiff(lastVisit, today);
 
     if (daysDiff === 1) {
-      // Consecutive day - increment streak
+      // Consecutive calendar day - increment streak
       progress.streak += 1;
     } else if (daysDiff > 1) {
-      // Streak broken - reset to 1
+      // Missed one or more days - reset streak to 1
       progress.streak = 1;
     }
+    // Note: daysDiff === 0 shouldn't happen here (caught by date string check above)
+    // daysDiff < 0 means clock went backwards - don't change streak
 
     progress.lastVisit = today.toISOString();
     saveProgress(progress);
