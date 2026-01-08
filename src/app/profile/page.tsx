@@ -691,12 +691,20 @@ export default function ProfilePage() {
         {/* Bookmarked Verses */}
         {progress?.bookmarks && progress.bookmarks.length > 0 && (
           <div className="mb-6">
-            <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-              Saved Verses
-            </h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Saved Verses
+              </h2>
+              <Link
+                href="/profile/saved"
+                className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline"
+              >
+                View all {progress.bookmarks.length} →
+              </Link>
+            </div>
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 transition-colors">
               <div className="flex flex-wrap gap-2">
-                {progress.bookmarks.map((ref) => {
+                {progress.bookmarks.slice(0, 6).map((ref) => {
                   const [chapter, verse] = ref.split(':');
                   return (
                     <Link
@@ -708,6 +716,14 @@ export default function ProfilePage() {
                     </Link>
                   );
                 })}
+                {progress.bookmarks.length > 6 && (
+                  <Link
+                    href="/profile/saved"
+                    className="px-3 py-1.5 bg-cream-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-full text-sm font-medium hover:bg-cream-200 dark:hover:bg-gray-600 transition-colors"
+                  >
+                    +{progress.bookmarks.length - 6} more
+                  </Link>
+                )}
               </div>
             </div>
           </div>
