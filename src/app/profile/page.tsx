@@ -701,7 +701,7 @@ export default function ProfilePage() {
                   return (
                     <Link
                       key={ref}
-                      href={`/gita/${chapter}`}
+                      href={`/gita/${chapter}/${verse}`}
                       className="px-3 py-1.5 bg-saffron-50 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400 rounded-full text-sm font-medium hover:bg-saffron-100 dark:hover:bg-saffron-900/50 transition-colors"
                     >
                       Gita {chapter}.{verse}
