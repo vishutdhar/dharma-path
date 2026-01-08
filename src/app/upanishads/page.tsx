@@ -7,7 +7,7 @@ import {
   getAllUpanishadSummaries,
   getVedaName,
   UpanishadSummary,
-} from '@/data/upanishads';
+} from '@/data/upanishads/metadata';
 
 export default function UpanishadsPage() {
   const allUpanishads = getAllUpanishadSummaries();
