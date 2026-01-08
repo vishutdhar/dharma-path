@@ -95,7 +95,7 @@ export default function VerseCard({
           </span>
           <div className="flex items-center gap-2">
             <ShareButton
-              title={`Bhagavad Gita ${verseRef}`}
+              title={`Bhagavad Gita ${verse.chapter}.${verse.verse}`}
               text={translation}
               url={shareUrl}
             />

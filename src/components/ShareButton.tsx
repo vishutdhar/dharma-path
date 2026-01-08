@@ -38,8 +38,9 @@ export default function ShareButton({
 
   const fullUrl = `${BASE_URL}${url}`;
 
-  // Format the share text with title, quote, and URL
-  const shareText = `${title}\n\n"${text}"\n\n${fullUrl}`;
+  // Format the share text with title and quote only
+  // URL is passed separately to navigator.share() for proper link preview
+  const shareText = `${title}\n\n"${text}"`;
 
   const handleShare = async () => {
     // Try native share API first (works on mobile)
@@ -59,9 +60,10 @@ export default function ShareButton({
       }
     }
 
-    // Fallback: Copy to clipboard
+    // Fallback: Copy to clipboard (include URL since there's no separate url param)
     try {
-      await navigator.clipboard.writeText(shareText);
+      const clipboardText = `${shareText}\n\n${fullUrl}`;
+      await navigator.clipboard.writeText(clipboardText);
       setCopied(true);
 
       // Reset copied state after 2 seconds
