@@ -15,7 +15,7 @@ import {
 import Navigation from '@/components/Navigation';
 import { curriculum, Lesson, Module, Level } from '@/data/curriculum';
 import { lessonContent } from '@/data/lessonContent';
-import { completeLesson, isLessonCompleted, getProgress } from '@/lib/progress';
+import { completeLesson, isLessonCompleted } from '@/lib/progress';
 
 interface LessonContext {
   lesson: Lesson;

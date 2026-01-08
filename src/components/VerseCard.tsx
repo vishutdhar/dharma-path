@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Bookmark, Share2, Volume2, ChevronDown, ChevronUp, Languages } from 'lucide-react';
+import { Bookmark, Share2, ChevronDown, ChevronUp } from 'lucide-react';
 import { GitaVerse, formatVerseRef, getSimpleTranslation } from '@/lib/api';
 
 interface VerseCardProps {
@@ -70,7 +70,7 @@ export default function VerseCard({
       .trim();
   };
 
-  const { wordMeanings, commentary: englishCommentary } = parseEnglishCommentary(rawEnglishCommentary);
+  const { wordMeanings: _wordMeanings, commentary: englishCommentary } = parseEnglishCommentary(rawEnglishCommentary);
 
   // Check for our custom content (takes priority)
   const hasCustomContent = !!verse.customContent;
@@ -87,7 +87,7 @@ export default function VerseCard({
     if (navigator.share) {
       try {
         await navigator.share({ text });
-      } catch (err) {
+      } catch (_err) {
         // User cancelled or error
       }
     } else {

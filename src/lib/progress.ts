@@ -206,7 +206,7 @@ export function getLevelProgress(levelId: number, totalLessons: number): number 
 // Check if a level is unlocked
 // All levels are always unlocked - users have full autonomy to explore any content
 // This aligns with Hinduism's philosophy of multiple valid paths for different seekers
-export function isLevelUnlocked(levelId: number, requiredLevel?: number): boolean {
+export function isLevelUnlocked(_levelId: number, _requiredLevel?: number): boolean {
   return true;
 }
 

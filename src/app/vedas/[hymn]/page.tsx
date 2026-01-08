@@ -15,8 +15,6 @@ import Navigation from '@/components/Navigation';
 import {
   getHymn,
   getHymnSummary,
-  getVedaName,
-  VedicHymn,
   VedicVerse,
   VedicHymnId,
   hymnSummaries,
@@ -204,7 +202,7 @@ export default function HymnDetailPage() {
 // Verse Card Component for Vedic Hymns
 function VedicVerseCard({
   verse,
-  hymnName,
+  hymnName: _hymnName,
 }: {
   verse: VedicVerse;
   hymnName: string;

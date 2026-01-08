@@ -8,7 +8,6 @@ import {
   UpanishadId,
   UpanishadSummary,
   VedaSource,
-  getVedaName,
 } from './types';
 
 // Import individual Upanishads (will be added as we create them)

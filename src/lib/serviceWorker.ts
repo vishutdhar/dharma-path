@@ -11,7 +11,7 @@ interface ServiceWorkerState {
   error: Error | null;
 }
 
-let swState: ServiceWorkerState = {
+const swState: ServiceWorkerState = {
   status: 'unsupported',
   registration: null,
   error: null,

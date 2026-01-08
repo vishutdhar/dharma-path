@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ChevronRight, BookOpen, Target, TrendingUp } from 'lucide-react';
 import { curriculum, getLessonCount } from '@/data/curriculum';
 
@@ -11,7 +11,6 @@ interface OnboardingProps {
 export default function Onboarding({ onComplete }: OnboardingProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [slideDirection, setSlideDirection] = useState<'next' | 'prev'>('next');
 
   // Dynamic stats from curriculum
   const totalLevels = curriculum.length;
@@ -38,10 +37,9 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
     },
   ];
 
-  const changeSlide = (newSlide: number, direction: 'next' | 'prev') => {
+  const changeSlide = (newSlide: number, _direction: 'next' | 'prev') => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setSlideDirection(direction);
 
     // Start exit animation, then change slide
     setTimeout(() => {

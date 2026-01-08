@@ -4,14 +4,14 @@
  */
 
 import Fuse, { FuseResultMatch, IFuseOptions } from 'fuse.js';
-import { curriculum, Lesson, Module, Level } from '@/data/curriculum';
+import { curriculum } from '@/data/curriculum';
 
 // Re-export Fuse types for use in components
 export type { FuseResultMatch };
 import { lessonContent } from '@/data/lessonContent';
-import { festivals, Festival } from '@/data/festivals';
-import { upanishads, Upanishad, UpanishadVerse } from '@/data/upanishads';
-import { hymns, VedicHymn, VedicVerse } from '@/data/vedas';
+import { festivals } from '@/data/festivals';
+import { upanishads } from '@/data/upanishads';
+import { hymns } from '@/data/vedas';
 
 // Import all Gita chapters
 import chapter1 from '@/data/chapters/chapter1';
@@ -317,7 +317,7 @@ function buildFestivalIndex(): SearchableFestival[] {
 function buildUpanishadIndex(): SearchableUpanishadVerse[] {
   const verses: SearchableUpanishadVerse[] = [];
 
-  for (const [upanishadId, upanishad] of Object.entries(upanishads)) {
+  for (const [_upanishadId, upanishad] of Object.entries(upanishads)) {
     if (!upanishad) continue;
 
     for (const section of upanishad.sections) {
@@ -351,7 +351,7 @@ function buildUpanishadIndex(): SearchableUpanishadVerse[] {
 function buildVedicIndex(): SearchableVedicVerse[] {
   const verses: SearchableVedicVerse[] = [];
 
-  for (const [hymnId, hymn] of Object.entries(hymns)) {
+  for (const [_hymnId, hymn] of Object.entries(hymns)) {
     if (!hymn) continue;
 
     for (const verse of hymn.verses) {

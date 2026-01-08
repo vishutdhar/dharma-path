@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, MapPin, Sparkles, ChevronRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
-import { getFestivalById, festivals, Festival } from '@/data/festivals';
+import { getFestivalById, festivals } from '@/data/festivals';
 
 export default function FestivalPage() {
   const params = useParams();

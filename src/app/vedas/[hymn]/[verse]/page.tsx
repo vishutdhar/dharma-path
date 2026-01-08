@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import {
@@ -13,7 +12,6 @@ import {
 import Navigation from '@/components/Navigation';
 import {
   getHymn,
-  VedicVerse,
   VedicHymnId,
   hymnSummaries,
 } from '@/data/vedas';

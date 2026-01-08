@@ -10,11 +10,10 @@ import {
   Sparkles
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
-import ProgressRing from '@/components/ProgressRing';
 import Onboarding from '@/components/Onboarding';
 import { VerseOfDaySkeleton } from '@/components/Skeleton';
 import { curriculum, getLessonCount, Lesson, Level, Module } from '@/data/curriculum';
-import { getProgress, getDaysSinceStart, UserProgress, updateDailyVisit, findNextIncompleteLesson } from '@/lib/progress';
+import { getDaysSinceStart, UserProgress, updateDailyVisit, findNextIncompleteLesson } from '@/lib/progress';
 import { getVerseOfTheDay, getVerse, GitaVerse, formatVerseRef } from '@/lib/api';
 
 const ONBOARDING_KEY = 'dharma_path_onboarding_complete';
@@ -65,7 +64,7 @@ export default function HomePage() {
           setVerseOfDay(verseData);
           setLoading(false);
         }
-      } catch (error) {
+      } catch (_error) {
         // Handle error gracefully
         if (isMounted) {
           setLoading(false);
@@ -91,9 +90,6 @@ export default function HomePage() {
     findNextIncompleteLesson(progress?.completedLessons || [])?.lessonId ||
     '1-1-1'; // Default to first lesson
   const nextLessonInfo = findLessonById(nextLessonId);
-
-  // Get current level info (for backward compatibility)
-  const currentLevel = nextLessonInfo?.level || curriculum.find(l => l.id === (progress?.currentLevel || 1));
 
   // Handle onboarding completion
   const handleOnboardingComplete = () => {

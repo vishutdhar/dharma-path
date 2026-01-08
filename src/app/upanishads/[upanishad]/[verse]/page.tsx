@@ -15,7 +15,6 @@ import {
   getUpanishadById,
   getVedaName,
   isValidUpanishadId,
-  UpanishadVerse,
 } from '@/data/upanishads';
 
 export default function UpanishadVersePage() {
@@ -119,7 +118,7 @@ export default function UpanishadVersePage() {
     if (navigator.share) {
       try {
         await navigator.share({ text });
-      } catch (err) {
+      } catch (_err) {
         // User cancelled or error
       }
     } else {

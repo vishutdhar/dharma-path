@@ -7,7 +7,6 @@ import {
   ArrowLeft,
   BookOpen,
   ChevronRight,
-  Sparkles,
   Star,
   ChevronLeft,
 } from 'lucide-react';
@@ -16,8 +15,6 @@ import {
   getUpanishadById,
   getVedaName,
   isValidUpanishadId,
-  Upanishad,
-  UpanishadSection,
   UpanishadVerse,
   getAllUpanishadSummaries,
 } from '@/data/upanishads';
@@ -81,19 +78,6 @@ export default function UpanishadDetailPage() {
     } else if (currentSection < upanishad.sections.length - 1) {
       setCurrentSection(currentSection + 1);
       setCurrentVerseIndex(0);
-    }
-  };
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'beginner':
-        return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400';
-      case 'intermediate':
-        return 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400';
-      case 'advanced':
-        return 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400';
-      default:
-        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-400';
     }
   };
 
@@ -260,7 +244,7 @@ export default function UpanishadDetailPage() {
 // Verse Card Component for Upanishads
 function UpanishadVerseCard({
   verse,
-  upanishadName,
+  upanishadName: _upanishadName,
 }: {
   verse: UpanishadVerse;
   upanishadName: string;

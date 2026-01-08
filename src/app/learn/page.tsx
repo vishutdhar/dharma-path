@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, Lock, CheckCircle, Circle, ChevronRight, Calendar, BookOpen, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
-import { curriculum, Level, getLevelDuration, getLessonCount } from '@/data/curriculum';
+import { curriculum, getLevelDuration, getLessonCount } from '@/data/curriculum';
 import { getProgress, UserProgress, getLevelProgress, isLevelUnlocked } from '@/lib/progress';
 import { festivals } from '@/data/festivals';
 
@@ -161,7 +161,7 @@ export default function LearnPage() {
                 {/* Expanded Modules */}
                 {isExpanded && !locked && (
                   <div className="px-6 pb-6 pt-2 border-t border-cream-100 dark:border-gray-700">
-                    {level.modules.map((module, moduleIndex) => (
+                    {level.modules.map((module, _moduleIndex) => (
                       <div key={module.id} className="mt-4 first:mt-0">
                         <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">
                           {module.title}

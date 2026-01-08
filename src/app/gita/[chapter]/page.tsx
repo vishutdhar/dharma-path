@@ -8,7 +8,7 @@ import Navigation from '@/components/Navigation';
 import VerseCard from '@/components/VerseCard';
 import { VerseCardSkeleton } from '@/components/Skeleton';
 import { getChapter, getVerse, GitaChapter, GitaVerse } from '@/lib/api';
-import { toggleBookmark, isBookmarked } from '@/lib/progress';
+import { toggleBookmark } from '@/lib/progress';
 
 export default function ChapterPage() {
   const params = useParams();

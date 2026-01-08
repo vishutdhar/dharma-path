@@ -5,7 +5,6 @@
 
 import {
   chapters as fallbackChapters,
-  keyVerses as fallbackVerses,
   getChapterFallback,
   getVerseFallback,
   GitaChapterData,

@@ -16,19 +16,6 @@ export default function UpanishadsPage() {
   const availableUpanishads = allUpanishads;
   const comingSoonUpanishads: UpanishadSummary[] = [];
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'beginner':
-        return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400';
-      case 'intermediate':
-        return 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400';
-      case 'advanced':
-        return 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400';
-      default:
-        return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-400';
-    }
-  };
-
   return (
     <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
       {/* Header */}

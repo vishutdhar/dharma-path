@@ -1,12 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, ChevronRight, Sparkles, Lock, Sun } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Sparkles, Lock, Sun } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import {
   hymnSummaries,
   isHymnAvailable,
-  getVedaName,
   VedicHymnSummary,
 } from '@/data/vedas';
 
