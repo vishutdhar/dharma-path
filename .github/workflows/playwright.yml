@@ -32,13 +32,13 @@ jobs:
 
       - name: Run Playwright tests (update snapshots)
         if: contains(github.event.head_commit.message, '[update-snapshots]')
-        run: npx playwright test --project=chromium --update-snapshots
+        run: npx playwright test visual --project=chromium --update-snapshots
         env:
           CI: true
 
       - name: Run Playwright tests
         if: ${{ !contains(github.event.head_commit.message, '[update-snapshots]') }}
-        run: npx playwright test --project=chromium
+        run: npx playwright test visual --project=chromium
         env:
           CI: true
 
