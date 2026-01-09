@@ -94,7 +94,11 @@ export default function ChapterPage() {
   // Scroll current verse button to center in the horizontal picker
   // Uses getBoundingClientRect for accurate positioning (offsetLeft is relative to BODY, not container)
   // setTimeout defers execution until after browser paint
+  // Depends on `chapter` so it re-runs after buttons are rendered (they need chapter.verses_count)
   useEffect(() => {
+    // Don't run until chapter is loaded (buttons won't exist yet)
+    if (!chapter) return;
+
     const timeoutId = setTimeout(() => {
       const button = verseButtonRefs.current.get(currentVerse);
       const container = versePickerRef.current;
@@ -121,7 +125,7 @@ export default function ChapterPage() {
 
     // Cleanup: cancel pending scroll if verse changes rapidly or component unmounts
     return () => clearTimeout(timeoutId);
-  }, [currentVerse]);
+  }, [currentVerse, chapter]);
 
   const handleBookmark = (ref: string) => {
     const isNowBookmarked = toggleBookmark(ref);
