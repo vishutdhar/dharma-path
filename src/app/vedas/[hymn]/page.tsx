@@ -9,9 +9,38 @@ import {
   ChevronRight,
   Star,
   ChevronLeft,
+  ChevronsLeft,
+  ChevronsRight,
   Sun,
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
+
+/**
+ * Calculate which verse indices to show in the pagination picker.
+ * Always keeps the current verse centered when possible.
+ */
+function getVisibleIndices(current: number, total: number, siblings: number = 2): number[] {
+  const totalVisible = siblings * 2 + 1;
+
+  if (total <= totalVisible) {
+    return Array.from({ length: total }, (_, i) => i);
+  }
+
+  let start = current - siblings;
+  let end = current + siblings;
+
+  if (start < 0) {
+    start = 0;
+    end = totalVisible - 1;
+  }
+
+  if (end >= total) {
+    end = total - 1;
+    start = total - totalVisible;
+  }
+
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+}
 import {
   getHymn,
   getHymnSummary,
@@ -178,31 +207,69 @@ export default function HymnDetailPage() {
               </button>
             </div>
 
-            {/* Verse Picker */}
+            {/* Verse Picker - Pagination Style */}
             {totalVerses > 1 && (
-              <div className="mt-8">
+              <nav
+                className="mt-8"
+                role="navigation"
+                aria-label="Verse navigation"
+              >
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 text-center">
                   Jump to verse
                 </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {hymn.verses.map((v, idx) => (
+                <div className="flex items-center justify-center gap-1 sm:gap-2">
+                  {/* Skip backward button */}
+                  <button
+                    onClick={() => navigateToVerse(Math.max(0, currentVerseIndex - 5))}
+                    disabled={currentVerseIndex <= 0}
+                    aria-label="Go back 5 verses"
+                    className={`
+                      w-11 h-11 rounded-lg flex items-center justify-center transition-all
+                      ${currentVerseIndex > 0
+                        ? 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
+                        : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
+                      }
+                    `}
+                  >
+                    <ChevronsLeft size={18} />
+                  </button>
+
+                  {/* Visible verse buttons */}
+                  {getVisibleIndices(currentVerseIndex, hymn.verses.length, 2).map(idx => (
                     <button
                       key={idx}
                       onClick={() => navigateToVerse(idx)}
+                      aria-label={`Go to verse ${hymn.verses[idx].verse}`}
+                      aria-current={idx === currentVerseIndex ? 'page' : undefined}
                       className={`
-                        w-10 h-10 rounded-lg text-sm font-medium transition-all
-                        ${
-                          idx === currentVerseIndex
-                            ? 'bg-saffron-700 text-white shadow-md'
-                            : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
+                        w-11 h-11 rounded-lg text-sm font-medium transition-all
+                        ${idx === currentVerseIndex
+                          ? 'bg-saffron-700 text-white shadow-md scale-110'
+                          : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                         }
                       `}
                     >
-                      {v.verse}
+                      {hymn.verses[idx].verse}
                     </button>
                   ))}
+
+                  {/* Skip forward button */}
+                  <button
+                    onClick={() => navigateToVerse(Math.min(hymn.verses.length - 1, currentVerseIndex + 5))}
+                    disabled={currentVerseIndex >= hymn.verses.length - 1}
+                    aria-label="Go forward 5 verses"
+                    className={`
+                      w-11 h-11 rounded-lg flex items-center justify-center transition-all
+                      ${currentVerseIndex < hymn.verses.length - 1
+                        ? 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
+                        : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
+                      }
+                    `}
+                  >
+                    <ChevronsRight size={18} />
+                  </button>
                 </div>
-              </div>
+              </nav>
             )}
 
             {/* Quick Navigation */}

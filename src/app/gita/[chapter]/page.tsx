@@ -1,14 +1,45 @@
 'use client';
 
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useParams, useSearchParams, useRouter, notFound } from 'next/navigation';
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import VerseCard from '@/components/VerseCard';
 import { VerseCardSkeleton } from '@/components/Skeleton';
 import { getChapter, getVerse, GitaChapter, GitaVerse } from '@/lib/api';
 import { toggleBookmark } from '@/lib/progress';
+
+/**
+ * Calculate which verse numbers to show in the pagination picker.
+ * Always keeps the current verse centered when possible.
+ * Handles edge cases at start and end of chapter.
+ */
+function getVisibleVerses(current: number, total: number, siblings: number = 2): number[] {
+  const totalVisible = siblings * 2 + 1; // e.g., 5 for siblings=2
+
+  // If total verses fit in visible range, show all
+  if (total <= totalVisible) {
+    return Array.from({ length: total }, (_, i) => i + 1);
+  }
+
+  let start = current - siblings;
+  let end = current + siblings;
+
+  // Shift range if at start edge
+  if (start < 1) {
+    start = 1;
+    end = totalVisible;
+  }
+
+  // Shift range if at end edge
+  if (end > total) {
+    end = total;
+    start = total - totalVisible + 1;
+  }
+
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+}
 
 export default function ChapterPage() {
   const params = useParams();
@@ -29,8 +60,6 @@ export default function ChapterPage() {
   const [loading, setLoading] = useState(true);
   const [currentVerse, setCurrentVerse] = useState(urlVerse);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
-  const versePickerRef = useRef<HTMLDivElement>(null);
-  const verseButtonRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
 
   // Sync currentVerse with URL when searchParams changes (handles page load and browser back/forward)
   useEffect(() => {
@@ -97,36 +126,6 @@ export default function ChapterPage() {
     };
     loadVerse();
   }, [currentVerse, chapterNum, verses]);
-
-  // Scroll current verse button to center in the horizontal picker
-  // We calculate exact scroll position rather than using scrollIntoView
-  // because CSS scroll snap can interfere with scrollIntoView's centering
-  useEffect(() => {
-    if (!chapter || loading) return;
-
-    // Use a small delay to ensure hydration is complete and buttons are rendered
-    const timeoutId = setTimeout(() => {
-      const container = versePickerRef.current;
-      const button = verseButtonRefs.current.get(currentVerse);
-
-      if (!container || !button) return;
-
-      // Calculate the exact scroll position to center the button
-      const containerWidth = container.clientWidth;
-      const buttonLeft = button.offsetLeft;
-      const buttonWidth = button.offsetWidth;
-
-      // Target: button's center should align with container's center
-      const targetScroll = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
-
-      container.scrollTo({
-        left: Math.max(0, targetScroll),
-        behavior: 'smooth',
-      });
-    }, 50);
-
-    return () => clearTimeout(timeoutId);
-  }, [currentVerse, chapter, loading]);
 
   const handleBookmark = (ref: string) => {
     const isNowBookmarked = toggleBookmark(ref);
@@ -243,23 +242,39 @@ export default function ChapterPage() {
               </button>
             </div>
 
-            {/* Verse Picker - Horizontal Scroll */}
-            <div className="mt-8">
+            {/* Verse Picker - Pagination Style (always centered) */}
+            <nav
+              className="mt-8"
+              role="navigation"
+              aria-label="Verse navigation"
+            >
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 text-center">Jump to verse</p>
-              <div
-                ref={versePickerRef}
-                className="flex gap-2 overflow-x-auto pb-2 px-4 -mx-4 scrollbar-hide"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-              >
-                {Array.from({ length: chapter.verses_count }, (_, i) => i + 1).map(num => (
+              <div className="flex items-center justify-center gap-1 sm:gap-2">
+                {/* Skip backward button */}
+                <button
+                  onClick={() => navigateToVerse(Math.max(1, currentVerse - 5))}
+                  disabled={currentVerse <= 1}
+                  aria-label="Go back 5 verses"
+                  className={`
+                    w-11 h-11 rounded-lg flex items-center justify-center transition-all
+                    ${currentVerse > 1
+                      ? 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
+                      : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
+                    }
+                  `}
+                >
+                  <ChevronsLeft size={18} />
+                </button>
+
+                {/* Visible verse buttons */}
+                {getVisibleVerses(currentVerse, chapter.verses_count, 2).map(num => (
                   <button
                     key={num}
-                    ref={(el) => {
-                      if (el) verseButtonRefs.current.set(num, el);
-                    }}
                     onClick={() => navigateToVerse(num)}
+                    aria-label={`Go to verse ${num}`}
+                    aria-current={num === currentVerse ? 'page' : undefined}
                     className={`
-                      w-10 h-10 rounded-lg text-sm font-medium transition-all flex-shrink-0
+                      w-11 h-11 rounded-lg text-sm font-medium transition-all
                       ${num === currentVerse
                         ? 'bg-saffron-700 text-white shadow-md scale-110'
                         : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
@@ -269,8 +284,24 @@ export default function ChapterPage() {
                     {num}
                   </button>
                 ))}
+
+                {/* Skip forward button */}
+                <button
+                  onClick={() => navigateToVerse(Math.min(chapter.verses_count, currentVerse + 5))}
+                  disabled={currentVerse >= chapter.verses_count}
+                  aria-label="Go forward 5 verses"
+                  className={`
+                    w-11 h-11 rounded-lg flex items-center justify-center transition-all
+                    ${currentVerse < chapter.verses_count
+                      ? 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
+                      : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
+                    }
+                  `}
+                >
+                  <ChevronsRight size={18} />
+                </button>
               </div>
-            </div>
+            </nav>
           </>
         )}
       </div>
