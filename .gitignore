@@ -33,6 +33,7 @@ Thumbs.db
 # Playwright
 .playwright-mcp/
 playwright-report/
+test-results/
 
 # TypeScript
 *.tsbuildinfo

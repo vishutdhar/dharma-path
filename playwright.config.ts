@@ -8,6 +8,15 @@ export default defineConfig({
   workers: 1, // Single worker to ensure sequential execution
   reporter: 'html',
   timeout: 60000, // 60 second timeout per test
+  // Snapshot settings for visual regression testing
+  snapshotDir: './e2e/snapshots',
+  snapshotPathTemplate: '{snapshotDir}/{testFilePath}/{arg}{ext}',
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.01, // Allow 1% pixel difference
+      threshold: 0.2, // Color threshold for anti-aliasing
+    },
+  },
   use: {
     baseURL: 'http://localhost:3002',
     trace: 'on-first-retry',
