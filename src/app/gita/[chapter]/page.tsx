@@ -21,16 +21,23 @@ export default function ChapterPage() {
     notFound();
   }
 
-  // Get initial verse from URL search params, default to 1
-  const initialVerse = parseInt(searchParams.get('v') || '1') || 1;
+  // Get verse from URL search params
+  const urlVerse = parseInt(searchParams.get('v') || '1') || 1;
 
   const [chapter, setChapter] = useState<GitaChapter | null>(null);
   const [verses, setVerses] = useState<GitaVerse[]>([]);
   const [loading, setLoading] = useState(true);
-  const [currentVerse, setCurrentVerse] = useState(initialVerse);
+  const [currentVerse, setCurrentVerse] = useState(urlVerse);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
   const versePickerRef = useRef<HTMLDivElement>(null);
   const verseButtonRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
+
+  // Sync currentVerse with URL when searchParams changes (handles page load and browser back/forward)
+  useEffect(() => {
+    if (urlVerse !== currentVerse) {
+      setCurrentVerse(urlVerse);
+    }
+  }, [urlVerse]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Update URL when verse changes (without full page navigation)
   const updateVerseInUrl = useCallback((verseNum: number) => {
@@ -55,7 +62,7 @@ export default function ChapterPage() {
 
       if (chapterData) {
         // Validate and clamp the initial verse to valid range
-        const validInitialVerse = Math.max(1, Math.min(initialVerse, chapterData.verses_count));
+        const validInitialVerse = Math.max(1, Math.min(urlVerse, chapterData.verses_count));
 
         // Update state if URL had invalid verse number
         if (validInitialVerse !== currentVerse) {
@@ -72,7 +79,7 @@ export default function ChapterPage() {
     };
 
     loadChapter();
-  }, [chapterNum, initialVerse]); // Re-run when chapter or initial verse from URL changes
+  }, [chapterNum, urlVerse]); // Re-run when chapter or initial verse from URL changes
 
   // Load more verses as user navigates
   useEffect(() => {
@@ -92,40 +99,34 @@ export default function ChapterPage() {
   }, [currentVerse, chapterNum, verses]);
 
   // Scroll current verse button to center in the horizontal picker
-  // Uses getBoundingClientRect for accurate positioning (offsetLeft is relative to BODY, not container)
-  // setTimeout defers execution until after browser paint
-  // Depends on `chapter` so it re-runs after buttons are rendered (they need chapter.verses_count)
+  // We calculate exact scroll position rather than using scrollIntoView
+  // because CSS scroll snap can interfere with scrollIntoView's centering
   useEffect(() => {
-    // Don't run until chapter is loaded (buttons won't exist yet)
-    if (!chapter) return;
+    if (!chapter || loading) return;
 
+    // Use a small delay to ensure hydration is complete and buttons are rendered
     const timeoutId = setTimeout(() => {
-      const button = verseButtonRefs.current.get(currentVerse);
       const container = versePickerRef.current;
-      if (button && container) {
-        // Use getBoundingClientRect for consistent coordinate system
-        const containerRect = container.getBoundingClientRect();
-        const buttonRect = button.getBoundingClientRect();
+      const button = verseButtonRefs.current.get(currentVerse);
 
-        // Calculate button's center position within the scrollable content
-        // (buttonRect.left - containerRect.left) = button position in visible area
-        // + container.scrollLeft = accounts for current scroll position
-        // + buttonRect.width/2 = get to button center
-        const buttonCenterInContent = (buttonRect.left - containerRect.left) + container.scrollLeft + (buttonRect.width / 2);
+      if (!container || !button) return;
 
-        // Scroll to position that puts button center in container center
-        const scrollLeft = buttonCenterInContent - (containerRect.width / 2);
+      // Calculate the exact scroll position to center the button
+      const containerWidth = container.clientWidth;
+      const buttonLeft = button.offsetLeft;
+      const buttonWidth = button.offsetWidth;
 
-        container.scrollTo({
-          left: Math.max(0, scrollLeft),
-          behavior: 'smooth',
-        });
-      }
-    }, 0);
+      // Target: button's center should align with container's center
+      const targetScroll = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
 
-    // Cleanup: cancel pending scroll if verse changes rapidly or component unmounts
+      container.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: 'smooth',
+      });
+    }, 50);
+
     return () => clearTimeout(timeoutId);
-  }, [currentVerse, chapter]);
+  }, [currentVerse, chapter, loading]);
 
   const handleBookmark = (ref: string) => {
     const isNowBookmarked = toggleBookmark(ref);
@@ -247,7 +248,7 @@ export default function ChapterPage() {
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 text-center">Jump to verse</p>
               <div
                 ref={versePickerRef}
-                className="flex gap-2 overflow-x-auto pb-2 px-4 -mx-4 snap-x snap-mandatory scrollbar-hide"
+                className="flex gap-2 overflow-x-auto pb-2 px-4 -mx-4 scrollbar-hide"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {Array.from({ length: chapter.verses_count }, (_, i) => i + 1).map(num => (
@@ -258,7 +259,7 @@ export default function ChapterPage() {
                     }}
                     onClick={() => navigateToVerse(num)}
                     className={`
-                      w-10 h-10 rounded-lg text-sm font-medium transition-all flex-shrink-0 snap-center
+                      w-10 h-10 rounded-lg text-sm font-medium transition-all flex-shrink-0
                       ${num === currentVerse
                         ? 'bg-saffron-700 text-white shadow-md scale-110'
                         : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
