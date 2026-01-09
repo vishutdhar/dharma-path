@@ -123,6 +123,56 @@ test.describe('Visual Regression', () => {
       maxDiffPixelRatio: 0.01,
     });
   });
+
+  test('lesson detail page', async ({ page }) => {
+    await page.goto('/learn/1');
+    // Wait for lesson content to load
+    await page.waitForSelector('main', { timeout: 10000 });
+    await expect(page).toHaveScreenshot('lesson-detail.png', {
+      fullPage: true,
+      maxDiffPixelRatio: 0.01,
+    });
+  });
+
+  test('saved bookmarks page', async ({ page }) => {
+    await page.goto('/profile/saved');
+    // Wait for page to load
+    await page.waitForSelector('main', { timeout: 10000 });
+    await expect(page).toHaveScreenshot('saved-bookmarks.png', {
+      fullPage: true,
+      maxDiffPixelRatio: 0.01,
+    });
+  });
+
+  test('upanishad detail page', async ({ page }) => {
+    await page.goto('/upanishads/isha');
+    // Wait for content to load
+    await page.waitForSelector('main', { timeout: 10000 });
+    await expect(page).toHaveScreenshot('upanishad-detail.png', {
+      fullPage: true,
+      maxDiffPixelRatio: 0.01,
+    });
+  });
+
+  test('vedas hymn detail page', async ({ page }) => {
+    await page.goto('/vedas/gayatri');
+    // Wait for content to load
+    await page.waitForSelector('main', { timeout: 10000 });
+    await expect(page).toHaveScreenshot('vedas-hymn-detail.png', {
+      fullPage: true,
+      maxDiffPixelRatio: 0.01,
+    });
+  });
+
+  test('festival detail page', async ({ page }) => {
+    await page.goto('/festivals/diwali');
+    // Wait for content to load
+    await page.waitForSelector('main', { timeout: 10000 });
+    await expect(page).toHaveScreenshot('festival-detail.png', {
+      fullPage: true,
+      maxDiffPixelRatio: 0.01,
+    });
+  });
 });
 
 test.describe('Visual Regression - Verse Picker Centering', () => {
@@ -136,8 +186,10 @@ test.describe('Visual Regression - Verse Picker Centering', () => {
     // Wait for page to load
     await page.waitForSelector('text=Jump to verse', { timeout: 10000 });
 
-    // Navigate to verse 10 to test centering
-    await page.locator('button:has-text("10")').click();
+    // Navigate to verse 3 to test centering (visible in initial pagination 1-5)
+    const verseButton = page.locator('button[aria-label="Go to verse 3"]');
+    await verseButton.waitFor({ state: 'visible', timeout: 10000 });
+    await verseButton.click();
     // Wait for scroll animation
     await page.waitForTimeout(500);
 

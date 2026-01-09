@@ -38,11 +38,13 @@ export default defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
   ],
-  // Use existing dev server on port 3002
+  // Use production server in CI, dev server locally
   webServer: {
-    command: 'npm run dev -- --port 3002',
+    command: process.env.CI
+      ? 'npm run start -- --port 3002'
+      : 'npm run dev -- --port 3002',
     url: 'http://localhost:3002',
-    reuseExistingServer: true,
+    reuseExistingServer: !process.env.CI,
     timeout: 120000,
   },
 });
