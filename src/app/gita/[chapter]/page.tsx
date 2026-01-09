@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -24,6 +24,8 @@ export default function ChapterPage() {
   const [loading, setLoading] = useState(true);
   const [currentVerse, setCurrentVerse] = useState(1);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
+  const versePickerRef = useRef<HTMLDivElement>(null);
+  const verseButtonRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
 
   useEffect(() => {
     const loadChapter = async () => {
@@ -60,6 +62,38 @@ export default function ChapterPage() {
     };
     loadVerse();
   }, [currentVerse, chapterNum, verses]);
+
+  // Scroll current verse button to center in the horizontal picker
+  // Uses getBoundingClientRect for accurate positioning (offsetLeft is relative to BODY, not container)
+  // setTimeout defers execution until after browser paint
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      const button = verseButtonRefs.current.get(currentVerse);
+      const container = versePickerRef.current;
+      if (button && container) {
+        // Use getBoundingClientRect for consistent coordinate system
+        const containerRect = container.getBoundingClientRect();
+        const buttonRect = button.getBoundingClientRect();
+
+        // Calculate button's center position within the scrollable content
+        // (buttonRect.left - containerRect.left) = button position in visible area
+        // + container.scrollLeft = accounts for current scroll position
+        // + buttonRect.width/2 = get to button center
+        const buttonCenterInContent = (buttonRect.left - containerRect.left) + container.scrollLeft + (buttonRect.width / 2);
+
+        // Scroll to position that puts button center in container center
+        const scrollLeft = buttonCenterInContent - (containerRect.width / 2);
+
+        container.scrollTo({
+          left: Math.max(0, scrollLeft),
+          behavior: 'smooth',
+        });
+      }
+    }, 0);
+
+    // Cleanup: cancel pending scroll if verse changes rapidly or component unmounts
+    return () => clearTimeout(timeoutId);
+  }, [currentVerse]);
 
   const handleBookmark = (ref: string) => {
     const isNowBookmarked = toggleBookmark(ref);
@@ -127,19 +161,23 @@ export default function ChapterPage() {
 
       {/* Content */}
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-6">
+        {/* Verse Card - conditionally rendered */}
         {loading ? (
           <VerseCardSkeleton />
         ) : currentVerseData ? (
-          <>
-            {/* Verse Card */}
-            <VerseCard
-              verse={currentVerseData}
-              showExpanded={false}
-              onBookmark={handleBookmark}
-              isBookmarked={bookmarks.has(`${chapterNum}:${currentVerse}`)}
-            />
+          <VerseCard
+            verse={currentVerseData}
+            showExpanded={false}
+            onBookmark={handleBookmark}
+            isBookmarked={bookmarks.has(`${chapterNum}:${currentVerse}`)}
+          />
+        ) : (
+          <VerseCardSkeleton />
+        )}
 
-            {/* Navigation */}
+        {/* Navigation - always visible when chapter is loaded */}
+        {!loading && chapter && (
+          <>
             <div className="flex items-center justify-between mt-6">
               <button
                 onClick={() => setCurrentVerse(prev => Math.max(1, prev - 1))}
@@ -172,18 +210,25 @@ export default function ChapterPage() {
               </button>
             </div>
 
-            {/* Verse Picker */}
+            {/* Verse Picker - Horizontal Scroll */}
             <div className="mt-8">
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 text-center">Jump to verse</p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {Array.from({ length: chapter?.verses_count || 0 }, (_, i) => i + 1).map(num => (
+              <div
+                ref={versePickerRef}
+                className="flex gap-2 overflow-x-auto pb-2 px-4 -mx-4 snap-x snap-mandatory scrollbar-hide"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {Array.from({ length: chapter.verses_count }, (_, i) => i + 1).map(num => (
                   <button
                     key={num}
+                    ref={(el) => {
+                      if (el) verseButtonRefs.current.set(num, el);
+                    }}
                     onClick={() => setCurrentVerse(num)}
                     className={`
-                      w-10 h-10 rounded-lg text-sm font-medium transition-all
+                      w-10 h-10 rounded-lg text-sm font-medium transition-all flex-shrink-0 snap-center
                       ${num === currentVerse
-                        ? 'bg-saffron-500 text-white shadow-md'
+                        ? 'bg-saffron-500 text-white shadow-md scale-110'
                         : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                       }
                     `}
@@ -194,41 +239,7 @@ export default function ChapterPage() {
               </div>
             </div>
           </>
-        ) : (
-          <div className="text-center py-20 text-gray-400">
-            Could not load verse. Please try again.
-          </div>
         )}
-      </div>
-
-      {/* Chapter Navigation */}
-      <div className="fixed bottom-20 left-0 right-0 bg-white dark:bg-gray-800 border-t border-cream-200 dark:border-gray-700 px-6 py-3 transition-colors">
-        <div className="max-w-2xl lg:max-w-4xl mx-auto flex items-center justify-between">
-          <Link
-            href={chapterNum > 1 ? `/gita/${chapterNum - 1}` : '#'}
-            className={`
-              text-sm font-medium
-              ${chapterNum > 1 ? 'text-saffron-600 dark:text-saffron-400' : 'text-gray-300 dark:text-gray-600 pointer-events-none'}
-            `}
-          >
-            ← Chapter {chapterNum - 1}
-          </Link>
-          <Link
-            href="/gita"
-            className="text-sm text-gray-500 dark:text-gray-400"
-          >
-            All Chapters
-          </Link>
-          <Link
-            href={chapterNum < 18 ? `/gita/${chapterNum + 1}` : '#'}
-            className={`
-              text-sm font-medium
-              ${chapterNum < 18 ? 'text-saffron-600 dark:text-saffron-400' : 'text-gray-300 dark:text-gray-600 pointer-events-none'}
-            `}
-          >
-            Chapter {chapterNum + 1} →
-          </Link>
-        </div>
       </div>
 
       {/* Navigation */}
