@@ -55,7 +55,7 @@ export default function GitaPage() {
                 Bhagavad Gita
               </h1>
               <p className="text-saffron-100 text-sm">
-                The Song of God • 18 Chapters • 700 Verses
+                The Divine Song • 18 Chapters • 700 Verses
               </p>
             </div>
           </div>

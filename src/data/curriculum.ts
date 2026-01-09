@@ -262,7 +262,7 @@ export const curriculum: Level[] = [
   {
     id: 3,
     title: "The Gita",
-    subtitle: "The Song of God",
+    subtitle: "The Divine Song",
     description: "The Bhagavad Gita — 700 verses containing the essence of Hindu philosophy. This is the heart of the tradition, a practical guide to life, action, and liberation.",
     color: "gold",
     requiredLevel: 2,
