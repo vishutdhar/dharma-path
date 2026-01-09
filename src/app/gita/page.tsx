@@ -83,7 +83,7 @@ export default function GitaPage() {
             </div>
             <div>
               <h2 className="font-heading font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                Your Page One
+                The Divine Song
               </h2>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 The Bhagavad Gita is a 700-verse dialogue between Prince Arjuna
