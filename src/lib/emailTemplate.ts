@@ -5,7 +5,7 @@
 
 import { EmailContent, getProgressPercentage, getMilestoneMessage, getNextDayPreview, TOTAL_DAYS } from './emailContent';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://dharmapath.app';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://mydharmapath.com';
 
 interface EmailTemplateOptions {
   content: EmailContent;

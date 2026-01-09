@@ -6,7 +6,7 @@ import { generateDailyEmail, generateEmailSubject, generateCompletionEmail } fro
 // Resend API for sending emails
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const CRON_SECRET = process.env.CRON_SECRET;
-const FROM_EMAIL = process.env.FROM_EMAIL || 'Dharma Path <lessons@dharmapath.app>';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'Dharma Path <lessons@mydharmapath.com>';
 
 // Create Supabase client with service role for cron jobs
 function getSupabaseClient() {
