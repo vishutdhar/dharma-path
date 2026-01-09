@@ -20,10 +20,10 @@ export default function NotFound() {
         </p>
 
         {/* Sanskrit Quote */}
-        <blockquote className="text-saffron-600 italic mb-8 px-4">
+        <blockquote className="text-saffron-700 italic mb-8 px-4">
           "कर्मण्येवाधिकारस्ते"
           <br />
-          <span className="text-sm text-gray-500 not-italic">
+          <span className="text-sm text-gray-500 dark:text-gray-400 not-italic">
             — Your right is to action alone
           </span>
         </blockquote>
@@ -32,7 +32,7 @@ export default function NotFound() {
         <div className="flex flex-col gap-3">
           <Link
             href="/"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg"
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-saffron-700 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg"
           >
             <Home size={20} />
             Return Home
@@ -41,7 +41,7 @@ export default function NotFound() {
           <div className="flex gap-3">
             <Link
               href="/gita"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-saffron-600 font-medium rounded-xl hover:bg-saffron-50 transition-colors border border-saffron-200"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-saffron-700 font-medium rounded-xl hover:bg-saffron-50 transition-colors border border-saffron-200"
             >
               <BookOpen size={18} />
               Read Gita
@@ -49,7 +49,7 @@ export default function NotFound() {
 
             <Link
               href="/search"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-saffron-600 font-medium rounded-xl hover:bg-saffron-50 transition-colors border border-saffron-200"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white text-saffron-700 font-medium rounded-xl hover:bg-saffron-50 transition-colors border border-saffron-200"
             >
               <Search size={18} />
               Search

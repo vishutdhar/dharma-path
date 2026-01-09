@@ -31,7 +31,7 @@ export default function UnsubscribeErrorPage() {
           <div className="flex flex-col gap-3">
             <Link
               href="/profile"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-700 hover:bg-saffron-800 text-white rounded-lg font-medium transition-colors"
             >
               Go to Profile
             </Link>

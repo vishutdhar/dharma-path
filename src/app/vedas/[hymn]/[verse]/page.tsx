@@ -76,6 +76,7 @@ export default function VerseDetailPage() {
           <div className="flex items-center gap-4">
             <Link
               href={`/vedas/${hymnId}`}
+              aria-label="Go back"
               className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700"
             >
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
@@ -84,11 +85,11 @@ export default function VerseDetailPage() {
               <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 {hymn.name.english}
               </h1>
-              <p className="text-sm text-saffron-600 dark:text-saffron-400">
+              <p className="text-sm text-saffron-700 dark:text-saffron-400">
                 {hymn.reference} • Verse {verse.verse}
               </p>
             </div>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-500 dark:text-gray-400">
               {verseIndex + 1} / {totalVerses}
             </span>
           </div>
@@ -226,7 +227,7 @@ export default function VerseDetailPage() {
           {prevVerse ? (
             <Link
               href={`/vedas/${hymnId}/${prevVerse.verse}`}
-              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700"
+              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700"
             >
               <ChevronLeft size={20} />
               Previous
@@ -241,7 +242,7 @@ export default function VerseDetailPage() {
           {nextVerse ? (
             <Link
               href={`/vedas/${hymnId}/${nextVerse.verse}`}
-              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg"
+              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-saffron-700 text-white hover:bg-saffron-800 shadow-lg"
             >
               Next
               <ChevronRight size={20} />
@@ -258,7 +259,7 @@ export default function VerseDetailPage() {
         <div className="mt-8 text-center">
           <Link
             href={`/vedas/${hymnId}`}
-            className="inline-flex items-center gap-2 text-sm text-saffron-600 dark:text-saffron-400 hover:underline"
+            className="inline-flex items-center gap-2 text-sm text-saffron-700 dark:text-saffron-400 hover:underline"
           >
             <BookOpen size={16} />
             View all {totalVerses} verses in {hymn.name.english}

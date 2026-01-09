@@ -104,8 +104,8 @@ export default function VerseCard({
                 onClick={() => onBookmark(`${verse.chapter}:${verse.verse}`)}
                 className={`p-2 rounded-full transition-colors ${
                   isBookmarked
-                    ? 'bg-saffron-100 dark:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400'
-                    : 'hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-gray-400'
+                    ? 'bg-saffron-100 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400'
+                    : 'hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-gray-500 dark:text-gray-400'
                 }`}
                 aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark verse'}
               >
@@ -143,7 +143,7 @@ export default function VerseCard({
           <div className="mt-6">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="flex items-center justify-center gap-2 w-full py-2 text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-2 text-saffron-700 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
             >
               <span className="text-sm font-medium">
                 {expanded ? 'Hide Explanation' : 'What Does This Mean?'}
@@ -241,7 +241,7 @@ export default function VerseCard({
                           <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                             {englishCommentary}
                           </p>
-                          <p className="text-xs text-gray-400 text-right italic">
+                          <p className="text-xs text-gray-500 dark:text-gray-400 text-right italic">
                             — Swami Sivananda
                           </p>
                         </div>
@@ -250,7 +250,7 @@ export default function VerseCard({
                           <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                             {hindiCommentary}
                           </p>
-                          <p className="text-xs text-gray-400 text-right italic">
+                          <p className="text-xs text-gray-500 dark:text-gray-400 text-right italic">
                             — Swami Chinmayananda
                           </p>
                         </div>
@@ -259,7 +259,7 @@ export default function VerseCard({
                           <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                             {englishCommentary}
                           </p>
-                          <p className="text-xs text-gray-400 text-right italic">
+                          <p className="text-xs text-gray-500 dark:text-gray-400 text-right italic">
                             — Swami Sivananda
                           </p>
                         </div>

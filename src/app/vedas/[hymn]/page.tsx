@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
+import { useParams, useSearchParams, useRouter, notFound } from 'next/navigation';
 import {
   ArrowLeft,
   BookOpen,
@@ -27,6 +27,8 @@ function isValidHymnId(id: string): id is VedicHymnId {
 
 export default function HymnDetailPage() {
   const params = useParams();
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const hymnId = params.hymn as string;
 
   // Validate hymn ID
@@ -42,10 +44,31 @@ export default function HymnDetailPage() {
     return <ComingSoonPage hymnId={hymnId} />;
   }
 
-  const [currentVerseIndex, setCurrentVerseIndex] = useState(0);
+  // Get initial verse from URL search params, default to 0
+  const initialVerseIndex = Math.max(0, Math.min(
+    parseInt(searchParams.get('v') || '0') || 0,
+    hymn.verses.length - 1
+  ));
+
+  const [currentVerseIndex, setCurrentVerseIndex] = useState(initialVerseIndex);
 
   const verse = hymn.verses[currentVerseIndex];
   const totalVerses = hymn.verses.length;
+
+  // Update URL when verse changes (without full page navigation)
+  const updateVerseInUrl = useCallback((verseIdx: number) => {
+    // Clean URL for first verse
+    const newUrl = verseIdx === 0
+      ? `/vedas/${hymnId}`
+      : `/vedas/${hymnId}?v=${verseIdx}`;
+    router.replace(newUrl, { scroll: false });
+  }, [hymnId, router]);
+
+  // Navigate to a specific verse and update URL
+  const navigateToVerse = useCallback((verseIdx: number) => {
+    setCurrentVerseIndex(verseIdx);
+    updateVerseInUrl(verseIdx);
+  }, [updateVerseInUrl]);
 
   // Navigation helpers
   const canGoPrev = currentVerseIndex > 0;
@@ -53,13 +76,13 @@ export default function HymnDetailPage() {
 
   const goToPrev = () => {
     if (canGoPrev) {
-      setCurrentVerseIndex(currentVerseIndex - 1);
+      navigateToVerse(currentVerseIndex - 1);
     }
   };
 
   const goToNext = () => {
     if (canGoNext) {
-      setCurrentVerseIndex(currentVerseIndex + 1);
+      navigateToVerse(currentVerseIndex + 1);
     }
   };
 
@@ -71,6 +94,7 @@ export default function HymnDetailPage() {
           <div className="flex items-center gap-4">
             <Link
               href="/vedas"
+              aria-label="Go back"
               className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700"
             >
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
@@ -79,11 +103,11 @@ export default function HymnDetailPage() {
               <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 {hymn.name.english}
               </h1>
-              <p className="text-sm text-saffron-600 dark:text-saffron-400">
+              <p className="text-sm text-saffron-700 dark:text-saffron-400">
                 {hymn.reference} • Verse {verse.verse}
               </p>
             </div>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-500 dark:text-gray-400">
               {currentVerseIndex + 1} / {totalVerses}
             </span>
           </div>
@@ -96,7 +120,7 @@ export default function HymnDetailPage() {
         {currentVerseIndex === 0 && (
           <div className="mb-6 p-4 bg-saffron-50 dark:bg-saffron-900/20 border border-saffron-200 dark:border-saffron-800 rounded-xl">
             <div className="flex items-start gap-3">
-              <Sun size={20} className="text-saffron-600 dark:text-saffron-400 flex-shrink-0 mt-0.5" />
+              <Sun size={20} className="text-saffron-700 dark:text-saffron-400 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-medium text-saffron-800 dark:text-saffron-200">
                   {hymn.name.english}
@@ -105,7 +129,7 @@ export default function HymnDetailPage() {
                   {hymn.summary}
                 </p>
                 {hymn.usedIn && hymn.usedIn.length > 0 && (
-                  <p className="text-xs text-saffron-600 dark:text-saffron-400 mt-2">
+                  <p className="text-xs text-saffron-700 dark:text-saffron-400 mt-2">
                     <strong>Used in:</strong> {hymn.usedIn.join(', ')}
                   </p>
                 )}
@@ -128,7 +152,7 @@ export default function HymnDetailPage() {
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
                   ${
                     canGoPrev
-                      ? 'bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
+                      ? 'bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
                       : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
@@ -144,7 +168,7 @@ export default function HymnDetailPage() {
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
                   ${
                     canGoNext
-                      ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg'
+                      ? 'bg-saffron-700 text-white hover:bg-saffron-800 shadow-lg'
                       : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
@@ -164,12 +188,12 @@ export default function HymnDetailPage() {
                   {hymn.verses.map((v, idx) => (
                     <button
                       key={idx}
-                      onClick={() => setCurrentVerseIndex(idx)}
+                      onClick={() => navigateToVerse(idx)}
                       className={`
                         w-10 h-10 rounded-lg text-sm font-medium transition-all
                         ${
                           idx === currentVerseIndex
-                            ? 'bg-saffron-500 text-white shadow-md'
+                            ? 'bg-saffron-700 text-white shadow-md'
                             : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                         }
                       `}
@@ -268,7 +292,7 @@ function VedicVerseCard({
         <div className="mt-6">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center justify-center gap-2 w-full py-2 text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
+            className="flex items-center justify-center gap-2 w-full py-2 text-saffron-700 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
           >
             <span className="text-sm font-medium">
               {expanded ? 'Hide Explanation' : 'What Does This Mean?'}
@@ -373,7 +397,7 @@ function ComingSoonPage({ hymnId }: { hymnId: string }) {
       <header className="bg-gradient-to-br from-saffron-600 to-saffron-500 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-6 pb-8">
           <div className="flex items-center gap-4 mb-6">
-            <Link href="/vedas" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
+            <Link href="/vedas" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
               <ArrowLeft size={24} />
             </Link>
             <div>
@@ -394,7 +418,7 @@ function ComingSoonPage({ hymnId }: { hymnId: string }) {
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 -mt-2">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 text-center border border-cream-200 dark:border-gray-700">
           <div className="w-16 h-16 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <BookOpen className="text-saffron-600 dark:text-saffron-400" size={32} />
+            <BookOpen className="text-saffron-700 dark:text-saffron-400" size={32} />
           </div>
           <h2 className="font-heading text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
             Coming Soon
@@ -405,7 +429,7 @@ function ComingSoonPage({ hymnId }: { hymnId: string }) {
           </p>
           <Link
             href="/vedas"
-            className="inline-block mt-6 px-6 py-3 bg-saffron-500 text-white rounded-xl font-medium hover:bg-saffron-600 transition-colors"
+            className="inline-block mt-6 px-6 py-3 bg-saffron-700 text-white rounded-xl font-medium hover:bg-saffron-600 transition-colors"
           >
             Explore Available Hymns
           </Link>

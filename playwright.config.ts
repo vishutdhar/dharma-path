@@ -27,6 +27,16 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    // Cross-browser testing - uncomment to enable
+    // Note: Firefox and WebKit require additional setup on some systems
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
   ],
   // Use existing dev server on port 3002
   webServer: {

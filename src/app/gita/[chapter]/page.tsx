@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
+import { useParams, useSearchParams, useRouter, notFound } from 'next/navigation';
 import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import VerseCard from '@/components/VerseCard';
@@ -12,6 +12,8 @@ import { toggleBookmark } from '@/lib/progress';
 
 export default function ChapterPage() {
   const params = useParams();
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const chapterNum = parseInt(params.chapter as string);
 
   // Validate chapter number (Bhagavad Gita has exactly 18 chapters)
@@ -19,13 +21,31 @@ export default function ChapterPage() {
     notFound();
   }
 
+  // Get initial verse from URL search params, default to 1
+  const initialVerse = parseInt(searchParams.get('v') || '1') || 1;
+
   const [chapter, setChapter] = useState<GitaChapter | null>(null);
   const [verses, setVerses] = useState<GitaVerse[]>([]);
   const [loading, setLoading] = useState(true);
-  const [currentVerse, setCurrentVerse] = useState(1);
+  const [currentVerse, setCurrentVerse] = useState(initialVerse);
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
   const versePickerRef = useRef<HTMLDivElement>(null);
   const verseButtonRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
+
+  // Update URL when verse changes (without full page navigation)
+  const updateVerseInUrl = useCallback((verseNum: number) => {
+    // Use shallow routing to update URL without re-rendering the page
+    const newUrl = verseNum === 1
+      ? `/gita/${chapterNum}` // Clean URL for verse 1
+      : `/gita/${chapterNum}?v=${verseNum}`;
+    router.replace(newUrl, { scroll: false });
+  }, [chapterNum, router]);
+
+  // Wrapper function to update both state and URL
+  const navigateToVerse = useCallback((verseNum: number) => {
+    setCurrentVerse(verseNum);
+    updateVerseInUrl(verseNum);
+  }, [updateVerseInUrl]);
 
   useEffect(() => {
     const loadChapter = async () => {
@@ -34,17 +54,25 @@ export default function ChapterPage() {
       setChapter(chapterData);
 
       if (chapterData) {
-        // Load first verse immediately
-        const firstVerse = await getVerse(chapterNum, 1);
-        if (firstVerse) {
-          setVerses([firstVerse]);
+        // Validate and clamp the initial verse to valid range
+        const validInitialVerse = Math.max(1, Math.min(initialVerse, chapterData.verses_count));
+
+        // Update state if URL had invalid verse number
+        if (validInitialVerse !== currentVerse) {
+          setCurrentVerse(validInitialVerse);
+        }
+
+        // Load the initial verse (from URL or default to 1)
+        const verseToLoad = await getVerse(chapterNum, validInitialVerse);
+        if (verseToLoad) {
+          setVerses([verseToLoad]);
         }
       }
       setLoading(false);
     };
 
     loadChapter();
-  }, [chapterNum]);
+  }, [chapterNum, initialVerse]); // Re-run when chapter or initial verse from URL changes
 
   // Load more verses as user navigates
   useEffect(() => {
@@ -139,19 +167,19 @@ export default function ChapterPage() {
       <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href="/gita" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+            <Link href="/gita" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div className="flex-1">
               <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 Chapter {chapterNum}
               </h1>
-              <p className="text-sm text-saffron-600 dark:text-saffron-400">
+              <p className="text-sm text-saffron-700 dark:text-saffron-400">
                 {chapterNames[chapterNum - 1] || chapter?.translation}
               </p>
             </div>
             {chapter && (
-              <span className="text-sm text-gray-400">
+              <span className="text-sm text-gray-500 dark:text-gray-400">
                 {currentVerse} / {chapter.verses_count}
               </span>
             )}
@@ -180,12 +208,12 @@ export default function ChapterPage() {
           <>
             <div className="flex items-center justify-between mt-6">
               <button
-                onClick={() => setCurrentVerse(prev => Math.max(1, prev - 1))}
+                onClick={() => navigateToVerse(Math.max(1, currentVerse - 1))}
                 disabled={!canGoPrev}
                 className={`
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
                   ${canGoPrev
-                    ? 'bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
+                    ? 'bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
                     : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
@@ -195,12 +223,12 @@ export default function ChapterPage() {
               </button>
 
               <button
-                onClick={() => setCurrentVerse(prev => Math.min(chapter?.verses_count || prev, prev + 1))}
+                onClick={() => navigateToVerse(Math.min(chapter?.verses_count || currentVerse, currentVerse + 1))}
                 disabled={!canGoNext}
                 className={`
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
                   ${canGoNext
-                    ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg'
+                    ? 'bg-saffron-700 text-white hover:bg-saffron-800 shadow-lg'
                     : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
@@ -224,11 +252,11 @@ export default function ChapterPage() {
                     ref={(el) => {
                       if (el) verseButtonRefs.current.set(num, el);
                     }}
-                    onClick={() => setCurrentVerse(num)}
+                    onClick={() => navigateToVerse(num)}
                     className={`
                       w-10 h-10 rounded-lg text-sm font-medium transition-all flex-shrink-0 snap-center
                       ${num === currentVerse
-                        ? 'bg-saffron-500 text-white shadow-md scale-110'
+                        ? 'bg-saffron-700 text-white shadow-md scale-110'
                         : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                       }
                     `}

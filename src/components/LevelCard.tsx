@@ -57,7 +57,7 @@ export default function LevelCard({
           </h3>
           
           {/* Subtitle */}
-          <p className="text-saffron-600 font-medium text-sm mb-2">
+          <p className="text-saffron-700 font-medium text-sm mb-2">
             {level.subtitle}
           </p>
 
@@ -67,7 +67,7 @@ export default function LevelCard({
           </p>
 
           {/* Meta info */}
-          <div className="flex items-center gap-4 text-sm text-gray-500">
+          <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
             <span>{lessonCount} lessons</span>
             <span>•</span>
             <span>{duration}</span>
@@ -76,7 +76,7 @@ export default function LevelCard({
           {/* Progress bar */}
           {!isLocked && (
             <div className="mt-4">
-              <div className="flex justify-between text-xs text-gray-500 mb-1">
+              <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
                 <span>Progress</span>
                 <span>{progress}%</span>
               </div>
@@ -95,7 +95,7 @@ export default function LevelCard({
           ml-4 p-2 rounded-full
           ${isLocked 
             ? 'bg-cream-300 text-cream-500' 
-            : 'bg-saffron-100 text-saffron-600'
+            : 'bg-saffron-100 text-saffron-700'
           }
         `}>
           {isLocked ? <Lock size={20} /> : <ChevronRight size={20} />}

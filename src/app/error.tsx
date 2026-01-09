@@ -20,7 +20,7 @@ export default function Error({ error, reset }: ErrorProps) {
       <div className="max-w-md w-full text-center">
         {/* Error Icon */}
         <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <AlertTriangle className="text-red-500" size={40} />
+          <AlertTriangle className="text-red-600" size={40} />
         </div>
 
         {/* Error Message */}
@@ -35,7 +35,7 @@ export default function Error({ error, reset }: ErrorProps) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={reset}
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg"
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-saffron-700 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg"
           >
             <RefreshCw size={20} />
             Try Again
@@ -43,7 +43,7 @@ export default function Error({ error, reset }: ErrorProps) {
 
           <Link
             href="/"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-saffron-600 font-semibold rounded-xl hover:bg-saffron-50 transition-colors border border-saffron-200"
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-saffron-700 font-semibold rounded-xl hover:bg-saffron-50 transition-colors border border-saffron-200"
           >
             <Home size={20} />
             Go Home
@@ -52,8 +52,8 @@ export default function Error({ error, reset }: ErrorProps) {
 
         {/* Error Details (Development Only) */}
         {process.env.NODE_ENV === 'development' && (
-          <div className="mt-8 p-4 bg-gray-100 rounded-lg text-left">
-            <p className="text-xs font-mono text-gray-500 break-all">
+          <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-left">
+            <p className="text-xs font-mono text-gray-500 dark:text-gray-400 break-all">
               {error.message}
             </p>
           </div>

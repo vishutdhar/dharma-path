@@ -52,7 +52,7 @@ export default function SavedVersesPage() {
       <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href="/profile" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+            <Link href="/profile" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div className="flex-1">
@@ -64,7 +64,7 @@ export default function SavedVersesPage() {
               </p>
             </div>
             <div className="w-10 h-10 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center">
-              <Bookmark size={20} className="text-saffron-600 dark:text-saffron-400" />
+              <Bookmark size={20} className="text-saffron-700 dark:text-saffron-400" />
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function SavedVersesPage() {
           /* Empty State */
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-8 text-center transition-colors">
             <div className="w-16 h-16 bg-cream-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <BookOpen size={32} className="text-gray-400" />
+              <BookOpen size={32} className="text-gray-500 dark:text-gray-400" />
             </div>
             <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
               No Saved Verses Yet
@@ -86,7 +86,7 @@ export default function SavedVersesPage() {
             </p>
             <Link
               href="/gita"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-saffron-500 text-white font-medium rounded-xl hover:bg-saffron-600 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-saffron-700 text-white font-medium rounded-xl hover:bg-saffron-600 transition-colors"
             >
               <BookOpen size={18} />
               Explore Bhagavad Gita
@@ -109,7 +109,7 @@ export default function SavedVersesPage() {
                       <h2 className="font-heading font-semibold text-saffron-800 dark:text-saffron-400">
                         Chapter {chapter}
                       </h2>
-                      <span className="text-sm text-saffron-600 dark:text-saffron-500">
+                      <span className="text-sm text-saffron-700 dark:text-saffron-400">
                         {verses.length} {verses.length === 1 ? 'verse' : 'verses'}
                       </span>
                     </div>
@@ -137,7 +137,7 @@ export default function SavedVersesPage() {
                         <button
                           onClick={() => handleRemoveBookmark(ref)}
                           disabled={removingRef === ref}
-                          className="p-2 text-gray-400 hover:text-red-500 dark:hover:text-red-400 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors disabled:opacity-50"
+                          className="p-2 text-gray-500 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-400 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors disabled:opacity-50"
                           aria-label="Remove bookmark"
                         >
                           <Trash2 size={18} />
@@ -155,7 +155,7 @@ export default function SavedVersesPage() {
         <div className="mt-8 text-center">
           <Link
             href="/profile"
-            className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline"
+            className="text-sm text-saffron-700 dark:text-saffron-400 font-medium hover:underline"
           >
             ← Back to Profile
           </Link>

@@ -29,7 +29,7 @@ export default function LearnPage() {
       <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href="/" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+            <Link href="/" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div>
@@ -97,7 +97,7 @@ export default function LearnPage() {
                         ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400'
                         : locked
                           ? 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500'
-                          : 'bg-saffron-100 dark:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400'
+                          : 'bg-saffron-100 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400'
                       }
                     `}>
                       {isComplete ? (
@@ -114,7 +114,7 @@ export default function LearnPage() {
                       <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                         {level.title}
                       </h2>
-                      <p className="text-saffron-600 dark:text-saffron-400 text-sm font-medium">
+                      <p className="text-saffron-700 dark:text-saffron-400 text-sm font-medium">
                         {level.subtitle}
                       </p>
                       <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 line-clamp-2">
@@ -122,14 +122,14 @@ export default function LearnPage() {
                       </p>
 
                       {/* Meta */}
-                      <div className="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                      <div className="flex items-center gap-3 mt-3 text-xs text-gray-500 dark:text-gray-400">
                         <span>{getLessonCount(level)} lessons</span>
                         <span>•</span>
                         <span>{getLevelDuration(level)}</span>
                         {!locked && (
                           <>
                             <span>•</span>
-                            <span className="text-saffron-500 dark:text-saffron-400">{levelProgress}% complete</span>
+                            <span className="text-saffron-700 dark:text-saffron-400">{levelProgress}% complete</span>
                           </>
                         )}
                       </div>
@@ -149,7 +149,7 @@ export default function LearnPage() {
                     {!locked && (
                       <ChevronRight
                         className={`
-                          text-gray-400 transition-transform shrink-0
+                          text-gray-500 dark:text-gray-400 transition-transform shrink-0
                           ${isExpanded ? 'rotate-90' : ''}
                         `}
                         size={20}
@@ -191,7 +191,7 @@ export default function LearnPage() {
                                     {lesson.title}
                                   </p>
                                 </div>
-                                <span className="text-xs text-gray-400 shrink-0">
+                                <span className="text-xs text-gray-500 dark:text-gray-400 shrink-0">
                                   {lesson.duration}
                                 </span>
                               </Link>
@@ -215,7 +215,7 @@ export default function LearnPage() {
             >
               <div className="flex items-start gap-4">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-saffron-100 dark:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-saffron-100 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400">
                   <BookOpen size={24} />
                 </div>
 
@@ -224,7 +224,7 @@ export default function LearnPage() {
                   <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                     Scripture Exploration
                   </h2>
-                  <p className="text-saffron-600 dark:text-saffron-400 text-sm font-medium">
+                  <p className="text-saffron-700 dark:text-saffron-400 text-sm font-medium">
                     Dive into the Primary Texts
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 line-clamp-2">
@@ -232,7 +232,7 @@ export default function LearnPage() {
                   </p>
 
                   {/* Meta */}
-                  <div className="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                  <div className="flex items-center gap-3 mt-3 text-xs text-gray-500 dark:text-gray-400">
                     <span>2 scriptures</span>
                     <span>•</span>
                     <span>Explore anytime</span>
@@ -242,7 +242,7 @@ export default function LearnPage() {
                 {/* Expand indicator */}
                 <ChevronRight
                   className={`
-                    text-gray-400 transition-transform shrink-0
+                    text-gray-500 dark:text-gray-400 transition-transform shrink-0
                     ${scripturesExpanded ? 'rotate-90' : ''}
                   `}
                   size={20}
@@ -263,10 +263,10 @@ export default function LearnPage() {
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-saffron-100 dark:bg-saffron-900/30 flex items-center justify-center">
-                        <BookOpen className="text-saffron-600 dark:text-saffron-400" size={20} />
+                        <BookOpen className="text-saffron-700 dark:text-saffron-400" size={20} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-600 dark:group-hover:text-saffron-400">
+                        <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-700 dark:group-hover:text-saffron-400">
                           Bhagavad Gita
                         </h3>
                         <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -282,10 +282,10 @@ export default function LearnPage() {
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-saffron-100 dark:bg-saffron-900/30 flex items-center justify-center">
-                        <Sparkles className="text-saffron-600 dark:text-saffron-400" size={20} />
+                        <Sparkles className="text-saffron-700 dark:text-saffron-400" size={20} />
                       </div>
                       <div>
-                        <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-600 dark:group-hover:text-saffron-400">
+                        <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-700 dark:group-hover:text-saffron-400">
                           Upanishads
                         </h3>
                         <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -308,7 +308,7 @@ export default function LearnPage() {
             >
               <div className="flex items-start gap-4">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400">
                   <Calendar size={24} />
                 </div>
 
@@ -317,7 +317,7 @@ export default function LearnPage() {
                   <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                     Festival Guide
                   </h2>
-                  <p className="text-orange-600 dark:text-orange-400 text-sm font-medium">
+                  <p className="text-orange-700 dark:text-orange-400 text-sm font-medium">
                     Celebrate with Understanding
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 line-clamp-2">
@@ -325,7 +325,7 @@ export default function LearnPage() {
                   </p>
 
                   {/* Meta */}
-                  <div className="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                  <div className="flex items-center gap-3 mt-3 text-xs text-gray-500 dark:text-gray-400">
                     <span>{festivals.length} festivals</span>
                     <span>•</span>
                     <span>Explore anytime</span>
@@ -335,7 +335,7 @@ export default function LearnPage() {
                 {/* Expand indicator */}
                 <ChevronRight
                   className={`
-                    text-gray-400 transition-transform shrink-0
+                    text-gray-500 dark:text-gray-400 transition-transform shrink-0
                     ${festivalsExpanded ? 'rotate-90' : ''}
                   `}
                   size={20}
@@ -356,11 +356,11 @@ export default function LearnPage() {
                       href={`/festivals/${festival.id}`}
                       className="bg-cream-50 dark:bg-gray-700 rounded-xl p-4 border border-cream-200 dark:border-gray-600 hover:border-orange-300 dark:hover:border-orange-700 hover:shadow-md transition-all group"
                     >
-                      <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 text-sm">
+                      <h3 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-orange-700 dark:group-hover:text-orange-400 text-sm">
                         {festival.name}
                       </h3>
                       {festival.sanskrit && (
-                        <p className="text-xs text-gray-400 mt-0.5">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
                           {festival.sanskrit}
                         </p>
                       )}

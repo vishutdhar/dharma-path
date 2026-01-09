@@ -17,7 +17,7 @@ export default function FestivalPage() {
       <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-20 text-center">
           <p className="text-gray-500 dark:text-gray-400">Festival not found</p>
-          <Link href="/learn" className="text-saffron-600 dark:text-saffron-400 mt-4 inline-block">
+          <Link href="/learn" className="text-saffron-700 dark:text-saffron-400 mt-4 inline-block">
             Back to Learning Path
           </Link>
         </div>
@@ -49,11 +49,11 @@ export default function FestivalPage() {
       <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href="/learn" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+            <Link href="/learn" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-medium text-saffron-600 dark:text-saffron-400">
+              <p className="text-xs font-medium text-saffron-700 dark:text-saffron-400">
                 Festival Guide
               </p>
               <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100 truncate">
@@ -226,7 +226,7 @@ export default function FestivalPage() {
                   href={`/festivals/${relFestival.id}`}
                   className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-cream-200 dark:border-gray-700 hover:border-saffron-300 dark:hover:border-saffron-700 hover:shadow-md transition-all group"
                 >
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-600 dark:group-hover:text-saffron-400">
+                  <h4 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-saffron-700 dark:group-hover:text-saffron-400">
                     {relFestival.name}
                   </h4>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -243,7 +243,7 @@ export default function FestivalPage() {
           {prevFestival ? (
             <Link
               href={`/festivals/${prevFestival.id}`}
-              className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 rounded-xl hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 font-medium transition-all"
+              className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 rounded-xl hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 font-medium transition-all"
             >
               <ArrowLeft size={20} />
               {prevFestival.name}
@@ -255,7 +255,7 @@ export default function FestivalPage() {
           {nextFestival && (
             <Link
               href={`/festivals/${nextFestival.id}`}
-              className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 rounded-xl hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 font-medium transition-all"
+              className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 rounded-xl hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 font-medium transition-all"
             >
               {nextFestival.name}
               <ChevronRight size={20} />
@@ -267,7 +267,7 @@ export default function FestivalPage() {
         <div className="mt-8 text-center">
           <Link
             href="/learn"
-            className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline"
+            className="text-sm text-saffron-700 dark:text-saffron-400 font-medium hover:underline"
           >
             ← Back to Learning Path
           </Link>
@@ -294,7 +294,7 @@ function ContentSection({
       {/* Section Header */}
       <div className="bg-saffron-50 dark:bg-saffron-900/30 px-6 py-4 border-b border-saffron-100 dark:border-saffron-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full text-saffron-600 dark:text-saffron-400 bg-white dark:bg-gray-800 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-full text-saffron-700 dark:text-saffron-400 bg-white dark:bg-gray-800 flex items-center justify-center">
             {icon}
           </div>
           <h2 className="font-heading text-xl font-bold text-gray-900 dark:text-gray-100">

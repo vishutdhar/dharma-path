@@ -146,7 +146,7 @@ export default function HomePage() {
         {nextLessonInfo && (
           <Link href={`/learn/${nextLessonId}`}>
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-6 card-hover border border-cream-200 dark:border-gray-700 transition-colors">
-              <div className="flex items-center gap-2 text-saffron-600 dark:text-saffron-400 mb-2">
+              <div className="flex items-center gap-2 text-saffron-700 dark:text-saffron-400 mb-2">
                 <BookOpen size={18} />
                 <span className="text-sm font-medium">Continue Learning</span>
               </div>
@@ -170,7 +170,7 @@ export default function HomePage() {
                     />
                   </div>
                 </div>
-                <ChevronRight className="ml-4 text-saffron-500" size={24} />
+                <ChevronRight className="ml-4 text-saffron-700" size={24} />
               </div>
             </div>
           </Link>
@@ -189,7 +189,7 @@ export default function HomePage() {
             <VerseOfDaySkeleton />
           ) : verseOfDay ? (
             <div className="p-6">
-              <p className="text-sm text-saffron-600 dark:text-saffron-400 font-medium mb-3">
+              <p className="text-sm text-saffron-700 dark:text-saffron-400 font-medium mb-3">
                 {formatVerseRef(verseOfDay.chapter, verseOfDay.verse)}
               </p>
 
@@ -203,14 +203,14 @@ export default function HomePage() {
 
               <Link
                 href={`/gita/${verseOfDay.chapter}/${verseOfDay.verse}`}
-                className="mt-4 flex items-center justify-center gap-2 text-saffron-600 dark:text-saffron-400 font-medium"
+                className="mt-4 flex items-center justify-center gap-2 text-saffron-700 dark:text-saffron-400 font-medium"
               >
                 Read Full Verse
                 <ChevronRight size={18} />
               </Link>
             </div>
           ) : (
-            <div className="p-6 text-center text-gray-400">
+            <div className="p-6 text-center text-gray-500 dark:text-gray-400">
               Could not load verse. Check your connection.
             </div>
           )}
@@ -221,7 +221,7 @@ export default function HomePage() {
           <Link href="/gita">
             <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md card-hover border border-cream-200 dark:border-gray-700 text-center transition-colors">
               <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
-                <BookOpen className="text-saffron-600 dark:text-saffron-400" size={24} />
+                <BookOpen className="text-saffron-700 dark:text-saffron-400" size={24} />
               </div>
               <h3 className="font-medium text-gray-900 dark:text-gray-100">Read Gita</h3>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">All 18 chapters</p>
@@ -231,7 +231,7 @@ export default function HomePage() {
           <Link href="/learn">
             <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md card-hover border border-cream-200 dark:border-gray-700 text-center transition-colors">
               <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Calendar className="text-saffron-600 dark:text-saffron-400" size={24} />
+                <Calendar className="text-saffron-700 dark:text-saffron-400" size={24} />
               </div>
               <h3 className="font-medium text-gray-900 dark:text-gray-100">My Journey</h3>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Track progress</p>
@@ -245,7 +245,7 @@ export default function HomePage() {
             <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
               Your Learning Path
             </h2>
-            <Link href="/learn" className="text-sm text-saffron-600 dark:text-saffron-400 font-medium">
+            <Link href="/learn" className="text-sm text-saffron-700 dark:text-saffron-400 font-medium">
               View All
             </Link>
           </div>
@@ -265,7 +265,7 @@ export default function HomePage() {
                 <div className={`
                   w-10 h-10 rounded-full flex items-center justify-center font-bold
                   ${index === 0
-                    ? 'bg-saffron-500 text-white'
+                    ? 'bg-saffron-700 text-white'
                     : 'bg-cream-200 dark:bg-gray-700 text-cream-500 dark:text-gray-400'
                   }
                 `}>

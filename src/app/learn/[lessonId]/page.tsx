@@ -111,7 +111,7 @@ export default function LessonPage() {
       <main className="min-h-screen pb-24 bg-cream-100 dark:bg-gray-900 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-20 text-center">
           <p className="text-gray-500 dark:text-gray-400">Lesson not found</p>
-          <Link href="/learn" className="text-saffron-600 dark:text-saffron-400 mt-4 inline-block">
+          <Link href="/learn" className="text-saffron-700 dark:text-saffron-400 mt-4 inline-block">
             Back to Learning Path
           </Link>
         </div>
@@ -132,7 +132,7 @@ export default function LessonPage() {
 
   // Color mapping for levels
   const colorClasses: Record<string, { bg: string; text: string; border: string; darkBg: string; darkBorder: string }> = {
-    saffron: { bg: 'bg-saffron-50', text: 'text-saffron-600 dark:text-saffron-400', border: 'border-saffron-200', darkBg: 'dark:bg-saffron-900/30', darkBorder: 'dark:border-saffron-800' },
+    saffron: { bg: 'bg-saffron-50', text: 'text-saffron-700 dark:text-saffron-400', border: 'border-saffron-200', darkBg: 'dark:bg-saffron-900/30', darkBorder: 'dark:border-saffron-800' },
     maroon: { bg: 'bg-maroon-50', text: 'text-maroon-600 dark:text-maroon-400', border: 'border-maroon-200', darkBg: 'dark:bg-maroon-900/30', darkBorder: 'dark:border-maroon-800' },
     gold: { bg: 'bg-gold-50', text: 'text-gold-600 dark:text-gold-400', border: 'border-gold-200', darkBg: 'dark:bg-gold-900/30', darkBorder: 'dark:border-gold-800' },
   };
@@ -144,7 +144,7 @@ export default function LessonPage() {
       <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4">
-            <Link href="/learn" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+            <Link href="/learn" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <div className="flex-1 min-w-0">
@@ -155,7 +155,7 @@ export default function LessonPage() {
                 {lesson.title}
               </h1>
             </div>
-            <div className="flex items-center gap-2 text-gray-400 text-sm">
+            <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
               <Clock size={16} />
               {lesson.duration}
             </div>
@@ -221,7 +221,7 @@ export default function LessonPage() {
               // Placeholder content for lessons without content yet
               <div className="text-center py-12">
                 <div className="w-16 h-16 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Sparkles className="text-saffron-500 dark:text-saffron-400" size={32} />
+                  <Sparkles className="text-saffron-700 dark:text-saffron-400" size={32} />
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                   Content Coming Soon
@@ -245,7 +245,7 @@ export default function LessonPage() {
                 {globalNextLesson ? (
                   <button
                     onClick={handleContinue}
-                    className="w-full py-4 bg-saffron-500 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-saffron-700 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg flex items-center justify-center gap-2"
                   >
                     Continue to Next Lesson
                     <ChevronRight size={20} />
@@ -267,7 +267,7 @@ export default function LessonPage() {
             ) : (
               <button
                 onClick={handleComplete}
-                className="w-full py-4 bg-saffron-500 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg"
+                className="w-full py-4 bg-saffron-700 text-white font-semibold rounded-xl hover:bg-saffron-600 transition-colors shadow-lg"
               >
                 Mark as Complete
               </button>
@@ -280,7 +280,7 @@ export default function LessonPage() {
           {prevLesson ? (
             <Link
               href={`/learn/${prevLesson.id}`}
-              className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 rounded-xl hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 font-medium transition-all"
+              className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 rounded-xl hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 font-medium transition-all"
             >
               <ChevronLeft size={20} />
               Previous
@@ -292,7 +292,7 @@ export default function LessonPage() {
           {globalNextLesson && !justCompleted && (
             <Link
               href={`/learn/${globalNextLesson.id}`}
-              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 border border-cream-200 dark:border-gray-700 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm"
+              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 border border-cream-200 dark:border-gray-700 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm"
             >
               Next
               <ChevronRight size={20} />
@@ -304,7 +304,7 @@ export default function LessonPage() {
         <div className="mt-8 text-center">
           <Link
             href="/learn"
-            className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline"
+            className="text-sm text-saffron-700 dark:text-saffron-400 font-medium hover:underline"
           >
             ← Back to Learning Path
           </Link>

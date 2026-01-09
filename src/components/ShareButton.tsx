@@ -76,7 +76,7 @@ export default function ShareButton({
   return (
     <button
       onClick={handleShare}
-      className={`p-2 rounded-full hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-saffron-600 dark:text-saffron-400 transition-colors ${className}`}
+      className={`p-2 rounded-full hover:bg-saffron-100 dark:hover:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400 transition-colors ${className}`}
       aria-label={copied ? 'Copied to clipboard' : 'Share'}
       title={copied ? 'Copied!' : 'Share'}
     >

@@ -22,7 +22,7 @@ export default function UpanishadsPage() {
       <header className="bg-gradient-to-br from-saffron-600 to-saffron-500 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-6 pb-8">
           <div className="flex items-center gap-4 mb-6">
-            <Link href="/" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
+            <Link href="/" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
               <ArrowLeft size={24} />
             </Link>
             <div>
@@ -48,7 +48,7 @@ export default function UpanishadsPage() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6 border border-cream-200 dark:border-gray-700 transition-colors">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center shrink-0">
-              <BookOpen className="text-saffron-600 dark:text-saffron-400" size={24} />
+              <BookOpen className="text-saffron-700 dark:text-saffron-400" size={24} />
             </div>
             <div>
               <h2 className="font-heading font-semibold text-gray-900 dark:text-gray-100 mb-1">
@@ -134,11 +134,11 @@ function UpanishadCard({
         >
           {available ? (
             <Sparkles
-              className="text-saffron-600 dark:text-saffron-400"
+              className="text-saffron-700 dark:text-saffron-400"
               size={22}
             />
           ) : (
-            <Lock className="text-gray-400 dark:text-gray-500" size={20} />
+            <Lock className="text-gray-500 dark:text-gray-400" size={20} />
           )}
         </div>
 
@@ -161,7 +161,7 @@ function UpanishadCard({
             {upanishad.summary}
           </p>
           <div className="flex items-center gap-3 mt-2 text-xs flex-wrap">
-            <span className="text-saffron-600 dark:text-saffron-400">
+            <span className="text-saffron-700 dark:text-saffron-400">
               {upanishad.isCurated
                 ? `${upanishad.includedVerses} of ${upanishad.totalVerses} verses`
                 : `${upanishad.totalVerses} verses`}

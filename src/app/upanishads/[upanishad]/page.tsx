@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
+import { useParams, useSearchParams, useRouter, notFound } from 'next/navigation';
 import {
   ArrowLeft,
   BookOpen,
@@ -21,6 +21,8 @@ import {
 
 export default function UpanishadDetailPage() {
   const params = useParams();
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const upanishadId = params.upanishad as string;
 
   // Validate upanishad ID
@@ -36,8 +38,18 @@ export default function UpanishadDetailPage() {
     return <ComingSoonPage upanishadId={upanishadId} />;
   }
 
-  const [currentSection, setCurrentSection] = useState(0);
-  const [currentVerseIndex, setCurrentVerseIndex] = useState(0);
+  // Get initial section and verse from URL search params, default to 0
+  const initialSection = Math.max(0, Math.min(
+    parseInt(searchParams.get('s') || '0') || 0,
+    upanishad.sections.length - 1
+  ));
+  const initialVerseIndex = Math.max(0, Math.min(
+    parseInt(searchParams.get('v') || '0') || 0,
+    upanishad.sections[initialSection]?.verses.length - 1 || 0
+  ));
+
+  const [currentSection, setCurrentSection] = useState(initialSection);
+  const [currentVerseIndex, setCurrentVerseIndex] = useState(initialVerseIndex);
 
   const section = upanishad.sections[currentSection];
   const verse = section?.verses[currentVerseIndex];
@@ -46,6 +58,22 @@ export default function UpanishadDetailPage() {
     (acc, s) => acc + s.verses.length,
     0
   );
+
+  // Update URL when section/verse changes (without full page navigation)
+  const updatePositionInUrl = useCallback((sectionIdx: number, verseIdx: number) => {
+    // Clean URL for first verse of first section
+    const newUrl = sectionIdx === 0 && verseIdx === 0
+      ? `/upanishads/${upanishadId}`
+      : `/upanishads/${upanishadId}?s=${sectionIdx}&v=${verseIdx}`;
+    router.replace(newUrl, { scroll: false });
+  }, [upanishadId, router]);
+
+  // Navigate to a specific position and update URL
+  const navigateToPosition = useCallback((sectionIdx: number, verseIdx: number) => {
+    setCurrentSection(sectionIdx);
+    setCurrentVerseIndex(verseIdx);
+    updatePositionInUrl(sectionIdx, verseIdx);
+  }, [updatePositionInUrl]);
 
   // Calculate overall verse number (for display)
   const getCurrentVerseNumber = () => {
@@ -64,20 +92,18 @@ export default function UpanishadDetailPage() {
 
   const goToPrev = () => {
     if (currentVerseIndex > 0) {
-      setCurrentVerseIndex(currentVerseIndex - 1);
+      navigateToPosition(currentSection, currentVerseIndex - 1);
     } else if (currentSection > 0) {
       const prevSection = upanishad.sections[currentSection - 1];
-      setCurrentSection(currentSection - 1);
-      setCurrentVerseIndex(prevSection.verses.length - 1);
+      navigateToPosition(currentSection - 1, prevSection.verses.length - 1);
     }
   };
 
   const goToNext = () => {
     if (currentVerseIndex < section.verses.length - 1) {
-      setCurrentVerseIndex(currentVerseIndex + 1);
+      navigateToPosition(currentSection, currentVerseIndex + 1);
     } else if (currentSection < upanishad.sections.length - 1) {
-      setCurrentSection(currentSection + 1);
-      setCurrentVerseIndex(0);
+      navigateToPosition(currentSection + 1, 0);
     }
   };
 
@@ -89,6 +115,7 @@ export default function UpanishadDetailPage() {
           <div className="flex items-center gap-4">
             <Link
               href="/upanishads"
+              aria-label="Go back"
               className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700"
             >
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
@@ -97,11 +124,11 @@ export default function UpanishadDetailPage() {
               <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 {upanishad.name.english}
               </h1>
-              <p className="text-sm text-saffron-600 dark:text-saffron-400">
+              <p className="text-sm text-saffron-700 dark:text-saffron-400">
                 {section.name.english} • Verse {verse.verse}
               </p>
             </div>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-500 dark:text-gray-400">
               {getCurrentVerseNumber()} / {totalVerses}
             </span>
           </div>
@@ -142,7 +169,7 @@ export default function UpanishadDetailPage() {
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
                   ${
                     canGoPrev
-                      ? 'bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
+                      ? 'bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700'
                       : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
@@ -158,7 +185,7 @@ export default function UpanishadDetailPage() {
                   flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all
                   ${
                     canGoNext
-                      ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg'
+                      ? 'bg-saffron-700 text-white hover:bg-saffron-800 shadow-lg'
                       : 'bg-cream-200 dark:bg-gray-700 text-cream-400 dark:text-gray-500 cursor-not-allowed'
                   }
                 `}
@@ -178,15 +205,12 @@ export default function UpanishadDetailPage() {
                   {upanishad.sections.map((s, idx) => (
                     <button
                       key={idx}
-                      onClick={() => {
-                        setCurrentSection(idx);
-                        setCurrentVerseIndex(0);
-                      }}
+                      onClick={() => navigateToPosition(idx, 0)}
                       className={`
                         px-4 py-2 rounded-lg text-sm font-medium transition-all
                         ${
                           idx === currentSection
-                            ? 'bg-saffron-500 text-white shadow-md'
+                            ? 'bg-saffron-700 text-white shadow-md'
                             : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                         }
                       `}
@@ -207,12 +231,12 @@ export default function UpanishadDetailPage() {
                 {section.verses.map((v, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setCurrentVerseIndex(idx)}
+                    onClick={() => navigateToPosition(currentSection, idx)}
                     className={`
                       w-10 h-10 rounded-lg text-sm font-medium transition-all
                       ${
                         idx === currentVerseIndex
-                          ? 'bg-saffron-500 text-white shadow-md'
+                          ? 'bg-saffron-700 text-white shadow-md'
                           : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-cream-200 dark:border-gray-700'
                       }
                     `}
@@ -315,7 +339,7 @@ function UpanishadVerseCard({
             <p className="text-center font-sanskrit text-xl text-saffron-700 dark:text-saffron-300">
               {verse.mahavakya.statement}
             </p>
-            <p className="text-center text-sm italic text-saffron-600 dark:text-saffron-400">
+            <p className="text-center text-sm italic text-saffron-700 dark:text-saffron-400">
               {verse.mahavakya.transliteration}
             </p>
             <p className="text-center text-gray-600 dark:text-gray-400 mt-2">
@@ -328,7 +352,7 @@ function UpanishadVerseCard({
         <div className="mt-6">
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center justify-center gap-2 w-full py-2 text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
+            className="flex items-center justify-center gap-2 w-full py-2 text-saffron-700 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
           >
             <span className="text-sm font-medium">
               {expanded ? 'Hide Explanation' : 'What Does This Mean?'}
@@ -434,7 +458,7 @@ function ComingSoonPage({ upanishadId }: { upanishadId: string }) {
       <header className="bg-gradient-to-br from-saffron-600 to-saffron-500 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-6 pb-8">
           <div className="flex items-center gap-4 mb-6">
-            <Link href="/upanishads" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
+            <Link href="/upanishads" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
               <ArrowLeft size={24} />
             </Link>
             <div>
@@ -455,7 +479,7 @@ function ComingSoonPage({ upanishadId }: { upanishadId: string }) {
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 -mt-2">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 text-center border border-cream-200 dark:border-gray-700">
           <div className="w-16 h-16 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-            <BookOpen className="text-saffron-600 dark:text-saffron-400" size={32} />
+            <BookOpen className="text-saffron-700 dark:text-saffron-400" size={32} />
           </div>
           <h2 className="font-heading text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
             Coming Soon
@@ -467,7 +491,7 @@ function ComingSoonPage({ upanishadId }: { upanishadId: string }) {
           </p>
           <Link
             href="/upanishads"
-            className="inline-block mt-6 px-6 py-3 bg-saffron-500 text-white rounded-xl font-medium hover:bg-saffron-600 transition-colors"
+            className="inline-block mt-6 px-6 py-3 bg-saffron-700 text-white rounded-xl font-medium hover:bg-saffron-600 transition-colors"
           >
             Explore Available Upanishads
           </Link>

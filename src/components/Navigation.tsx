@@ -29,8 +29,8 @@ export default function Navigation() {
                 className={`
                   flex flex-col items-center py-1 sm:py-1.5 px-3 sm:px-4 rounded-lg transition-all duration-200
                   ${isActive
-                    ? 'text-saffron-600 dark:text-saffron-400'
-                    : 'text-gray-400 dark:text-gray-500 hover:text-saffron-500 dark:hover:text-saffron-400'
+                    ? 'text-saffron-700 dark:text-saffron-400'
+                    : 'text-gray-500 dark:text-gray-400 hover:text-saffron-600 dark:hover:text-saffron-400'
                   }
                 `}
               >
@@ -41,7 +41,7 @@ export default function Navigation() {
                 />
                 <span className={`
                   text-[10px] sm:text-xs mt-0.5 font-medium
-                  ${isActive ? 'text-saffron-600 dark:text-saffron-400' : 'text-gray-500 dark:text-gray-400'}
+                  ${isActive ? 'text-saffron-700 dark:text-saffron-400' : 'text-gray-500 dark:text-gray-400'}
                 `}>
                   {item.label}
                 </span>

@@ -329,7 +329,7 @@ export default function ProfilePage() {
       <header className="bg-gradient-to-br from-saffron-600 to-orange-500 text-white">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 pt-6 pb-8">
           <div className="flex items-center gap-4 mb-6">
-            <Link href="/" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
+            <Link href="/" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-white/10">
               <ArrowLeft size={24} />
             </Link>
             <h1 className="font-heading text-xl font-bold">Your Profile</h1>
@@ -358,7 +358,7 @@ export default function ProfilePage() {
               onClick={() => setTheme('light')}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
                 theme === 'light'
-                  ? 'bg-saffron-500 text-white'
+                  ? 'bg-saffron-700 text-white'
                   : 'bg-cream-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -369,7 +369,7 @@ export default function ProfilePage() {
               onClick={() => setTheme('dark')}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
                 theme === 'dark'
-                  ? 'bg-saffron-500 text-white'
+                  ? 'bg-saffron-700 text-white'
                   : 'bg-cream-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -380,7 +380,7 @@ export default function ProfilePage() {
               onClick={() => setTheme('system')}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors ${
                 theme === 'system'
-                  ? 'bg-saffron-500 text-white'
+                  ? 'bg-saffron-700 text-white'
                   : 'bg-cream-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
               }`}
             >
@@ -394,14 +394,14 @@ export default function ProfilePage() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 mb-6 transition-colors">
           {loading ? (
             <div className="flex items-center justify-center py-4">
-              <RefreshCw className="animate-spin text-gray-400" size={20} />
+              <RefreshCw className="animate-spin text-gray-500 dark:text-gray-400" size={20} />
             </div>
           ) : user ? (
             // Logged in state
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-saffron-100 dark:bg-saffron-900/30 rounded-full flex items-center justify-center">
-                  <User className="text-saffron-600 dark:text-saffron-400" size={20} />
+                  <User className="text-saffron-700 dark:text-saffron-400" size={20} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="font-medium text-gray-900 dark:text-gray-100 truncate">{user.email}</p>
@@ -436,7 +436,7 @@ export default function ProfilePage() {
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-cream-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                      <CloudOff className="text-gray-400" size={20} />
+                      <CloudOff className="text-gray-500 dark:text-gray-400" size={20} />
                     </div>
                     <div>
                       <p className="font-medium text-gray-900 dark:text-gray-100">Sign in to sync</p>
@@ -445,11 +445,11 @@ export default function ProfilePage() {
                   </div>
                   <button
                     onClick={() => setShowAuthForm(true)}
-                    className="w-full py-2.5 bg-saffron-500 hover:bg-saffron-600 text-white rounded-lg font-medium transition-colors"
+                    className="w-full py-2.5 bg-saffron-700 hover:bg-saffron-800 text-white rounded-lg font-medium transition-colors"
                   >
                     Sign In / Create Account
                   </button>
-                  <p className="text-xs text-gray-400 text-center mt-2">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">
                     Your progress is saved locally. Sign in to backup and sync.
                   </p>
                 </div>
@@ -473,7 +473,7 @@ export default function ProfilePage() {
 
                   <div className="space-y-3">
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" size={18} />
                       <input
                         type="email"
                         placeholder="Email"
@@ -484,7 +484,7 @@ export default function ProfilePage() {
                       />
                     </div>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400" size={18} />
                       <input
                         type="password"
                         placeholder="Password"
@@ -498,7 +498,7 @@ export default function ProfilePage() {
                   </div>
 
                   {authError && (
-                    <p className={`text-sm mt-3 ${authError.includes('Check your email') ? 'text-green-600' : 'text-red-500'}`}>
+                    <p className={`text-sm mt-3 ${authError.includes('Check your email') ? 'text-green-600' : 'text-red-600'}`}>
                       {authError}
                     </p>
                   )}
@@ -506,7 +506,7 @@ export default function ProfilePage() {
                   <button
                     type="submit"
                     disabled={authLoading}
-                    className="w-full mt-4 py-2.5 bg-saffron-500 hover:bg-saffron-600 disabled:bg-saffron-300 text-white rounded-lg font-medium transition-colors"
+                    className="w-full mt-4 py-2.5 bg-saffron-700 hover:bg-saffron-800 disabled:bg-saffron-500 text-white rounded-lg font-medium transition-colors"
                   >
                     {authLoading ? 'Please wait...' : isSignUp ? 'Create Account' : 'Sign In'}
                   </button>
@@ -517,7 +517,7 @@ export default function ProfilePage() {
                       setIsSignUp(!isSignUp);
                       setAuthError(null);
                     }}
-                    className="w-full mt-2 text-sm text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300"
+                    className="w-full mt-2 text-sm text-saffron-700 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300"
                   >
                     {isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Create one"}
                   </button>
@@ -531,13 +531,13 @@ export default function ProfilePage() {
         {user && (
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-cream-200 dark:border-gray-700 p-4 mb-6 transition-colors">
             <div className="flex items-center gap-2 mb-3">
-              <Mail className="text-saffron-500" size={20} />
+              <Mail className="text-saffron-700" size={20} />
               <h3 className="font-medium text-gray-900 dark:text-gray-100">Daily Email Lessons</h3>
             </div>
 
             {isLoadingSubscription ? (
               <div className="flex items-center justify-center py-4">
-                <RefreshCw className="animate-spin text-gray-400" size={20} />
+                <RefreshCw className="animate-spin text-gray-500 dark:text-gray-400" size={20} />
               </div>
             ) : emailSubscription ? (
               <div>
@@ -566,7 +566,7 @@ export default function ProfilePage() {
                       {emailSubscription.subscribed ? (
                         <span className="text-green-600 dark:text-green-400">Subscribed</span>
                       ) : (
-                        <span className="text-gray-500">Unsubscribed</span>
+                        <span className="text-gray-500 dark:text-gray-400">Unsubscribed</span>
                       )}
                     </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -597,7 +597,7 @@ export default function ProfilePage() {
                   <button
                     onClick={restartEmailJourney}
                     disabled={isUpdatingSubscription}
-                    className="w-full py-2 text-sm text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 disabled:opacity-50"
+                    className="w-full py-2 text-sm text-saffron-700 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 disabled:opacity-50"
                   >
                     <RotateCcw size={14} className="inline mr-1" />
                     Restart from Day 1
@@ -620,7 +620,7 @@ export default function ProfilePage() {
                 <button
                   onClick={createEmailSubscription}
                   disabled={isUpdatingSubscription}
-                  className="w-full py-3 bg-saffron-500 hover:bg-saffron-600 disabled:bg-saffron-300 text-white rounded-lg font-medium transition-colors"
+                  className="w-full py-3 bg-saffron-700 hover:bg-saffron-800 disabled:bg-saffron-500 text-white rounded-lg font-medium transition-colors"
                 >
                   {isUpdatingSubscription ? 'Subscribing...' : 'Subscribe to Daily Lessons'}
                 </button>
@@ -664,7 +664,7 @@ export default function ProfilePage() {
                 className={`
                   flex items-center gap-4 p-4
                   ${index !== achievements.length - 1 ? 'border-b border-cream-100 dark:border-gray-700' : ''}
-                  ${achievement.earned ? '' : 'opacity-50'}
+                  ${achievement.earned ? '' : 'grayscale'}
                 `}
               >
                 <div className="text-2xl">
@@ -697,7 +697,7 @@ export default function ProfilePage() {
               </h2>
               <Link
                 href="/profile/saved"
-                className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline"
+                className="text-sm text-saffron-700 dark:text-saffron-400 font-medium hover:underline"
               >
                 View all {progress.bookmarks.length} →
               </Link>
@@ -734,7 +734,7 @@ export default function ProfilePage() {
           <button
             onClick={handleReset}
             disabled={isResetting}
-            className="flex items-center justify-center gap-2 w-full py-3 text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:text-red-300 dark:disabled:text-red-700 text-sm font-medium"
+            className="flex items-center justify-center gap-2 w-full py-3 text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 disabled:text-red-300 dark:disabled:text-red-700 text-sm font-medium"
           >
             <RotateCcw size={16} className={isResetting ? 'animate-spin' : ''} />
             {isResetting ? 'Resetting...' : 'Reset All Progress'}
@@ -744,7 +744,7 @@ export default function ProfilePage() {
         {/* Support Section */}
         <div className="bg-gradient-to-br from-saffron-50 to-orange-50 dark:from-saffron-900/20 dark:to-orange-900/20 rounded-2xl shadow-sm border border-saffron-200 dark:border-saffron-800 p-6 mb-6 text-center transition-colors">
           <div className="w-12 h-12 bg-saffron-100 dark:bg-saffron-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Heart className="text-saffron-600 dark:text-saffron-400" size={24} />
+            <Heart className="text-saffron-700 dark:text-saffron-400" size={24} />
           </div>
           <h3 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
             Support Dharma Path
@@ -759,7 +759,7 @@ export default function ProfilePage() {
               href="https://donate.stripe.com/fZuaEW12G7NY3iEaod8g000"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-700 hover:bg-saffron-800 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
             >
               <Heart size={18} />
               US & Other Countries
@@ -768,7 +768,7 @@ export default function ProfilePage() {
             {/* India - UPI */}
             <button
               onClick={() => setShowUPIModal(true)}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-500 hover:bg-saffron-600 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-saffron-700 hover:bg-saffron-800 text-white rounded-xl font-medium transition-colors shadow-md w-full max-w-xs"
             >
               <Heart size={18} />
               India (UPI)
@@ -777,7 +777,7 @@ export default function ProfilePage() {
         </div>
 
         {/* App Info */}
-        <div className="text-center text-sm text-gray-400 mb-6">
+        <div className="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">
           <p>Dharma Path v1.0</p>
           <p className="mt-1">Made with 🧡 for seekers everywhere</p>
         </div>
@@ -790,7 +790,7 @@ export default function ProfilePage() {
             {/* Close button */}
             <button
               onClick={() => setShowUPIModal(false)}
-              className="absolute top-4 right-4 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              className="absolute top-4 right-4 p-1 text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
             >
               <X size={24} />
             </button>
@@ -827,14 +827,14 @@ export default function ProfilePage() {
                       navigator.clipboard.writeText('6005817706@ptyes');
                       alert('UPI ID copied!');
                     }}
-                    className="text-xs px-2 py-1 bg-saffron-500 hover:bg-saffron-600 text-white rounded-lg transition-colors"
+                    className="text-xs px-2 py-1 bg-saffron-700 hover:bg-saffron-800 text-white rounded-lg transition-colors"
                   >
                     Copy
                   </button>
                 </div>
               </div>
 
-              <p className="text-xs text-gray-400 dark:text-gray-500">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 Thank you for supporting Dharma Path 🙏
               </p>
             </div>

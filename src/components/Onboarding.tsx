@@ -18,19 +18,19 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
 
   const slides = [
     {
-      icon: <BookOpen size={48} className="text-saffron-500" />,
+      icon: <BookOpen size={48} className="text-saffron-700" />,
       title: "Hinduism is vast.",
       subtitle: "We made it simple.",
       description: "No more confusion about where to start. No more scattered YouTube videos and Wikipedia rabbit holes.",
     },
     {
-      icon: <Target size={48} className="text-saffron-500" />,
+      icon: <Target size={48} className="text-saffron-700" />,
       title: `${totalLevels} levels. ${totalLessons} lessons.`,
       subtitle: "One clear path.",
       description: "From the basics to the Bhagavad Gita - everything organized in a structured learning journey.",
     },
     {
-      icon: <TrendingUp size={48} className="text-saffron-500" />,
+      icon: <TrendingUp size={48} className="text-saffron-700" />,
       title: "Learn at your pace.",
       subtitle: "Track your progress.",
       description: "5-15 minute lessons. Pick up where you left off. Your journey, your schedule.",
@@ -112,12 +112,15 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
       {/* Progress dots and next button */}
       <div className="p-8">
         {/* Progress dots */}
-        <div className="flex justify-center gap-2 mb-6">
+        <div className="flex justify-center gap-2 mb-6" role="tablist" aria-label="Onboarding slides">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
               disabled={isAnimating}
+              role="tab"
+              aria-selected={index === currentSlide}
+              aria-label={`Go to slide ${index + 1} of ${slides.length}`}
               className={`h-2 rounded-full transition-all duration-300 ${
                 index === currentSlide
                   ? 'bg-white w-6'
@@ -131,7 +134,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
         <button
           onClick={handleNext}
           disabled={isAnimating}
-          className={`w-full max-w-md mx-auto flex items-center justify-center gap-2 bg-white text-saffron-600 font-semibold py-4 px-8 rounded-xl transition-all duration-200 ${
+          className={`w-full max-w-md mx-auto flex items-center justify-center gap-2 bg-white text-saffron-700 font-semibold py-4 px-8 rounded-xl transition-all duration-200 ${
             isAnimating ? 'opacity-70 cursor-not-allowed' : 'hover:bg-white/95'
           }`}
         >

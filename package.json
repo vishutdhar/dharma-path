@@ -13,7 +13,15 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "test:stress": "./stress-tests/run-stress-tests.sh --all",
+    "test:stress:quick": "./stress-tests/run-stress-tests.sh --quick",
+    "test:stress:k6": "./stress-tests/run-stress-tests.sh --k6",
+    "test:stress:lighthouse": "./stress-tests/run-stress-tests.sh --lighthouse",
+    "test:stress:memory": "./stress-tests/run-stress-tests.sh --memory",
+    "test:stress:ui": "playwright test e2e/stress.spec.ts",
+    "test:stress:prod": "./stress-tests/run-stress-tests.sh --all --prod",
+    "lighthouse": "npx lhci autorun"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +40,7 @@
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
     "@eslint/js": "^9.39.2",
     "@playwright/test": "^1.57.0",
     "@testing-library/jest-dom": "^6.9.1",

@@ -123,6 +123,7 @@ export default function UpanishadVersePage() {
           <div className="flex items-center gap-4">
             <Link
               href={`/upanishads/${upanishadId}`}
+              aria-label="Go back"
               className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700"
             >
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
@@ -131,11 +132,11 @@ export default function UpanishadVersePage() {
               <h1 className="font-heading text-lg font-bold text-gray-900 dark:text-gray-100">
                 {upanishad.name.english} {sectionNum}.{verseNum}
               </h1>
-              <p className="text-sm text-saffron-600 dark:text-saffron-400">
+              <p className="text-sm text-saffron-700 dark:text-saffron-400">
                 {section.name.english} • {getVedaName(upanishad.veda)}
               </p>
             </div>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-500 dark:text-gray-400">
               {getCurrentVerseNumber()} / {totalVerses}
             </span>
           </div>
@@ -204,7 +205,7 @@ export default function UpanishadVersePage() {
                 <p className="text-center font-sanskrit text-xl text-saffron-700 dark:text-saffron-300">
                   {verse.mahavakya.statement}
                 </p>
-                <p className="text-center text-sm italic text-saffron-600 dark:text-saffron-400">
+                <p className="text-center text-sm italic text-saffron-700 dark:text-saffron-400">
                   {verse.mahavakya.transliteration}
                 </p>
                 <p className="text-center text-gray-600 dark:text-gray-400 mt-2">
@@ -217,7 +218,7 @@ export default function UpanishadVersePage() {
             <div className="mt-6">
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="flex items-center justify-center gap-2 w-full py-2 text-saffron-600 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-2 text-saffron-700 dark:text-saffron-400 hover:text-saffron-700 dark:hover:text-saffron-300 transition-colors"
               >
                 <span className="text-sm font-medium">
                   {expanded ? 'Hide Explanation' : 'What Does This Mean?'}
@@ -310,7 +311,7 @@ export default function UpanishadVersePage() {
           {prevVerse ? (
             <Link
               href={`/upanishads/${upanishadId}/${prevVerse.section}-${prevVerse.verse}`}
-              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-white dark:bg-gray-800 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 transition-all"
+              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-white dark:bg-gray-800 text-saffron-700 dark:text-saffron-400 hover:bg-saffron-50 dark:hover:bg-gray-700 shadow-sm border border-cream-200 dark:border-gray-700 transition-all"
             >
               <ChevronLeft size={20} />
               {prevVerse.section}.{prevVerse.verse}
@@ -322,7 +323,7 @@ export default function UpanishadVersePage() {
           {nextVerse ? (
             <Link
               href={`/upanishads/${upanishadId}/${nextVerse.section}-${nextVerse.verse}`}
-              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-saffron-500 text-white hover:bg-saffron-600 shadow-lg transition-all"
+              className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium bg-saffron-700 text-white hover:bg-saffron-800 shadow-lg transition-all"
             >
               {nextVerse.section}.{nextVerse.verse}
               <ChevronRight size={20} />
@@ -336,7 +337,7 @@ export default function UpanishadVersePage() {
         <div className="mt-8 text-center space-y-3">
           <Link
             href={`/upanishads/${upanishadId}`}
-            className="text-sm text-saffron-600 dark:text-saffron-400 font-medium hover:underline block"
+            className="text-sm text-saffron-700 dark:text-saffron-400 font-medium hover:underline block"
           >
             View all verses in {upanishad.name.english}
           </Link>

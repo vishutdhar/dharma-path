@@ -109,7 +109,7 @@ export default function SearchPage() {
       <header className="bg-white dark:bg-gray-800 border-b border-cream-200 dark:border-gray-700 sticky top-0 z-40 transition-colors">
         <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-4">
           <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
+            <Link href="/" aria-label="Go back" className="p-2 -ml-2 rounded-lg hover:bg-cream-100 dark:hover:bg-gray-700">
               <ArrowLeft size={24} className="text-gray-600 dark:text-gray-400" />
             </Link>
             <h1 className="font-heading text-xl font-bold text-gray-900 dark:text-gray-100">
@@ -120,7 +120,7 @@ export default function SearchPage() {
           {/* Search Input */}
           <div className="relative">
             <SearchIcon
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400"
               size={20}
             />
             <input
@@ -134,7 +134,7 @@ export default function SearchPage() {
             {query && (
               <button
                 onClick={clearSearch}
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-cream-200 dark:hover:bg-gray-600 text-gray-400 transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-cream-200 dark:hover:bg-gray-600 text-gray-500 dark:text-gray-400 transition-colors"
               >
                 <X size={18} />
               </button>
@@ -150,7 +150,7 @@ export default function SearchPage() {
                   onClick={() => setActiveTab(tab)}
                   className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                     activeTab === tab
-                      ? 'bg-saffron-500 text-white'
+                      ? 'bg-saffron-700 text-white'
                       : 'bg-cream-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-cream-200 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -172,7 +172,7 @@ export default function SearchPage() {
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 py-6">
         {/* Loading State */}
         {isSearching && (
-          <div className="text-center py-12 text-gray-400">
+          <div className="text-center py-12 text-gray-500 dark:text-gray-400">
             <div className="animate-pulse">Searching...</div>
           </div>
         )}
@@ -187,7 +187,7 @@ export default function SearchPage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 text-gray-400">
+              <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                 <SearchIcon size={48} className="mx-auto mb-4 opacity-50" />
                 <p>No results found for "{query}"</p>
                 <p className="text-sm mt-2">Try a different search term</p>
@@ -202,7 +202,7 @@ export default function SearchPage() {
             {/* Quick Links */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Lightbulb className="text-saffron-500" size={20} />
+                <Lightbulb className="text-saffron-700" size={20} />
                 <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                   Popular Topics
                 </h2>
@@ -223,7 +223,7 @@ export default function SearchPage() {
             {/* Glossary */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <BookOpen className="text-saffron-500" size={20} />
+                <BookOpen className="text-saffron-700" size={20} />
                 <h2 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                   Glossary of Terms
                 </h2>
@@ -238,7 +238,7 @@ export default function SearchPage() {
                       <h3 className="font-heading text-lg font-semibold text-gray-900 dark:text-gray-100">
                         {item.term}
                       </h3>
-                      <span className="font-sanskrit text-saffron-600 dark:text-saffron-400 text-lg">
+                      <span className="font-sanskrit text-saffron-700 dark:text-saffron-400 text-lg">
                         {item.sanskrit}
                       </span>
                     </div>
@@ -311,14 +311,14 @@ function LessonResultCard({
       <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 hover:shadow-md hover:border-saffron-200 dark:hover:border-saffron-700 transition-all">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 bg-saffron-100 dark:bg-saffron-900/30 rounded-lg flex items-center justify-center shrink-0">
-            <Book className="text-saffron-600 dark:text-saffron-400" size={20} />
+            <Book className="text-saffron-700 dark:text-saffron-400" size={20} />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
               <span className="px-2 py-0.5 bg-saffron-100 dark:bg-saffron-900/30 text-saffron-700 dark:text-saffron-400 text-xs font-medium rounded">
                 Lesson
               </span>
-              <span className="text-xs text-gray-400">
+              <span className="text-xs text-gray-500 dark:text-gray-400">
                 Level {item.levelId} · {item.moduleTitle}
               </span>
             </div>
@@ -412,7 +412,7 @@ function GlossaryResultCard({ item }: { item: SearchableGlossaryTerm }) {
             <h3 className="font-medium text-gray-900 dark:text-gray-100">
               {item.term}
             </h3>
-            <span className="font-sanskrit text-saffron-600 dark:text-saffron-400">
+            <span className="font-sanskrit text-saffron-700 dark:text-saffron-400">
               {item.sanskrit}
             </span>
           </div>
@@ -431,14 +431,14 @@ function FestivalResultCard({ item }: { item: SearchableFestival }) {
       <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 hover:shadow-md hover:border-orange-200 dark:hover:border-orange-700 transition-all">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center shrink-0">
-            <Calendar className="text-orange-600 dark:text-orange-400" size={20} />
+            <Calendar className="text-orange-700 dark:text-orange-400" size={20} />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
               <span className="px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs font-medium rounded">
                 Festival
               </span>
-              <span className="text-xs text-gray-400">
+              <span className="text-xs text-gray-500 dark:text-gray-400">
                 {item.month}
               </span>
             </div>
@@ -447,7 +447,7 @@ function FestivalResultCard({ item }: { item: SearchableFestival }) {
                 {item.name}
               </h3>
               {item.sanskrit && (
-                <span className="font-sanskrit text-orange-600 dark:text-orange-400 text-sm">
+                <span className="font-sanskrit text-orange-700 dark:text-orange-400 text-sm">
                   {item.sanskrit}
                 </span>
               )}
@@ -561,7 +561,7 @@ function VedicVerseResultCard({
       <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-cream-200 dark:border-gray-700 hover:shadow-md hover:border-saffron-200 dark:hover:border-saffron-700 transition-all">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 bg-saffron-100 dark:bg-saffron-900/30 rounded-lg flex items-center justify-center shrink-0">
-            <Flame className="text-saffron-600 dark:text-saffron-400" size={20} />
+            <Flame className="text-saffron-700 dark:text-saffron-400" size={20} />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
