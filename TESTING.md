@@ -11,8 +11,38 @@ Run these commands before pushing:
 ```bash
 npm run lint         # ESLint - 0 errors expected
 npm run test:run     # Vitest unit tests - 62 tests
-npm run test:e2e     # Playwright E2E tests - 16 tests
+npm run test:e2e     # Playwright E2E tests
 npm run build        # Production build - must pass
+```
+
+### Visual Regression Tests (Screenshot Tests)
+
+We have 29 visual regression tests that automatically catch unintended UI changes:
+- **15 light mode tests** - all major pages
+- **14 dark mode tests** - all major pages
+
+These run automatically on every push/PR via GitHub Actions.
+
+**Run locally:**
+```bash
+npx playwright test visual --project=chromium
+```
+
+**Update baselines after intentional UI changes:**
+```bash
+# Option 1: Update locally (may differ from CI due to OS rendering)
+npx playwright test visual --project=chromium --update-snapshots
+
+# Option 2: Update via CI (recommended - ensures Linux-compatible baselines)
+# Add [update-snapshots] to your commit message:
+git commit -m "Update button styles [update-snapshots]"
+git push
+# CI will regenerate baselines and auto-commit them
+```
+
+**View test report:**
+```bash
+npx playwright show-report
 ```
 
 ---
@@ -181,6 +211,25 @@ Test on:
 - [ ] Firefox
 - [ ] Mobile Safari (iOS)
 - [ ] Chrome (Android)
+
+---
+
+## GitHub Actions CI
+
+Visual regression tests run automatically on every push/PR to main.
+
+**Workflow:** `.github/workflows/playwright.yml`
+
+**What it does:**
+- Builds the app
+- Runs 29 visual tests against Linux-rendered baselines
+- Uploads test report as artifact
+- On failure, uploads screenshot diffs for debugging
+
+**If tests fail:**
+1. Check the GitHub Actions tab for the failed run
+2. Download the `screenshot-diffs` artifact to see what changed
+3. If the change was intentional, push with `[update-snapshots]` in commit message
 
 ---
 
