@@ -98,15 +98,15 @@ export async function GET(request: NextRequest) {
 
     const userId = subscription.user_id;
 
-    // Get all lesson IDs from day 1 to current day
-    const lessonsToComplete = getLessonIdsUpToDay(day);
-
-    if (lessonsToComplete.length === 0) {
-      // Day 111+ (Gita chapters) - no lessons to mark, just redirect
+    // Day 111+ (Gita chapters) - no lessons to mark, just redirect to Gita page
+    if (day > TOTAL_LESSONS) {
       return NextResponse.redirect(
         new URL(`/gita/${day - TOTAL_LESSONS}`, request.url)
       );
     }
+
+    // Get all lesson IDs from day 1 to current day
+    const lessonsToComplete = getLessonIdsUpToDay(day);
 
     // Fetch existing progress
     const { data: existingProgress, error: fetchError } = await supabase
