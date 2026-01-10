@@ -203,6 +203,7 @@ function buildChapterEmailContent(chapter: typeof chapter1): string {
 
 /**
  * Get the level name for a given day
+ * Matches the curriculum structure in the header comments
  */
 export function getLevelForDay(day: number): string {
   if (day <= 14) return 'Level 1: The Foundation';
@@ -210,6 +211,9 @@ export function getLevelForDay(day: number): string {
   if (day <= 43) return 'Level 3: The Gita';
   if (day <= 59) return 'Level 4: Going Deeper';
   if (day <= 76) return 'Level 5: The Puranas';
+  if (day <= 94) return 'Level 6: Study the Gita';
+  if (day <= 104) return 'Level 7: Study the Upanishads';
+  if (day <= 110) return 'Level 8: Study the Vedic Hymns';
   return 'Bhagavad Gita Chapters';
 }
 
@@ -250,28 +254,48 @@ function capitalizeFirst(str: string): string {
 
 /**
  * Get milestone message for special days
+ * Matches the curriculum structure: 8 levels + Gita chapter summaries
  */
 export function getMilestoneMessage(day: number): string | null {
+  // Day 1: Welcome
   if (day === 1) {
     return `Welcome to your journey! Today begins your ${TOTAL_DAYS}-day path through Hindu wisdom.`;
   }
+  // Day 14: End of Level 1
   if (day === 14) {
     return "Congratulations! You've completed Level 1: The Foundation. Tomorrow, we explore the great epics.";
   }
+  // Day 26: End of Level 2
   if (day === 26) {
     return "Level 2 complete! You now know the stories. Tomorrow, we begin the Bhagavad Gita.";
   }
+  // Day 43: End of Level 3
   if (day === 43) {
     return "You've completed the Gita overview! Time to go deeper into advanced topics.";
   }
+  // Day 59: End of Level 4
   if (day === 59) {
     return "Level 4 complete! Tomorrow, we explore the Puranas — the great mythological texts.";
   }
+  // Day 76: End of Level 5
   if (day === 76) {
-    return "All lessons complete! For the final 18 days, we'll journey through each chapter of the Gita.";
+    return "Level 5 complete! You've explored the Puranas. Tomorrow, we dive deeper into studying the Gita.";
   }
+  // Day 94: End of Level 6
   if (day === 94) {
-    return "You did it! 94 days of learning complete. You now have a comprehensive understanding of Hindu philosophy, the Puranas, and the Bhagavad Gita.";
+    return "Level 6 complete! You've studied the Gita in depth. Tomorrow, we explore the Upanishads.";
+  }
+  // Day 104: End of Level 7
+  if (day === 104) {
+    return "Level 7 complete! You've explored the Upanishads. Tomorrow, we study the Vedic Hymns.";
+  }
+  // Day 110: End of Level 8 (all lessons complete)
+  if (day === 110) {
+    return "All lessons complete! For the final 18 days, we'll journey through each chapter of the Bhagavad Gita with detailed summaries and key verses.";
+  }
+  // Day 128: Course completion
+  if (day === TOTAL_DAYS) {
+    return `You did it! ${TOTAL_DAYS} days of wisdom complete. You now have a comprehensive understanding of Hindu philosophy, the epics, the Puranas, the Upanishads, the Vedic Hymns, and the Bhagavad Gita.`;
   }
 
   // Weekly milestones
