@@ -24,6 +24,8 @@ export function generateDailyEmail(options: EmailTemplateOptions): string {
 
   const webUrl = `${BASE_URL}${content.webUrl}`;
   const unsubscribeUrl = `${BASE_URL}/api/unsubscribe?token=${unsubscribeToken}&email=${encodeURIComponent(userEmail)}`;
+  const markCompleteUrl = `${BASE_URL}/api/mark-complete?token=${unsubscribeToken}&day=${content.day}`;
+  const isLesson = content.type === 'lesson';
 
   return `
 <!DOCTYPE html>
@@ -162,9 +164,15 @@ export function generateDailyEmail(options: EmailTemplateOptions): string {
           <!-- CTA Button -->
           <tr>
             <td style="padding: 10px 40px 30px 40px; text-align: center;">
+              ${isLesson ? `
+              <a href="${markCompleteUrl}" style="display: inline-block; background-color: #059669; color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px;">
+                ✓ Mark Lesson Complete
+              </a>
+              ` : `
               <a href="${webUrl}" style="display: inline-block; background-color: #1F2937; color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px;">
                 Continue Reading on App
               </a>
+              `}
             </td>
           </tr>
 

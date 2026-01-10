@@ -76,6 +76,34 @@ function getAllLessonIds(): string[] {
 // Pre-compute the lesson ID array
 const LESSON_IDS = getAllLessonIds();
 
+// Export the total number of lessons (for external use)
+export const TOTAL_LESSONS = LESSON_IDS.length;
+
+/**
+ * Get the lesson ID for a specific day (1-110)
+ * Returns null for days 111-128 (Gita chapters, not lessons)
+ */
+export function getLessonIdForDay(day: number): string | null {
+  if (day < 1 || day > LESSON_IDS.length) {
+    return null;
+  }
+  return LESSON_IDS[day - 1];
+}
+
+/**
+ * Get all lesson IDs from day 1 up to and including the given day
+ * Used by mark-complete API to mark all lessons up to current day
+ * Returns empty array for invalid days or days > 110
+ */
+export function getLessonIdsUpToDay(day: number): string[] {
+  if (day < 1) {
+    return [];
+  }
+  // Cap at total lessons (days 111+ are Gita chapters, not lessons)
+  const maxDay = Math.min(day, LESSON_IDS.length);
+  return LESSON_IDS.slice(0, maxDay);
+}
+
 /**
  * Get lesson metadata by ID
  */
