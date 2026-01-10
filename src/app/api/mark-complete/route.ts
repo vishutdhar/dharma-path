@@ -3,6 +3,16 @@ import { createClient } from '@supabase/supabase-js';
 import { getLessonIdsUpToDay, TOTAL_LESSONS } from '@/lib/emailContent';
 import { findNextIncompleteLesson } from '@/lib/progress';
 
+// UUID v4 format validation regex
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+/**
+ * Validate UUID format to prevent unnecessary DB lookups
+ */
+function isValidUUID(str: string): boolean {
+  return UUID_REGEX.test(str);
+}
+
 // Create Supabase client with service role for API operations
 function getSupabaseClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -31,10 +41,17 @@ export async function GET(request: NextRequest) {
   const token = searchParams.get('token');
   const dayParam = searchParams.get('day');
 
-  // Validate parameters
+  // Validate parameters exist
   if (!token || !dayParam) {
     return NextResponse.redirect(
       new URL('/lesson-complete?error=missing_params', request.url)
+    );
+  }
+
+  // Validate token format (UUID) - prevents unnecessary DB lookups
+  if (!isValidUUID(token)) {
+    return NextResponse.redirect(
+      new URL('/lesson-complete?error=invalid_token', request.url)
     );
   }
 
@@ -54,10 +71,10 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Look up subscription by ID (token)
+    // Look up subscription by ID (token) - include current_day for validation
     const { data: subscription, error: subError } = await supabase
       .from('email_subscriptions')
-      .select('id, user_id, email')
+      .select('id, user_id, email, current_day')
       .eq('id', token)
       .single();
 
@@ -65,6 +82,17 @@ export async function GET(request: NextRequest) {
       console.error('Subscription not found:', subError);
       return NextResponse.redirect(
         new URL('/lesson-complete?error=invalid_token', request.url)
+      );
+    }
+
+    // SECURITY: Validate that the requested day has actually been sent to this user
+    // current_day in DB is the NEXT day to be sent, so user has received days 1 to (current_day - 1)
+    // Exception: current_day starts at 1, so day 1 is valid even when current_day is 1 (first email sent)
+    const maxAllowedDay = Math.max(subscription.current_day, 1);
+    if (day > maxAllowedDay) {
+      console.error(`Day validation failed: requested day ${day} > max allowed ${maxAllowedDay}`);
+      return NextResponse.redirect(
+        new URL('/lesson-complete?error=invalid_day', request.url)
       );
     }
 
