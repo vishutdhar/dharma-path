@@ -32,6 +32,8 @@ export function generateDailyEmail(options: EmailTemplateOptions): string {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <title>Day ${content.day}: ${content.title}</title>
   <!--[if mso]>
   <noscript>
@@ -62,7 +64,7 @@ export function generateDailyEmail(options: EmailTemplateOptions): string {
 <body style="margin: 0; padding: 0; background-color: #F5F0E8;" class="email-body">
   <!-- Preview text -->
   <div style="display: none; max-height: 0; overflow: hidden;">
-    Day ${content.day} of 77: ${content.title} - ${content.subtitle}
+    Day ${content.day} of ${TOTAL_DAYS}: ${content.title} - ${content.subtitle}
   </div>
 
   <!-- Main wrapper -->
@@ -221,18 +223,19 @@ export function generateDailyEmail(options: EmailTemplateOptions): string {
 /**
  * Format lesson HTML content for email
  * - Adds inline styles for email compatibility
+ * - Uses CSS classes for dark mode support (class overrides inline in dark mode)
  * - Ensures proper spacing and formatting
  */
 function formatContentForEmail(html: string): string {
   return html
-    // Style h2 headers
-    .replace(/<h2>/g, '<h2 style="font-family: Georgia, \'Times New Roman\', serif; font-size: 20px; color: #1F2937; margin: 25px 0 15px 0; padding-top: 15px; border-top: 1px solid #E5E7EB;">')
+    // Style h2 headers - use class for dark mode override
+    .replace(/<h2>/g, '<h2 class="email-text" style="font-family: Georgia, \'Times New Roman\', serif; font-size: 20px; color: #1F2937; margin: 25px 0 15px 0; padding-top: 15px; border-top: 1px solid #E5E7EB;">')
     // Style paragraphs
     .replace(/<p>/g, '<p style="margin: 0 0 15px 0;">')
-    // Style bold text
-    .replace(/<strong>/g, '<strong style="color: #1F2937;">')
-    // Style italic text
-    .replace(/<em>/g, '<em style="color: #6B7280;">')
+    // Style bold text - use class for dark mode override
+    .replace(/<strong>/g, '<strong class="email-text" style="color: #1F2937;">')
+    // Style italic text - use class for dark mode override
+    .replace(/<em>/g, '<em class="email-text-muted" style="color: #6B7280;">')
     // Style unordered lists
     .replace(/<ul>/g, '<ul style="margin: 15px 0; padding-left: 25px;">')
     // Style list items
@@ -313,9 +316,19 @@ export function generateWelcomeEmail(userEmail: string, unsubscribeToken: string
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <title>Welcome to Dharma Path</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .email-body { background-color: #1F2937 !important; }
+      .email-container { background-color: #111827 !important; }
+      .email-text { color: #F3F4F6 !important; }
+      .email-text-muted { color: #9CA3AF !important; }
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #F5F0E8;">
+<body style="margin: 0; padding: 0; background-color: #F5F0E8;" class="email-body">
   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #F5F0E8;">
     <tr>
       <td align="center" style="padding: 40px 10px;">
@@ -333,27 +346,29 @@ export function generateWelcomeEmail(userEmail: string, unsubscribeToken: string
           <!-- Content -->
           <tr>
             <td style="padding: 40px;">
-              <h2 style="margin: 0 0 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; color: #1F2937;">
-                Your 77-Day Journey Begins Tomorrow
+              <h2 class="email-text" style="margin: 0 0 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; color: #1F2937;">
+                Your ${TOTAL_DAYS}-Day Journey Begins Tomorrow
               </h2>
 
-              <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 0 0 20px 0;">
-                You've taken the first step on an incredible journey through Hindu philosophy and the Bhagavad Gita. Over the next 77 days, you'll receive one lesson each morning at 6 AM UTC.
+              <p class="email-text" style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 0 0 20px 0;">
+                You've taken the first step on an incredible journey through Hindu philosophy and the Bhagavad Gita. Over the next ${TOTAL_DAYS} days, you'll receive one lesson each morning at 6 AM UTC.
               </p>
 
               <h3 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; color: #F97316; margin: 30px 0 15px 0;">
                 What to Expect:
               </h3>
 
-              <ul style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; padding-left: 25px;">
+              <ul class="email-text" style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; padding-left: 25px;">
                 <li style="margin-bottom: 10px;"><strong>Days 1-14:</strong> The Foundation — Core concepts of Hindu philosophy</li>
                 <li style="margin-bottom: 10px;"><strong>Days 15-26:</strong> The Stories — The Ramayana and Mahabharata</li>
                 <li style="margin-bottom: 10px;"><strong>Days 27-43:</strong> The Gita — Journey through all 18 chapters</li>
                 <li style="margin-bottom: 10px;"><strong>Days 44-59:</strong> Going Deeper — Upanishads, traditions, and practices</li>
-                <li style="margin-bottom: 10px;"><strong>Days 60-77:</strong> Gita Deep Dive — Full chapter summaries with key verses</li>
+                <li style="margin-bottom: 10px;"><strong>Days 60-76:</strong> The Puranas — The great mythological texts</li>
+                <li style="margin-bottom: 10px;"><strong>Days 77-110:</strong> Deep Study — The Gita, Upanishads, and Vedic Hymns</li>
+                <li style="margin-bottom: 10px;"><strong>Days 111-128:</strong> Gita Chapter Summaries — Full chapter deep dives with key verses</li>
               </ul>
 
-              <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 25px 0;">
+              <p class="email-text" style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 25px 0;">
                 Each email contains the full lesson text so you can read it right from your inbox. You can also click "Read on Web" to explore the lesson with additional features.
               </p>
 
@@ -397,9 +412,19 @@ export function generateCompletionEmail(userEmail: string, unsubscribeToken: str
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <title>Journey Complete - Dharma Path</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .email-body { background-color: #1F2937 !important; }
+      .email-container { background-color: #111827 !important; }
+      .email-text { color: #F3F4F6 !important; }
+      .email-text-muted { color: #9CA3AF !important; }
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #F5F0E8;">
+<body style="margin: 0; padding: 0; background-color: #F5F0E8;" class="email-body">
   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #F5F0E8;">
     <tr>
       <td align="center" style="padding: 40px 10px;">
@@ -412,7 +437,7 @@ export function generateCompletionEmail(userEmail: string, unsubscribeToken: str
                 Journey Complete
               </h1>
               <p style="margin: 15px 0 0 0; color: rgba(255, 255, 255, 0.9); font-family: Georgia, 'Times New Roman', serif; font-size: 18px;">
-                77 Days of Wisdom
+                ${TOTAL_DAYS} Days of Wisdom
               </p>
             </td>
           </tr>
@@ -420,12 +445,12 @@ export function generateCompletionEmail(userEmail: string, unsubscribeToken: str
           <!-- Content -->
           <tr>
             <td style="padding: 40px;">
-              <h2 style="margin: 0 0 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; color: #1F2937; text-align: center;">
+              <h2 class="email-text" style="margin: 0 0 20px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; color: #1F2937; text-align: center;">
                 Congratulations, Seeker
               </h2>
 
-              <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 0 0 20px 0;">
-                You have completed the entire Dharma Path journey. Over 77 days, you've explored the foundations of Hindu philosophy, traveled through the great epics, and immersed yourself in the timeless wisdom of the Bhagavad Gita.
+              <p class="email-text" style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 0 0 20px 0;">
+                You have completed the entire Dharma Path journey. Over ${TOTAL_DAYS} days, you've explored the foundations of Hindu philosophy, traveled through the great epics, and immersed yourself in the timeless wisdom of the Bhagavad Gita.
               </p>
 
               <div style="background-color: #FEF3C7; border-left: 4px solid #F59E0B; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0;">
@@ -436,7 +461,7 @@ export function generateCompletionEmail(userEmail: string, unsubscribeToken: str
                 </p>
               </div>
 
-              <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 0 0 20px 0;">
+              <p class="email-text" style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; margin: 0 0 20px 0;">
                 This is not an ending, but a beginning. The knowledge you've gained is a foundation for a lifetime of practice and deeper understanding. May your path be blessed with wisdom, peace, and purpose.
               </p>
 
@@ -444,7 +469,7 @@ export function generateCompletionEmail(userEmail: string, unsubscribeToken: str
                 What's Next?
               </h3>
 
-              <ul style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; padding-left: 25px;">
+              <ul class="email-text" style="font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.7; color: #374151; padding-left: 25px;">
                 <li style="margin-bottom: 10px;">Revisit any lesson anytime on the Dharma Path website</li>
                 <li style="margin-bottom: 10px;">Start the journey again from Day 1 (you can restart from your profile)</li>
                 <li style="margin-bottom: 10px;">Dive deeper into specific chapters of the Gita</li>

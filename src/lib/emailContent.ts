@@ -253,7 +253,7 @@ function capitalizeFirst(str: string): string {
  */
 export function getMilestoneMessage(day: number): string | null {
   if (day === 1) {
-    return "Welcome to your journey! Today begins your 77-day path through Hindu wisdom.";
+    return `Welcome to your journey! Today begins your ${TOTAL_DAYS}-day path through Hindu wisdom.`;
   }
   if (day === 14) {
     return "Congratulations! You've completed Level 1: The Foundation. Tomorrow, we explore the great epics.";
