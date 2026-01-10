@@ -93,7 +93,7 @@ function getLessonMetadata(lessonId: string): { lesson: Lesson; module: Module; 
 }
 
 /**
- * Get email content for a specific day (1-77)
+ * Get email content for a specific day (1-128)
  */
 export function getEmailContentForDay(day: number): EmailContent | null {
   if (day < 1 || day > TOTAL_DAYS) {
@@ -128,7 +128,7 @@ export function getEmailContentForDay(day: number): EmailContent | null {
     };
   }
 
-  // Days 60-77: Gita chapters
+  // Days 111-128: Gita chapter summaries
   const chapterIndex = day - LESSON_IDS.length - 1; // 0-indexed
   const chapter = gitaChapters[chapterIndex];
 

@@ -401,7 +401,7 @@ export function generateWelcomeEmail(userEmail: string, unsubscribeToken: string
 }
 
 /**
- * Generate completion email for users who finish the 77-day journey
+ * Generate completion email for users who finish the 128-day journey
  */
 export function generateCompletionEmail(userEmail: string, unsubscribeToken: string): string {
   const unsubscribeUrl = `${BASE_URL}/api/unsubscribe?token=${unsubscribeToken}&email=${encodeURIComponent(userEmail)}`;

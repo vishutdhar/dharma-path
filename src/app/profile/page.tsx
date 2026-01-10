@@ -607,7 +607,7 @@ export default function ProfilePage() {
                 {emailSubscription.current_day >= TOTAL_DAYS && (
                   <div className="mt-2 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
                     <p className="text-sm text-green-700 dark:text-green-400 text-center">
-                      You've completed the 77-day journey!
+                      You've completed the {TOTAL_DAYS}-day journey!
                     </p>
                   </div>
                 )}
@@ -615,7 +615,7 @@ export default function ProfilePage() {
             ) : (
               <div className="text-center">
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  Get one lesson delivered to your inbox every day for 77 days — from the foundations of Hinduism to the wisdom of the Bhagavad Gita.
+                  Get one lesson delivered to your inbox every day for {TOTAL_DAYS} days — from the foundations of Hinduism to the wisdom of the Bhagavad Gita.
                 </p>
                 <button
                   onClick={createEmailSubscription}
