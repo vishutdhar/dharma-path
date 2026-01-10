@@ -66,7 +66,7 @@ export default function ChapterPage() {
     if (urlVerse !== currentVerse) {
       setCurrentVerse(urlVerse);
     }
-  }, [urlVerse]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [urlVerse]);
 
   // Update URL when verse changes (without full page navigation)
   const updateVerseInUrl = useCallback((verseNum: number) => {
