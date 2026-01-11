@@ -3,7 +3,7 @@
  * Extracted for testability
  */
 
-import { UserProgress } from './progress';
+import { UserProgress, findNextIncompleteLesson } from './progress';
 import { DbUserProgress, DbUserProgressCore } from './supabase';
 
 // Re-export for convenience
@@ -18,8 +18,8 @@ export type { DbUserProgress, DbUserProgressCore };
  * - streak: Keep the higher value
  * - startDate: Keep the earlier date (preserve original start)
  * - lastVisit: Keep the most recent (accurate activity tracking)
- * - currentLevel: Keep the higher value (most progress)
- * - currentLesson: Prefer local if set, otherwise use cloud
+ * - currentLevel: From recalculated next lesson, or higher of both
+ * - currentLesson: Recalculated from merged completedLessons (ensures consistency across devices)
  */
 export function mergeProgress(local: UserProgress, cloud: DbUserProgressCore): UserProgress {
   // Merge completed lessons (union of both)
@@ -47,10 +47,14 @@ export function mergeProgress(local: UserProgress, cloud: DbUserProgressCore): U
   const cloudVisit = new Date(cloud.last_visit);
   const lastVisit = localVisit > cloudVisit ? local.lastVisit : cloud.last_visit;
 
+  // Recalculate currentLesson from merged completedLessons
+  // This ensures consistency regardless of which device synced last
+  const nextLesson = findNextIncompleteLesson(completedLessons);
+
   return {
     completedLessons,
-    currentLevel: Math.max(local.currentLevel, cloud.current_level),
-    currentLesson: local.currentLesson || cloud.current_lesson,
+    currentLevel: nextLesson?.levelId || Math.max(local.currentLevel, cloud.current_level),
+    currentLesson: nextLesson?.lessonId || null,
     streak,
     lastVisit,
     startDate,

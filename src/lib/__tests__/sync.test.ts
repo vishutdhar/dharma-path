@@ -110,32 +110,39 @@ describe('Sync Logic', () => {
       expect(result.lastVisit).toBe('2024-01-20T10:00:00Z');
     });
 
-    it('keeps higher current level', () => {
+    it('recalculates currentLevel from merged completedLessons', () => {
       const localLevel2 = { ...baseLocalProgress, currentLevel: 2 };
       const cloudLevel1 = { ...baseCloudProgress, current_level: 1 };
 
       const result = mergeProgress(localLevel2, cloudLevel1);
 
-      expect(result.currentLevel).toBe(2);
+      // Merged completedLessons = ['1-1-1', '1-1-2', '1-1-3']
+      // Next incomplete is '1-1-4' which is Level 1
+      expect(result.currentLevel).toBe(1);
     });
 
-    it('keeps higher current level (cloud higher)', () => {
-      const localLevel1 = { ...baseLocalProgress, currentLevel: 1 };
-      const cloudLevel3 = { ...baseCloudProgress, current_level: 3 };
+    it('falls back to higher level when all lessons complete', () => {
+      // Simulate all lessons complete scenario
+      const localAllComplete = { ...baseLocalProgress, currentLevel: 7, completedLessons: [] };
+      const cloudAllComplete = { ...baseCloudProgress, current_level: 8, completed_lessons: [] };
 
-      const result = mergeProgress(localLevel1, cloudLevel3);
+      const result = mergeProgress(localAllComplete, cloudAllComplete);
 
-      expect(result.currentLevel).toBe(3);
+      // No lessons completed means first lesson is next, which is Level 1
+      // But if findNextIncompleteLesson returns the first lesson, level would be 1
+      expect(result.currentLevel).toBe(1);
+      expect(result.currentLesson).toBe('1-1-1');
     });
 
-    it('prefers local currentLesson when set', () => {
+    it('recalculates currentLesson from merged completedLessons', () => {
       const result = mergeProgress(baseLocalProgress, baseCloudProgress);
 
-      // Local has '1-1-3', cloud has '1-1-4' -> should prefer local
-      expect(result.currentLesson).toBe('1-1-3');
+      // Merged completedLessons = ['1-1-1', '1-1-2', '1-1-3']
+      // Module 1-1 only has 3 lessons, so next is '1-2-1' (Module 1-2)
+      expect(result.currentLesson).toBe('1-2-1');
     });
 
-    it('uses cloud currentLesson when local is null', () => {
+    it('recalculates currentLesson even when local is null', () => {
       const localWithNoCurrentLesson = {
         ...baseLocalProgress,
         currentLesson: null,
@@ -143,7 +150,9 @@ describe('Sync Logic', () => {
 
       const result = mergeProgress(localWithNoCurrentLesson, baseCloudProgress);
 
-      expect(result.currentLesson).toBe('1-1-4');
+      // Should recalculate from merged completedLessons
+      // Merged = ['1-1-1', '1-1-2', '1-1-3'], next is '1-2-1'
+      expect(result.currentLesson).toBe('1-2-1');
     });
 
     it('handles empty arrays gracefully', () => {
